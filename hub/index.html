@@ -427,8 +427,23 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   transition: border-color 0.2s;
   width: 100%;
 }
-.callback-field input:focus, .callback-field select:focus, .callback-field textarea:focus { border-color: var(--accent); }
+.callback-field input:focus, .callback-field select:focus, .callback-field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(143,203,235,0.25); }
 .callback-field textarea { resize: vertical; min-height: 90px; font-family: var(--font); }
+.callback-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232d5a80' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 15px;
+  padding-right: 40px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.15s;
+}
+.callback-field select:hover { border-color: var(--accent); background-color: var(--sky); }
+.callback-field select:focus { background-color: white; }
 .callback-success { display: none; margin-top: 20px; padding: 18px 20px; border-radius: 12px; background: var(--sky); border: 1px solid var(--border); font-size: 0.875rem; color: var(--navy); line-height: 1.7; max-width: 640px; }
 .callback-success.show { display: block; }
 .callback-success a { color: var(--navy-light); font-weight: 600; }
@@ -1050,8 +1065,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
             <input type="text" id="cb-name" name="name" required>
           </div>
           <div class="callback-field">
-            <label for="cb-phone">Best phone number *</label>
-            <input type="tel" id="cb-phone" name="phone" required>
+            <label for="cb-company">Company Name *</label>
+            <input type="text" id="cb-company" name="company_name" required>
           </div>
           <div class="callback-field">
             <label for="cb-email">Email address</label>
@@ -1187,7 +1202,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     successEl.classList.remove('show');
     errorEl.classList.remove('show');
 
-    var required = ['cb-client-id', 'cb-name', 'cb-phone'];
+    var required = ['cb-client-id', 'cb-name', 'cb-company'];
     var valid = true;
     required.forEach(function (id) {
       var el = document.getElementById(id);
