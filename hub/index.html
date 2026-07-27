@@ -333,6 +333,17 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .holiday-date-cell { width: 110px; flex-shrink: 0; color: var(--gray); white-space: nowrap; font-variant-numeric: tabular-nums; font-size: 0.875rem; }
 .holiday-currency-cell { display: flex; gap: 6px; flex-shrink: 0; flex-wrap: wrap; width: 130px; }
 
+/* Interest rates */
+.rate-list { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.rate-row { display: flex; align-items: center; gap: 16px; padding: 16px 22px; border-top: 1px solid var(--border); }
+.rate-row:first-child { border-top: none; }
+.rate-bank { flex: 1; min-width: 0; }
+.rate-bank-name { font-size: 0.9375rem; font-weight: 700; color: var(--navy); }
+.rate-bank-code { font-size: 0.75rem; color: var(--gray); margin-left: 6px; }
+.rate-note { font-size: 0.8125rem; color: var(--gray); margin-top: 4px; line-height: 1.6; }
+.rate-currency { flex-shrink: 0; width: 66px; }
+.rate-value { flex-shrink: 0; width: 130px; text-align: right; font-size: 1.0625rem; font-weight: 800; color: var(--navy); }
+
 /* Introducers */
 .intro-benefit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
 .intro-benefit-card { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 26px; }
@@ -423,6 +434,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .intro-benefit-grid { grid-template-columns: 1fr; }
   .report-detail { padding: 22px 20px; }
   .holiday-date-cell, .holiday-currency-cell { width: auto; }
+  .rate-row { flex-wrap: wrap; padding: 14px 16px; }
+  .rate-value { width: auto; margin-left: auto; }
   .intro-cta-banner { padding: 24px; }
   .callback-grid { grid-template-columns: 1fr; }
 }
@@ -467,6 +480,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <button class="hub-side-btn" data-tab="insights" onclick="showTab('insights')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span>Market Reports</span></button>
         <button class="hub-side-btn" data-tab="calendar" onclick="showTab('calendar')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>Economic Calendar</span></button>
         <button class="hub-side-btn" data-tab="holidays" onclick="showTab('holidays')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg><span>Bank Holidays</span></button>
+        <button class="hub-side-btn" data-tab="rates" onclick="showTab('rates')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg><span>Interest Rates</span></button>
         <button class="hub-side-btn" data-tab="introducers" onclick="showTab('introducers')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Introducer Programme</span></button>
         <button class="hub-side-btn" data-tab="callback" onclick="showTab('callback')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Request a Callback</span></button>
       </nav>
@@ -499,6 +513,14 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           <h3>Economic Calendar</h3>
           <p>Track upcoming central bank decisions and data releases that move the currencies you use.</p>
           <a href="#" onclick="showTab('calendar'); return false;">View calendar &rarr;</a>
+        </div>
+        <div class="home-card">
+          <div class="home-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+          </div>
+          <h3>Interest Rates</h3>
+          <p>Current base rates for the Fed, BoE, ECB and other major central banks, updated monthly.</p>
+          <a href="#" onclick="showTab('rates'); return false;">View rates &rarr;</a>
         </div>
         <div class="home-card">
           <div class="home-card-icon">
@@ -731,6 +753,18 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       </div>
 
       <p class="calendar-note">Dates shown are for the remainder of 2026 and cover UK, US, Eurozone (TARGET2 payment system, plus select country-specific dates for major euro markets like France), Japan, New Zealand and China public holidays. This list is refreshed periodically; always double-check timing directly with your relationship manager for a specific payment.</p>
+    </section>
+
+    <!-- INTEREST RATES -->
+    <section class="hub-panel" id="panel-rates">
+      <div class="hub-section-eyebrow"><span>Interest Rates</span></div>
+      <h2>Major central bank base rates.</h2>
+      <p class="lead">Current policy rates for the central banks behind the currencies Dinheiro clients trade most, refreshed on the first of every month.</p>
+
+      <div id="rates-updated" class="calendar-updated"></div>
+      <div id="rates-root"><div class="calendar-loading">Loading current rates&hellip;</div></div>
+
+      <p class="calendar-note">Rates shown are each bank's primary policy rate and may not reflect an emergency or unscheduled move made between refreshes. For information only, not personalised advice. See the Economic Calendar tab for upcoming rate decisions.</p>
     </section>
 
     <!-- INTRODUCER PROGRAMME -->
@@ -1171,6 +1205,48 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   }
 
   loadMarketReport();
+
+  /* ═══ INTEREST RATES ══════════════════════════════════════
+     Reads rates-data.json, refreshed on the 1st of each month.
+  ============================================================ */
+  function renderRates(data) {
+    var root = document.getElementById('rates-root');
+    var updatedEl = document.getElementById('rates-updated');
+    if (data.updated && updatedEl) updatedEl.textContent = fmtUpdated(data.updated);
+
+    var rates = data.rates || [];
+    if (!rates.length) {
+      root.innerHTML = '<div class="calendar-loading">No rate data available yet.</div>';
+      return;
+    }
+
+    var html = '<div class="rate-list">';
+    rates.forEach(function (r) {
+      html += '<div class="rate-row">' +
+        '<div class="rate-bank">' +
+        '<span class="rate-bank-name">' + escapeHtml(r.bank || '') + '</span>' +
+        '<span class="rate-bank-code">' + escapeHtml(r.code || '') + '</span>' +
+        (r.note ? '<div class="rate-note">' + escapeHtml(r.note) + '</div>' : '') +
+        '</div>' +
+        '<div class="rate-currency"><span class="calendar-badge calendar-badge-medium">' + escapeHtml(r.currency || '') + '</span></div>' +
+        '<div class="rate-value">' + escapeHtml(r.rate || '') + '</div>' +
+        '</div>';
+    });
+    html += '</div>';
+    root.innerHTML = html;
+  }
+
+  function loadRates() {
+    var root = document.getElementById('rates-root');
+    fetch('rates-data.json', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+      .then(renderRates)
+      .catch(function () {
+        root.innerHTML = '<div class="calendar-error">Interest rates couldn\'t load. If you\'re previewing this file locally rather than on the live site, that\'s expected. It will load once this page is live on dinheirogroup.com.</div>';
+      });
+  }
+
+  loadRates();
 </script>
 
 </body>

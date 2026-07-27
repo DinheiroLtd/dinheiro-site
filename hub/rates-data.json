@@ -1,0 +1,68 @@
+{
+  "updated": "2026-07-27T08:30:00+01:00",
+  "rates": [
+    {
+      "bank": "Federal Reserve",
+      "code": "Fed",
+      "currency": "USD",
+      "rate": "3.50%-3.75%",
+      "note": "Target range for the federal funds rate. Held at the July meeting."
+    },
+    {
+      "bank": "Bank of England",
+      "code": "BoE",
+      "currency": "GBP",
+      "rate": "3.75%",
+      "note": "Bank Rate, set by the Monetary Policy Committee."
+    },
+    {
+      "bank": "European Central Bank",
+      "code": "ECB",
+      "currency": "EUR",
+      "rate": "2.25%",
+      "note": "Deposit facility rate. Held at the 23 July meeting."
+    },
+    {
+      "bank": "Bank of Japan",
+      "code": "BoJ",
+      "currency": "JPY",
+      "rate": "1.00%",
+      "note": "Short-term policy rate, following the BoJ's recent shift toward tighter policy."
+    },
+    {
+      "bank": "Reserve Bank of New Zealand",
+      "code": "RBNZ",
+      "currency": "NZD",
+      "rate": "2.50%",
+      "note": "Official Cash Rate. Raised 25bps on 8 July, its first hike in over three years."
+    },
+    {
+      "bank": "Reserve Bank of Australia",
+      "code": "RBA",
+      "currency": "AUD",
+      "rate": "4.35%",
+      "note": "Cash rate target, held since June."
+    },
+    {
+      "bank": "Bank of Canada",
+      "code": "BoC",
+      "currency": "CAD",
+      "rate": "2.25%",
+      "note": "Target for the overnight rate."
+    },
+    {
+      "bank": "Swiss National Bank",
+      "code": "SNB",
+      "currency": "CHF",
+      "rate": "0.00%",
+      "note": "SNB policy rate, held at the 18 June meeting."
+    },
+    {
+      "bank": "People's Bank of China",
+      "code": "PBoC",
+      "currency": "CNY",
+      "rate": "3.00%",
+      "note": "1-year Loan Prime Rate, the main policy benchmark. The 5-year LPR, used for mortgages, is 3.50%."
+    }
+  ]
+}
