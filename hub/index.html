@@ -253,6 +253,18 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .report-watch { border-top: 1px solid var(--border); padding-top: 14px; }
 .report-watch-label { display: block; font-size: 0.6875rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
 .report-watch p { font-size: 0.8125rem; color: var(--gray); line-height: 1.7; margin: 0; }
+.report-archive-heading { font-size: 0.75rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin: 44px 0 14px; }
+.report-archive-day { border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+.report-archive-day:last-child { margin-bottom: 0; }
+.report-archive-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 22px; cursor: pointer; transition: background 0.15s; background: var(--gray-light); }
+.report-archive-head:hover { background: var(--sky); }
+.report-archive-day.open .report-archive-head { background: var(--sky); }
+.report-archive-date { font-size: 0.875rem; font-weight: 700; color: var(--navy); }
+.report-archive-body { display: none; padding: 22px; }
+.report-archive-day.open .report-archive-body { display: block; }
+.report-archive-day.open .calendar-expand-icon { transform: rotate(45deg); background: var(--navy); }
+.report-archive-day.open .calendar-expand-icon::before,
+.report-archive-day.open .calendar-expand-icon::after { background: white; }
 
 /* Economic calendar */
 .calendar-updated { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 28px; margin-top: -24px; }
@@ -420,6 +432,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .calendar-event { order: 4; flex-basis: 100%; }
   .calendar-row-detail { padding: 8px 16px 16px; }
   .hedge-compare-grid, .intro-benefit-grid, .report-grid { grid-template-columns: 1fr; }
+  .report-archive-head { padding: 12px 16px; }
+  .report-archive-body { padding: 16px; }
   .holiday-row { flex-wrap: wrap; gap: 6px 12px; }
   .holiday-date { width: 100%; }
   .intro-cta-banner { padding: 24px; }
@@ -558,11 +572,11 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     <section class="hub-panel" id="panel-insights">
       <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Market Reports</span></div>
       <h2>Your morning market report.</h2>
-      <p class="lead">A daily briefing on GBP, EUR and USD, refreshed every morning by the Dinheiro team &mdash; how each has been trading, and what's scheduled today that could move it.</p>
+      <p class="lead">A briefing on GBP, EUR and USD, refreshed every weekday morning by the Dinheiro team &mdash; how each has been trading, and what's scheduled today that could move it. Past reports are available to browse below.</p>
 
       <div id="report-updated" class="calendar-updated"></div>
       <div id="report-root"><div class="calendar-loading">Loading this morning's report&hellip;</div></div>
-      <p class="calendar-note">General market commentary for information only &mdash; not personalised advice. See the Economic Calendar tab for the full week ahead.</p>
+      <p class="calendar-note">General market commentary for information only &mdash; not personalised advice. Published on UK business days (Monday&ndash;Friday). See the Economic Calendar tab for the full week ahead.</p>
     </section>
 
     <!-- ECONOMIC CALENDAR -->
@@ -1151,25 +1165,59 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
      Reads market-report.json, refreshed each morning alongside
      the economic calendar. General commentary only.
   ============================================================ */
-  function renderMarketReport(data) {
-    var root = document.getElementById('report-root');
-    var updatedEl = document.getElementById('report-updated');
-    if (data.updated && updatedEl) updatedEl.textContent = fmtUpdated(data.updated);
-
+  function reportCardsHtml(currencies, watchLabel) {
     var html = '<div class="report-grid">';
-    (data.currencies || []).forEach(function (c) {
+    (currencies || []).forEach(function (c) {
       html += '<div class="report-card">' +
         '<span class="report-card-code">' + escapeHtml(c.code || '') + '</span>' +
         '<div class="report-headline">' + escapeHtml(c.headline || '') + '</div>' +
         '<div class="report-body">' + escapeHtml(c.commentary || '') + '</div>' +
         '<div class="report-watch">' +
-        '<span class="report-watch-label">Today, watch</span>' +
-        '<p>' + escapeHtml(c.watchToday || 'Nothing scheduled that\'s likely to move this currency today.') + '</p>' +
+        '<span class="report-watch-label">' + (watchLabel || 'That day, watch') + '</span>' +
+        '<p>' + escapeHtml(c.watchToday || 'Nothing scheduled that\'s likely to move this currency that day.') + '</p>' +
         '</div>' +
         '</div>';
     });
     html += '</div>';
+    return html;
+  }
+
+  function renderMarketReport(data) {
+    var root = document.getElementById('report-root');
+    var updatedEl = document.getElementById('report-updated');
+    if (data.updated && updatedEl) updatedEl.textContent = fmtUpdated(data.updated);
+
+    var reports = data.reports || [];
+    if (!reports.length) {
+      root.innerHTML = '<div class="calendar-loading">No report available yet.</div>';
+      return;
+    }
+
+    var latest = reports[0];
+    var past = reports.slice(1);
+
+    var html = reportCardsHtml(latest.currencies, 'Today, watch');
+
+    if (past.length) {
+      html += '<div class="report-archive-heading">Past reports</div>';
+      past.forEach(function (day) {
+        html += '<div class="report-archive-day">' +
+          '<div class="report-archive-head" onclick="toggleReportArchive(this)">' +
+          '<span class="report-archive-date">' + escapeHtml(day.label || day.date || '') + '</span>' +
+          '<div class="calendar-expand-icon"></div>' +
+          '</div>' +
+          '<div class="report-archive-body">' + reportCardsHtml(day.currencies, 'That day, watch') + '</div>' +
+          '</div>';
+      });
+    }
+
     root.innerHTML = html;
+  }
+
+  function toggleReportArchive(el) {
+    var day = el.closest('.report-archive-day');
+    if (!day) return;
+    day.classList.toggle('open');
   }
 
   function loadMarketReport() {
