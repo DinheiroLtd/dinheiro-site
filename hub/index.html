@@ -246,26 +246,21 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .siopay-banner-btn { position: relative; z-index: 1; flex-shrink: 0; }
 
 /* Morning market report */
-.report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.report-card { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 26px; }
-.report-card-code { display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; color: var(--navy-light); background: var(--sky); padding: 3px 11px; border-radius: 20px; margin-bottom: 14px; }
-.report-headline { font-size: 0.9625rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 10px; }
-.report-body { font-size: 0.825rem; color: var(--gray); line-height: 1.75; margin-bottom: 16px; }
-.report-watch { border-top: 1px solid var(--border); padding-top: 14px; }
+.report-switch { display: inline-flex; gap: 2px; background: var(--gray-light); border-radius: 11px; padding: 3px; margin-bottom: 18px; }
+.report-switch-btn { font-family: var(--font); background: transparent; border: none; color: var(--gray); font-size: 0.85rem; font-weight: 700; padding: 8px 20px; border-radius: 8px; cursor: pointer; transition: all 0.15s; }
+.report-switch-btn:hover { color: var(--navy); }
+.report-switch-btn.active { background: var(--navy); color: white; }
+.report-datebar { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.report-nav-btn { width: 34px; height: 34px; flex-shrink: 0; border-radius: 50%; border: 1.5px solid var(--border); background: white; color: var(--navy); font-size: 1rem; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; }
+.report-nav-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--sky); }
+.report-nav-btn:disabled { opacity: 0.3; cursor: default; }
+.report-date-pill { font-size: 0.8125rem; font-weight: 700; color: var(--navy); background: var(--sky); padding: 6px 16px; border-radius: 20px; }
+.report-detail { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 28px; max-width: 640px; }
+.report-detail-headline { font-size: 1.0625rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 12px; }
+.report-detail-body { font-size: 0.875rem; color: var(--gray); line-height: 1.75; margin-bottom: 18px; }
+.report-detail-watch { border-top: 1px solid var(--border); padding-top: 16px; }
 .report-watch-label { display: block; font-size: 0.6875rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
-.report-watch p { font-size: 0.8125rem; color: var(--gray); line-height: 1.7; margin: 0; }
-.report-archive-heading { font-size: 0.75rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin: 44px 0 14px; }
-.report-archive-day { border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
-.report-archive-day:last-child { margin-bottom: 0; }
-.report-archive-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 22px; cursor: pointer; transition: background 0.15s; background: var(--gray-light); }
-.report-archive-head:hover { background: var(--sky); }
-.report-archive-day.open .report-archive-head { background: var(--sky); }
-.report-archive-date { font-size: 0.875rem; font-weight: 700; color: var(--navy); }
-.report-archive-body { display: none; padding: 22px; }
-.report-archive-day.open .report-archive-body { display: block; }
-.report-archive-day.open .calendar-expand-icon { transform: rotate(45deg); background: var(--navy); }
-.report-archive-day.open .calendar-expand-icon::before,
-.report-archive-day.open .calendar-expand-icon::after { background: white; }
+.report-detail-watch p { font-size: 0.8125rem; color: var(--gray); line-height: 1.7; margin: 0; }
 
 /* Economic calendar */
 .calendar-updated { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 28px; margin-top: -24px; }
@@ -426,9 +421,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .calendar-row-main { flex-wrap: wrap; gap: 8px 12px; padding: 12px 16px; }
   .calendar-event { order: 4; flex-basis: 100%; }
   .calendar-row-detail { padding: 8px 16px 16px; }
-  .intro-benefit-grid, .report-grid { grid-template-columns: 1fr; }
-  .report-archive-head { padding: 12px 16px; }
-  .report-archive-body { padding: 16px; }
+  .intro-benefit-grid { grid-template-columns: 1fr; }
+  .report-detail { padding: 20px; }
   .holiday-date-cell, .holiday-currency-cell { width: auto; }
   .intro-cta-banner { padding: 24px; }
   .callback-grid { grid-template-columns: 1fr; }
@@ -546,7 +540,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     <section class="hub-panel" id="panel-insights">
       <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Market Reports</span></div>
       <h2>Your morning market report.</h2>
-      <p class="lead">A briefing on GBP, EUR and USD, refreshed every weekday morning by the Dinheiro team &mdash; how each has been trading, and what's scheduled today that could move it. Past reports are available to browse below.</p>
+      <p class="lead">A briefing on GBP, EUR and USD, refreshed every weekday morning by the Dinheiro team. Switch currencies below, and step back through past mornings with the arrows.</p>
 
       <div id="report-updated" class="calendar-updated"></div>
       <div id="report-root"><div class="calendar-loading">Loading this morning's report&hellip;</div></div>
@@ -1093,61 +1087,78 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 
   /* ═══ MORNING MARKET REPORT ═══════════════════════════════
      Reads market-report.json, refreshed each morning alongside
-     the economic calendar. General commentary only.
+     the economic calendar. Shown as a single-currency briefing
+     with a pill switch (GBP/EUR/USD) and prev/next arrows to
+     step back through past weekday reports.
   ============================================================ */
-  function reportCardsHtml(currencies, watchLabel) {
-    var html = '<div class="report-grid">';
-    (currencies || []).forEach(function (c) {
-      html += '<div class="report-card">' +
-        '<span class="report-card-code">' + escapeHtml(c.code || '') + '</span>' +
-        '<div class="report-headline">' + escapeHtml(c.headline || '') + '</div>' +
-        '<div class="report-body">' + escapeHtml(c.commentary || '') + '</div>' +
-        '<div class="report-watch">' +
-        '<span class="report-watch-label">' + (watchLabel || 'That day, watch') + '</span>' +
-        '<p>' + escapeHtml(c.watchToday || 'Nothing scheduled that\'s likely to move this currency that day.') + '</p>' +
-        '</div>' +
-        '</div>';
-    });
-    html += '</div>';
-    return html;
-  }
+  var marketReportsData = [];
+  var reportViewIndex = 0;
+  var reportViewCurrency = 'GBP';
 
   function renderMarketReport(data) {
-    var root = document.getElementById('report-root');
     var updatedEl = document.getElementById('report-updated');
     if (data.updated && updatedEl) updatedEl.textContent = fmtUpdated(data.updated);
+    marketReportsData = data.reports || [];
+    reportViewIndex = 0;
+    reportViewCurrency = 'GBP';
+    renderReportView();
+  }
 
-    var reports = data.reports || [];
-    if (!reports.length) {
+  function renderReportView() {
+    var root = document.getElementById('report-root');
+    if (!marketReportsData.length) {
       root.innerHTML = '<div class="calendar-loading">No report available yet.</div>';
       return;
     }
 
-    var latest = reports[0];
-    var past = reports.slice(1);
+    var day = marketReportsData[reportViewIndex];
+    var currencies = day.currencies || [];
+    var current = currencies.filter(function (c) { return c.code === reportViewCurrency; })[0] || currencies[0];
+    if (current) reportViewCurrency = current.code;
+    var isToday = reportViewIndex === 0;
+    var dateLabel = (isToday ? 'Today &middot; ' : '') + escapeHtml(day.label || day.date || '');
 
-    var html = reportCardsHtml(latest.currencies, 'Today, watch');
+    var switchHtml = '<div class="report-switch">' + currencies.map(function (c) {
+      var active = current && c.code === current.code;
+      return '<button class="report-switch-btn' + (active ? ' active' : '') + '" onclick="selectReportCurrency(\'' + c.code + '\')">' + escapeHtml(c.code) + '</button>';
+    }).join('') + '</div>';
 
-    if (past.length) {
-      html += '<div class="report-archive-heading">Past reports</div>';
-      past.forEach(function (day) {
-        html += '<div class="report-archive-day">' +
-          '<div class="report-archive-head" onclick="toggleReportArchive(this)">' +
-          '<span class="report-archive-date">' + escapeHtml(day.label || day.date || '') + '</span>' +
-          '<div class="calendar-expand-icon"></div>' +
-          '</div>' +
-          '<div class="report-archive-body">' + reportCardsHtml(day.currencies, 'That day, watch') + '</div>' +
-          '</div>';
-      });
+    var prevDisabled = reportViewIndex >= marketReportsData.length - 1;
+    var nextDisabled = reportViewIndex <= 0;
+
+    var barHtml = '<div class="report-datebar">' +
+      '<button class="report-nav-btn" onclick="stepReport(1)"' + (prevDisabled ? ' disabled' : '') + ' aria-label="Earlier report">&larr;</button>' +
+      '<span class="report-date-pill">' + dateLabel + '</span>' +
+      '<button class="report-nav-btn" onclick="stepReport(-1)"' + (nextDisabled ? ' disabled' : '') + ' aria-label="Later report">&rarr;</button>' +
+      '</div>';
+
+    var detailHtml;
+    if (current) {
+      detailHtml = '<div class="report-detail">' +
+        '<div class="report-detail-headline">' + escapeHtml(current.headline || '') + '</div>' +
+        '<div class="report-detail-body">' + escapeHtml(current.commentary || '') + '</div>' +
+        '<div class="report-detail-watch">' +
+        '<span class="report-watch-label">' + (isToday ? 'Today, watch' : 'That day, watch') + '</span>' +
+        '<p>' + escapeHtml(current.watchToday || 'Nothing scheduled that\'s likely to move this currency that day.') + '</p>' +
+        '</div>' +
+        '</div>';
+    } else {
+      detailHtml = '<div class="calendar-loading">No data for this currency on this date.</div>';
     }
 
-    root.innerHTML = html;
+    root.innerHTML = switchHtml + barHtml + detailHtml;
   }
 
-  function toggleReportArchive(el) {
-    var day = el.closest('.report-archive-day');
-    if (!day) return;
-    day.classList.toggle('open');
+  function selectReportCurrency(code) {
+    reportViewCurrency = code;
+    renderReportView();
+  }
+
+  function stepReport(delta) {
+    var newIndex = reportViewIndex + delta;
+    if (newIndex < 0 || newIndex > marketReportsData.length - 1) return;
+    reportViewIndex = newIndex;
+    renderReportView();
   }
 
   function loadMarketReport() {
