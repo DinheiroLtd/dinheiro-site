@@ -450,19 +450,104 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .hub-footer-logo img { height: 24px; width: auto; filter: brightness(0) invert(1); }
 .hub-footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.35); line-height: 1.7; max-width: 640px; text-align: right; }
 
+/* Mobile bottom tab bar + "More" sheet (hidden on desktop, enabled in the mobile media query below) */
+.hub-mobile-tabbar { display: none; }
+.mobile-more-backdrop { display: none; }
+.mobile-more-sheet { display: none; }
+
 /* ─── RESPONSIVE ────────────────────────────────────────── */
 @media (max-width: 860px) {
   .hub-shell { flex-direction: column; min-height: auto; }
   .hub-sidebar { width: 100%; height: auto; position: static; flex-direction: row; flex-wrap: wrap; align-items: center; padding: 14px 16px; }
   .hub-sidebar-logo { height: 28px; margin: 0 10px 0 0; }
   .hub-sidebar-greeting { display: none; }
-  .hub-sidebar-nav { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; flex: 1; gap: 2px; }
-  .hub-side-btn { width: auto; flex-shrink: 0; white-space: nowrap; padding: 8px 10px; border-radius: 7px; }
-  .hub-side-btn span { display: none; }
+  .hub-sidebar { justify-content: center; }
+  .hub-sidebar-nav { display: none; }
   .hub-sidebar-spacer { display: none; }
-  .hub-side-logout { width: auto; flex-shrink: 0; border-top: none; margin: 0; padding: 8px; }
-  .hub-side-logout span { display: none; }
+  .hub-side-logout { display: none; }
   .hub-panel { padding: 40px 20px 64px; }
+  .hub-main { padding-bottom: 74px; }
+
+  /* Bottom tab bar: Home, Market Reports, Economic Calendar, Schedule a Call get a
+     permanent slot; everything else (Interest Rates, Bank Holidays, Introducer
+     Programme, Log out) sits behind "More". */
+  .hub-mobile-tabbar {
+    display: flex;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 50;
+    background: white;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 20px rgba(28,60,87,0.1);
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+  }
+  .mobile-tab-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    background: transparent;
+    border: none;
+    color: var(--gray);
+    font-family: var(--font);
+    font-size: 0.625rem;
+    font-weight: 600;
+    padding: 7px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .mobile-tab-btn svg { flex-shrink: 0; }
+  .mobile-tab-btn.active { color: var(--navy); background: var(--sky); }
+
+  .mobile-more-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15,34,51,0.4);
+    z-index: 55;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .mobile-more-backdrop.open { opacity: 1; pointer-events: auto; }
+
+  .mobile-more-sheet {
+    display: block;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 56;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -8px 32px rgba(28,60,87,0.22);
+    padding: 10px 10px calc(14px + env(safe-area-inset-bottom));
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+  }
+  .mobile-more-sheet.open { transform: translateY(0); }
+  .mobile-more-handle { width: 36px; height: 4px; background: var(--border); border-radius: 3px; margin: 4px auto 12px; }
+  .mobile-more-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--navy);
+    font-family: var(--font);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 13px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+  }
+  .mobile-more-item svg { flex-shrink: 0; color: var(--navy-light); }
+  .mobile-more-item.active { background: var(--sky); }
+  .mobile-more-item.logout { color: var(--gray); border-top: 1px solid var(--border); margin-top: 4px; padding-top: 15px; border-radius: 0; }
+  .mobile-more-item.logout svg { color: var(--gray); }
   .home-grid { grid-template-columns: 1fr; }
   .siopay-banner { padding: 24px; }
   .hub-footer-inner { flex-direction: column; align-items: flex-start; text-align: left; }
@@ -1015,6 +1100,51 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     </div>
   </div>
 
+  <!-- Mobile bottom tab bar (visible under 860px only, see CSS) -->
+  <nav class="hub-mobile-tabbar" id="hub-mobile-tabbar">
+    <button class="mobile-tab-btn active" data-tab="home" onclick="showTab('home')">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg>
+      <span>Home</span>
+    </button>
+    <button class="mobile-tab-btn" data-tab="insights" onclick="showTab('insights')">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Reports</span>
+    </button>
+    <button class="mobile-tab-btn" data-tab="calendar" onclick="showTab('calendar')">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Calendar</span>
+    </button>
+    <button class="mobile-tab-btn" data-tab="callback" onclick="showTab('callback')">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call</span>
+    </button>
+    <button class="mobile-tab-btn" id="mobile-more-btn" onclick="toggleMobileMore(event)">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg>
+      <span>More</span>
+    </button>
+  </nav>
+
+  <div class="mobile-more-backdrop" id="mobile-more-backdrop" onclick="closeMobileMore()"></div>
+  <div class="mobile-more-sheet" id="mobile-more-sheet">
+    <div class="mobile-more-handle"></div>
+    <button class="mobile-more-item" data-tab="rates" onclick="showTab('rates')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+      <span>Interest Rates</span>
+    </button>
+    <button class="mobile-more-item" data-tab="holidays" onclick="showTab('holidays')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+      <span>Bank Holidays</span>
+    </button>
+    <button class="mobile-more-item" data-tab="introducers" onclick="showTab('introducers')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span>Introducer Programme</span>
+    </button>
+    <button class="mobile-more-item logout" onclick="handleLogout()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      <span>Log out</span>
+    </button>
+  </div>
+
 </div>
 
 <script>
@@ -1059,12 +1189,49 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   function showTab(name) {
     document.querySelectorAll('.hub-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.hub-side-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.mobile-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.mobile-more-item').forEach(b => b.classList.remove('active'));
     document.getElementById('panel-' + name).classList.add('active');
     document.querySelector('.hub-side-btn[data-tab="' + name + '"]').classList.add('active');
+    var mobileBtn = document.querySelector('.mobile-tab-btn[data-tab="' + name + '"]');
+    if (mobileBtn) mobileBtn.classList.add('active');
+    var moreItem = document.querySelector('.mobile-more-item[data-tab="' + name + '"]');
+    var moreBtn = document.getElementById('mobile-more-btn');
+    if (moreItem) {
+      moreItem.classList.add('active');
+      if (moreBtn) moreBtn.classList.add('active');
+    } else if (moreBtn) {
+      moreBtn.classList.remove('active');
+    }
+    closeMobileMore();
     var main = document.querySelector('.hub-main');
     if (main) main.scrollTo({ top: 0, behavior: 'instant' });
     window.scrollTo({ top: 0, behavior: 'instant' });
     if (name === 'callback' && typeof alignCallbackPhoto === 'function') alignCallbackPhoto();
+  }
+
+  /* ═══ MOBILE "MORE" SHEET ═════════════════════════════════
+     Bottom tab bar covers Home, Market Reports, Economic
+     Calendar and Schedule a Call; everything else opens here.
+  ============================================================ */
+  function toggleMobileMore(e) {
+    if (e) e.stopPropagation();
+    var sheet = document.getElementById('mobile-more-sheet');
+    if (!sheet) return;
+    if (sheet.classList.contains('open')) {
+      closeMobileMore();
+    } else {
+      sheet.classList.add('open');
+      var backdrop = document.getElementById('mobile-more-backdrop');
+      if (backdrop) backdrop.classList.add('open');
+    }
+  }
+
+  function closeMobileMore() {
+    var sheet = document.getElementById('mobile-more-sheet');
+    var backdrop = document.getElementById('mobile-more-backdrop');
+    if (sheet) sheet.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('open');
   }
 
   /* Stay logged in for the browser session */
