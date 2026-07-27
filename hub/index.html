@@ -362,6 +362,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .callback-field.full { grid-column: 1 / -1; }
 .callback-field label { font-size: 0.8125rem; font-weight: 600; color: var(--navy); }
 .callback-field .hint { font-weight: 400; color: var(--text-muted); }
+.callback-field-hint { font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
 .callback-field input, .callback-field select, .callback-field textarea {
   padding: 12px 14px;
   border: 1.5px solid var(--border);
@@ -881,6 +882,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           <div class="callback-field">
             <label for="cb-client-id">Client ID *</label>
             <input type="text" id="cb-client-id" name="client_id" required>
+            <p class="callback-field-hint">Usually starts with a country code, e.g. GB, US or IE, depending on where you're based.</p>
           </div>
           <div class="callback-field">
             <label for="cb-name">Full name *</label>
