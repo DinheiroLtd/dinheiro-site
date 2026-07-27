@@ -258,13 +258,28 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .calendar-day-head { background: var(--gray-light); padding: 14px 22px; display: flex; align-items: center; gap: 10px; font-size: 0.875rem; font-weight: 700; color: var(--navy); }
 .calendar-day.today .calendar-day-head { background: var(--sky); }
 .calendar-today-pill { background: var(--navy); color: white; font-size: 0.6875rem; font-weight: 700; padding: 2px 10px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; }
-.calendar-table { width: 100%; border-collapse: collapse; }
-.calendar-table td { padding: 12px 22px; font-size: 0.875rem; border-top: 1px solid var(--border); vertical-align: middle; }
-.calendar-table tr:first-child td { border-top: none; }
-.calendar-time { color: var(--gray); width: 76px; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.calendar-currency { width: 56px; font-weight: 700; color: var(--navy-light); }
-.calendar-event { color: var(--navy); }
-.calendar-impact { text-align: right; white-space: nowrap; }
+.calendar-row { border-top: 1px solid var(--border); }
+.calendar-row:first-child { border-top: none; }
+.calendar-row-main { display: flex; align-items: center; gap: 16px; padding: 12px 22px; cursor: pointer; transition: background 0.15s; }
+.calendar-row-main:hover { background: var(--gray-light); }
+.calendar-row.open .calendar-row-main { background: var(--sky); }
+.calendar-time { color: var(--gray); width: 60px; flex-shrink: 0; white-space: nowrap; font-variant-numeric: tabular-nums; font-size: 0.875rem; }
+.calendar-currency { width: 44px; flex-shrink: 0; font-weight: 700; color: var(--navy-light); font-size: 0.875rem; }
+.calendar-event { color: var(--navy); flex: 1; min-width: 0; }
+.calendar-impact { flex-shrink: 0; white-space: nowrap; }
+.calendar-expand-icon {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--sky);
+  color: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 300; line-height: 1;
+  transition: transform 0.25s, background 0.2s;
+}
+.calendar-row.open .calendar-expand-icon { transform: rotate(45deg); background: var(--navy); color: white; }
+.calendar-row-detail { display: none; padding: 0 22px 18px 98px; font-size: 0.85rem; color: var(--gray); line-height: 1.75; }
+.calendar-row.open .calendar-row-detail { display: block; }
 .calendar-badge { display: inline-block; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; }
 .calendar-badge-high { background: #fde8e8; color: #c53030; }
 .calendar-badge-medium { background: var(--sky); color: var(--navy-light); }
@@ -326,6 +341,9 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .hub-footer-inner { flex-direction: column; align-items: flex-start; text-align: left; }
   .hub-footer-legal { text-align: left; }
   .login-card { padding: 36px 26px; }
+  .calendar-row-main { flex-wrap: wrap; gap: 8px 12px; padding: 12px 16px; }
+  .calendar-event { order: 4; flex-basis: 100%; }
+  .calendar-row-detail { padding: 0 16px 16px; }
 }
 </style>
 </head>
@@ -662,8 +680,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       html += '<div class="calendar-day-head">' + escapeHtml(day.label || '') +
         (isToday ? ' <span class="calendar-today-pill">Today</span>' : '') + '</div>';
       if (day.events && day.events.length) {
-        html += '<table class="calendar-table"><tbody>';
-        day.events.forEach(function (ev) {
+        day.events.forEach(function (ev, i) {
           var importance = ev.importance || 'low';
           var metaParts = [];
           if (ev.previous) metaParts.push('Previous: <strong>' + escapeHtml(ev.previous) + '</strong>');
@@ -672,20 +689,32 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           var revisedBadge = ev.revised
             ? '<span class="calendar-revised-badge" title="' + escapeHtml(ev.revisedNote || 'Updated since yesterday') + '">Revised</span>'
             : '';
-          html += '<tr>' +
-            '<td class="calendar-time">' + escapeHtml(ev.time || '') + '</td>' +
-            '<td class="calendar-currency">' + escapeHtml(ev.currency || '') + '</td>' +
-            '<td class="calendar-event"><div class="calendar-event-name">' + escapeHtml(ev.event || '') + revisedBadge + '</div>' + metaLine + '</td>' +
-            '<td class="calendar-impact"><span class="calendar-badge calendar-badge-' + importance + '">' + importance + '</span></td>' +
-            '</tr>';
+          var description = ev.description
+            ? escapeHtml(ev.description)
+            : 'No further detail is available for this item yet.';
+          html += '<div class="calendar-row">' +
+            '<div class="calendar-row-main" onclick="toggleCalendarRow(this)">' +
+            '<div class="calendar-time">' + escapeHtml(ev.time || '') + '</div>' +
+            '<div class="calendar-currency">' + escapeHtml(ev.currency || '') + '</div>' +
+            '<div class="calendar-event"><div class="calendar-event-name">' + escapeHtml(ev.event || '') + revisedBadge + '</div>' + metaLine + '</div>' +
+            '<div class="calendar-impact"><span class="calendar-badge calendar-badge-' + importance + '">' + importance + '</span></div>' +
+            '<div class="calendar-expand-icon">+</div>' +
+            '</div>' +
+            '<div class="calendar-row-detail">' + description + '</div>' +
+            '</div>';
         });
-        html += '</tbody></table>';
       } else {
         html += '<div class="calendar-day-empty">No major releases scheduled.</div>';
       }
       html += '</div>';
     });
     root.innerHTML = html || '<div class="calendar-loading">No calendar data available yet.</div>';
+  }
+
+  function toggleCalendarRow(el) {
+    var row = el.closest('.calendar-row');
+    if (!row) return;
+    row.classList.toggle('open');
   }
 
   function loadCalendar() {
