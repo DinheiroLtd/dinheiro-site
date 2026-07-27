@@ -474,7 +474,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <button class="hub-side-btn" data-tab="holidays" onclick="showTab('holidays')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg><span>Bank Holidays</span></button>
         <button class="hub-side-btn" data-tab="rates" onclick="showTab('rates')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg><span>Interest Rates</span></button>
         <button class="hub-side-btn" data-tab="introducers" onclick="showTab('introducers')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Introducer Programme</span></button>
-        <button class="hub-side-btn" data-tab="callback" onclick="showTab('callback')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Request a Callback</span></button>
+        <button class="hub-side-btn" data-tab="callback" onclick="showTab('callback')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Schedule a Call</span></button>
       </nav>
       <div class="hub-sidebar-spacer"></div>
       <button class="hub-side-logout" onclick="handleLogout()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Log out</span></button>
@@ -534,9 +534,9 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           <div class="home-card-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
-          <h3>Request a Callback</h3>
+          <h3>Schedule a Call</h3>
           <p>Want to talk something through? Book a call with your relationship manager at a time that suits you.</p>
-          <a href="#" onclick="showTab('callback'); return false;">Request a callback &rarr;</a>
+          <a href="#" onclick="showTab('callback'); return false;">Schedule a call &rarr;</a>
         </div>
       </div>
 
@@ -827,9 +827,9 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       </div>
     </section>
 
-    <!-- REQUEST A CALLBACK -->
+    <!-- SCHEDULE A CALL -->
     <section class="hub-panel" id="panel-callback">
-      <div class="hub-section-eyebrow"><span>Request a Callback</span></div>
+      <div class="hub-section-eyebrow"><span>Schedule a Call</span></div>
       <h2>Book a call with your relationship manager.</h2>
       <p class="lead">Fill in your details and submit. This goes straight to the Dinheiro team by email, and your relationship manager will call you at the time you prefer.</p>
 
@@ -884,12 +884,12 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
             <textarea id="cb-notes" name="notes" placeholder="e.g. amount, currency pair, or any context that would help your relationship manager"></textarea>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary" id="callback-submit-btn">Send callback request &rarr;</button>
+        <button type="submit" class="btn btn-primary" id="callback-submit-btn">Schedule call &rarr;</button>
         <p class="callback-error" id="callback-error"></p>
         <div class="callback-success" id="callback-success">Thanks, your request has been sent. Your relationship manager will call you at your preferred time.</div>
       </form>
 
-      <p class="calendar-note">This form only sends the details above by email to arrange your callback. It doesn't store or display any account, balance or transaction data. For anything urgent, call <a href="tel:+442030985525">(+44) 203 098 5525</a> instead.</p>
+      <p class="calendar-note">This form only sends the details above by email to arrange your call. It doesn't store or display any account, balance or transaction data. For anything urgent, call <a href="tel:+442030985525">(+44) 203 098 5525</a> instead.</p>
     </section>
 
   </main>
