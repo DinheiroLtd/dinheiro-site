@@ -1423,6 +1423,23 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       var detailEl = root.querySelector('.report-detail');
       if (detailEl) detailEl.style.minHeight = reportMaxHeight + 'px';
     }
+
+    /* Web fonts can still be loading on first paint, which measures a
+       fallback font's (usually narrower) line wrapping and locks in a
+       height that's too short for the real font once it swaps in. Once
+       fonts are confirmed ready, re-measure and correct the lock so the
+       very first view isn't working off a stale, too-small number. */
+    if (window.document && document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        var freshEl = document.querySelector('#report-detail-wrap .report-detail');
+        if (!freshEl) return;
+        var freshMax = computeReportMaxHeight(currencies, isToday);
+        if (freshMax > reportMaxHeight) {
+          reportMaxHeight = freshMax;
+          freshEl.style.minHeight = reportMaxHeight + 'px';
+        }
+      });
+    }
   }
 
   function selectReportCurrency(code) {
@@ -1441,6 +1458,13 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     var currencies = (day && day.currencies) || [];
     var current = currencies.filter(function (c) { return c.code === code; })[0];
     var isToday = reportViewIndex === 0;
+
+    /* Recompute fresh rather than trusting the cached value: if the
+       original measurement under-shot (e.g. taken before fonts finished
+       loading), reusing it would let a later currency blow past the
+       locked height and cause exactly the jolt this is meant to prevent. */
+    var freshMax = computeReportMaxHeight(currencies, isToday);
+    if (freshMax > reportMaxHeight) reportMaxHeight = freshMax;
 
     var detailWrap = document.getElementById('report-detail-wrap');
     if (detailWrap) detailWrap.innerHTML = reportDetailHtml(current, isToday, reportMaxHeight);
