@@ -258,6 +258,12 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .report-nav-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--sky); }
 .report-nav-btn:disabled { opacity: 0.3; cursor: default; }
 .report-date-pill { font-size: 0.8125rem; font-weight: 700; color: var(--navy); background: var(--sky); padding: 6px 16px; border-radius: 20px; }
+.report-session-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.report-session-switch { display: inline-flex; gap: 2px; background: var(--sky); border-radius: 9px; padding: 3px; }
+.report-session-btn { font-family: var(--font); background: transparent; border: none; color: var(--navy-light); font-size: 0.75rem; font-weight: 700; padding: 6px 14px; border-radius: 7px; cursor: pointer; transition: all 0.15s; text-transform: uppercase; letter-spacing: 0.03em; }
+.report-session-btn:hover { color: var(--navy); }
+.report-session-btn.active { background: var(--navy); color: white; }
+.report-session-time { font-size: 0.75rem; color: var(--text-muted); }
 .report-detail { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 40px 44px; max-width: 1100px; min-height: 200px; box-sizing: border-box; }
 .report-detail-headline { font-size: 1.25rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 16px; }
 .report-detail-body { font-size: 0.9375rem; color: var(--gray); line-height: 1.85; margin-bottom: 22px; white-space: pre-line; }
@@ -652,7 +658,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
           <h3>Market Reports</h3>
-          <p>A daily morning briefing on the 10 major currencies you trade most: how each is doing, and what's scheduled today.</p>
+          <p>A morning and afternoon briefing on the 10 major currencies you trade most: how each is doing, and what's scheduled today.</p>
           <a href="#" onclick="showTab('insights'); return false;">View insights &rarr;</a>
         </div>
         <div class="home-card">
@@ -710,7 +716,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     <section class="hub-panel" id="panel-insights">
       <div class="hub-section-eyebrow"><span>Market Reports</span></div>
       <h2>Your morning market report.</h2>
-      <p class="lead">A briefing on 10 major currencies, refreshed every weekday morning by the Dinheiro team. Switch currencies below, and step back through past mornings with the arrows.</p>
+      <p class="lead">A briefing on 10 major currencies, refreshed every weekday morning and afternoon by the Dinheiro team. Switch sessions and currencies below, and step back through past days with the arrows.</p>
 
       <div id="report-updated" class="calendar-updated"></div>
       <div id="report-root"><div class="calendar-loading">Loading this morning's report&hellip;</div></div>
@@ -1604,7 +1610,10 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   var marketReportsData = [];
   var reportViewIndex = 0;
   var reportViewCurrency = 'GBP';
+  var reportViewSession = '';
   var reportMaxHeight = 0;
+  var reportSessionLabels = { morning: 'Morning', afternoon: 'Afternoon' };
+  var reportSessionOrder = ['morning', 'afternoon'];
 
   function renderMarketReport(data) {
     var updatedEl = document.getElementById('report-updated');
@@ -1612,7 +1621,38 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     marketReportsData = data.reports || [];
     reportViewIndex = 0;
     reportViewCurrency = 'GBP';
+    reportViewSession = '';
     renderReportView();
+  }
+
+  /* Older archive entries (before the morning/afternoon split) store their
+     currencies directly on the day object. Wrap those as a single "morning"
+     session so the rest of the rendering code only ever deals with sessions. */
+  function getDaySessions(day) {
+    if (!day) return [];
+    if (day.sessions && day.sessions.length) return day.sessions;
+    if (day.currencies) return [{ session: 'morning', time: '', currencies: day.currencies }];
+    return [];
+  }
+
+  function findSession(sessions, name) {
+    return sessions.filter(function (s) { return s.session === name; })[0];
+  }
+
+  /* Whichever session was published most recently for a day, regardless
+     of how the underlying array happens to be ordered. */
+  function getLatestSession(sessions) {
+    return findSession(sessions, 'afternoon') || findSession(sessions, 'morning') || sessions[0];
+  }
+
+  function fmtSessionTime(time) {
+    if (!time) return '';
+    var parts = time.split(':');
+    if (parts.length !== 2) return time;
+    var h = parseInt(parts[0], 10);
+    var suffix = h >= 12 ? 'pm' : 'am';
+    var h12 = h % 12 === 0 ? 12 : h % 12;
+    return h12 + (parts[1] === '00' ? '' : ':' + parts[1]) + suffix;
   }
 
   function reportDetailHtml(current, isToday, minHeight) {
@@ -1660,11 +1700,33 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     }
 
     var day = marketReportsData[reportViewIndex];
-    var currencies = day.currencies || [];
+    var sessions = getDaySessions(day);
+    if (!sessions.length) {
+      root.innerHTML = '<div class="calendar-loading">No report available yet.</div>';
+      return;
+    }
+    /* Keep the same session (morning/afternoon) across date changes when
+       available; fall back to whichever session this day actually has. */
+    var activeSession = findSession(sessions, reportViewSession) || getLatestSession(sessions);
+    reportViewSession = activeSession.session;
+    var currencies = activeSession.currencies || [];
+
     var current = currencies.filter(function (c) { return c.code === reportViewCurrency; })[0] || currencies[0];
     if (current) reportViewCurrency = current.code;
     var isToday = reportViewIndex === 0;
     var dateLabel = (isToday ? 'Today &middot; ' : '') + escapeHtml(day.label || day.date || '');
+
+    var availableSessions = reportSessionOrder.filter(function (name) { return findSession(sessions, name); });
+    var sessionHtml = '';
+    if (availableSessions.length > 1) {
+      sessionHtml = '<div class="report-session-row">' +
+        '<div class="report-session-switch" id="report-session-switch">' + availableSessions.map(function (name) {
+          var active = name === activeSession.session;
+          return '<button class="report-session-btn' + (active ? ' active' : '') + '" data-session="' + name + '" onclick="selectReportSession(\'' + name + '\')">' + reportSessionLabels[name] + '</button>';
+        }).join('') + '</div>' +
+        (activeSession.time ? '<span class="report-session-time">Published ' + fmtSessionTime(activeSession.time) + '</span>' : '') +
+        '</div>';
+    }
 
     var switchHtml = '<div class="report-switch" id="report-switch">' + currencies.map(function (c) {
       var active = current && c.code === current.code;
@@ -1680,7 +1742,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       '<button class="report-nav-btn" onclick="stepReport(-1)"' + (nextDisabled ? ' disabled' : '') + ' aria-label="Later report">&rarr;</button>' +
       '</div>';
 
-    root.innerHTML = switchHtml + barHtml + '<div id="report-detail-wrap">' + reportDetailHtml(current, isToday, 0) + '</div>';
+    root.innerHTML = barHtml + sessionHtml + switchHtml + '<div id="report-detail-wrap">' + reportDetailHtml(current, isToday, 0) + '</div>';
 
     reportMaxHeight = computeReportMaxHeight(currencies, isToday);
     if (reportMaxHeight) {
@@ -1706,6 +1768,12 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     }
   }
 
+  function selectReportSession(name) {
+    if (name === reportViewSession) return;
+    reportViewSession = name;
+    renderReportView();
+  }
+
   function selectReportCurrency(code) {
     if (code === reportViewCurrency) return;
     reportViewCurrency = code;
@@ -1719,7 +1787,9 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     }
 
     var day = marketReportsData[reportViewIndex];
-    var currencies = (day && day.currencies) || [];
+    var sessions = getDaySessions(day);
+    var activeSession = findSession(sessions, reportViewSession) || getLatestSession(sessions);
+    var currencies = (activeSession && activeSession.currencies) || [];
     var current = currencies.filter(function (c) { return c.code === code; })[0];
     var isToday = reportViewIndex === 0;
 
@@ -1740,7 +1810,9 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     reportResizeTimer = setTimeout(function () {
       if (!marketReportsData.length) return;
       var day = marketReportsData[reportViewIndex];
-      var currencies = (day && day.currencies) || [];
+      var sessions = getDaySessions(day);
+      var activeSession = findSession(sessions, reportViewSession) || getLatestSession(sessions);
+      var currencies = (activeSession && activeSession.currencies) || [];
       if (!currencies.length) return;
       reportMaxHeight = computeReportMaxHeight(currencies, reportViewIndex === 0);
       var detailEl = document.querySelector('#report-detail-wrap .report-detail');
