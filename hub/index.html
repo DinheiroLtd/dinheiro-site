@@ -362,7 +362,10 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .callback-field.full { grid-column: 1 / -1; }
 .callback-field label { font-size: 0.8125rem; font-weight: 600; color: var(--navy); }
 .callback-field .hint { font-weight: 400; color: var(--text-muted); }
-.callback-field-hint { font-size: 0.75rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+.field-info { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 50%; background: var(--sky); color: var(--navy-light); margin-left: 5px; cursor: help; vertical-align: middle; }
+.field-info-tip { display: none; position: absolute; bottom: calc(100% + 9px); left: 50%; transform: translateX(-50%); width: 220px; background: var(--navy); color: white; font-size: 0.75rem; font-weight: 400; line-height: 1.5; padding: 10px 12px; border-radius: 8px; box-shadow: 0 8px 20px rgba(28,60,87,0.25); z-index: 30; text-transform: none; letter-spacing: normal; }
+.field-info-tip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: var(--navy); }
+.field-info:hover .field-info-tip, .field-info:focus .field-info-tip, .field-info:focus-visible .field-info-tip { display: block; }
 .callback-field input, .callback-field select, .callback-field textarea {
   padding: 12px 14px;
   border: 1.5px solid var(--border);
@@ -880,9 +883,13 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <input type="hidden" name="botcheck" style="display:none">
         <div class="callback-grid">
           <div class="callback-field">
-            <label for="cb-client-id">Client ID *</label>
+            <label for="cb-client-id">Client ID *
+              <span class="field-info" tabindex="0">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="10.5" x2="12" y2="17"/><circle cx="12" cy="7" r="0.5" fill="currentColor"/></svg>
+                <span class="field-info-tip">Usually starts with a country code, e.g. GB, US or IE, depending on where you're based.</span>
+              </span>
+            </label>
             <input type="text" id="cb-client-id" name="client_id" required>
-            <p class="callback-field-hint">Usually starts with a country code, e.g. GB, US or IE, depending on where you're based.</p>
           </div>
           <div class="callback-field">
             <label for="cb-name">Full name *</label>
