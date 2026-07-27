@@ -432,6 +432,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .callback-success { display: none; margin-top: 20px; padding: 18px 20px; border-radius: 12px; background: var(--sky); border: 1px solid var(--border); font-size: 0.875rem; color: var(--navy); line-height: 1.7; max-width: 640px; }
 .callback-success.show { display: block; }
 .callback-success a { color: var(--navy-light); font-weight: 600; }
+.callback-error { display: none; font-size: 0.8125rem; color: #d64545; margin-top: 12px; }
+.callback-error.show { display: block; }
 
 /* Footer */
 .hub-footer { background: #0f2233; color: rgba(255,255,255,0.6); }
@@ -1031,34 +1033,38 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     <section class="hub-panel" id="panel-callback">
       <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Request a Callback</span></div>
       <h2>Book a call with your relationship manager.</h2>
-      <p class="lead">Fill in your details and we'll pass this straight to your relationship manager, who'll call you at the time you prefer. This form doesn't submit automatically &mdash; it opens your email app with the request already filled in, ready for you to send.</p>
+      <p class="lead">Fill in your details and submit &mdash; this goes straight to the Dinheiro team by email, and your relationship manager will call you at the time you prefer.</p>
 
-      <form class="callback-form" id="callback-form" onsubmit="return handleCallbackSubmit(event)">
+      <form class="callback-form" id="callback-form" onsubmit="return handleCallbackSubmit(event)" novalidate>
+        <input type="hidden" name="access_key" value="440a23ea-2416-439b-9810-adff409044cb">
+        <input type="hidden" name="subject" value="Client Hub — Callback Request">
+        <input type="hidden" name="from_name" value="Dinheiro Client Hub">
+        <input type="hidden" name="botcheck" style="display:none">
         <div class="callback-grid">
           <div class="callback-field">
             <label for="cb-client-id">Client ID *</label>
-            <input type="text" id="cb-client-id" required>
+            <input type="text" id="cb-client-id" name="client_id" required>
           </div>
           <div class="callback-field">
             <label for="cb-name">Full name *</label>
-            <input type="text" id="cb-name" required>
+            <input type="text" id="cb-name" name="name" required>
           </div>
           <div class="callback-field">
             <label for="cb-phone">Best phone number *</label>
-            <input type="tel" id="cb-phone" required>
+            <input type="tel" id="cb-phone" name="phone" required>
           </div>
           <div class="callback-field">
             <label for="cb-email">Email address</label>
-            <input type="email" id="cb-email">
+            <input type="email" id="cb-email" name="email">
           </div>
           <div class="callback-field">
             <label for="cb-date">Preferred day</label>
-            <input type="date" id="cb-date">
+            <input type="date" id="cb-date" name="preferred_day">
           </div>
           <div class="callback-field">
             <label for="cb-time">Preferred time</label>
-            <select id="cb-time">
-              <option value="">Any time</option>
+            <select id="cb-time" name="preferred_time">
+              <option value="Any time">Any time</option>
               <option value="Morning (9am-12pm)">Morning (9am&ndash;12pm)</option>
               <option value="Early afternoon (12pm-3pm)">Early afternoon (12pm&ndash;3pm)</option>
               <option value="Late afternoon (3pm-5:30pm)">Late afternoon (3pm&ndash;5:30pm)</option>
@@ -1066,7 +1072,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           </div>
           <div class="callback-field full">
             <label for="cb-topic">What's this about?</label>
-            <select id="cb-topic">
+            <select id="cb-topic" name="topic">
               <option value="">Select an option (optional)</option>
               <option value="Book a rate / spot trade">Book a rate / spot trade</option>
               <option value="Set up a forward contract">Set up a forward contract</option>
@@ -1077,14 +1083,15 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           </div>
           <div class="callback-field full">
             <label for="cb-notes">Anything else we should know? <span class="hint">(optional)</span></label>
-            <textarea id="cb-notes" placeholder="e.g. amount, currency pair, or any context that would help your relationship manager"></textarea>
+            <textarea id="cb-notes" name="notes" placeholder="e.g. amount, currency pair, or any context that would help your relationship manager"></textarea>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Send callback request &rarr;</button>
-        <div class="callback-success" id="callback-success">Your request has opened in your email app &mdash; just hit send and your relationship manager will call you at your preferred time. If nothing opened, email us directly at <a href="mailto:contact@dinheiro.uk">contact@dinheiro.uk</a> with your Client ID.</div>
+        <button type="submit" class="btn btn-primary" id="callback-submit-btn">Send callback request &rarr;</button>
+        <p class="callback-error" id="callback-error"></p>
+        <div class="callback-success" id="callback-success">Thanks &mdash; your request has been sent. Your relationship manager will call you at your preferred time.</div>
       </form>
 
-      <p class="calendar-note">This form doesn't store or transmit any account, balance or transaction data &mdash; it only prepares an email with the details above so your relationship manager can call you back. For anything urgent, call <a href="tel:+442030985525">(+44) 203 098 5525</a> instead.</p>
+      <p class="calendar-note">This form only sends the details above by email to arrange your callback &mdash; it doesn't store or display any account, balance or transaction data. For anything urgent, call <a href="tel:+442030985525">(+44) 203 098 5525</a> instead.</p>
     </section>
 
   </main>
@@ -1165,38 +1172,61 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   }
 
   /* ═══ REQUEST A CALLBACK ══════════════════════════════════
-     No backend on this static page — submitting builds a
-     mailto: link with the details and opens the client's own
-     email app, so nothing is stored or transmitted from here.
+     Submits via Web3Forms (web3forms.com) — the same free,
+     no-server form service already used by the main Dinheiro
+     website's callback form. The submission is emailed
+     straight to the Dinheiro team; nothing is stored here.
   ============================================================ */
   function handleCallbackSubmit(e) {
     e.preventDefault();
-    var clientId = document.getElementById('cb-client-id').value.trim();
-    var name = document.getElementById('cb-name').value.trim();
-    var phone = document.getElementById('cb-phone').value.trim();
-    var email = document.getElementById('cb-email').value.trim();
-    var date = document.getElementById('cb-date').value;
-    var time = document.getElementById('cb-time').value;
-    var topic = document.getElementById('cb-topic').value;
-    var notes = document.getElementById('cb-notes').value.trim();
+    var form = document.getElementById('callback-form');
+    var btn = document.getElementById('callback-submit-btn');
+    var successEl = document.getElementById('callback-success');
+    var errorEl = document.getElementById('callback-error');
 
-    var lines = [
-      'Client ID: ' + clientId,
-      'Name: ' + name,
-      'Phone: ' + phone,
-      email ? 'Email: ' + email : null,
-      'Preferred day: ' + (date || 'No preference'),
-      'Preferred time: ' + (time || 'Any time'),
-      topic ? 'What it\'s about: ' + topic : null,
-      notes ? 'Notes: ' + notes : null
-    ].filter(function (l) { return l !== null; });
+    successEl.classList.remove('show');
+    errorEl.classList.remove('show');
 
-    var subject = 'Callback request — Client ID ' + clientId;
-    var body = lines.join('\n');
-    var mailto = 'mailto:contact@dinheiro.uk?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    var required = ['cb-client-id', 'cb-name', 'cb-phone'];
+    var valid = true;
+    required.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el.value.trim()) { el.style.borderColor = '#d64545'; valid = false; }
+      else { el.style.borderColor = ''; }
+    });
+    if (!valid) {
+      errorEl.textContent = 'Please fill in all required fields.';
+      errorEl.classList.add('show');
+      return false;
+    }
 
-    window.location.href = mailto;
-    document.getElementById('callback-success').classList.add('show');
+    var originalText = btn.textContent;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        if (data.success) {
+          form.reset();
+          successEl.classList.add('show');
+        } else {
+          throw new Error('Web3Forms returned failure');
+        }
+      })
+      .catch(function () {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        errorEl.textContent = 'Something went wrong sending your request — please try again, or call us directly on (+44) 203 098 5525.';
+        errorEl.classList.add('show');
+      });
+
     return false;
   }
 
