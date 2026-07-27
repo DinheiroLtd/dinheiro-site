@@ -408,6 +408,31 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .intro-cta-banner p { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.7; margin: 0; }
 .intro-cta-btns { position: relative; z-index: 1; display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
 
+/* Request a callback */
+.callback-form { max-width: 660px; }
+.callback-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 24px; }
+.callback-field { display: flex; flex-direction: column; gap: 7px; }
+.callback-field.full { grid-column: 1 / -1; }
+.callback-field label { font-size: 0.8125rem; font-weight: 600; color: var(--navy); }
+.callback-field .hint { font-weight: 400; color: var(--text-muted); }
+.callback-field input, .callback-field select, .callback-field textarea {
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  color: var(--navy);
+  background: white;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.callback-field input:focus, .callback-field select:focus, .callback-field textarea:focus { border-color: var(--accent); }
+.callback-field textarea { resize: vertical; min-height: 90px; font-family: var(--font); }
+.callback-success { display: none; margin-top: 20px; padding: 18px 20px; border-radius: 12px; background: var(--sky); border: 1px solid var(--border); font-size: 0.875rem; color: var(--navy); line-height: 1.7; max-width: 640px; }
+.callback-success.show { display: block; }
+.callback-success a { color: var(--navy-light); font-weight: 600; }
+
 /* Footer */
 .hub-footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 .hub-footer-inner { max-width: 1160px; margin: 0 auto; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
@@ -443,6 +468,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .holiday-row { flex-wrap: wrap; gap: 6px 12px; }
   .holiday-date { width: 100%; }
   .intro-cta-banner { padding: 24px; }
+  .callback-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -489,6 +515,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <button class="hub-side-btn" data-tab="faqs" onclick="showTab('faqs')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><span>FAQs</span></button>
         <button class="hub-side-btn" data-tab="holidays" onclick="showTab('holidays')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg><span>Bank Holidays</span></button>
         <button class="hub-side-btn" data-tab="introducers" onclick="showTab('introducers')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Introducer Programme</span></button>
+        <button class="hub-side-btn" data-tab="callback" onclick="showTab('callback')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Request a Callback</span></button>
       </nav>
       <div class="hub-sidebar-spacer"></div>
       <button class="hub-side-logout" onclick="handleLogout()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Log out</span></button>
@@ -559,6 +586,14 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           <h3>Introducer Programme</h3>
           <p>Know a solicitor, accountant or adviser whose clients move money abroad? Here's how referrals work.</p>
           <a href="#" onclick="showTab('introducers'); return false;">Learn more &rarr;</a>
+        </div>
+        <div class="home-card">
+          <div class="home-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3>Request a Callback</h3>
+          <p>Want to talk something through? Book a call with your relationship manager at a time that suits you.</p>
+          <a href="#" onclick="showTab('callback'); return false;">Request a callback &rarr;</a>
         </div>
       </div>
 
@@ -992,6 +1027,66 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       </div>
     </section>
 
+    <!-- REQUEST A CALLBACK -->
+    <section class="hub-panel" id="panel-callback">
+      <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Request a Callback</span></div>
+      <h2>Book a call with your relationship manager.</h2>
+      <p class="lead">Fill in your details and we'll pass this straight to your relationship manager, who'll call you at the time you prefer. This form doesn't submit automatically &mdash; it opens your email app with the request already filled in, ready for you to send.</p>
+
+      <form class="callback-form" id="callback-form" onsubmit="return handleCallbackSubmit(event)">
+        <div class="callback-grid">
+          <div class="callback-field">
+            <label for="cb-client-id">Client ID *</label>
+            <input type="text" id="cb-client-id" required>
+          </div>
+          <div class="callback-field">
+            <label for="cb-name">Full name *</label>
+            <input type="text" id="cb-name" required>
+          </div>
+          <div class="callback-field">
+            <label for="cb-phone">Best phone number *</label>
+            <input type="tel" id="cb-phone" required>
+          </div>
+          <div class="callback-field">
+            <label for="cb-email">Email address</label>
+            <input type="email" id="cb-email">
+          </div>
+          <div class="callback-field">
+            <label for="cb-date">Preferred day</label>
+            <input type="date" id="cb-date">
+          </div>
+          <div class="callback-field">
+            <label for="cb-time">Preferred time</label>
+            <select id="cb-time">
+              <option value="">Any time</option>
+              <option value="Morning (9am-12pm)">Morning (9am&ndash;12pm)</option>
+              <option value="Early afternoon (12pm-3pm)">Early afternoon (12pm&ndash;3pm)</option>
+              <option value="Late afternoon (3pm-5:30pm)">Late afternoon (3pm&ndash;5:30pm)</option>
+            </select>
+          </div>
+          <div class="callback-field full">
+            <label for="cb-topic">What's this about?</label>
+            <select id="cb-topic">
+              <option value="">Select an option (optional)</option>
+              <option value="Book a rate / spot trade">Book a rate / spot trade</option>
+              <option value="Set up a forward contract">Set up a forward contract</option>
+              <option value="Set up a limit order">Set up a limit order</option>
+              <option value="General account query">General account query</option>
+              <option value="Something else">Something else</option>
+            </select>
+          </div>
+          <div class="callback-field full">
+            <label for="cb-notes">Anything else we should know? <span class="hint">(optional)</span></label>
+            <textarea id="cb-notes" placeholder="e.g. amount, currency pair, or any context that would help your relationship manager"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Send callback request &rarr;</button>
+        <div class="callback-success" id="callback-success">Your request has opened in your email app &mdash; just hit send and your relationship manager will call you at your preferred time. If nothing opened, email us directly at <a href="mailto:contact@dinheiro.uk">contact@dinheiro.uk</a> with your Client ID.</div>
+      </form>
+
+      <p class="calendar-note">This form doesn't store or transmit any account, balance or transaction data &mdash; it only prepares an email with the details above so your relationship manager can call you back. For anything urgent, call <a href="tel:+442030985525">(+44) 203 098 5525</a> instead.</p>
+    </section>
+
   </main>
 
   <footer class="hub-footer">
@@ -1067,6 +1162,42 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     var isOpen = item.classList.contains('open');
     document.querySelectorAll('.hub-faq-item.open').forEach(function (el) { el.classList.remove('open'); });
     if (!isOpen) item.classList.add('open');
+  }
+
+  /* ═══ REQUEST A CALLBACK ══════════════════════════════════
+     No backend on this static page — submitting builds a
+     mailto: link with the details and opens the client's own
+     email app, so nothing is stored or transmitted from here.
+  ============================================================ */
+  function handleCallbackSubmit(e) {
+    e.preventDefault();
+    var clientId = document.getElementById('cb-client-id').value.trim();
+    var name = document.getElementById('cb-name').value.trim();
+    var phone = document.getElementById('cb-phone').value.trim();
+    var email = document.getElementById('cb-email').value.trim();
+    var date = document.getElementById('cb-date').value;
+    var time = document.getElementById('cb-time').value;
+    var topic = document.getElementById('cb-topic').value;
+    var notes = document.getElementById('cb-notes').value.trim();
+
+    var lines = [
+      'Client ID: ' + clientId,
+      'Name: ' + name,
+      'Phone: ' + phone,
+      email ? 'Email: ' + email : null,
+      'Preferred day: ' + (date || 'No preference'),
+      'Preferred time: ' + (time || 'Any time'),
+      topic ? 'What it\'s about: ' + topic : null,
+      notes ? 'Notes: ' + notes : null
+    ].filter(function (l) { return l !== null; });
+
+    var subject = 'Callback request — Client ID ' + clientId;
+    var body = lines.join('\n');
+    var mailto = 'mailto:contact@dinheiro.uk?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailto;
+    document.getElementById('callback-success').classList.add('show');
+    return false;
   }
 
   /* ═══ HEDGING QUIZ ════════════════════════════════════════ */
