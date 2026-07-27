@@ -383,12 +383,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 /* Bank holidays */
 .holiday-note { background: var(--gray-light); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; margin-bottom: 32px; font-size: 0.875rem; color: var(--gray); line-height: 1.75; }
 .holiday-note strong { color: var(--navy); }
-.holiday-row { display: flex; align-items: center; gap: 18px; padding: 14px 4px; border-top: 1px solid var(--border); }
-.holiday-row:first-child { border-top: none; }
-.holiday-date { width: 190px; flex-shrink: 0; font-size: 0.875rem; font-weight: 700; color: var(--navy); }
-.holiday-currencies { display: flex; gap: 6px; flex-shrink: 0; flex-wrap: wrap; width: 150px; }
-.holiday-tag { display: inline-block; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.03em; color: var(--navy-light); background: var(--sky); padding: 3px 9px; border-radius: 20px; }
-.holiday-name { font-size: 0.9rem; color: var(--navy); }
+.holiday-date-cell { width: 110px; flex-shrink: 0; color: var(--gray); white-space: nowrap; font-variant-numeric: tabular-nums; font-size: 0.875rem; }
+.holiday-currency-cell { display: flex; gap: 6px; flex-shrink: 0; flex-wrap: wrap; width: 130px; }
 
 /* Introducers */
 .intro-benefit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
@@ -482,8 +478,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .hedge-compare-grid, .intro-benefit-grid, .report-grid { grid-template-columns: 1fr; }
   .report-archive-head { padding: 12px 16px; }
   .report-archive-body { padding: 16px; }
-  .holiday-row { flex-wrap: wrap; gap: 6px 12px; }
-  .holiday-date { width: 100%; }
+  .holiday-date-cell, .holiday-currency-cell { width: auto; }
   .intro-cta-banner { padding: 24px; }
   .callback-grid { grid-template-columns: 1fr; }
 }
@@ -901,75 +896,148 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       <div class="holiday-note"><strong>A general note on timing:</strong> banks and payment systems in the relevant country are typically closed on these dates, which can push same-day or next-day settlement to the next working day. If you have a time-sensitive payment near any of these dates, check with your relationship manager for the exact cut-off that applies.</div>
 
       <div class="calendar-day">
-        <div class="holiday-row">
-          <div class="holiday-date">Tue 11 Aug 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">JPY</span></div>
-          <div class="holiday-name">Mountain Day</div>
+        <div class="calendar-day-head">August 2026</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Tue 11 Aug</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Mountain Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in Japan. Banks and payment systems there are closed, which can push same-day or next-day JPY settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Mon 31 Aug 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">GBP</span></div>
-          <div class="holiday-name">Summer Bank Holiday</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Mon 31 Aug</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">GBP</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Summer Bank Holiday</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday across the UK. Banks and UK payment systems are closed, which can push same-day or next-day GBP settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Mon 7 Sep 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">USD</span></div>
-          <div class="holiday-name">Labor Day</div>
+      </div>
+
+      <div class="calendar-day">
+        <div class="calendar-day-head">September 2026</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Mon 7 Sep</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Labor Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A federal holiday in the US. US banks and payment systems are closed, which can push same-day or next-day USD settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Mon 21 Sep 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">JPY</span></div>
-          <div class="holiday-name">Respect for the Aged Day</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Mon 21 Sep</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Respect for the Aged Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in Japan. Banks and payment systems there are closed, which can push same-day or next-day JPY settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Tue 22 Sep 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">JPY</span></div>
-          <div class="holiday-name">Citizens' Holiday (bridge day)</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Tue 22 Sep</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Citizens' Holiday (bridge day)</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A "bridge day" public holiday in Japan that falls between two other holidays. Banks are closed, with the same impact on JPY settlement as other Japanese holidays.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Wed 23 Sep 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">JPY</span></div>
-          <div class="holiday-name">Autumn Equinox Day</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Wed 23 Sep</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Autumn Equinox Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in Japan. Banks and payment systems there are closed, which can push same-day or next-day JPY settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Mon 12 Oct 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">JPY</span> <span class="holiday-tag">USD</span></div>
-          <div class="holiday-name">Sports Day (Japan) &middot; Columbus Day (US)</div>
+      </div>
+
+      <div class="calendar-day">
+        <div class="calendar-day-head">October 2026</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Mon 12 Oct</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span><span class="calendar-badge calendar-badge-medium">USD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Sports Day (Japan) &middot; Columbus Day (US)</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in both Japan and the US. Banks in both markets are closed, which can push same-day or next-day JPY and USD settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Mon 26 Oct 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">NZD</span></div>
-          <div class="holiday-name">Labour Day</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Mon 26 Oct</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">NZD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Labour Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in New Zealand. Banks and payment systems there are closed, which can push same-day or next-day NZD settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Tue 3 Nov 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">JPY</span></div>
-          <div class="holiday-name">Culture Day</div>
+      </div>
+
+      <div class="calendar-day">
+        <div class="calendar-day-head">November 2026</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Tue 3 Nov</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Culture Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in Japan. Banks and payment systems there are closed, which can push same-day or next-day JPY settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Wed 11 Nov 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">USD</span></div>
-          <div class="holiday-name">Veterans Day</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Wed 11 Nov</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Veterans Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A federal holiday in the US. US banks and payment systems are closed, which can push same-day or next-day USD settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Mon 23 Nov 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">JPY</span></div>
-          <div class="holiday-name">Labour Thanksgiving Day</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Mon 23 Nov</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Labour Thanksgiving Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in Japan. Banks and payment systems there are closed, which can push same-day or next-day JPY settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Thu 26 Nov 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">USD</span></div>
-          <div class="holiday-name">Thanksgiving Day</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Thu 26 Nov</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Thanksgiving Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A federal holiday in the US. US banks and payment systems are closed, which can push same-day or next-day USD settlement to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Fri 25 Dec 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">GBP</span> <span class="holiday-tag">USD</span> <span class="holiday-tag">EUR</span> <span class="holiday-tag">NZD</span></div>
-          <div class="holiday-name">Christmas Day</div>
+      </div>
+
+      <div class="calendar-day">
+        <div class="calendar-day-head">December 2026</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Fri 25 Dec</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">GBP</span><span class="calendar-badge calendar-badge-medium">USD</span><span class="calendar-badge calendar-badge-medium">EUR</span><span class="calendar-badge calendar-badge-medium">NZD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Christmas Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday across the UK, US, Eurozone (TARGET2) and New Zealand. Banks and payment systems in all of these markets are closed, so GBP, USD, EUR and NZD settlement can be pushed to the next working day.</div>
         </div>
-        <div class="holiday-row">
-          <div class="holiday-date">Mon 28 Dec 2026</div>
-          <div class="holiday-currencies"><span class="holiday-tag">GBP</span> <span class="holiday-tag">NZD</span></div>
-          <div class="holiday-name">Boxing Day (observed &mdash; 26 Dec falls on a Saturday)</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Mon 28 Dec</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">GBP</span><span class="calendar-badge calendar-badge-medium">NZD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Boxing Day (observed &mdash; 26 Dec falls on a Saturday)</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in the UK and New Zealand, observed on this date because 26 December falls on a Saturday. GBP and NZD settlement can be pushed to the next working day.</div>
         </div>
       </div>
 
