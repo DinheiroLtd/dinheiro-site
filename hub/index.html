@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Hub | Dinheiro</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:       #1C3C57;
+  --navy-mid:   #244a6b;
+  --navy-light: #2d5a80;
+  --accent:     #8fcbeb;
+  --accent-dark:#6db5da;
+  --sky:        #e8f4fb;
+  --white:      #ffffff;
+  --gray:       #6b7280;
+  --gray-light: #f4f6f8;
+  --border:     #d4e8f5;
+  --text-muted: #94a3b8;
+  --font:       'Plus Jakarta Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  color: var(--navy);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-select: none; }
+
+/* ─── DIAGONAL PATTERN ──────────────────────────────────── */
+.diag-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(-50deg, transparent, transparent 80px, rgba(255,255,255,0.018) 80px, rgba(255,255,255,0.018) 82px);
+  pointer-events: none;
+}
+
+/* ─── BUTTONS ───────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+.btn-primary { background: var(--navy); color: white; }
+.btn-primary:hover { background: var(--navy-mid); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(28,60,87,0.25); }
+.btn-white { background: white; color: var(--navy); }
+.btn-white:hover { background: var(--sky); }
+.btn-outline-navy { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+.btn-outline-navy:hover { background: var(--navy); color: white; }
+.btn-lg { padding: 14px 32px; font-size: 0.9625rem; }
+
+/* ─── LOGIN SCREEN ──────────────────────────────────────── */
+#login-screen {
+  min-height: 100vh;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+}
+#login-screen::after {
+  content: '';
+  position: absolute;
+  top: -300px; right: -300px;
+  width: 900px; height: 900px;
+  background: radial-gradient(circle, rgba(45,90,128,0.45) 0%, transparent 65%);
+  pointer-events: none;
+}
+.login-card {
+  position: relative;
+  z-index: 1;
+  background: white;
+  border-radius: 20px;
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.28);
+}
+.login-logo { height: 34px; width: auto; display: block; margin: 0 auto 32px; }
+.login-title { font-size: 1.375rem; font-weight: 800; color: var(--navy); text-align: center; margin-bottom: 8px; letter-spacing: -0.3px; }
+.login-sub { font-size: 0.875rem; color: var(--gray); text-align: center; margin-bottom: 32px; line-height: 1.6; }
+.login-field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+.login-field label { font-size: 0.8125rem; font-weight: 600; color: var(--navy); }
+.login-field input {
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 0.9375rem;
+  color: var(--navy);
+  background: white;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.login-field input:focus { border-color: var(--accent); }
+.login-submit { width: 100%; padding: 14px; margin-top: 8px; background: var(--navy); color: white; border: none; border-radius: 8px; font-family: var(--font); font-size: 0.9625rem; font-weight: 700; cursor: pointer; transition: background 0.2s, transform 0.15s; letter-spacing: 0.01em; }
+.login-submit:hover { background: var(--navy-mid); transform: translateY(-1px); }
+.login-error { font-size: 0.8125rem; color: #d64545; text-align: center; margin-top: 14px; display: none; }
+.login-error.show { display: block; }
+.login-footnote { font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 24px; line-height: 1.6; }
+.login-footnote a { color: var(--navy-light); }
+
+/* ─── HUB APP ───────────────────────────────────────────── */
+#hub-app { display: none; }
+#hub-app.active { display: block; }
+
+/* Floating nav — matches site */
+.hub-nav {
+  position: fixed;
+  top: 16px;
+  left: 24px;
+  right: 24px;
+  z-index: 1000;
+  background: #0c1821;
+  border-radius: 14px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 22px;
+  justify-content: space-between;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.15);
+}
+.hub-nav-logo { display: flex; align-items: center; gap: 12px; }
+.hub-nav-logo img { height: 26px; width: auto; filter: brightness(0) invert(1); }
+.hub-nav-logo span { font-size: 0.8125rem; font-weight: 600; color: rgba(255,255,255,0.5); border-left: 1px solid rgba(255,255,255,0.2); padding-left: 12px; }
+.hub-logout {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.hub-logout:hover { color: white; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.06); }
+
+/* Tab header band */
+.hub-tabhead {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  padding: 130px 48px 0;
+}
+.hub-tabhead-inner { max-width: 1160px; margin: 0 auto; position: relative; z-index: 1; }
+.hub-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.hub-eyebrow-line { width: 28px; height: 2px; background: var(--accent); }
+.hub-eyebrow span { font-size: 0.8125rem; font-weight: 600; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
+.hub-tabhead h1 { font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; color: white; letter-spacing: -0.5px; margin-bottom: 28px; }
+.hub-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.hub-tab-btn {
+  font-family: var(--font);
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 14px 22px;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.2s;
+  position: relative;
+}
+.hub-tab-btn:hover { color: rgba(255,255,255,0.85); }
+.hub-tab-btn.active { color: var(--navy); background: white; }
+
+.hub-content { background: white; min-height: 50vh; }
+.hub-panel { display: none; max-width: 1160px; margin: 0 auto; padding: 56px 48px 96px; }
+.hub-panel.active { display: block; }
+
+/* Section headings within panels */
+.hub-section-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.hub-section-eyebrow-line { width: 26px; height: 2px; background: var(--accent); }
+.hub-section-eyebrow span { font-size: 0.75rem; font-weight: 700; color: var(--navy); letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; }
+.hub-panel h2 { font-size: clamp(1.5rem, 2.2vw, 2rem); font-weight: 800; color: var(--navy); letter-spacing: -0.4px; margin-bottom: 12px; }
+.hub-panel > p.lead { font-size: 0.9625rem; color: var(--gray); line-height: 1.8; max-width: 640px; margin-bottom: 40px; }
+
+/* Home tab */
+.home-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 12px; }
+.home-card { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 28px; transition: box-shadow 0.2s, transform 0.2s; }
+.home-card:hover { box-shadow: 0 8px 28px rgba(28,60,87,0.08); transform: translateY(-2px); }
+.home-card-icon { width: 44px; height: 44px; background: var(--sky); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.home-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.home-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
+.home-card a { font-size: 0.8125rem; font-weight: 600; color: var(--navy-light); text-decoration: none; }
+.home-card a:hover { text-decoration: underline; }
+
+.siopay-banner {
+  margin-top: 32px;
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.siopay-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(-50deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 62px);
+  pointer-events: none;
+}
+.siopay-banner-text { position: relative; z-index: 1; max-width: 520px; }
+.siopay-banner h3 { color: white; font-size: 1.0625rem; font-weight: 700; margin-bottom: 8px; }
+.siopay-banner p { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.7; margin: 0; }
+.siopay-banner-btn { position: relative; z-index: 1; flex-shrink: 0; }
+
+/* Market insights */
+.insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.insight-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 28px; text-decoration: none; display: block; transition: box-shadow 0.2s, transform 0.2s; }
+.insight-card:hover { box-shadow: 0 8px 28px rgba(28,60,87,0.1); transform: translateY(-2px); }
+.insight-tag { display: inline-block; background: var(--sky); color: var(--navy-light); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 11px; border-radius: 20px; margin-bottom: 14px; }
+.insight-card h3 { font-size: 1.0625rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 10px; }
+.insight-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
+.insight-card .arrow { font-size: 0.8125rem; font-weight: 600; color: var(--navy-light); }
+
+/* Economic calendar */
+.calendar-frame-wrap { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.calendar-note { font-size: 0.8125rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6; }
+
+/* Brochures */
+.brochure-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.brochure-card { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+.brochure-card-icon { width: 48px; height: 48px; background: var(--navy); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.brochure-card h3 { font-size: 1.0625rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.brochure-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.75; margin-bottom: 20px; }
+.brochure-dl { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8125rem; font-weight: 600; color: white; background: var(--navy); padding: 9px 18px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+.brochure-dl:hover { background: var(--navy-mid); }
+
+.glossary-card { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 32px; grid-column: span 2; }
+.glossary-card h3 { font-size: 1.0625rem; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
+.glossary-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 32px; }
+.glossary-term { font-size: 0.875rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.glossary-def { font-size: 0.825rem; color: var(--gray); line-height: 1.65; }
+
+/* Footer */
+.hub-footer { background: #0f2233; color: rgba(255,255,255,0.6); }
+.hub-footer-inner { max-width: 1160px; margin: 0 auto; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.hub-footer-logo img { height: 24px; width: auto; filter: brightness(0) invert(1); }
+.hub-footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.35); line-height: 1.7; max-width: 640px; text-align: right; }
+
+/* ─── RESPONSIVE ────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .hub-nav { left: 12px; right: 12px; padding: 0 14px; }
+  .hub-nav-logo span { display: none; }
+  .hub-tabhead { padding: 110px 20px 0; }
+  .hub-tabs { gap: 4px; }
+  .hub-tab-btn { padding: 12px 14px; font-size: 0.825rem; }
+  .hub-panel { padding: 40px 20px 64px; }
+  .home-grid, .insight-grid, .brochure-grid { grid-template-columns: 1fr; }
+  .glossary-card { grid-column: span 1; }
+  .glossary-list { grid-template-columns: 1fr; }
+  .siopay-banner { padding: 24px; }
+  .hub-footer-inner { flex-direction: column; align-items: flex-start; text-align: left; }
+  .hub-footer-legal { text-align: left; }
+  .login-card { padding: 36px 26px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ LOGIN SCREEN ═══════════════════════ -->
+<div id="login-screen" class="diag-pattern">
+  <div class="login-card">
+    <img src="dinheiro-logo.png" alt="Dinheiro" class="login-logo">
+    <div class="login-title">Client Hub</div>
+    <div class="login-sub">Market insights, the economic calendar and product brochures for Dinheiro clients.</div>
+    <form id="login-form" onsubmit="return handleLogin(event)">
+      <div class="login-field">
+        <label for="hub-username">Username</label>
+        <input type="text" id="hub-username" autocomplete="username" required>
+      </div>
+      <div class="login-field">
+        <label for="hub-password">Password</label>
+        <input type="password" id="hub-password" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="login-submit">Log In</button>
+      <div id="login-error" class="login-error">Incorrect username or password. Please try again.</div>
+    </form>
+    <div class="login-footnote">Looking to manage your account, balances or transactions? Log in at <a href="https://dinheiro.sciopay.co/login" target="_blank" rel="noopener">dinheiro.sciopay.co</a> instead.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ HUB APP ═══════════════════════ -->
+<div id="hub-app">
+
+  <nav class="hub-nav">
+    <div class="hub-nav-logo">
+      <img src="dinheiro-logo.png" alt="Dinheiro">
+      <span>Client Hub</span>
+    </div>
+    <button class="hub-logout" onclick="handleLogout()">Log Out</button>
+  </nav>
+
+  <header class="hub-tabhead diag-pattern">
+    <div class="hub-tabhead-inner">
+      <div class="hub-eyebrow"><span class="hub-eyebrow-line"></span><span>Client Hub</span></div>
+      <h1>Welcome back.</h1>
+      <div class="hub-tabs">
+        <button class="hub-tab-btn active" data-tab="home" onclick="showTab('home')">Home</button>
+        <button class="hub-tab-btn" data-tab="insights" onclick="showTab('insights')">Market Insights</button>
+        <button class="hub-tab-btn" data-tab="calendar" onclick="showTab('calendar')">Economic Calendar</button>
+        <button class="hub-tab-btn" data-tab="brochures" onclick="showTab('brochures')">Brochures</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="hub-content">
+
+    <!-- HOME -->
+    <section class="hub-panel active" id="panel-home">
+      <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Overview</span></div>
+      <h2>Everything you need, in one place.</h2>
+      <p class="lead">This hub brings together the market commentary, economic data and product guides that support your currency decisions. It doesn't hold any account, balance or transaction data &mdash; that all lives securely in SioPay.</p>
+
+      <div class="home-grid">
+        <div class="home-card">
+          <div class="home-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Market Insights</h3>
+          <p>Currency commentary and rate outlooks from the Dinheiro team, updated regularly.</p>
+          <a href="#" onclick="showTab('insights'); return false;">View insights &rarr;</a>
+        </div>
+        <div class="home-card">
+          <div class="home-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Economic Calendar</h3>
+          <p>Track upcoming central bank decisions and data releases that move the currencies you use.</p>
+          <a href="#" onclick="showTab('calendar'); return false;">View calendar &rarr;</a>
+        </div>
+        <div class="home-card">
+          <div class="home-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Brochures</h3>
+          <p>Guides to forward contracts, margin calls, limit orders and an FX glossary.</p>
+          <a href="#" onclick="showTab('brochures'); return false;">View brochures &rarr;</a>
+        </div>
+      </div>
+
+      <div class="siopay-banner">
+        <div class="siopay-banner-text">
+          <h3>Need your account, balances or payment history?</h3>
+          <p>Those live in SioPay, your dedicated client platform &mdash; not on this page. Log in there to manage transactions.</p>
+        </div>
+        <a href="https://dinheiro.sciopay.co/login" target="_blank" rel="noopener" class="btn btn-white siopay-banner-btn">Go to SioPay &rarr;</a>
+      </div>
+    </section>
+
+    <!-- MARKET INSIGHTS -->
+    <section class="hub-panel" id="panel-insights">
+      <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Market Insights</span></div>
+      <h2>Currency commentary from the Dinheiro team.</h2>
+      <p class="lead">The latest analysis on rate movements, central bank decisions and what they mean for your payments. These link out to the full articles on the Dinheiro website.</p>
+
+      <div class="insight-grid">
+        <a class="insight-card" href="/blog/gbp-eur-outlook-q3-2026.html" target="_blank" rel="noopener">
+          <span class="insight-tag">Rates</span>
+          <h3>GBP/EUR outlook: what Q3 2026 holds for UK businesses and property buyers</h3>
+          <p>Where sterling stands against the euro heading into Q3, and what it means if you're trading or buying abroad.</p>
+          <span class="arrow">Read more &rarr;</span>
+        </a>
+        <a class="insight-card" href="/blog/boe-rate-decision-oil-inflation-risk-2026.html" target="_blank" rel="noopener">
+          <span class="insight-tag">Central Banks</span>
+          <h3>Bank of England decision this week: what oil-driven inflation risk means for your payments</h3>
+          <p>How the latest BoE decision and oil-driven inflation pressure could feed through to your currency costs.</p>
+          <span class="arrow">Read more &rarr;</span>
+        </a>
+        <a class="insight-card" href="/blog/geopolitical-risk-fx-hedging-2026.html" target="_blank" rel="noopener">
+          <span class="insight-tag">Risk</span>
+          <h3>Geopolitical risk is back in FX markets: how to protect your business payments</h3>
+          <p>Why volatility driven by geopolitical events matters for anyone making international payments, and how to hedge it.</p>
+          <span class="arrow">Read more &rarr;</span>
+        </a>
+        <a class="insight-card" href="/blog/buying-property-abroad-currency-risk.html" target="_blank" rel="noopener">
+          <span class="insight-tag">Personal</span>
+          <h3>Buying abroad in 2026: how to protect yourself from currency swings</h3>
+          <p>Practical steps for protecting an overseas property purchase from adverse rate movements between now and completion.</p>
+          <span class="arrow">Read more &rarr;</span>
+        </a>
+        <a class="insight-card" href="/blog/hidden-cost-bank-transfers.html" target="_blank" rel="noopener">
+          <span class="insight-tag">Business</span>
+          <h3>The hidden cost of paying international suppliers through your bank</h3>
+          <p>What high-street banks don't show you on their exchange rates, and what it's really costing your business.</p>
+          <span class="arrow">Read more &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ECONOMIC CALENDAR -->
+    <section class="hub-panel" id="panel-calendar">
+      <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Economic Calendar</span></div>
+      <h2>Upcoming events that move currency markets.</h2>
+      <p class="lead">Central bank decisions, inflation prints and other releases across the currencies Dinheiro clients trade most.</p>
+
+      <div class="calendar-frame-wrap">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+          {
+          "colorTheme": "light",
+          "isTransparent": false,
+          "width": "100%",
+          "height": "650",
+          "locale": "en",
+          "importanceFilter": "-1,0,1",
+          "countryFilter": "us,gb,eu,jp,au,ca"
+          }
+          </script>
+        </div>
+      </div>
+      <p class="calendar-note">Calendar data provided by TradingView. General market information only &mdash; not personalised advice.</p>
+    </section>
+
+    <!-- BROCHURES -->
+    <section class="hub-panel" id="panel-brochures">
+      <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Brochures</span></div>
+      <h2>Guides to our products and key terms.</h2>
+      <p class="lead">Short guides covering the products Dinheiro clients use most, plus a glossary of common FX terms.</p>
+
+      <div class="brochure-grid">
+        <div class="brochure-card">
+          <div class="brochure-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Forward Contracts</h3>
+          <p>Lock in today's exchange rate for a future date, protecting your business against adverse market movements between now and settlement.</p>
+          <!-- TODO Kevin: add the PDF at /brochures/forward-contracts.pdf in the repo, then this link will work -->
+          <a class="brochure-dl" href="/brochures/forward-contracts.pdf" target="_blank" rel="noopener">Download PDF &darr;</a>
+        </div>
+        <div class="brochure-card">
+          <div class="brochure-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Margin Calls</h3>
+          <p>When you hold a forward contract, the market can move against the rate you've locked in. A margin call is a request for additional funds as collateral to cover that movement until settlement.</p>
+          <!-- TODO Kevin: add the PDF at /brochures/margin-calls.pdf in the repo, then this link will work -->
+          <a class="brochure-dl" href="/brochures/margin-calls.pdf" target="_blank" rel="noopener">Download PDF &darr;</a>
+        </div>
+        <div class="brochure-card">
+          <div class="brochure-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Limit Orders</h3>
+          <p>Set a target rate and we execute automatically when the market reaches it, so you don't need to watch the market yourself &mdash; we monitor it for you.</p>
+          <!-- TODO Kevin: add the PDF at /brochures/limit-orders.pdf in the repo, then this link will work -->
+          <a class="brochure-dl" href="/brochures/limit-orders.pdf" target="_blank" rel="noopener">Download PDF &darr;</a>
+        </div>
+        <div class="brochure-card">
+          <div class="brochure-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3>FX Glossary</h3>
+          <p>Not sure what a term means? The glossary below covers the words you'll hear most often from your relationship manager.</p>
+          <!-- TODO Kevin: add the PDF at /brochures/fx-glossary.pdf in the repo if you want a downloadable version, then this link will work -->
+          <a class="brochure-dl" href="/brochures/fx-glossary.pdf" target="_blank" rel="noopener">Download PDF &darr;</a>
+        </div>
+
+        <div class="glossary-card">
+          <h3>Quick reference: FX Glossary</h3>
+          <div class="glossary-list">
+            <div>
+              <div class="glossary-term">Spot Rate</div>
+              <div class="glossary-def">The exchange rate for a currency trade that settles almost immediately, usually within one or two business days.</div>
+            </div>
+            <div>
+              <div class="glossary-term">Forward Contract</div>
+              <div class="glossary-def">An agreement to exchange currency at a fixed rate on a future date, regardless of how the market moves in between.</div>
+            </div>
+            <div>
+              <div class="glossary-term">Limit Order</div>
+              <div class="glossary-def">An instruction to execute a trade automatically once the market reaches a rate you've specified.</div>
+            </div>
+            <div>
+              <div class="glossary-term">Margin Call</div>
+              <div class="glossary-def">A request for additional funds as collateral on an open forward position when the market has moved against it.</div>
+            </div>
+            <div>
+              <div class="glossary-term">Hedging</div>
+              <div class="glossary-def">Using tools like forward contracts to protect against adverse currency movements rather than speculating on them.</div>
+            </div>
+            <div>
+              <div class="glossary-term">Settlement Date</div>
+              <div class="glossary-def">The date on which currency actually changes hands and funds are delivered to the beneficiary.</div>
+            </div>
+            <div>
+              <div class="glossary-term">Mid-Market Rate</div>
+              <div class="glossary-def">The midpoint between the buy and sell price of a currency pair, often used as a neutral reference rate.</div>
+            </div>
+            <div>
+              <div class="glossary-term">Beneficiary</div>
+              <div class="glossary-def">The person or business receiving the funds at the end of an international payment.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="hub-footer">
+    <div class="hub-footer-inner">
+      <div class="hub-footer-logo"><img src="dinheiro-logo.png" alt="Dinheiro"></div>
+      <div class="hub-footer-legal">&copy; 2026 Dinheiro Limited. Registered in England &amp; Wales, Company No. 15820088. Payment services are provided by Sciopay Ltd, authorised by the FCA (FRN: 927951).</div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  /* ═══ CONFIG ═══════════════════════════════════════════════
+     Set your shared client-hub username/password here before
+     you publish. This is a simple client-side gate suited to
+     keeping this unlinked page tidy for clients — it is not a
+     substitute for real account security (that's SioPay's job).
+     Anyone who views the page source can see these values, so
+     don't reuse a password used anywhere sensitive.
+  ============================================================ */
+  const HUB_USERNAME = "DinheiroHub";
+  const HUB_PASSWORD = "Dinheiro2026";
+
+  function handleLogin(e) {
+    e.preventDefault();
+    const u = document.getElementById('hub-username').value.trim();
+    const p = document.getElementById('hub-password').value;
+    const err = document.getElementById('login-error');
+    if (u === HUB_USERNAME && p === HUB_PASSWORD) {
+      sessionStorage.setItem('dinheiroHubAuth', '1');
+      err.classList.remove('show');
+      showHub();
+    } else {
+      err.classList.add('show');
+    }
+    return false;
+  }
+
+  function handleLogout() {
+    sessionStorage.removeItem('dinheiroHubAuth');
+    document.getElementById('hub-app').classList.remove('active');
+    document.getElementById('login-screen').style.display = 'flex';
+    document.getElementById('login-form').reset();
+  }
+
+  function showHub() {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('hub-app').classList.add('active');
+  }
+
+  function showTab(name) {
+    document.querySelectorAll('.hub-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.hub-tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + name).classList.add('active');
+    document.querySelector('.hub-tab-btn[data-tab="' + name + '"]').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  /* Stay logged in for the browser session */
+  if (sessionStorage.getItem('dinheiroHubAuth') === '1') {
+    showHub();
+  }
+</script>
+
+</body>
+</html>
