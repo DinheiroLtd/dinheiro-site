@@ -254,7 +254,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .report-nav-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--sky); }
 .report-nav-btn:disabled { opacity: 0.3; cursor: default; }
 .report-date-pill { font-size: 0.8125rem; font-weight: 700; color: var(--navy); background: var(--sky); padding: 6px 16px; border-radius: 20px; }
-.report-detail { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 40px 44px; max-width: 1100px; }
+.report-detail { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 40px 44px; max-width: 1100px; min-height: 420px; box-sizing: border-box; }
+#report-detail-wrap { min-height: 420px; }
 .report-detail-headline { font-size: 1.25rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 16px; }
 .report-detail-body { font-size: 0.9375rem; color: var(--gray); line-height: 1.85; margin-bottom: 22px; white-space: pre-line; }
 .report-detail-watch { border-top: 1px solid var(--border); padding-top: 16px; }
@@ -1329,6 +1330,18 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     renderReportView();
   }
 
+  function reportDetailHtml(current, isToday) {
+    if (!current) return '<div class="calendar-loading">No data for this currency on this date.</div>';
+    return '<div class="report-detail">' +
+      '<div class="report-detail-headline">' + escapeHtml(current.headline || '') + '</div>' +
+      '<div class="report-detail-body">' + escapeHtml(current.commentary || '') + '</div>' +
+      '<div class="report-detail-watch">' +
+      '<span class="report-watch-label">' + (isToday ? 'Today, watch' : 'That day, watch') + '</span>' +
+      '<p>' + escapeHtml(current.watchToday || 'Nothing scheduled that\'s likely to move this currency that day.') + '</p>' +
+      '</div>' +
+      '</div>';
+  }
+
   function renderReportView() {
     var root = document.getElementById('report-root');
     if (!marketReportsData.length) {
@@ -1343,9 +1356,9 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     var isToday = reportViewIndex === 0;
     var dateLabel = (isToday ? 'Today &middot; ' : '') + escapeHtml(day.label || day.date || '');
 
-    var switchHtml = '<div class="report-switch">' + currencies.map(function (c) {
+    var switchHtml = '<div class="report-switch" id="report-switch">' + currencies.map(function (c) {
       var active = current && c.code === current.code;
-      return '<button class="report-switch-btn' + (active ? ' active' : '') + '" onclick="selectReportCurrency(\'' + c.code + '\')">' + escapeHtml(c.code) + '</button>';
+      return '<button class="report-switch-btn' + (active ? ' active' : '') + '" data-code="' + escapeHtml(c.code) + '" onclick="selectReportCurrency(\'' + c.code + '\')">' + escapeHtml(c.code) + '</button>';
     }).join('') + '</div>';
 
     var prevDisabled = reportViewIndex >= marketReportsData.length - 1;
@@ -1357,26 +1370,28 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       '<button class="report-nav-btn" onclick="stepReport(-1)"' + (nextDisabled ? ' disabled' : '') + ' aria-label="Later report">&rarr;</button>' +
       '</div>';
 
-    var detailHtml;
-    if (current) {
-      detailHtml = '<div class="report-detail">' +
-        '<div class="report-detail-headline">' + escapeHtml(current.headline || '') + '</div>' +
-        '<div class="report-detail-body">' + escapeHtml(current.commentary || '') + '</div>' +
-        '<div class="report-detail-watch">' +
-        '<span class="report-watch-label">' + (isToday ? 'Today, watch' : 'That day, watch') + '</span>' +
-        '<p>' + escapeHtml(current.watchToday || 'Nothing scheduled that\'s likely to move this currency that day.') + '</p>' +
-        '</div>' +
-        '</div>';
-    } else {
-      detailHtml = '<div class="calendar-loading">No data for this currency on this date.</div>';
-    }
-
-    root.innerHTML = switchHtml + barHtml + detailHtml;
+    root.innerHTML = switchHtml + barHtml + '<div id="report-detail-wrap">' + reportDetailHtml(current, isToday) + '</div>';
   }
 
   function selectReportCurrency(code) {
+    if (code === reportViewCurrency) return;
     reportViewCurrency = code;
-    renderReportView();
+
+    var switchWrap = document.getElementById('report-switch');
+    if (switchWrap) {
+      var btns = switchWrap.querySelectorAll('.report-switch-btn');
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.toggle('active', btns[i].getAttribute('data-code') === code);
+      }
+    }
+
+    var day = marketReportsData[reportViewIndex];
+    var currencies = (day && day.currencies) || [];
+    var current = currencies.filter(function (c) { return c.code === code; })[0];
+    var isToday = reportViewIndex === 0;
+
+    var detailWrap = document.getElementById('report-detail-wrap');
+    if (detailWrap) detailWrap.innerHTML = reportDetailHtml(current, isToday);
   }
 
   function stepReport(delta) {
