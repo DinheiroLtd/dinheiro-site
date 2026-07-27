@@ -270,6 +270,23 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .calendar-badge-medium { background: var(--sky); color: var(--navy-light); }
 .calendar-badge-low { background: var(--gray-light); color: var(--gray); }
 .calendar-day-empty { padding: 16px 22px; font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+.calendar-event-name { color: var(--navy); font-weight: 600; }
+.calendar-event-meta { font-size: 0.78rem; color: var(--gray); margin-top: 3px; }
+.calendar-event-meta strong { color: var(--navy-light); font-weight: 700; }
+.calendar-revised-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff3d6;
+  color: #92650c;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 2px 9px;
+  border-radius: 20px;
+  margin-left: 8px;
+  cursor: help;
+}
 .calendar-note { font-size: 0.8125rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6; }
 .calendar-loading, .calendar-error { padding: 32px; text-align: center; color: var(--text-muted); font-size: 0.9rem; border: 1px dashed var(--border); border-radius: 14px; }
 
@@ -648,10 +665,17 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         html += '<table class="calendar-table"><tbody>';
         day.events.forEach(function (ev) {
           var importance = ev.importance || 'low';
+          var metaParts = [];
+          if (ev.previous) metaParts.push('Previous: <strong>' + escapeHtml(ev.previous) + '</strong>');
+          if (ev.consensus) metaParts.push('Consensus: <strong>' + escapeHtml(ev.consensus) + '</strong>');
+          var metaLine = metaParts.length ? '<div class="calendar-event-meta">' + metaParts.join(' &nbsp;&middot;&nbsp; ') + '</div>' : '';
+          var revisedBadge = ev.revised
+            ? '<span class="calendar-revised-badge" title="' + escapeHtml(ev.revisedNote || 'Updated since yesterday') + '">Revised</span>'
+            : '';
           html += '<tr>' +
             '<td class="calendar-time">' + escapeHtml(ev.time || '') + '</td>' +
             '<td class="calendar-currency">' + escapeHtml(ev.currency || '') + '</td>' +
-            '<td class="calendar-event">' + escapeHtml(ev.event || '') + '</td>' +
+            '<td class="calendar-event"><div class="calendar-event-name">' + escapeHtml(ev.event || '') + revisedBadge + '</div>' + metaLine + '</td>' +
             '<td class="calendar-impact"><span class="calendar-badge calendar-badge-' + importance + '">' + importance + '</span></td>' +
             '</tr>';
         });

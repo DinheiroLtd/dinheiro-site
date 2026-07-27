@@ -22,7 +22,7 @@
       "label": "Wednesday 29 July",
       "events": [
         { "time": "12:00", "currency": "GBP", "event": "BoE's Catherine Mann speech", "importance": "low" },
-        { "time": "19:00", "currency": "USD", "event": "Federal Reserve interest rate decision", "importance": "high" },
+        { "time": "19:00", "currency": "USD", "event": "Federal Reserve interest rate decision", "importance": "high", "previous": "3.50%-3.75%", "consensus": "Hold at 3.50%-3.75%" },
         { "time": "19:30", "currency": "USD", "event": "Fed Chair press conference", "importance": "high" }
       ]
     },
@@ -34,7 +34,7 @@
         { "time": "07:00", "currency": "EUR", "event": "German flash GDP (Q2)", "importance": "medium" },
         { "time": "10:00", "currency": "EUR", "event": "Eurozone flash GDP (Q2)", "importance": "high" },
         { "time": "10:00", "currency": "EUR", "event": "ECB's Philip Lane speech", "importance": "low" },
-        { "time": "12:00", "currency": "GBP", "event": "Bank of England interest rate decision", "importance": "high" },
+        { "time": "12:00", "currency": "GBP", "event": "Bank of England interest rate decision", "importance": "high", "previous": "3.75%", "consensus": "Hold at 3.75%" },
         { "time": "12:00", "currency": "GBP", "event": "BoE Monetary Policy Report & Financial Stability Report", "importance": "medium" },
         { "time": "12:30", "currency": "GBP", "event": "BoE Governor press conference", "importance": "high" },
         { "time": "13:00", "currency": "EUR", "event": "German flash CPI", "importance": "medium" },
@@ -47,7 +47,7 @@
       "date": "2026-07-31",
       "label": "Friday 31 July",
       "events": [
-        { "time": "04:00", "currency": "JPY", "event": "Bank of Japan interest rate decision", "importance": "high" },
+        { "time": "04:00", "currency": "JPY", "event": "Bank of Japan interest rate decision", "importance": "high", "previous": "1.00%", "consensus": "Hold at 1.00%" },
         { "time": "06:00", "currency": "JPY", "event": "BoJ Governor press conference", "importance": "high" },
         { "time": "10:00", "currency": "EUR", "event": "Eurozone flash CPI", "importance": "high" },
         { "time": "10:00", "currency": "EUR", "event": "Eurozone unemployment rate", "importance": "low" },
