@@ -254,8 +254,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .report-nav-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--sky); }
 .report-nav-btn:disabled { opacity: 0.3; cursor: default; }
 .report-date-pill { font-size: 0.8125rem; font-weight: 700; color: var(--navy); background: var(--sky); padding: 6px 16px; border-radius: 20px; }
-.report-detail { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 40px 44px; max-width: 1100px; min-height: 420px; box-sizing: border-box; }
-#report-detail-wrap { min-height: 420px; }
+.report-detail { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 40px 44px; max-width: 1100px; min-height: 200px; box-sizing: border-box; }
 .report-detail-headline { font-size: 1.25rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 16px; }
 .report-detail-body { font-size: 0.9375rem; color: var(--gray); line-height: 1.85; margin-bottom: 22px; white-space: pre-line; }
 .report-detail-watch { border-top: 1px solid var(--border); padding-top: 16px; }
@@ -1320,6 +1319,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   var marketReportsData = [];
   var reportViewIndex = 0;
   var reportViewCurrency = 'GBP';
+  var reportMaxHeight = 0;
 
   function renderMarketReport(data) {
     var updatedEl = document.getElementById('report-updated');
@@ -1330,9 +1330,10 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     renderReportView();
   }
 
-  function reportDetailHtml(current, isToday) {
+  function reportDetailHtml(current, isToday, minHeight) {
     if (!current) return '<div class="calendar-loading">No data for this currency on this date.</div>';
-    return '<div class="report-detail">' +
+    var styleAttr = minHeight ? ' style="min-height:' + minHeight + 'px"' : '';
+    return '<div class="report-detail"' + styleAttr + '>' +
       '<div class="report-detail-headline">' + escapeHtml(current.headline || '') + '</div>' +
       '<div class="report-detail-body">' + escapeHtml(current.commentary || '') + '</div>' +
       '<div class="report-detail-watch">' +
@@ -1340,6 +1341,30 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       '<p>' + escapeHtml(current.watchToday || 'Nothing scheduled that\'s likely to move this currency that day.') + '</p>' +
       '</div>' +
       '</div>';
+  }
+
+  /* Measures every currency's card for the given day in an invisible probe
+     (in normal document flow so widths match, height-clamped to zero so it
+     never affects layout) and returns the tallest one. That height is then
+     locked onto the visible card so switching currency, including landing
+     on a shorter one like USD, never shrinks or grows the page underneath. */
+  function computeReportMaxHeight(currencies, isToday) {
+    var root = document.getElementById('report-root');
+    if (!root || !currencies.length) return 0;
+    var probe = document.createElement('div');
+    probe.style.visibility = 'hidden';
+    probe.style.height = '0';
+    probe.style.overflow = 'hidden';
+    probe.style.margin = '0';
+    root.appendChild(probe);
+    var maxH = 0;
+    currencies.forEach(function (c) {
+      probe.innerHTML = reportDetailHtml(c, isToday, 0);
+      var el = probe.querySelector('.report-detail');
+      if (el) maxH = Math.max(maxH, el.offsetHeight);
+    });
+    root.removeChild(probe);
+    return maxH;
   }
 
   function renderReportView() {
@@ -1370,7 +1395,13 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       '<button class="report-nav-btn" onclick="stepReport(-1)"' + (nextDisabled ? ' disabled' : '') + ' aria-label="Later report">&rarr;</button>' +
       '</div>';
 
-    root.innerHTML = switchHtml + barHtml + '<div id="report-detail-wrap">' + reportDetailHtml(current, isToday) + '</div>';
+    root.innerHTML = switchHtml + barHtml + '<div id="report-detail-wrap">' + reportDetailHtml(current, isToday, 0) + '</div>';
+
+    reportMaxHeight = computeReportMaxHeight(currencies, isToday);
+    if (reportMaxHeight) {
+      var detailEl = root.querySelector('.report-detail');
+      if (detailEl) detailEl.style.minHeight = reportMaxHeight + 'px';
+    }
   }
 
   function selectReportCurrency(code) {
@@ -1391,8 +1422,22 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     var isToday = reportViewIndex === 0;
 
     var detailWrap = document.getElementById('report-detail-wrap');
-    if (detailWrap) detailWrap.innerHTML = reportDetailHtml(current, isToday);
+    if (detailWrap) detailWrap.innerHTML = reportDetailHtml(current, isToday, reportMaxHeight);
   }
+
+  var reportResizeTimer = null;
+  window.addEventListener('resize', function () {
+    clearTimeout(reportResizeTimer);
+    reportResizeTimer = setTimeout(function () {
+      if (!marketReportsData.length) return;
+      var day = marketReportsData[reportViewIndex];
+      var currencies = (day && day.currencies) || [];
+      if (!currencies.length) return;
+      reportMaxHeight = computeReportMaxHeight(currencies, reportViewIndex === 0);
+      var detailEl = document.querySelector('#report-detail-wrap .report-detail');
+      if (detailEl && reportMaxHeight) detailEl.style.minHeight = reportMaxHeight + 'px';
+    }, 200);
+  });
 
   function stepReport(delta) {
     var newIndex = reportViewIndex + delta;
