@@ -333,16 +333,9 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .holiday-date-cell { width: 110px; flex-shrink: 0; color: var(--gray); white-space: nowrap; font-variant-numeric: tabular-nums; font-size: 0.875rem; }
 .holiday-currency-cell { display: flex; gap: 6px; flex-shrink: 0; flex-wrap: wrap; width: 130px; }
 
-/* Interest rates */
-.rate-list { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
-.rate-row { display: flex; align-items: center; gap: 16px; padding: 16px 22px; border-top: 1px solid var(--border); }
-.rate-row:first-child { border-top: none; }
-.rate-bank { flex: 1; min-width: 0; }
-.rate-bank-name { font-size: 0.9375rem; font-weight: 700; color: var(--navy); }
-.rate-bank-code { font-size: 0.75rem; color: var(--gray); margin-left: 6px; }
-.rate-note { font-size: 0.8125rem; color: var(--gray); margin-top: 4px; line-height: 1.6; }
-.rate-currency { flex-shrink: 0; width: 66px; }
-.rate-value { flex-shrink: 0; width: 130px; text-align: right; font-size: 1.0625rem; font-weight: 800; color: var(--navy); }
+/* Interest rates (reuses calendar-day / calendar-row from Economic Calendar) */
+.rate-bank-code { font-size: 0.75rem; color: var(--gray); font-weight: 400; margin-left: 6px; }
+.rate-value { flex-shrink: 0; width: 120px; text-align: right; font-size: 0.9375rem; font-weight: 800; color: var(--navy); font-variant-numeric: tabular-nums; }
 
 /* Introducers */
 .intro-benefit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
@@ -434,7 +427,6 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .intro-benefit-grid { grid-template-columns: 1fr; }
   .report-detail { padding: 22px 20px; }
   .holiday-date-cell, .holiday-currency-cell { width: auto; }
-  .rate-row { flex-wrap: wrap; padding: 14px 16px; }
   .rate-value { width: auto; margin-left: auto; }
   .intro-cta-banner { padding: 24px; }
   .callback-grid { grid-template-columns: 1fr; }
@@ -1220,16 +1212,17 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       return;
     }
 
-    var html = '<div class="rate-list">';
+    var html = '<div class="calendar-day">';
+    html += '<div class="calendar-day-head">Major central banks</div>';
     rates.forEach(function (r) {
-      html += '<div class="rate-row">' +
-        '<div class="rate-bank">' +
-        '<span class="rate-bank-name">' + escapeHtml(r.bank || '') + '</span>' +
-        '<span class="rate-bank-code">' + escapeHtml(r.code || '') + '</span>' +
-        (r.note ? '<div class="rate-note">' + escapeHtml(r.note) + '</div>' : '') +
-        '</div>' +
-        '<div class="rate-currency"><span class="calendar-badge calendar-badge-medium">' + escapeHtml(r.currency || '') + '</span></div>' +
+      html += '<div class="calendar-row">' +
+        '<div class="calendar-row-main" onclick="toggleCalendarRow(this)">' +
+        '<div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">' + escapeHtml(r.currency || '') + '</span></div>' +
+        '<div class="calendar-event"><div class="calendar-event-name">' + escapeHtml(r.bank || '') + '<span class="rate-bank-code">' + escapeHtml(r.code || '') + '</span></div></div>' +
         '<div class="rate-value">' + escapeHtml(r.rate || '') + '</div>' +
+        '<div class="calendar-expand-icon"></div>' +
+        '</div>' +
+        '<div class="calendar-row-detail">' + escapeHtml(r.note || 'No further detail available.') + '</div>' +
         '</div>';
     });
     html += '</div>';
