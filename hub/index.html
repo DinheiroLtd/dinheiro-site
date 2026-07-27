@@ -244,15 +244,6 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .siopay-banner p { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.7; margin: 0; }
 .siopay-banner-btn { position: relative; z-index: 1; flex-shrink: 0; }
 
-/* Market insights */
-.insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.insight-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 28px; text-decoration: none; display: block; transition: box-shadow 0.2s, transform 0.2s; }
-.insight-card:hover { box-shadow: 0 8px 28px rgba(28,60,87,0.1); transform: translateY(-2px); }
-.insight-tag { display: inline-block; background: var(--sky); color: var(--navy-light); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 11px; border-radius: 20px; margin-bottom: 14px; }
-.insight-card h3 { font-size: 1.0625rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 10px; }
-.insight-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
-.insight-card .arrow { font-size: 0.8125rem; font-weight: 600; color: var(--navy-light); }
-
 /* Morning market report */
 .report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .report-card { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 26px; }
@@ -418,7 +409,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .hub-tabs { gap: 4px; }
   .hub-tab-btn { padding: 12px 14px; font-size: 0.825rem; }
   .hub-panel { padding: 40px 20px 64px; }
-  .home-grid, .insight-grid, .brochure-grid { grid-template-columns: 1fr; }
+  .home-grid, .brochure-grid { grid-template-columns: 1fr; }
   .glossary-card { grid-column: span 1; }
   .glossary-list { grid-template-columns: 1fr; }
   .siopay-banner { padding: 24px; }
@@ -501,7 +492,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
           <h3>Market Reports</h3>
-          <p>A daily morning briefing on GBP, EUR and USD, plus rate outlooks and analysis from the Dinheiro team.</p>
+          <p>A daily morning briefing on GBP, EUR and USD &mdash; how each is trading, and what's scheduled today.</p>
           <a href="#" onclick="showTab('insights'); return false;">View insights &rarr;</a>
         </div>
         <div class="home-card">
@@ -572,42 +563,6 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       <div id="report-updated" class="calendar-updated"></div>
       <div id="report-root"><div class="calendar-loading">Loading this morning's report&hellip;</div></div>
       <p class="calendar-note">General market commentary for information only &mdash; not personalised advice. See the Economic Calendar tab for the full week ahead.</p>
-
-      <h2 style="margin-top: 56px;">From the Dinheiro team.</h2>
-      <p class="lead">Deeper analysis on rate movements, central bank decisions and what they mean for your payments. These link out to the full articles on the Dinheiro website.</p>
-
-      <div class="insight-grid">
-        <a class="insight-card" href="/blog/gbp-eur-outlook-q3-2026.html" target="_blank" rel="noopener">
-          <span class="insight-tag">Rates</span>
-          <h3>GBP/EUR outlook: what Q3 2026 holds for UK businesses and property buyers</h3>
-          <p>Where sterling stands against the euro heading into Q3, and what it means if you're trading or buying abroad.</p>
-          <span class="arrow">Read more &rarr;</span>
-        </a>
-        <a class="insight-card" href="/blog/boe-rate-decision-oil-inflation-risk-2026.html" target="_blank" rel="noopener">
-          <span class="insight-tag">Central Banks</span>
-          <h3>Bank of England decision this week: what oil-driven inflation risk means for your payments</h3>
-          <p>How the latest BoE decision and oil-driven inflation pressure could feed through to your currency costs.</p>
-          <span class="arrow">Read more &rarr;</span>
-        </a>
-        <a class="insight-card" href="/blog/geopolitical-risk-fx-hedging-2026.html" target="_blank" rel="noopener">
-          <span class="insight-tag">Risk</span>
-          <h3>Geopolitical risk is back in FX markets: how to protect your business payments</h3>
-          <p>Why volatility driven by geopolitical events matters for anyone making international payments, and how to hedge it.</p>
-          <span class="arrow">Read more &rarr;</span>
-        </a>
-        <a class="insight-card" href="/blog/buying-property-abroad-currency-risk.html" target="_blank" rel="noopener">
-          <span class="insight-tag">Personal</span>
-          <h3>Buying abroad in 2026: how to protect yourself from currency swings</h3>
-          <p>Practical steps for protecting an overseas property purchase from adverse rate movements between now and completion.</p>
-          <span class="arrow">Read more &rarr;</span>
-        </a>
-        <a class="insight-card" href="/blog/hidden-cost-bank-transfers.html" target="_blank" rel="noopener">
-          <span class="insight-tag">Business</span>
-          <h3>The hidden cost of paying international suppliers through your bank</h3>
-          <p>What high-street banks don't show you on their exchange rates, and what it's really costing your business.</p>
-          <span class="arrow">Read more &rarr;</span>
-        </a>
-      </div>
     </section>
 
     <!-- ECONOMIC CALENDAR -->
