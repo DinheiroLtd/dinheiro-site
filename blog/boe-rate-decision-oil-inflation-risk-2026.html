@@ -3,37 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bank of England Decision This Week: What Oil-Driven Inflation Risk Means for Your Payments | Dinheiro Insights</title>
+  <title>Bank of England decision this week: what oil-driven inflation risk means for your payments | Dinheiro Insights</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../styles.css?v=18">
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="apple-touch-icon" href="../favicon-192.png">
   <style>
-    .article-hero { background: var(--navy); position: relative; overflow: hidden; padding: 64px 48px 56px; }
-    .article-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-50deg, transparent, transparent 80px, rgba(255,255,255,0.018) 80px, rgba(255,255,255,0.018) 82px); }
-    .article-hero-inner { position: relative; max-width: 760px; margin: 0 auto; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 24px; transition: color 0.2s; }
-    .back-link:hover { color: rgba(255,255,255,0.85); }
-    .article-cat-badge { display: inline-block; font-size: 0.67rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px 12px; border-radius: 12px; background: var(--accent); color: var(--navy); margin-bottom: 18px; }
-    .article-hero h1 { font-size: clamp(1.7rem, 2.8vw, 2.5rem); font-weight: 800; color: #fff; line-height: 1.12; letter-spacing: -0.5px; margin-bottom: 20px; }
-    .article-meta { display: flex; align-items: center; gap: 12px; font-size: 0.8rem; color: rgba(255,255,255,0.45); }
-    .article-meta-dot { width: 3px; height: 3px; background: rgba(255,255,255,0.25); border-radius: 50%; }
-    .article-body { max-width: 760px; margin: 0 auto; padding: 56px 48px 80px; }
-    .article-body p { font-size: 1rem; line-height: 1.8; color: #374151; margin-bottom: 24px; }
-    .article-body h2 { font-size: 1.3rem; font-weight: 700; color: var(--navy); margin: 40px 0 16px; line-height: 1.3; }
-    .article-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin: 28px 0 12px; }
-    .article-callout { border-left: 3px solid var(--accent); padding: 18px 24px; background: var(--sky); border-radius: 0 12px 12px 0; margin: 32px 0; }
-    .article-callout p { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin: 0; line-height: 1.6; }
-    .article-cta { background: var(--navy); border-radius: 16px; padding: 36px 40px; margin-top: 56px; position: relative; overflow: hidden; }
-    .article-cta::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-50deg, transparent, transparent 60px, rgba(255,255,255,0.018) 60px, rgba(255,255,255,0.018) 62px); }
-    .article-cta-inner { position: relative; }
-    .article-cta h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
-    .article-cta p { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 24px; }
-    @media (max-width: 900px) { .article-hero { padding: 48px 24px; } .article-body { padding: 40px 24px 60px; } .article-cta { padding: 28px 24px; } }
+    /* ── progress bar ── */
+    .art-progress-track { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(28,60,87,.12); z-index: 9999; }
+    .art-progress-bar { height: 3px; width: 0%; background: #8fcbeb; transition: width .1s linear; }
+
+    /* ── hero ── */
+    .art-hero { background: #1C3C57; position: relative; overflow: hidden; padding: 0; }
+    .art-hero-stripe { position: absolute; inset: 0; background: repeating-linear-gradient(-55deg, transparent, transparent 30px, rgba(255,255,255,.018) 30px, rgba(255,255,255,.018) 31px); pointer-events: none; }
+    .art-hero-inner { position: relative; max-width: 1100px; margin: 0 auto; padding: 36px 48px 32px; }
+    .art-back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,.38); text-decoration: none; margin-bottom: 22px; transition: color .2s; }
+    .art-back:hover { color: rgba(255,255,255,.7); }
+    .art-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .art-badge { display: inline-block; font-size: 0.67rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 4px 12px; border-radius: 12px; background:#8fcbeb;color:#1C3C57; }
+    .art-readtime { font-size: 0.78rem; color: rgba(255,255,255,.35); display: flex; align-items: center; gap: 5px; }
+    .art-title { font-size: clamp(1.6rem, 2.6vw, 2.3rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 26px; letter-spacing: -.3px; max-width: 820px; }
+    .art-author-bar { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; border-top: 0.5px solid rgba(255,255,255,.1); flex-wrap: wrap; gap: 14px; }
+    .art-author { display: flex; align-items: center; gap: 12px; }
+    .art-avatar { width: 36px; height: 36px; border-radius: 50%; background: rgba(143,203,235,.2); border: 1.5px solid rgba(143,203,235,.3); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; color: #8fcbeb; flex-shrink: 0; }
+    .art-author-name { font-size: 0.85rem; font-weight: 600; color: #fff; }
+    .art-author-date { font-size: 0.75rem; color: rgba(255,255,255,.38); margin-top: 1px; }
+    .art-share { display: flex; gap: 8px; }
+    .art-share-btn { width: 30px; height: 30px; border-radius: 50%; border: 0.5px solid rgba(255,255,255,.15); display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; transition: border-color .2s; }
+    .art-share-btn:hover { border-color: rgba(255,255,255,.35); }
+    .art-share-btn svg { opacity: .45; }
+    .art-share-btn:hover svg { opacity: .75; }
+
+    /* ── layout ── */
+    .art-outer { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+    .art-columns { display: grid; grid-template-columns: 1fr 260px; gap: 48px; padding: 40px 0 80px; }
+
+    /* ── article body ── */
+    .art-tldr { border-radius: 12px; overflow: hidden; margin-bottom: 32px; border: 1px solid #d4e8f5; }
+    .art-tldr-head { background: #1C3C57; padding: 12px 18px; display: flex; align-items: center; gap: 9px; }
+    .art-tldr-head svg { opacity: .7; flex-shrink: 0; }
+    .art-tldr-label { font-size: 0.7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8fcbeb; }
+    .art-tldr-body { background: #f0f7fc; padding: 16px 18px; }
+    .art-tk-row { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+    .art-tk-row:last-child { margin-bottom: 0; }
+    .art-tk-check { width: 16px; height: 16px; border-radius: 50%; background: #1C3C57; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .art-tk-text { font-size: 0.88rem; color: #1C3C57; font-weight: 500; line-height: 1.55; }
+    .art-body p { font-size: 1rem; line-height: 1.82; color: #374151; margin-bottom: 22px; }
+    .art-body h2 { font-size: 1.25rem; font-weight: 800; color: #1C3C57; margin: 36px 0 14px; padding-bottom: 10px; border-bottom: 1px solid #e2edf5; }
+    .art-body h3 { font-size: 1.05rem; font-weight: 700; color: #1C3C57; margin: 24px 0 10px; }
+    .art-callout { display: flex; gap: 14px; padding: 18px 20px; border-radius: 12px; background: #e8f4fb; margin: 26px 0; align-items: flex-start; }
+    .art-callout-icon { width: 32px; height: 32px; border-radius: 8px; background: #1C3C57; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .art-callout p { font-size: 0.93rem; font-weight: 600; color: #1C3C57; line-height: 1.65; margin: 0; }
+    .art-pull { font-size: 1.15rem; font-weight: 700; font-style: italic; color: #1C3C57; padding: 18px 24px; margin: 28px 0; border-left: 3px solid #8fcbeb; border-radius: 0 10px 10px 0; background: #f8fbfd; line-height: 1.5; }
+
+    /* tables (property post) */
+    .cost-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9rem; }
+    .cost-table th { background: #1C3C57; color: #fff; padding: 10px 14px; text-align: left; font-size: 0.8rem; font-weight: 700; letter-spacing: .04em; }
+    .cost-table td { padding: 9px 14px; border-bottom: 1px solid #e8f0f5; color: #374151; }
+    .cost-table tr:last-child td { border-bottom: none; }
+    .cost-table .highlight { font-weight: 700; color: #1C3C57; }
+
+    /* cost comparison (bank transfers post) */
+    .cost-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .cost-col { border-radius: 10px; overflow: hidden; border: 1px solid #e2edf5; }
+    .cost-col-label { padding: 10px 14px; font-size: 0.75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+    .label-bank { background: #f1f5f9; color: #6b7280; }
+    .label-dinheiro { background: #1C3C57; color: #8fcbeb; }
+    .cost-col-item { display: flex; justify-content: space-between; padding: 8px 14px; border-top: 1px solid #e2edf5; font-size: 0.85rem; color: #374151; }
+    .cost-col-dinheiro .cost-col-item { border-color: rgba(255,255,255,.1); color: #fff; background: rgba(28,60,87,.96); }
+
+    /* bottom CTA */
+    .art-bottom-cta { background: #1C3C57; border-radius: 16px; padding: 36px 40px; margin-top: 48px; position: relative; overflow: hidden; }
+    .art-bottom-cta::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-55deg, transparent, transparent 60px, rgba(255,255,255,.018) 60px, rgba(255,255,255,.018) 61px); }
+    .art-bottom-cta-inner { position: relative; }
+    .art-bottom-cta h3 { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .art-bottom-cta p { font-size: 0.9rem; color: rgba(255,255,255,.55); line-height: 1.6; margin-bottom: 24px; }
+
+    /* ── sidebar ── */
+    .art-sidebar { position: sticky; top: 80px; align-self: start; }
+    .art-sb-block { margin-bottom: 24px; }
+    .art-sb-label { font-size: 0.68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #8fcbeb; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid #e2edf5; }
+    .art-prog-wrap { margin-bottom: 6px; }
+    .art-prog-track { height: 4px; background: #e2edf5; border-radius: 4px; }
+    .art-prog-fill { height: 4px; width: 0%; background: #8fcbeb; border-radius: 4px; transition: width .2s; }
+    .art-prog-pct { font-size: 0.75rem; color: #9ca3af; text-align: right; margin-top: 4px; }
+    .art-toc-item { display: flex; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid #edf2f7; align-items: flex-start; cursor: pointer; text-decoration: none; }
+    .art-toc-item:hover .art-toc-text { color: #1C3C57; }
+    .art-toc-num { font-size: 0.68rem; font-weight: 700; color: #8fcbeb; flex-shrink: 0; margin-top: 2px; min-width: 18px; }
+    .art-toc-text { font-size: 0.82rem; color: #6b7280; line-height: 1.4; transition: color .15s; }
+    .art-cta-box { background: #1C3C57; border-radius: 12px; padding: 18px; margin-bottom: 0; }
+    .art-cta-box h4 { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+    .art-cta-box p { font-size: 0.8rem; color: rgba(255,255,255,.5); line-height: 1.55; margin-bottom: 14px; }
+    .art-cta-btn { display: block; text-align: center; padding: 9px; border-radius: 8px; font-size: 0.82rem; font-weight: 700; text-decoration: none; margin-bottom: 7px; }
+    .art-cta-btn.solid { background: #8fcbeb; color: #1C3C57; }
+    .art-cta-btn.outline { background: transparent; border: 0.5px solid rgba(255,255,255,.25); color: rgba(255,255,255,.65); }
+    .art-rel-item { padding: 10px 0; border-bottom: 0.5px solid #edf2f7; }
+    .art-rel-item:last-child { border-bottom: none; }
+    .art-rel-cat { font-size: 0.67rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: 3px; }
+    .art-rel-title { font-size: 0.83rem; font-weight: 600; color: #1C3C57; line-height: 1.4; display: block; text-decoration: none; margin-bottom: 3px; }
+    .art-rel-title:hover { color: #244a6b; }
+    .art-rel-meta { font-size: 0.73rem; color: #9ca3af; }
+
+    @media (max-width: 900px) {
+      .art-hero-inner { padding: 28px 24px 24px; }
+      .art-outer { padding: 0 24px; }
+      .art-columns { grid-template-columns: 1fr; gap: 32px; padding: 28px 0 60px; }
+      .art-sidebar { position: static; }
+      .art-bottom-cta { padding: 28px 24px; }
+      .cost-comparison { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
+  <div class="art-progress-track"><div class="art-progress-bar" id="art-prog"></div></div>
+
   <nav id="navbar">
     <a href="../index.html" class="nav-logo"><img src="../Dinheiro_logo.png" alt="Dinheiro"></a>
     <ul class="nav-links">
@@ -53,57 +137,157 @@
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
   </nav>
 
-  <section class="article-hero">
-    <div class="article-hero-inner">
-      <a href="../insights.html" class="back-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <section class="art-hero">
+    <div class="art-hero-stripe"></div>
+    <div class="art-hero-inner">
+      <a href="../insights.html" class="art-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
         Back to Insights
       </a>
-      <div class="article-cat-badge">Market outlook</div>
-      <h1>Bank of England decision this week: what oil-driven inflation risk means for your payments</h1>
-      <div class="article-meta">
-        <span>27 Jul 2026</span>
-        <div class="article-meta-dot"></div>
-        <span>5 min read</span>
-        <div class="article-meta-dot"></div>
-        <span>Dinheiro Research Team</span>
+      <div class="art-eyebrow">
+        <span class="art-badge">Market outlook</span>
+        <span class="art-readtime">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          5 min read
+        </span>
+      </div>
+      <h1 class="art-title">Bank of England decision this week: what oil-driven inflation risk means for your payments</h1>
+      <div class="art-author-bar">
+        <div class="art-author">
+          <div class="art-avatar">DR</div>
+          <div>
+            <div class="art-author-name">Dinheiro Research Team</div>
+            <div class="art-author-date">27 July 2026</div>
+          </div>
+        </div>
+        <div class="art-share">
+          <a class="art-share-btn" aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.dinheirogroup.com/blog/boe-rate-decision-oil-inflation-risk-2026.html" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a class="art-share-btn" aria-label="Copy link" href="#" onclick="navigator.clipboard&&navigator.clipboard.writeText(location.href);return false;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+          </a>
+          <a class="art-share-btn" aria-label="Share by email" href="mailto:?subject=Bank of England decision this week: what oil-driven inflation risk means for your payments&body=I thought this might interest you: https://www.dinheirogroup.com/blog/boe-rate-decision-oil-inflation-risk-2026.html">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="article-body">
-    <p>The Bank of England's Monetary Policy Committee meets this week, and the calculus has shifted noticeably since the last decision. A few months ago, markets were pricing in a steady path of rate cuts through the second half of 2026. That path now looks far less certain. Renewed tensions in the Middle East have pushed oil prices higher, and the knock-on effect on UK inflation expectations is enough to make the Committee think twice about cutting further. For any business or individual with payments crossing borders, this is exactly the kind of moment where a passive approach to currency risk starts to cost real money.</p>
+  <div class="art-outer">
+    <div class="art-columns">
 
-    <h2>Why the inflation picture has changed</h2>
-    <p>Earlier in the summer, falling fuel prices helped headline inflation ease, and that gave the Bank room to talk about further cuts. That window is closing. Oil markets have moved firmly higher on the back of the conflict, and forecasters now expect UK inflation to climb back up over the coming months rather than continue its gentle descent. That matters because the Bank's entire justification for cutting rates rested on inflation staying on a downward path. When the path bends the other way, even briefly, policymakers tend to pause and wait for clearer signals before committing to more easing.</p>
+      <div class="art-body-col">
+        <div class="art-tldr">
+          <div class="art-tldr-head">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8fcbeb" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            <span class="art-tldr-label">Key takeaways from this article</span>
+          </div>
+          <div class="art-tldr-body">
+            <div class="art-tk-row">
+              <div class="art-tk-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8fcbeb" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <span class="art-tk-text">Rising oil prices have reduced the likelihood of further Bank of England rate cuts, shifting market expectations meaningfully in recent weeks.</span>
+            </div>
+<div class="art-tk-row">
+              <div class="art-tk-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8fcbeb" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <span class="art-tk-text">The combination of a firmer BoE and ongoing geopolitical risk tends to produce choppy, less predictable sterling movements rather than a clean trend.</span>
+            </div>
+<div class="art-tk-row">
+              <div class="art-tk-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#8fcbeb" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <span class="art-tk-text">Businesses with payments due in the coming weeks should review their exposure before the announcement, not react to it afterwards.</span>
+            </div>
 
-    <p>The practical result is that market expectations for further Bank of England cuts this year have been pushed back, and in some scenarios pared back altogether. That is a meaningful change in tone from where things stood only a few weeks ago, and it is already being reflected in how sterling is trading against both the euro and the dollar.</p>
+          </div>
+        </div>
 
-    <h2>What this means for the pound and your payments</h2>
-    <p>A central bank that is expected to hold rates for longer than previously thought tends to offer some support to its currency, all else being equal. But this is not a clean, one-directional story. The same geopolitical tensions driving oil higher are also a source of broader market nervousness, and sterling has shown itself sensitive to swings in risk appetite through this conflict already. That combination, a firmer rate outlook pulling one way and geopolitical risk pulling the other, tends to produce choppier, less predictable currency movements rather than a smooth trend in either direction.</p>
+        <div class="art-body">
+          <p>The Bank of England's Monetary Policy Committee meets this week, and the calculus has shifted noticeably since the last decision. A few months ago, markets were pricing in a steady path of rate cuts through the second half of 2026. That path now looks far less certain. Renewed tensions in the Middle East have pushed oil prices higher, and the knock-on effect on UK inflation expectations is enough to make the Committee think twice about cutting further. For any business or individual with payments crossing borders, this is exactly the kind of moment where a passive approach to currency risk starts to cost real money.</p>
 
-    <p>For a business paying European or American suppliers, or an individual mid-way through funding an overseas property purchase, that unpredictability is the real issue. It is not that the pound is guaranteed to weaken or strengthen from here. It is that the range of plausible outcomes has widened, and a payment you schedule without a plan is now more exposed than it would have been a month ago.</p>
+<h2>Why the inflation picture has changed</h2>
+<p>Earlier in the summer, falling fuel prices helped headline inflation ease, and that gave the Bank room to talk about further cuts. That window is closing. Oil markets have moved firmly higher on the back of the conflict, and forecasters now expect UK inflation to climb back up over the coming months rather than continue its gentle descent. That matters because the Bank's entire justification for cutting rates rested on inflation staying on a downward path. When the path bends the other way, even briefly, policymakers tend to pause and wait for clearer signals before committing to more easing.</p>
 
-    <div class="article-callout">
-      <p>The Bank of England's decision this week will not just move the pound in the moment. It will set the tone for how much further volatility you should expect to plan around through the rest of the year.</p>
-    </div>
+<p>The practical result is that market expectations for further Bank of England cuts this year have been pushed back, and in some scenarios pared back altogether. That is a meaningful change in tone from where things stood only a few weeks ago, and it is already being reflected in how sterling is trading against both the euro and the dollar.</p>
 
-    <h2>What to do before and after the decision</h2>
-    <p>If you have a known payment coming up in the next few weeks, whether that is payroll for overseas staff, a supplier invoice, or a deposit on a property, this is a sensible moment to review how exposed you are. A forward contract lets you lock in today's terms for a payment due later, taking the guesswork out of the equation regardless of which way the announcement moves the market. If your payment timing is more flexible, a limit order lets you set a target level and have it executed automatically if the market reaches it, without needing to watch screens all day.</p>
+<h2>What this means for the pound and your payments</h2>
+<p>A central bank that is expected to hold rates for longer than previously thought tends to offer some support to its currency, all else being equal. But this is not a clean, one-directional story. The same geopolitical tensions driving oil higher are also a source of broader market nervousness, and sterling has shown itself sensitive to swings in risk appetite through this conflict already.</p>
 
-    <p>What you should not do is treat the decision as background noise. Businesses that run currency exposure through a single bank transfer, timed whenever it happens to be convenient, are the ones most likely to be caught out by a sharp move around a central bank announcement. A short conversation about your upcoming payment schedule now is far cheaper than an unplanned currency loss after the fact.</p>
+<div class="art-pull">"A hold or surprise from the MPC will not just move the pound in the moment. It will set the tone for how much volatility you should plan around through the rest of the year."</div>
 
-    <p>Whatever the Committee decides this week, the businesses and individuals who come out ahead will be the ones who had a plan in place before the announcement, not the ones reacting to it afterwards. If you have payments due in the coming weeks or months, now is the time to talk to us about how to protect them.</p>
+<p>That combination, a firmer rate outlook pulling one way and geopolitical risk pulling the other, tends to produce choppier, less predictable currency movements rather than a smooth trend in either direction. For a business paying European or American suppliers, or an individual mid-way through funding an overseas property purchase, that unpredictability is the real issue.</p>
 
-    <div class="article-cta">
-      <div class="article-cta-inner">
-        <h3>Don't let this week's decision catch your payments off guard</h3>
-        <p>Speak with our team about locking in certainty for upcoming payments, whatever direction the market moves.</p>
-        <div class="hero-btns">
-          <a href="../index.html#contact" class="btn btn-white btn-lg">Get a Quote</a>
-          <a href="../compare.html" class="btn btn-outline-white btn-lg">See How We Compare</a>
+<div class="art-callout">
+  <div class="art-callout-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8fcbeb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
+  <p>The Bank of England's decision this week will not just move the pound in the moment. It will set the tone for how much further volatility you should expect to plan around through the rest of the year.</p>
+</div>
+
+<h2>What to do before and after the decision</h2>
+<p>If you have a known payment coming up in the next few weeks, whether that is payroll for overseas staff, a supplier invoice, or a deposit on a property, this is a sensible moment to review how exposed you are. A forward contract lets you lock in today's terms for a payment due later, taking the guesswork out of the equation regardless of which way the announcement moves the market. If your payment timing is more flexible, a limit order lets you set a target level and have it executed automatically if the market reaches it, without needing to watch screens all day.</p>
+
+<p>What you should not do is treat the decision as background noise. Businesses that run currency exposure through a single bank transfer, timed whenever it happens to be convenient, are the ones most likely to be caught out by a sharp move around a central bank announcement. A short conversation about your upcoming payment schedule now is far cheaper than an unplanned currency loss after the fact.</p>
+
+<p>Whatever the Committee decides this week, the businesses and individuals who come out ahead will be the ones who had a plan in place before the announcement, not the ones reacting to it afterwards. If you have payments due in the coming weeks or months, now is the time to talk to us about how to protect them.</p>
+        </div>
+
+        <div class="art-bottom-cta">
+          <div class="art-bottom-cta-inner">
+            <h3>Don't let this week's decision catch your payments off guard</h3>
+            <p>Speak with our team about locking in certainty for upcoming payments, whatever direction the market moves.</p>
+            <div class="hero-btns">
+              <a href="../index.html#contact" class="btn btn-white btn-lg">Get a Quote</a>
+              <a href="../compare.html" class="btn btn-outline-white btn-lg">See How We Compare</a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <aside class="art-sidebar">
+        <div class="art-sb-block">
+          <div class="art-sb-label">Reading progress</div>
+          <div class="art-prog-wrap">
+            <div class="art-prog-track"><div class="art-prog-fill" id="sb-prog"></div></div>
+            <div class="art-prog-pct" id="sb-pct">0% complete</div>
+          </div>
+        </div>
+
+        <div class="art-sb-block">
+          <div class="art-sb-label">In this article</div>
+          <div class="art-toc-item"><span class="art-toc-num">01</span><span class="art-toc-text">Why the inflation picture has changed</span></div>
+<div class="art-toc-item"><span class="art-toc-num">02</span><span class="art-toc-text">What this means for the pound and your payments</span></div>
+<div class="art-toc-item"><span class="art-toc-num">03</span><span class="art-toc-text">What to do before and after the decision</span></div>
+
+        </div>
+
+        <div class="art-sb-block">
+          <div class="art-cta-box">
+            <h4>Plan before the announcement</h4>
+            <p>Lock in your rate before the MPC decision moves the market. Our team can act fast.</p>
+            <a href="../index.html#contact" class="art-cta-btn solid">Get a Quote</a>
+            <a href="../compare.html" class="art-cta-btn outline">See How We Compare</a>
+          </div>
+        </div>
+
+        <div class="art-sb-block">
+          <div class="art-sb-label">Related articles</div>
+          <div class="art-rel-item">
+              <div class="art-rel-cat">Business</div>
+              <a href="geopolitical-risk-fx-hedging-2026.html" class="art-rel-title">Geopolitical risk is back in FX markets: how to protect your business payments</a>
+              <div class="art-rel-meta">27 Jul 2026 &middot; 6 min</div>
+            </div>
+<div class="art-rel-item">
+              <div class="art-rel-cat">Market outlook</div>
+              <a href="gbp-eur-outlook-q3-2026.html" class="art-rel-title">GBP/EUR outlook: what Q3 2026 holds for UK businesses and property buyers</a>
+              <div class="art-rel-meta">18 Jul 2026 &middot; 5 min</div>
+            </div>
+<div class="art-rel-item">
+              <div class="art-rel-cat">Business</div>
+              <a href="hidden-cost-bank-transfers.html" class="art-rel-title">The hidden cost of paying international suppliers through your bank</a>
+              <div class="art-rel-meta">9 Jul 2026 &middot; 3 min</div>
+            </div>
+
+        </div>
+      </aside>
+
     </div>
   </div>
 
@@ -130,6 +314,22 @@
     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); });
     const hamburger = document.getElementById('nav-hamburger');
     if (hamburger) { hamburger.addEventListener('click', () => { document.querySelector('.nav-links').classList.toggle('open'); hamburger.classList.toggle('open'); }); }
+
+    // Reading progress
+    const prog = document.getElementById('art-prog');
+    const sbProg = document.getElementById('sb-prog');
+    const sbPct = document.getElementById('sb-pct');
+    window.addEventListener('scroll', () => {
+      const el = document.querySelector('.art-body-col');
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const total = el.offsetHeight - window.innerHeight;
+      const scrolled = Math.max(0, Math.min(1, -rect.top / total));
+      const pct = Math.round(scrolled * 100);
+      prog.style.width = pct + '%';
+      sbProg.style.width = pct + '%';
+      sbPct.textContent = pct + '% complete';
+    });
   </script>
 </body>
 </html>
