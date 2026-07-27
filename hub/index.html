@@ -453,7 +453,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       <div id="calendar-updated" class="calendar-updated"></div>
       <div id="calendar-root"><div class="calendar-loading">Loading this week's calendar&hellip;</div></div>
 
-      <p class="calendar-note">Times shown are approximate UK local time and provided for general information only &mdash; not personalised advice. Always confirm exact timing nearer the release if it's material to a trade you're planning.</p>
+      <p class="calendar-note" id="calendar-tz-note">Times shown are approximate UK local time and provided for general information only &mdash; not personalised advice. Always confirm exact timing nearer the release if it's material to a trade you're planning.</p>
     </section>
 
     <!-- BROCHURES -->
@@ -630,6 +630,12 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     var root = document.getElementById('calendar-root');
     var updatedEl = document.getElementById('calendar-updated');
     if (data.updated && updatedEl) updatedEl.textContent = fmtUpdated(data.updated);
+
+    var tzNoteEl = document.getElementById('calendar-tz-note');
+    if (tzNoteEl) {
+      var tzLabel = data.timezone ? data.timezone : 'UK time';
+      tzNoteEl.textContent = 'All times below are shown in ' + tzLabel + ' (UK local time) and are approximate, for general information only — not personalised advice. UK clocks move between BST and GMT across the year, so always confirm exact timing nearer the release if it’s material to a trade you’re planning.';
+    }
 
     var todayStr = new Date().toISOString().slice(0, 10);
     var html = '';
