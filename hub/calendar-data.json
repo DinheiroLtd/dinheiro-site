@@ -40,7 +40,7 @@
         {
           "time": "19:00", "currency": "USD", "event": "Federal Reserve interest rate decision", "importance": "high",
           "previous": "3.50%-3.75%", "consensus": "Hold at 3.50%-3.75%",
-          "description": "The Federal Reserve's Open Market Committee (FOMC) announces its target range for the US federal funds rate. This is one of the single biggest drivers of the US dollar and global markets — a surprise move (or surprise language in the statement) can cause sharp swings across all major currency pairs."
+          "description": "The Federal Reserve's Open Market Committee (FOMC) announces its target range for the US federal funds rate. This is one of the single biggest drivers of the US dollar and global markets: a surprise move (or surprise language in the statement) can cause sharp swings across all major currency pairs."
         },
         {
           "time": "19:30", "currency": "USD", "event": "Fed Chair press conference", "importance": "high",
@@ -71,7 +71,7 @@
         {
           "time": "12:00", "currency": "GBP", "event": "Bank of England interest rate decision", "importance": "high",
           "previous": "3.75%", "consensus": "Hold at 3.75%",
-          "description": "The Bank of England's Monetary Policy Committee (MPC) announces its decision on the Bank Rate, the UK's main interest rate. This is the single biggest scheduled event for sterling each cycle — a surprise decision or shift in the accompanying vote split can move GBP sharply."
+          "description": "The Bank of England's Monetary Policy Committee (MPC) announces its decision on the Bank Rate, the UK's main interest rate. This is the single biggest scheduled event for sterling each cycle: a surprise decision or shift in the accompanying vote split can move GBP sharply."
         },
         {
           "time": "12:00", "currency": "GBP", "event": "BoE Monetary Policy Report & Financial Stability Report", "importance": "medium",
@@ -87,11 +87,11 @@
         },
         {
           "time": "13:30", "currency": "USD", "event": "US GDP (Q2, advance estimate)", "importance": "high",
-          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy — surprises here tend to move the dollar broadly."
+          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: surprises here tend to move the dollar broadly."
         },
         {
           "time": "13:30", "currency": "USD", "event": "US PCE inflation", "importance": "high",
-          "description": "The Personal Consumption Expenditures price index — the Federal Reserve's preferred measure of inflation. Often more market-moving than CPI because of how directly it feeds into the Fed's own policy framework."
+          "description": "The Personal Consumption Expenditures price index, the Federal Reserve's preferred measure of inflation. Often more market-moving than CPI because of how directly it feeds into the Fed's own policy framework."
         },
         {
           "time": "13:30", "currency": "USD", "event": "US weekly initial jobless claims", "importance": "low",
