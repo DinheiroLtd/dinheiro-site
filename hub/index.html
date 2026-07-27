@@ -391,6 +391,31 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 }
 .callback-field select:hover { border-color: var(--accent); background-color: var(--sky); }
 .callback-field select:focus { background-color: white; }
+/* Custom date picker (Preferred day) */
+.date-picker { position: relative; }
+.date-picker-input { padding-right: 42px !important; cursor: pointer; background: white; }
+.date-picker-input::placeholder { color: var(--text-muted); }
+.date-picker-icon { position: absolute; right: 14px; top: 15px; color: var(--gray); pointer-events: none; }
+.date-picker-popup { display: none; position: absolute; top: calc(100% + 8px); left: 0; z-index: 20; width: 300px; background: white; border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 16px 36px rgba(28,60,87,0.16); padding: 18px; }
+.date-picker.dp-open .date-picker-popup { display: block; }
+.date-picker.dp-open .date-picker-input { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(143,203,235,0.25); }
+.date-picker-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.date-picker-month { font-size: 0.9375rem; font-weight: 700; color: var(--navy); }
+.date-picker-nav { display: flex; gap: 6px; }
+.date-picker-nav-btn { width: 28px; height: 28px; border-radius: 50%; border: none; background: var(--sky); color: var(--navy-light); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.15s, color 0.15s; padding: 0; }
+.date-picker-nav-btn:hover { background: var(--accent); color: white; }
+.date-picker-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 6px; }
+.date-picker-weekday { text-align: center; font-size: 0.6875rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.03em; padding: 4px 0; }
+.date-picker-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+.date-picker-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 0.8125rem; font-weight: 600; color: var(--navy); border-radius: 10px; cursor: pointer; transition: background 0.15s, color 0.15s; }
+.date-picker-day:hover { background: var(--sky); }
+.date-picker-day.muted { color: var(--text-muted); font-weight: 400; cursor: default; pointer-events: none; }
+.date-picker-day.today { box-shadow: inset 0 0 0 1.5px var(--accent-dark); }
+.date-picker-day.selected { background: var(--navy); color: white; }
+.date-picker-day.selected:hover { background: var(--navy); }
+.date-picker-footer { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); text-align: center; }
+.date-picker-clear { background: none; border: none; color: var(--navy-light); font-size: 0.8125rem; font-weight: 600; cursor: pointer; font-family: var(--font); padding: 4px; }
+.date-picker-clear:hover { text-decoration: underline; }
 .callback-success { display: none; margin-top: 20px; padding: 18px 20px; border-radius: 12px; background: var(--sky); border: 1px solid var(--border); font-size: 0.875rem; color: var(--navy); line-height: 1.7; max-width: 640px; }
 .callback-success.show { display: block; }
 .callback-success a { color: var(--navy-light); font-weight: 600; }
@@ -430,6 +455,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .rate-value { width: auto; margin-left: auto; }
   .intro-cta-banner { padding: 24px; }
   .callback-grid { grid-template-columns: 1fr; }
+  .date-picker-popup { width: 100%; min-width: 0; }
 }
 </style>
 </head>
@@ -857,7 +883,12 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           </div>
           <div class="callback-field">
             <label for="cb-date">Preferred day</label>
-            <input type="date" id="cb-date" name="preferred_day">
+            <div class="date-picker" id="cb-date-wrap">
+              <input type="text" id="cb-date" class="date-picker-input" placeholder="Select a date" readonly autocomplete="off" onclick="dpToggle('cb-date', event)">
+              <input type="hidden" name="preferred_day" id="cb-date-value">
+              <svg class="date-picker-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <div class="date-picker-popup" id="cb-date-popup"></div>
+            </div>
           </div>
           <div class="callback-field">
             <label for="cb-time">Preferred time</label>
@@ -1004,6 +1035,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         btn.disabled = false;
         if (data.success) {
           form.reset();
+          dpState = {};
           successEl.classList.add('show');
         } else {
           throw new Error('Web3Forms returned failure');
@@ -1017,6 +1049,111 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       });
 
     return false;
+  }
+
+  /* ═══ DATE PICKER (Preferred day) ═════════════════════════
+     Custom themed calendar popup, replacing the browser's
+     native date input. Keyed by field id so it could support
+     more than one date field on the page if needed later.
+  ============================================================ */
+  var dpState = {};
+  var dpWeekdayLabels = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+  var dpMonthLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var dpMonthShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var dpDayShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  function dpPad(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function dpToggle(fieldId, e) {
+    if (e) e.stopPropagation();
+    var wrap = document.getElementById(fieldId + '-wrap');
+    var wasOpen = wrap.classList.contains('dp-open');
+    dpCloseAll();
+    if (wasOpen) return;
+    if (!dpState[fieldId]) {
+      var today = new Date();
+      dpState[fieldId] = { viewYear: today.getFullYear(), viewMonth: today.getMonth(), selYear: null, selMonth: null, selDay: null };
+    }
+    wrap.classList.add('dp-open');
+    dpRender(fieldId);
+  }
+
+  function dpCloseAll() {
+    var open = document.querySelectorAll('.date-picker.dp-open');
+    for (var i = 0; i < open.length; i++) open[i].classList.remove('dp-open');
+  }
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.date-picker')) dpCloseAll();
+  });
+
+  function dpShiftMonth(fieldId, delta) {
+    var s = dpState[fieldId];
+    s.viewMonth += delta;
+    if (s.viewMonth < 0) { s.viewMonth = 11; s.viewYear--; }
+    if (s.viewMonth > 11) { s.viewMonth = 0; s.viewYear++; }
+    dpRender(fieldId);
+  }
+
+  function dpSelect(fieldId, y, m, d) {
+    var s = dpState[fieldId];
+    s.selYear = y; s.selMonth = m; s.selDay = d;
+    var iso = y + '-' + dpPad(m + 1) + '-' + dpPad(d);
+    var display = dpDayShort[new Date(y, m, d).getDay()] + ' ' + d + ' ' + dpMonthShort[m] + ' ' + y;
+    document.getElementById(fieldId + '-value').value = iso;
+    document.getElementById(fieldId).value = display;
+    dpCloseAll();
+  }
+
+  function dpClear(fieldId, e) {
+    if (e) e.stopPropagation();
+    var s = dpState[fieldId];
+    s.selYear = null; s.selMonth = null; s.selDay = null;
+    document.getElementById(fieldId + '-value').value = '';
+    document.getElementById(fieldId).value = '';
+    dpCloseAll();
+  }
+
+  function dpRender(fieldId) {
+    var s = dpState[fieldId];
+    var popup = document.getElementById(fieldId + '-popup');
+    var today = new Date();
+    var firstOfMonth = new Date(s.viewYear, s.viewMonth, 1);
+    var startOffset = (firstOfMonth.getDay() + 6) % 7; // Monday-first
+    var daysInMonth = new Date(s.viewYear, s.viewMonth + 1, 0).getDate();
+    var daysInPrevMonth = new Date(s.viewYear, s.viewMonth, 0).getDate();
+
+    var html = '<div class="date-picker-head">' +
+      '<div class="date-picker-month">' + dpMonthLabels[s.viewMonth] + ' ' + s.viewYear + '</div>' +
+      '<div class="date-picker-nav">' +
+      '<button type="button" class="date-picker-nav-btn" onclick="dpShiftMonth(\'' + fieldId + '\', -1)" aria-label="Previous month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>' +
+      '<button type="button" class="date-picker-nav-btn" onclick="dpShiftMonth(\'' + fieldId + '\', 1)" aria-label="Next month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>' +
+      '</div></div>';
+
+    html += '<div class="date-picker-weekdays">';
+    dpWeekdayLabels.forEach(function (w) { html += '<div class="date-picker-weekday">' + w + '</div>'; });
+    html += '</div>';
+
+    html += '<div class="date-picker-days">';
+    for (var i = 0; i < startOffset; i++) {
+      html += '<div class="date-picker-day muted">' + (daysInPrevMonth - startOffset + i + 1) + '</div>';
+    }
+    for (var d = 1; d <= daysInMonth; d++) {
+      var isToday = s.viewYear === today.getFullYear() && s.viewMonth === today.getMonth() && d === today.getDate();
+      var isSelected = s.selYear === s.viewYear && s.selMonth === s.viewMonth && s.selDay === d;
+      var cls = 'date-picker-day' + (isToday ? ' today' : '') + (isSelected ? ' selected' : '');
+      html += '<div class="' + cls + '" onclick="dpSelect(\'' + fieldId + '\', ' + s.viewYear + ', ' + s.viewMonth + ', ' + d + ')">' + d + '</div>';
+    }
+    var totalCells = startOffset + daysInMonth;
+    var trailing = (7 - (totalCells % 7)) % 7;
+    for (var t = 1; t <= trailing; t++) {
+      html += '<div class="date-picker-day muted">' + t + '</div>';
+    }
+    html += '</div>';
+
+    html += '<div class="date-picker-footer"><button type="button" class="date-picker-clear" onclick="dpClear(\'' + fieldId + '\', event)">Clear</button></div>';
+
+    popup.innerHTML = html;
   }
 
   /* ═══ ECONOMIC CALENDAR ═══════════════════════════════════
