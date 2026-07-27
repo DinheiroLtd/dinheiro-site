@@ -417,6 +417,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .date-picker-nav { display: flex; gap: 6px; }
 .date-picker-nav-btn { width: 28px; height: 28px; border-radius: 50%; border: none; background: var(--sky); color: var(--navy-light); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.15s, color 0.15s; padding: 0; }
 .date-picker-nav-btn:hover { background: var(--accent); color: white; }
+.date-picker-nav-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
 .date-picker-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 6px; }
 .date-picker-weekday { text-align: center; font-size: 0.6875rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.03em; padding: 4px 0; }
 .date-picker-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
@@ -1372,9 +1373,17 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 
   function dpShiftMonth(fieldId, delta) {
     var s = dpState[fieldId];
-    s.viewMonth += delta;
-    if (s.viewMonth < 0) { s.viewMonth = 11; s.viewYear--; }
-    if (s.viewMonth > 11) { s.viewMonth = 0; s.viewYear++; }
+    var newMonth = s.viewMonth + delta;
+    var newYear = s.viewYear;
+    if (newMonth < 0) { newMonth = 11; newYear--; }
+    if (newMonth > 11) { newMonth = 0; newYear++; }
+    if (delta < 0) {
+      var today = new Date();
+      var isBeforeCurrentMonth = newYear < today.getFullYear() || (newYear === today.getFullYear() && newMonth < today.getMonth());
+      if (isBeforeCurrentMonth) return;
+    }
+    s.viewMonth = newMonth;
+    s.viewYear = newYear;
     dpRender(fieldId);
   }
 
@@ -1401,15 +1410,18 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     var s = dpState[fieldId];
     var popup = document.getElementById(fieldId + '-popup');
     var today = new Date();
+    var todayY = today.getFullYear(), todayM = today.getMonth(), todayD = today.getDate();
     var firstOfMonth = new Date(s.viewYear, s.viewMonth, 1);
     var startOffset = (firstOfMonth.getDay() + 6) % 7; // Monday-first
     var daysInMonth = new Date(s.viewYear, s.viewMonth + 1, 0).getDate();
     var daysInPrevMonth = new Date(s.viewYear, s.viewMonth, 0).getDate();
+    var isAtCurrentMonth = s.viewYear === todayY && s.viewMonth === todayM;
+    var prevDisabled = isAtCurrentMonth || s.viewYear < todayY || (s.viewYear === todayY && s.viewMonth < todayM);
 
     var html = '<div class="date-picker-head">' +
       '<div class="date-picker-month">' + dpMonthLabels[s.viewMonth] + ' ' + s.viewYear + '</div>' +
       '<div class="date-picker-nav">' +
-      '<button type="button" class="date-picker-nav-btn" onclick="dpShiftMonth(\'' + fieldId + '\', -1)" aria-label="Previous month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>' +
+      '<button type="button" class="date-picker-nav-btn"' + (prevDisabled ? ' disabled' : '') + ' onclick="dpShiftMonth(\'' + fieldId + '\', -1)" aria-label="Previous month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>' +
       '<button type="button" class="date-picker-nav-btn" onclick="dpShiftMonth(\'' + fieldId + '\', 1)" aria-label="Next month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>' +
       '</div></div>';
 
@@ -1422,7 +1434,12 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       html += '<div class="date-picker-day muted">' + (daysInPrevMonth - startOffset + i + 1) + '</div>';
     }
     for (var d = 1; d <= daysInMonth; d++) {
-      var isToday = s.viewYear === today.getFullYear() && s.viewMonth === today.getMonth() && d === today.getDate();
+      var isToday = s.viewYear === todayY && s.viewMonth === todayM && d === todayD;
+      var isPast = s.viewYear < todayY || (s.viewYear === todayY && s.viewMonth < todayM) || (s.viewYear === todayY && s.viewMonth === todayM && d < todayD);
+      if (isPast) {
+        html += '<div class="date-picker-day muted">' + d + '</div>';
+        continue;
+      }
       var isSelected = s.selYear === s.viewYear && s.selMonth === s.viewMonth && s.selDay === d;
       var cls = 'date-picker-day' + (isToday ? ' today' : '') + (isSelected ? ' selected' : '');
       html += '<div class="' + cls + '" onclick="dpSelect(\'' + fieldId + '\', ' + s.viewYear + ', ' + s.viewMonth + ', ' + d + ')">' + d + '</div>';
