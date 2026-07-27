@@ -1,0 +1,24 @@
+{
+  "updated": "2026-07-27T08:30:00+01:00",
+  "timezone": "BST",
+  "currencies": [
+    {
+      "code": "GBP",
+      "headline": "Sterling firm as traders price in higher odds of a BoE hike, not a cut.",
+      "commentary": "GBP has held up well over the past week as a rebound in oil prices, driven by renewed Middle East tensions, has pushed UK inflation expectations higher. A recent Reuters poll of economists found nearly 40% now expect at least one further Bank of England hike this year, a marked shift from earlier expectations of a rate cut, with markets pricing in the possibility of two hikes by March 2027.",
+      "watchToday": "No major UK data due today. Attention is building toward Thursday's Bank of England decision (Bank Rate currently 3.75%), where a new Monetary Policy Report will be published alongside the vote."
+    },
+    {
+      "code": "EUR",
+      "headline": "Euro steady after the ECB held rates last week.",
+      "commentary": "The ECB left its deposit rate unchanged at 2.25% at its 23 July meeting, keeping policy on hold amid ongoing energy-driven uncertainty. With no ECB meeting scheduled this week, EUR direction is more likely to be driven by upcoming Eurozone growth and inflation data than by fresh central bank action.",
+      "watchToday": "A quiet start to the week for the euro. ECB Executive Board member Isabel Schnabel speaks tomorrow, followed by flash Q2 GDP and inflation data from Germany and the wider Eurozone later in the week."
+    },
+    {
+      "code": "USD",
+      "headline": "Dollar in a holding pattern ahead of Wednesday's Fed decision.",
+      "commentary": "The Federal Reserve is widely expected to leave rates unchanged at 3.50%-3.75% this week, though markets are assigning a meaningful probability to a surprise hike given recent inflation pressure. The dollar has traded in a relatively tight range as investors await the decision and the press conference that follows it for fresh guidance.",
+      "watchToday": "No major US releases today. Consumer confidence data and a speech from Fed Governor Christopher Waller are due tomorrow, ahead of Wednesday's rate decision."
+    }
+  ]
+}

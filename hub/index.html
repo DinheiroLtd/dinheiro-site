@@ -253,6 +253,16 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .insight-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
 .insight-card .arrow { font-size: 0.8125rem; font-weight: 600; color: var(--navy-light); }
 
+/* Morning market report */
+.report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.report-card { background: var(--gray-light); border: 1px solid var(--border); border-radius: 16px; padding: 26px; }
+.report-card-code { display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; color: var(--navy-light); background: var(--sky); padding: 3px 11px; border-radius: 20px; margin-bottom: 14px; }
+.report-headline { font-size: 0.9625rem; font-weight: 700; color: var(--navy); line-height: 1.4; margin-bottom: 10px; }
+.report-body { font-size: 0.825rem; color: var(--gray); line-height: 1.75; margin-bottom: 16px; }
+.report-watch { border-top: 1px solid var(--border); padding-top: 14px; }
+.report-watch-label { display: block; font-size: 0.6875rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+.report-watch p { font-size: 0.8125rem; color: var(--gray); line-height: 1.7; margin: 0; }
+
 /* Economic calendar */
 .calendar-updated { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 28px; margin-top: -24px; }
 .calendar-day { border: 1px solid var(--border); border-radius: 14px; margin-bottom: 16px; overflow: hidden; }
@@ -418,7 +428,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   .calendar-row-main { flex-wrap: wrap; gap: 8px 12px; padding: 12px 16px; }
   .calendar-event { order: 4; flex-basis: 100%; }
   .calendar-row-detail { padding: 8px 16px 16px; }
-  .hedge-compare-grid, .intro-benefit-grid { grid-template-columns: 1fr; }
+  .hedge-compare-grid, .intro-benefit-grid, .report-grid { grid-template-columns: 1fr; }
   .holiday-row { flex-wrap: wrap; gap: 6px 12px; }
   .holiday-date { width: 100%; }
   .intro-cta-banner { padding: 24px; }
@@ -466,7 +476,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       <h1>Welcome back.</h1>
       <div class="hub-tabs">
         <button class="hub-tab-btn active" data-tab="home" onclick="showTab('home')">Home</button>
-        <button class="hub-tab-btn" data-tab="insights" onclick="showTab('insights')">Market Insights</button>
+        <button class="hub-tab-btn" data-tab="insights" onclick="showTab('insights')">Market Reports</button>
         <button class="hub-tab-btn" data-tab="calendar" onclick="showTab('calendar')">Economic Calendar</button>
         <button class="hub-tab-btn" data-tab="brochures" onclick="showTab('brochures')">Brochures</button>
         <button class="hub-tab-btn" data-tab="hedging" onclick="showTab('hedging')">Is Hedging Right for You?</button>
@@ -490,8 +500,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           <div class="home-card-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C3C57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
-          <h3>Market Insights</h3>
-          <p>Currency commentary and rate outlooks from the Dinheiro team, updated regularly.</p>
+          <h3>Market Reports</h3>
+          <p>A daily morning briefing on GBP, EUR and USD, plus rate outlooks and analysis from the Dinheiro team.</p>
           <a href="#" onclick="showTab('insights'); return false;">View insights &rarr;</a>
         </div>
         <div class="home-card">
@@ -553,11 +563,18 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
       </div>
     </section>
 
-    <!-- MARKET INSIGHTS -->
+    <!-- MARKET REPORTS -->
     <section class="hub-panel" id="panel-insights">
-      <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Market Insights</span></div>
-      <h2>Currency commentary from the Dinheiro team.</h2>
-      <p class="lead">The latest analysis on rate movements, central bank decisions and what they mean for your payments. These link out to the full articles on the Dinheiro website.</p>
+      <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Market Reports</span></div>
+      <h2>Your morning market report.</h2>
+      <p class="lead">A daily briefing on GBP, EUR and USD, refreshed every morning by the Dinheiro team &mdash; how each has been trading, and what's scheduled today that could move it.</p>
+
+      <div id="report-updated" class="calendar-updated"></div>
+      <div id="report-root"><div class="calendar-loading">Loading this morning's report&hellip;</div></div>
+      <p class="calendar-note">General market commentary for information only &mdash; not personalised advice. See the Economic Calendar tab for the full week ahead.</p>
+
+      <h2 style="margin-top: 56px;">From the Dinheiro team.</h2>
+      <p class="lead">Deeper analysis on rate movements, central bank decisions and what they mean for your payments. These link out to the full articles on the Dinheiro website.</p>
 
       <div class="insight-grid">
         <a class="insight-card" href="/blog/gbp-eur-outlook-q3-2026.html" target="_blank" rel="noopener">
@@ -1174,6 +1191,43 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   }
 
   loadCalendar();
+
+  /* ═══ MORNING MARKET REPORT ═══════════════════════════════
+     Reads market-report.json, refreshed each morning alongside
+     the economic calendar. General commentary only.
+  ============================================================ */
+  function renderMarketReport(data) {
+    var root = document.getElementById('report-root');
+    var updatedEl = document.getElementById('report-updated');
+    if (data.updated && updatedEl) updatedEl.textContent = fmtUpdated(data.updated);
+
+    var html = '<div class="report-grid">';
+    (data.currencies || []).forEach(function (c) {
+      html += '<div class="report-card">' +
+        '<span class="report-card-code">' + escapeHtml(c.code || '') + '</span>' +
+        '<div class="report-headline">' + escapeHtml(c.headline || '') + '</div>' +
+        '<div class="report-body">' + escapeHtml(c.commentary || '') + '</div>' +
+        '<div class="report-watch">' +
+        '<span class="report-watch-label">Today, watch</span>' +
+        '<p>' + escapeHtml(c.watchToday || 'Nothing scheduled that\'s likely to move this currency today.') + '</p>' +
+        '</div>' +
+        '</div>';
+    });
+    html += '</div>';
+    root.innerHTML = html;
+  }
+
+  function loadMarketReport() {
+    var root = document.getElementById('report-root');
+    fetch('market-report.json', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+      .then(renderMarketReport)
+      .catch(function () {
+        root.innerHTML = '<div class="calendar-error">This morning\'s report couldn\'t load. If you\'re previewing this file locally rather than on the live site, that\'s expected &mdash; it will load once this page is live on dinheirogroup.com.</div>';
+      });
+  }
+
+  loadMarketReport();
 </script>
 
 </body>
