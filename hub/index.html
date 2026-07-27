@@ -499,6 +499,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     transition: opacity 0.2s;
     padding: 16px;
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
   .mobile-menu-overlay.open { opacity: 1; pointer-events: auto; }
   .mobile-menu-panel {
@@ -1220,6 +1221,8 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
      Opened by the "Menu" button in the mobile header; shows
      every tab as a 2-column grid of tiles, plus Log out.
   ============================================================ */
+  var mobileMenuScrollY = 0;
+
   function toggleMobileMenu(e) {
     if (e) e.stopPropagation();
     var overlay = document.getElementById('mobile-menu-overlay');
@@ -1227,13 +1230,34 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     if (overlay.classList.contains('open')) {
       closeMobileMenu();
     } else {
-      overlay.classList.add('open');
+      openMobileMenu();
     }
+  }
+
+  /* Locks the page underneath the overlay so scrolling the menu
+     never drags the home page along with it (a common mobile bug
+     with fixed-position overlays otherwise). */
+  function openMobileMenu() {
+    var overlay = document.getElementById('mobile-menu-overlay');
+    if (!overlay) return;
+    mobileMenuScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + mobileMenuScrollY + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    overlay.classList.add('open');
   }
 
   function closeMobileMenu() {
     var overlay = document.getElementById('mobile-menu-overlay');
     if (overlay) overlay.classList.remove('open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    window.scrollTo(0, mobileMenuScrollY);
   }
 
   /* Stay logged in for the browser session */
