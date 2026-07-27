@@ -125,16 +125,6 @@
           "description": "A regional survey of purchasing managers in the Chicago area, used as an early signal for the following week's national ISM manufacturing survey. Usually a modest, secondary market mover."
         }
       ]
-    },
-    {
-      "date": "2026-08-01",
-      "label": "Saturday 1 August",
-      "events": []
-    },
-    {
-      "date": "2026-08-02",
-      "label": "Sunday 2 August",
-      "events": []
     }
   ]
 }
