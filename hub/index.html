@@ -1312,8 +1312,9 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   /* ═══ MORNING MARKET REPORT ═══════════════════════════════
      Reads market-report.json, refreshed each morning alongside
      the economic calendar. Shown as a single-currency briefing
-     with a pill switch (GBP/EUR/USD) and prev/next arrows to
-     step back through past weekday reports.
+     with a pill switch (data-driven, currently 10 currencies)
+     and prev/next arrows to step back through past weekday
+     reports.
   ============================================================ */
   var marketReportsData = [];
   var reportViewIndex = 0;
