@@ -29,13 +29,17 @@
   --font:       'Plus Jakarta Sans', sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
 body {
   font-family: var(--font);
   color: var(--navy);
   background: var(--white);
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+  touch-action: pan-y;
+  overscroll-behavior-x: none;
 }
 
 img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-select: none; }
