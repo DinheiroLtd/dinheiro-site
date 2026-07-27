@@ -955,10 +955,28 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           </div>
           <div class="calendar-row-detail">A public holiday in Japan. Banks and payment systems there are closed, which can push same-day or next-day JPY settlement to the next working day.</div>
         </div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Fri 25 Sep</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">CNY</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Mid-Autumn Festival (China)</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in mainland China, running into the weekend of 26&ndash;27 September. Chinese banks are closed, which can push same-day or next-day CNY settlement to the next working day &mdash; useful to know if you're sending funds to a Chinese bank around this date.</div>
+        </div>
       </div>
 
       <div class="calendar-day">
         <div class="calendar-day-head">October 2026</div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Thu 1&ndash;Wed 7 Oct</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">CNY</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">National Day Golden Week (China)</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">China's National Day holiday, one of the country's two "Golden Week" breaks. Chinese banks are closed for the full week, so CNY payments sent to Chinese banks around this period typically won't settle until 8 October. Worth planning any China-bound payments around this well in advance.</div>
+        </div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Mon 12 Oct</div>
@@ -993,11 +1011,11 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Wed 11 Nov</div>
-            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span></div>
-            <div class="calendar-event"><div class="calendar-event-name">Veterans Day</div></div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span><span class="calendar-badge calendar-badge-medium">EUR</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Veterans Day (US) &middot; Armistice Day (France)</div></div>
             <div class="calendar-expand-icon"></div>
           </div>
-          <div class="calendar-row-detail">A federal holiday in the US. US banks and payment systems are closed, which can push same-day or next-day USD settlement to the next working day.</div>
+          <div class="calendar-row-detail">A federal holiday in the US and a national holiday in France. US and French banks are closed &mdash; TARGET2 (the Eurozone payment system) itself stays open, but payments to French beneficiary banks specifically may not process until the next working day.</div>
         </div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
@@ -1041,7 +1059,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         </div>
       </div>
 
-      <p class="calendar-note">Dates shown are for the remainder of 2026 and cover UK, US, Eurozone (TARGET2 payment system), Japan and New Zealand public holidays &mdash; the same markets as the Economic Calendar tab. This list is refreshed periodically; always double-check timing directly with your relationship manager for a specific payment.</p>
+      <p class="calendar-note">Dates shown are for the remainder of 2026 and cover UK, US, Eurozone (TARGET2 payment system, plus select country-specific dates for major euro markets like France), Japan, New Zealand and China public holidays. This list is refreshed periodically; always double-check timing directly with your relationship manager for a specific payment.</p>
     </section>
 
     <!-- INTRODUCER PROGRAMME -->
