@@ -642,6 +642,15 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         </div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Sat 1 Aug</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">CHF</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Swiss National Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">Switzerland's national holiday, observed across all cantons. It falls on a Saturday in 2026, so it has no effect on CHF settlement timing this year as Swiss banks are already closed that day regardless.</div>
+        </div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Mon 31 Aug</div>
             <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">GBP</span></div>
             <div class="calendar-event"><div class="calendar-event-name">Summer Bank Holiday</div></div>
@@ -656,11 +665,11 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Mon 7 Sep</div>
-            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span></div>
-            <div class="calendar-event"><div class="calendar-event-name">Labor Day</div></div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span><span class="calendar-badge calendar-badge-medium">CAD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Labor Day (US) &middot; Labour Day (Canada)</div></div>
             <div class="calendar-expand-icon"></div>
           </div>
-          <div class="calendar-row-detail">A federal holiday in the US. US banks and payment systems are closed, which can push same-day or next-day USD settlement to the next working day.</div>
+          <div class="calendar-row-detail">A federal holiday in the US and a statutory holiday in Canada, both falling on the first Monday of September. Banks in both markets are closed, which can push same-day or next-day USD and CAD settlement to the next working day.</div>
         </div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
@@ -691,12 +700,30 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         </div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Thu 24 Sep</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">ZAR</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Heritage Day</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in South Africa. Banks and payment systems there are closed, which can push same-day or next-day ZAR settlement to the next working day.</div>
+        </div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Fri 25 Sep</div>
             <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">CNY</span></div>
             <div class="calendar-event"><div class="calendar-event-name">Mid-Autumn Festival (China)</div></div>
             <div class="calendar-expand-icon"></div>
           </div>
           <div class="calendar-row-detail">A public holiday in mainland China, running into the weekend of 26&ndash;27 September. Chinese banks are closed, which can push same-day or next-day CNY settlement to the next working day, useful to know if you're sending funds to a Chinese bank around this date.</div>
+        </div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Wed 30 Sep</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">CAD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">National Day for Truth and Reconciliation</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A federal statutory holiday in Canada. Canadian banks, which are federally regulated, are closed, which can push same-day or next-day CAD settlement to the next working day.</div>
         </div>
       </div>
 
@@ -714,11 +741,11 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Mon 12 Oct</div>
-            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span><span class="calendar-badge calendar-badge-medium">USD</span></div>
-            <div class="calendar-event"><div class="calendar-event-name">Sports Day (Japan) &middot; Columbus Day (US)</div></div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">JPY</span><span class="calendar-badge calendar-badge-medium">USD</span><span class="calendar-badge calendar-badge-medium">CAD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Sports Day (Japan) &middot; Columbus Day (US) &middot; Thanksgiving (Canada)</div></div>
             <div class="calendar-expand-icon"></div>
           </div>
-          <div class="calendar-row-detail">A public holiday in both Japan and the US. Banks in both markets are closed, which can push same-day or next-day JPY and USD settlement to the next working day.</div>
+          <div class="calendar-row-detail">A public holiday in Japan, the US and Canada. Banks in all three markets are closed, which can push same-day or next-day JPY, USD and CAD settlement to the next working day.</div>
         </div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
@@ -745,11 +772,11 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Wed 11 Nov</div>
-            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span><span class="calendar-badge calendar-badge-medium">EUR</span></div>
-            <div class="calendar-event"><div class="calendar-event-name">Veterans Day (US) &middot; Armistice Day (France)</div></div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">USD</span><span class="calendar-badge calendar-badge-medium">EUR</span><span class="calendar-badge calendar-badge-medium">CAD</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Veterans Day (US) &middot; Armistice Day (France) &middot; Remembrance Day (Canada)</div></div>
             <div class="calendar-expand-icon"></div>
           </div>
-          <div class="calendar-row-detail">A federal holiday in the US and a national holiday in France. US and French banks are closed. TARGET2 (the Eurozone payment system) itself stays open, but payments to French beneficiary banks specifically may not process until the next working day.</div>
+          <div class="calendar-row-detail">A federal holiday in the US, a national holiday in France, and a federal statutory holiday in Canada. US and Canadian banks are closed. TARGET2 (the Eurozone payment system) itself stays open, but payments to French beneficiary banks specifically may not process until the next working day.</div>
         </div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
@@ -775,25 +802,43 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         <div class="calendar-day-head">December 2026</div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Wed 16 Dec</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">ZAR</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Day of Reconciliation</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">A public holiday in South Africa. Banks and payment systems there are closed, which can push same-day or next-day ZAR settlement to the next working day.</div>
+        </div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Fri 25 Dec</div>
-            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">GBP</span><span class="calendar-badge calendar-badge-medium">USD</span><span class="calendar-badge calendar-badge-medium">EUR</span><span class="calendar-badge calendar-badge-medium">NZD</span></div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">GBP</span><span class="calendar-badge calendar-badge-medium">USD</span><span class="calendar-badge calendar-badge-medium">EUR</span><span class="calendar-badge calendar-badge-medium">NZD</span><span class="calendar-badge calendar-badge-medium">CHF</span><span class="calendar-badge calendar-badge-medium">CAD</span><span class="calendar-badge calendar-badge-medium">AUD</span><span class="calendar-badge calendar-badge-medium">ZAR</span></div>
             <div class="calendar-event"><div class="calendar-event-name">Christmas Day</div></div>
             <div class="calendar-expand-icon"></div>
           </div>
-          <div class="calendar-row-detail">A public holiday across the UK, US, Eurozone (TARGET2) and New Zealand. Banks and payment systems in all of these markets are closed, so GBP, USD, EUR and NZD settlement can be pushed to the next working day.</div>
+          <div class="calendar-row-detail">A public holiday across the UK, US, Eurozone (TARGET2), New Zealand, Switzerland, Canada, Australia and South Africa. Banks and payment systems in all of these markets are closed, so GBP, USD, EUR, NZD, CHF, CAD, AUD and ZAR settlement can all be pushed to the next working day.</div>
+        </div>
+        <div class="calendar-row">
+          <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
+            <div class="holiday-date-cell">Sat 26 Dec</div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">ZAR</span></div>
+            <div class="calendar-event"><div class="calendar-event-name">Day of Goodwill</div></div>
+            <div class="calendar-expand-icon"></div>
+          </div>
+          <div class="calendar-row-detail">South Africa's equivalent of Boxing Day. It falls on a Saturday in 2026, and South African law only shifts a public holiday to the following Monday when it falls on a Sunday, not a Saturday, so this date does not push ZAR settlement the way it does for some other markets.</div>
         </div>
         <div class="calendar-row">
           <div class="calendar-row-main" onclick="toggleCalendarRow(this)">
             <div class="holiday-date-cell">Mon 28 Dec</div>
-            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">GBP</span><span class="calendar-badge calendar-badge-medium">NZD</span></div>
+            <div class="holiday-currency-cell"><span class="calendar-badge calendar-badge-medium">GBP</span><span class="calendar-badge calendar-badge-medium">NZD</span><span class="calendar-badge calendar-badge-medium">CAD</span><span class="calendar-badge calendar-badge-medium">AUD</span></div>
             <div class="calendar-event"><div class="calendar-event-name">Boxing Day (observed, since 26 Dec falls on a Saturday)</div></div>
             <div class="calendar-expand-icon"></div>
           </div>
-          <div class="calendar-row-detail">A public holiday in the UK and New Zealand, observed on this date because 26 December falls on a Saturday. GBP and NZD settlement can be pushed to the next working day.</div>
+          <div class="calendar-row-detail">A public holiday in the UK, New Zealand, Canada and most of Australia (South Australia is the exception), observed on this date because 26 December falls on a Saturday. GBP, NZD, CAD and AUD settlement can be pushed to the next working day.</div>
         </div>
       </div>
 
-      <p class="calendar-note">Dates shown are for the remainder of 2026 and cover UK, US, Eurozone (TARGET2 payment system, plus select country-specific dates for major euro markets like France), Japan, New Zealand and China public holidays. This list is refreshed periodically; always double-check timing directly with your relationship manager for a specific payment.</p>
+      <p class="calendar-note">Dates shown are for the remainder of 2026 and cover UK, US, Eurozone (TARGET2 payment system, plus select country-specific dates for major euro markets like France), Japan, New Zealand, China, Switzerland, Canada, Australia and South Africa public holidays. This list is refreshed periodically; always double-check timing directly with your relationship manager for a specific payment.</p>
     </section>
 
     <!-- INTEREST RATES -->

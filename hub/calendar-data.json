@@ -12,6 +12,10 @@
       "label": "Tuesday 28 July",
       "events": [
         {
+          "time": "04:05", "currency": "AUD", "event": "RBA Governor Michele Bullock speech (Anika Foundation lunch)", "importance": "high",
+          "description": "The RBA Governor's annual address at the Anika Foundation lunch, a long-running venue for major RBA speeches. Markets watch closely for any signal on the path of interest rates ahead of the Bank's mid-August meeting."
+        },
+        {
           "time": "09:00", "currency": "EUR", "event": "ECB's Isabel Schnabel speech", "importance": "medium",
           "description": "A public speech by Isabel Schnabel, a member of the ECB's Executive Board. Markets watch these closely for hints about the Governing Council's thinking on future interest rate moves, ahead of the formal policy statement."
         },
@@ -36,6 +40,10 @@
         {
           "time": "12:00", "currency": "GBP", "event": "BoE's Catherine Mann speech", "importance": "low",
           "description": "A public appearance by Catherine Mann, an external member of the Bank of England's Monetary Policy Committee. Mann has historically taken a more hawkish stance, so any change in tone can move sterling."
+        },
+        {
+          "time": "18:30", "currency": "CAD", "event": "Bank of Canada Summary of Deliberations", "importance": "medium",
+          "description": "A written account of the discussion behind the Bank of Canada's 15 July rate decision, published two weeks after the meeting. It can reveal how divided or confident the Governing Council was, which matters for how markets price the next move."
         },
         {
           "time": "19:00", "currency": "USD", "event": "Federal Reserve interest rate decision", "importance": "high",
@@ -113,12 +121,20 @@
           "description": "The BoJ Governor explains the decision and answers questions from the press. Often moves the yen more than the decision itself, particularly any comments on the pace of future policy normalisation."
         },
         {
+          "time": "07:00", "currency": "CHF", "event": "KOF Economic Barometer", "importance": "medium",
+          "description": "A monthly composite leading indicator for the Swiss economy from the KOF Swiss Economic Institute, pointing to likely activity over the next six months. A widely watched gauge of Swiss business sentiment, though it typically moves the franc less than a central bank event would."
+        },
+        {
           "time": "10:00", "currency": "EUR", "event": "Eurozone flash CPI", "importance": "high",
           "description": "An early estimate of Eurozone-wide inflation for the month. One of the key inputs into the ECB's interest rate decisions, and a regular source of euro volatility on release."
         },
         {
           "time": "10:00", "currency": "EUR", "event": "Eurozone unemployment rate", "importance": "low",
           "description": "The percentage of the Eurozone workforce that is unemployed. A slower-moving indicator that rarely surprises markets, but still forms part of the broader picture of Eurozone economic health."
+        },
+        {
+          "time": "13:30", "currency": "CAD", "event": "Canada GDP by industry (May)", "importance": "medium",
+          "description": "Statistics Canada's monthly measure of economic output by industry. Released with a roughly two-month lag, it gives an early read on how the Canadian economy is tracking heading into the third quarter."
         },
         {
           "time": "14:45", "currency": "USD", "event": "US Chicago PMI", "importance": "low",
