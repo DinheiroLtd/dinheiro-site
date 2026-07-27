@@ -252,8 +252,26 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .insight-card .arrow { font-size: 0.8125rem; font-weight: 600; color: var(--navy-light); }
 
 /* Economic calendar */
-.calendar-frame-wrap { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.calendar-updated { font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 28px; margin-top: -24px; }
+.calendar-day { border: 1px solid var(--border); border-radius: 14px; margin-bottom: 16px; overflow: hidden; }
+.calendar-day.today { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.calendar-day-head { background: var(--gray-light); padding: 14px 22px; display: flex; align-items: center; gap: 10px; font-size: 0.875rem; font-weight: 700; color: var(--navy); }
+.calendar-day.today .calendar-day-head { background: var(--sky); }
+.calendar-today-pill { background: var(--navy); color: white; font-size: 0.6875rem; font-weight: 700; padding: 2px 10px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; }
+.calendar-table { width: 100%; border-collapse: collapse; }
+.calendar-table td { padding: 12px 22px; font-size: 0.875rem; border-top: 1px solid var(--border); vertical-align: middle; }
+.calendar-table tr:first-child td { border-top: none; }
+.calendar-time { color: var(--gray); width: 76px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.calendar-currency { width: 56px; font-weight: 700; color: var(--navy-light); }
+.calendar-event { color: var(--navy); }
+.calendar-impact { text-align: right; white-space: nowrap; }
+.calendar-badge { display: inline-block; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; }
+.calendar-badge-high { background: #fde8e8; color: #c53030; }
+.calendar-badge-medium { background: var(--sky); color: var(--navy-light); }
+.calendar-badge-low { background: var(--gray-light); color: var(--gray); }
+.calendar-day-empty { padding: 16px 22px; font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
 .calendar-note { font-size: 0.8125rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6; }
+.calendar-loading, .calendar-error { padding: 32px; text-align: center; color: var(--text-muted); font-size: 0.9rem; border: 1px dashed var(--border); border-radius: 14px; }
 
 /* Brochures */
 .brochure-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -430,25 +448,12 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
     <section class="hub-panel" id="panel-calendar">
       <div class="hub-section-eyebrow"><span class="hub-section-eyebrow-line"></span><span>Economic Calendar</span></div>
       <h2>Upcoming events that move currency markets.</h2>
-      <p class="lead">Central bank decisions, inflation prints and other releases across the currencies Dinheiro clients trade most.</p>
+      <p class="lead">Central bank decisions, inflation prints and other releases across the currencies Dinheiro clients trade most. Refreshed each morning by the Dinheiro team.</p>
 
-      <div class="calendar-frame-wrap">
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
-          {
-          "colorTheme": "light",
-          "isTransparent": false,
-          "width": "100%",
-          "height": "650",
-          "locale": "en",
-          "importanceFilter": "-1,0,1",
-          "countryFilter": "us,gb,eu,jp,au,ca"
-          }
-          </script>
-        </div>
-      </div>
-      <p class="calendar-note">Calendar data provided by TradingView. General market information only &mdash; not personalised advice.</p>
+      <div id="calendar-updated" class="calendar-updated"></div>
+      <div id="calendar-root"><div class="calendar-loading">Loading this week's calendar&hellip;</div></div>
+
+      <p class="calendar-note">Times shown are approximate UK local time and provided for general information only &mdash; not personalised advice. Always confirm exact timing nearer the release if it's material to a trade you're planning.</p>
     </section>
 
     <!-- BROCHURES -->
@@ -597,6 +602,73 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
   if (sessionStorage.getItem('dinheiroHubAuth') === '1') {
     showHub();
   }
+
+  /* ═══ ECONOMIC CALENDAR ═══════════════════════════════════
+     Reads calendar-data.json, which sits alongside this file.
+     That JSON gets refreshed automatically once a day — this
+     page just displays whatever's currently in it. No third
+     party name or branding appears anywhere in this tab.
+  ============================================================ */
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function fmtUpdated(iso) {
+    try {
+      var d = new Date(iso);
+      var datePart = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+      var timePart = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      return 'Updated ' + datePart + ' at ' + timePart;
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function renderCalendar(data) {
+    var root = document.getElementById('calendar-root');
+    var updatedEl = document.getElementById('calendar-updated');
+    if (data.updated && updatedEl) updatedEl.textContent = fmtUpdated(data.updated);
+
+    var todayStr = new Date().toISOString().slice(0, 10);
+    var html = '';
+    (data.days || []).forEach(function (day) {
+      var isToday = day.date === todayStr;
+      html += '<div class="calendar-day' + (isToday ? ' today' : '') + '">';
+      html += '<div class="calendar-day-head">' + escapeHtml(day.label || '') +
+        (isToday ? ' <span class="calendar-today-pill">Today</span>' : '') + '</div>';
+      if (day.events && day.events.length) {
+        html += '<table class="calendar-table"><tbody>';
+        day.events.forEach(function (ev) {
+          var importance = ev.importance || 'low';
+          html += '<tr>' +
+            '<td class="calendar-time">' + escapeHtml(ev.time || '') + '</td>' +
+            '<td class="calendar-currency">' + escapeHtml(ev.currency || '') + '</td>' +
+            '<td class="calendar-event">' + escapeHtml(ev.event || '') + '</td>' +
+            '<td class="calendar-impact"><span class="calendar-badge calendar-badge-' + importance + '">' + importance + '</span></td>' +
+            '</tr>';
+        });
+        html += '</tbody></table>';
+      } else {
+        html += '<div class="calendar-day-empty">No major releases scheduled.</div>';
+      }
+      html += '</div>';
+    });
+    root.innerHTML = html || '<div class="calendar-loading">No calendar data available yet.</div>';
+  }
+
+  function loadCalendar() {
+    var root = document.getElementById('calendar-root');
+    fetch('calendar-data.json', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+      .then(renderCalendar)
+      .catch(function () {
+        root.innerHTML = '<div class="calendar-error">The calendar couldn\'t load. If you\'re previewing this file locally rather than on the live site, that\'s expected &mdash; it will load once this page is live on dinheirogroup.com.</div>';
+      });
+  }
+
+  loadCalendar();
 </script>
 
 </body>
