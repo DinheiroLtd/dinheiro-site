@@ -416,6 +416,19 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 .date-picker-footer { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); text-align: center; }
 .date-picker-clear { background: none; border: none; color: var(--navy-light); font-size: 0.8125rem; font-weight: 600; cursor: pointer; font-family: var(--font); padding: 4px; }
 .date-picker-clear:hover { text-decoration: underline; }
+/* Custom themed select (Preferred time) */
+.select-picker { position: relative; }
+.select-picker-input { padding-right: 40px !important; cursor: pointer; background: white; }
+.select-picker-icon { position: absolute; right: 14px; top: 16px; color: var(--navy-light); pointer-events: none; transition: transform 0.2s; }
+.select-picker.sp-open .select-picker-icon { transform: rotate(180deg); }
+.select-picker-popup { display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 20; background: white; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 16px 36px rgba(28,60,87,0.16); padding: 8px; max-height: 280px; overflow-y: auto; }
+.select-picker.sp-open .select-picker-popup { display: block; }
+.select-picker.sp-open .select-picker-input { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(143,203,235,0.25); }
+.select-picker-option { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 9px; font-size: 0.875rem; color: var(--navy); cursor: pointer; transition: background 0.15s; }
+.select-picker-option:hover { background: var(--sky); }
+.select-picker-option.selected { background: var(--sky); font-weight: 700; color: var(--navy-light); }
+.select-picker-check { width: 15px; height: 15px; flex-shrink: 0; color: var(--navy-light); visibility: hidden; }
+.select-picker-option.selected .select-picker-check { visibility: visible; }
 .callback-success { display: none; margin-top: 20px; padding: 18px 20px; border-radius: 12px; background: var(--sky); border: 1px solid var(--border); font-size: 0.875rem; color: var(--navy); line-height: 1.7; max-width: 640px; }
 .callback-success.show { display: block; }
 .callback-success a { color: var(--navy-light); font-weight: 600; }
@@ -892,12 +905,12 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
           </div>
           <div class="callback-field">
             <label for="cb-time">Preferred time</label>
-            <select id="cb-time" name="preferred_time">
-              <option value="Any time">Any time</option>
-              <option value="Morning (9am-12pm)">Morning (9am&ndash;12pm)</option>
-              <option value="Early afternoon (12pm-3pm)">Early afternoon (12pm&ndash;3pm)</option>
-              <option value="Late afternoon (3pm-5:30pm)">Late afternoon (3pm&ndash;5:30pm)</option>
-            </select>
+            <div class="select-picker" id="cb-time-wrap">
+              <input type="text" id="cb-time" class="select-picker-input" value="Any time" readonly autocomplete="off" onclick="spToggle('cb-time', event)">
+              <input type="hidden" name="preferred_time" id="cb-time-value" value="Any time">
+              <svg class="select-picker-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              <div class="select-picker-popup" id="cb-time-popup"></div>
+            </div>
           </div>
           <div class="callback-field full">
             <label for="cb-topic">What's this about?</label>
@@ -1036,6 +1049,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
         if (data.success) {
           form.reset();
           dpState = {};
+          spSelected['cb-time'] = 'Any time';
           successEl.classList.add('show');
         } else {
           throw new Error('Web3Forms returned failure');
@@ -1085,6 +1099,7 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.date-picker')) dpCloseAll();
+    if (!e.target.closest('.select-picker')) spCloseAll();
   });
 
   function dpShiftMonth(fieldId, delta) {
@@ -1153,6 +1168,53 @@ img { -webkit-user-drag: none; user-drag: none; -webkit-user-select: none; user-
 
     html += '<div class="date-picker-footer"><button type="button" class="date-picker-clear" onclick="dpClear(\'' + fieldId + '\', event)">Clear</button></div>';
 
+    popup.innerHTML = html;
+  }
+
+  /* ═══ CUSTOM SELECT (Preferred time) ══════════════════════
+     Same themed-popup pattern as the date picker above. Option
+     lists are data-driven by field id, so another field could
+     reuse this without new markup.
+  ============================================================ */
+  var spOptionSets = {
+    'cb-time': ['Any time', '9:00am – 10:00am', '10:00am – 11:00am', '11:00am – 12:00pm', '12:00pm – 1:00pm', '1:00pm – 2:00pm', '2:00pm – 3:00pm', '3:00pm – 4:00pm', '4:00pm – 5:00pm', '5:00pm – 5:30pm']
+  };
+  var spSelected = { 'cb-time': 'Any time' };
+
+  function spToggle(fieldId, e) {
+    if (e) e.stopPropagation();
+    var wrap = document.getElementById(fieldId + '-wrap');
+    var wasOpen = wrap.classList.contains('sp-open');
+    spCloseAll();
+    if (wasOpen) return;
+    wrap.classList.add('sp-open');
+    spRender(fieldId);
+  }
+
+  function spCloseAll() {
+    var open = document.querySelectorAll('.select-picker.sp-open');
+    for (var i = 0; i < open.length; i++) open[i].classList.remove('sp-open');
+  }
+
+  function spSelect(fieldId, value) {
+    spSelected[fieldId] = value;
+    document.getElementById(fieldId).value = value;
+    document.getElementById(fieldId + '-value').value = value;
+    spCloseAll();
+  }
+
+  function spRender(fieldId) {
+    var popup = document.getElementById(fieldId + '-popup');
+    var options = spOptionSets[fieldId] || [];
+    var current = spSelected[fieldId];
+    var html = '';
+    options.forEach(function (opt) {
+      var isSelected = opt === current;
+      html += '<div class="select-picker-option' + (isSelected ? ' selected' : '') + '" onclick="spSelect(\'' + fieldId + '\', \'' + opt.replace(/'/g, "\\'") + '\')">' +
+        '<svg class="select-picker-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+        '<span>' + escapeHtml(opt) + '</span>' +
+        '</div>';
+    });
     popup.innerHTML = html;
   }
 
