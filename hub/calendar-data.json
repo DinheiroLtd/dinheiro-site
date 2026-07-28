@@ -1,35 +1,46 @@
 {
-  "updated": "2026-07-27T08:30:00+01:00",
+  "updated": "2026-07-28T09:11:00+01:00",
   "timezone": "BST",
   "days": [
-    {
-      "date": "2026-07-27",
-      "label": "Monday 27 July",
-      "events": []
-    },
     {
       "date": "2026-07-28",
       "label": "Tuesday 28 July",
       "events": [
         {
-          "time": "04:05", "currency": "AUD", "event": "RBA Governor Michele Bullock speech (Anika Foundation lunch)", "importance": "high",
-          "description": "The RBA Governor's annual address at the Anika Foundation lunch, a long-running venue for major RBA speeches. Markets watch closely for any signal on the path of interest rates ahead of the Bank's mid-August meeting."
+          "time": "04:05",
+          "currency": "AUD",
+          "event": "RBA Governor Michele Bullock speech (Anika Foundation lunch)",
+          "importance": "high",
+          "description": "The RBA Governor's annual address at the Anika Foundation lunch, a long-running venue for major RBA speeches. Markets watch closely for any signal on the path of interest rates and how the Bank views the recent cooling in the domestic economy."
         },
         {
-          "time": "09:00", "currency": "EUR", "event": "ECB's Isabel Schnabel speech", "importance": "medium",
-          "description": "A public speech by Isabel Schnabel, a member of the ECB's Executive Board. Markets watch these closely for hints about the Governing Council's thinking on future interest rate moves, ahead of the formal policy statement."
+          "time": "09:00",
+          "currency": "EUR",
+          "event": "ECB's Isabel Schnabel speech",
+          "importance": "medium",
+          "description": "A public speech by Isabel Schnabel, a member of the ECB's Executive Board. Her comments are watched closely for hints about the Governing Council's thinking on future interest rate moves, since the ECB itself just met on 23 July."
         },
         {
-          "time": "13:00", "currency": "EUR", "event": "ECB's Pierre Wunsch speech", "importance": "low",
-          "description": "A public speech by Pierre Wunsch, a member of the ECB's Governing Council (Governor of the National Bank of Belgium). Lower-profile than a Board speech, but still scanned for any shift in tone on inflation or rates."
+          "time": "13:00",
+          "currency": "EUR",
+          "event": "ECB's Pierre Wunsch speech",
+          "importance": "low",
+          "description": "A public speech by Pierre Wunsch, Governor of the National Bank of Belgium and a Governing Council member. Lower profile than an Executive Board speech, but still scanned for any shift in tone on inflation or rates."
         },
         {
-          "time": "15:00", "currency": "USD", "event": "US Conference Board Consumer Confidence", "importance": "medium",
-          "description": "A survey measuring how optimistic or pessimistic US consumers feel about the economy, their income, and jobs. Stronger-than-expected confidence tends to support the dollar as it points to healthy consumer spending ahead."
+          "time": "14:00",
+          "currency": "USD",
+          "event": "S&P/Case-Shiller Home Price Index (May)",
+          "importance": "low",
+          "description": "A measure of US home price changes across major cities. A slow-moving gauge of housing market health that rarely moves the dollar on its own, but feeds into the broader picture of consumer wealth and spending power."
         },
         {
-          "time": "17:00", "currency": "USD", "event": "Fed's Christopher Waller speech", "importance": "medium",
-          "description": "A public speech by Christopher Waller, a member of the Federal Reserve's Board of Governors. His comments are watched for signals on the Fed's next move, particularly this week with the FOMC decision the following day."
+          "time": "15:00",
+          "currency": "USD",
+          "event": "US Conference Board Consumer Confidence (July)",
+          "importance": "medium",
+          "previous": "91.2 (June)",
+          "description": "A survey measuring how optimistic or pessimistic US consumers feel about the economy, their income, and jobs. Stronger-than-expected confidence tends to support the dollar as it points to healthier consumer spending ahead."
         }
       ]
     },
@@ -38,21 +49,35 @@
       "label": "Wednesday 29 July",
       "events": [
         {
-          "time": "12:00", "currency": "GBP", "event": "BoE's Catherine Mann speech", "importance": "low",
-          "description": "A public appearance by Catherine Mann, an external member of the Bank of England's Monetary Policy Committee. Mann has historically taken a more hawkish stance, so any change in tone can move sterling."
+          "time": "13:15",
+          "currency": "USD",
+          "event": "ADP National Employment Report (July)",
+          "importance": "medium",
+          "consensus": "+82K",
+          "description": "A private-sector estimate of US job creation, released two days ahead of the official government payrolls report. Traders use it as an early, if imperfect, read on the health of the labour market."
         },
         {
-          "time": "18:30", "currency": "CAD", "event": "Bank of Canada Summary of Deliberations", "importance": "medium",
+          "time": "18:30",
+          "currency": "CAD",
+          "event": "Bank of Canada Summary of Deliberations",
+          "importance": "medium",
           "description": "A written account of the discussion behind the Bank of Canada's 15 July rate decision, published two weeks after the meeting. It can reveal how divided or confident the Governing Council was, which matters for how markets price the next move."
         },
         {
-          "time": "19:00", "currency": "USD", "event": "Federal Reserve interest rate decision", "importance": "high",
-          "previous": "3.50%-3.75%", "consensus": "Hold at 3.50%-3.75%",
-          "description": "The Federal Reserve's Open Market Committee (FOMC) announces its target range for the US federal funds rate. This is one of the single biggest drivers of the US dollar and global markets: a surprise move (or surprise language in the statement) can cause sharp swings across all major currency pairs."
+          "time": "19:00",
+          "currency": "USD",
+          "event": "Federal Reserve interest rate decision",
+          "importance": "high",
+          "previous": "3.50%-3.75%",
+          "consensus": "Hold at 3.50%-3.75%",
+          "description": "The Federal Reserve's Open Market Committee (FOMC) announces its target range for the US federal funds rate. This is one of the single biggest drivers of the US dollar and global markets: a surprise move, or surprise language in the statement, can cause sharp swings across all major currency pairs. This meeting carries no fresh Summary of Economic Projections."
         },
         {
-          "time": "19:30", "currency": "USD", "event": "Fed Chair press conference", "importance": "high",
-          "description": "The Fed Chair takes questions from reporters straight after the rate decision. Often more market-moving than the decision itself, since this is where the Fed explains its reasoning and gives clues about what comes next."
+          "time": "19:30",
+          "currency": "USD",
+          "event": "Fed Chair Kevin Warsh press conference",
+          "importance": "high",
+          "description": "Fed Chair Kevin Warsh takes questions from reporters straight after the rate decision, his first FOMC press conference cycle since being confirmed in May. Often more market-moving than the decision itself, since this is where the Fed explains its reasoning and gives clues about what comes next."
         }
       ]
     },
@@ -61,48 +86,102 @@
       "label": "Thursday 30 July",
       "events": [
         {
-          "time": "00:30", "currency": "JPY", "event": "Japan national CPI", "importance": "medium",
+          "time": "00:30",
+          "currency": "JPY",
+          "event": "Japan national CPI",
+          "importance": "medium",
           "description": "Japan's headline Consumer Price Index, measuring the change in prices for a typical basket of goods and services. A key input for the Bank of Japan's policy decisions, and released just ahead of this week's BoJ meeting."
         },
         {
-          "time": "07:00", "currency": "EUR", "event": "German flash GDP (Q2)", "importance": "medium",
+          "time": "00:30",
+          "currency": "JPY",
+          "event": "Japan unemployment rate and industrial production",
+          "importance": "low",
+          "description": "Monthly reads on Japan's labour market slack and factory output. Usually a modest yen mover on their own, but they add to the backdrop the Bank of Japan considers at its meeting the following day."
+        },
+        {
+          "time": "02:30",
+          "currency": "AUD",
+          "event": "Building Approvals (June)",
+          "importance": "low",
+          "description": "The number of new residential building permits issued in Australia. A volatile, forward-looking indicator for construction activity that occasionally surprises markets but is rarely a major driver of the Australian dollar."
+        },
+        {
+          "time": "07:00",
+          "currency": "EUR",
+          "event": "German flash GDP (Q2)",
+          "importance": "medium",
           "description": "An early estimate of quarterly economic growth in Germany, the Eurozone's largest economy. Often moves the euro ahead of the full Eurozone GDP figure released later the same morning."
         },
         {
-          "time": "10:00", "currency": "EUR", "event": "Eurozone flash GDP (Q2)", "importance": "high",
-          "description": "An early estimate of quarterly economic growth across the whole Eurozone. One of the most closely watched growth indicators for the euro, as it feeds directly into the ECB's outlook for the bloc."
+          "time": "10:00",
+          "currency": "EUR",
+          "event": "Eurozone flash GDP (Q2)",
+          "importance": "high",
+          "previous": "-0.2% QoQ (Q1, revised down from an initial +0.1%)",
+          "consensus": "+0.4% to +0.7% QoQ",
+          "description": "An early estimate of quarterly economic growth across the whole Eurozone. One of the most closely watched growth indicators for the euro, as it feeds directly into the ECB's outlook for the bloc, and this quarter is watched for a rebound after Q1's contraction."
         },
         {
-          "time": "10:00", "currency": "EUR", "event": "ECB's Philip Lane speech", "importance": "low",
+          "time": "10:00",
+          "currency": "EUR",
+          "event": "ECB's Philip Lane speech",
+          "importance": "low",
           "description": "A public speech by Philip Lane, the ECB's Chief Economist. His remarks are watched particularly closely as he's seen as a bellwether for the Governing Council's internal economic thinking."
         },
         {
-          "time": "12:00", "currency": "GBP", "event": "Bank of England interest rate decision", "importance": "high",
-          "previous": "3.75%", "consensus": "Hold at 3.75%",
-          "description": "The Bank of England's Monetary Policy Committee (MPC) announces its decision on the Bank Rate, the UK's main interest rate. This is the single biggest scheduled event for sterling each cycle: a surprise decision or shift in the accompanying vote split can move GBP sharply."
+          "time": "12:00",
+          "currency": "GBP",
+          "event": "Bank of England interest rate decision",
+          "importance": "high",
+          "previous": "3.75%",
+          "consensus": "Hold at 3.75%",
+          "description": "The Bank of England's Monetary Policy Committee (MPC) announces its decision on the Bank Rate, the UK's main interest rate. This is the single biggest scheduled event for sterling each cycle: a surprise decision or shift in the accompanying vote split can move GBP sharply. With services inflation still running at 3.7%, this is seen as a live meeting."
         },
         {
-          "time": "12:00", "currency": "GBP", "event": "BoE Monetary Policy Report & Financial Stability Report", "importance": "medium",
+          "time": "12:00",
+          "currency": "GBP",
+          "event": "BoE Monetary Policy Report and Financial Stability Report",
+          "importance": "medium",
           "description": "Published alongside the rate decision, this sets out the Bank's updated forecasts for inflation and growth, plus its assessment of risks to the UK financial system. Markets read this for clues on the future path of rates."
         },
         {
-          "time": "12:30", "currency": "GBP", "event": "BoE Governor press conference", "importance": "high",
+          "time": "12:30",
+          "currency": "GBP",
+          "event": "BoE Governor press conference",
+          "importance": "high",
           "description": "The Governor of the Bank of England answers questions from journalists straight after the rate decision. Often the moment that moves sterling most, as it's where the Bank explains its reasoning in its own words."
         },
         {
-          "time": "13:00", "currency": "EUR", "event": "German flash CPI", "importance": "medium",
+          "time": "13:00",
+          "currency": "EUR",
+          "event": "German flash CPI (July)",
+          "importance": "medium",
+          "previous": "+2.3% y/y (June)",
           "description": "An early estimate of German inflation, released ahead of the full Eurozone inflation figure. As the bloc's largest economy, Germany's number often sets the tone for how the euro reacts the next day."
         },
         {
-          "time": "13:30", "currency": "USD", "event": "US GDP (Q2, advance estimate)", "importance": "high",
-          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: surprises here tend to move the dollar broadly."
+          "time": "13:30",
+          "currency": "USD",
+          "event": "US GDP (Q2, advance estimate)",
+          "importance": "high",
+          "previous": "+2.1% annualized (Q1, third estimate)",
+          "consensus": "+2.1% annualized (estimates range roughly 1.6% to 2.5%)",
+          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: surprises here tend to move the dollar broadly, and this print lands the day after the FOMC decision."
         },
         {
-          "time": "13:30", "currency": "USD", "event": "US PCE inflation", "importance": "high",
-          "description": "The Personal Consumption Expenditures price index, the Federal Reserve's preferred measure of inflation. Often more market-moving than CPI because of how directly it feeds into the Fed's own policy framework."
+          "time": "13:30",
+          "currency": "USD",
+          "event": "US PCE inflation (Personal Income and Outlays, June)",
+          "importance": "high",
+          "previous": "Core PCE +3.4% y/y (May)",
+          "description": "The Personal Consumption Expenditures price index, the Federal Reserve's preferred measure of inflation. Often more market-moving than CPI because of how directly it feeds into the Fed's own policy framework, especially with core PCE running well above the 2% target."
         },
         {
-          "time": "13:30", "currency": "USD", "event": "US weekly initial jobless claims", "importance": "low",
+          "time": "13:30",
+          "currency": "USD",
+          "event": "US weekly initial jobless claims",
+          "importance": "low",
           "description": "The number of people filing for unemployment benefits for the first time that week. A high-frequency, early read on the US labour market; usually a minor mover unless it deviates sharply from expectations."
         }
       ]
@@ -112,33 +191,114 @@
       "label": "Friday 31 July",
       "events": [
         {
-          "time": "04:00", "currency": "JPY", "event": "Bank of Japan interest rate decision", "importance": "high",
-          "previous": "1.00%", "consensus": "Hold at 1.00%",
-          "description": "The Bank of Japan announces its target for short-term interest rates. Following the BoJ's recent shift toward tighter policy, each decision is watched closely for signs of further rate rises, which tend to strengthen the yen."
+          "time": "02:30",
+          "currency": "CNY",
+          "event": "China NBS Manufacturing PMI (July)",
+          "importance": "high",
+          "previous": "50.3 (June)",
+          "description": "China's official gauge of factory activity, compiled by the National Bureau of Statistics and weighted toward large, state-owned firms. A reading above 50 signals expansion; as the main monthly health check on the world's second-largest economy, it can move the yuan and broader risk sentiment."
         },
         {
-          "time": "06:00", "currency": "JPY", "event": "BoJ Governor press conference", "importance": "high",
-          "description": "The BoJ Governor explains the decision and answers questions from the press. Often moves the yen more than the decision itself, particularly any comments on the pace of future policy normalisation."
+          "time": "02:30",
+          "currency": "CNY",
+          "event": "China NBS Non-Manufacturing PMI (July)",
+          "importance": "medium",
+          "description": "The official measure of activity in China's services and construction sectors, released alongside the manufacturing PMI. Gives a fuller picture of domestic demand than the factory-focused manufacturing index alone."
         },
         {
-          "time": "07:00", "currency": "CHF", "event": "KOF Economic Barometer", "importance": "medium",
+          "time": "02:30",
+          "currency": "AUD",
+          "event": "Producer Price Index (Q2)",
+          "importance": "low",
+          "description": "Measures the change in prices Australian producers receive for their output. A useful early signal of pipeline inflation pressure that can eventually feed into consumer prices, but rarely a major market mover by itself."
+        },
+        {
+          "time": "04:00",
+          "currency": "JPY",
+          "event": "Bank of Japan interest rate decision",
+          "importance": "high",
+          "previous": "1.00%",
+          "consensus": "Hold at 1.00%",
+          "description": "The Bank of Japan announces its target for short-term interest rates, alongside its quarterly Outlook Report with updated growth and inflation forecasts. Following the BoJ's shift toward tighter policy, each decision is watched closely for signs of further rate rises, which tend to strengthen the yen."
+        },
+        {
+          "time": "06:00",
+          "currency": "JPY",
+          "event": "BoJ Governor Kazuo Ueda press conference",
+          "importance": "high",
+          "description": "Governor Ueda explains the decision and answers questions from the press. Often moves the yen more than the decision itself, particularly any comments on the pace of future policy normalisation and the central bank's updated growth forecasts."
+        },
+        {
+          "time": "07:00",
+          "currency": "CHF",
+          "event": "KOF Economic Barometer (July)",
+          "importance": "medium",
           "description": "A monthly composite leading indicator for the Swiss economy from the KOF Swiss Economic Institute, pointing to likely activity over the next six months. A widely watched gauge of Swiss business sentiment, though it typically moves the franc less than a central bank event would."
         },
         {
-          "time": "10:00", "currency": "EUR", "event": "Eurozone flash CPI", "importance": "high",
-          "description": "An early estimate of Eurozone-wide inflation for the month. One of the key inputs into the ECB's interest rate decisions, and a regular source of euro volatility on release."
+          "time": "10:00",
+          "currency": "EUR",
+          "event": "Eurozone flash CPI (July)",
+          "importance": "high",
+          "description": "An early estimate of Eurozone-wide inflation for the month. One of the key inputs into the ECB's interest rate decisions, and a regular source of euro volatility on release, especially coming a day after the flash GDP print."
         },
         {
-          "time": "10:00", "currency": "EUR", "event": "Eurozone unemployment rate", "importance": "low",
+          "time": "10:00",
+          "currency": "EUR",
+          "event": "Eurozone unemployment rate (June)",
+          "importance": "low",
+          "previous": "6.3% (April)",
           "description": "The percentage of the Eurozone workforce that is unemployed. A slower-moving indicator that rarely surprises markets, but still forms part of the broader picture of Eurozone economic health."
         },
         {
-          "time": "13:30", "currency": "CAD", "event": "Canada GDP by industry (May)", "importance": "medium",
-          "description": "Statistics Canada's monthly measure of economic output by industry. Released with a roughly two-month lag, it gives an early read on how the Canadian economy is tracking heading into the third quarter."
+          "time": "13:30",
+          "currency": "CAD",
+          "event": "Canada GDP by industry (May)",
+          "importance": "medium",
+          "description": "Statistics Canada's monthly measure of economic output by industry. Released with a roughly two-month lag, it gives an early read on how the Canadian economy is tracking heading into the third quarter, and comes with an advance estimate for June."
         },
         {
-          "time": "14:45", "currency": "USD", "event": "US Chicago PMI", "importance": "low",
+          "time": "14:45",
+          "currency": "USD",
+          "event": "US Chicago PMI (July)",
+          "importance": "low",
           "description": "A regional survey of purchasing managers in the Chicago area, used as an early signal for the following week's national ISM manufacturing survey. Usually a modest, secondary market mover."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "label": "Monday 3 August",
+      "events": [
+        {
+          "time": "02:45",
+          "currency": "CNY",
+          "event": "Caixin Manufacturing PMI (July)",
+          "importance": "medium",
+          "description": "A private-sector survey of Chinese manufacturing activity, skewed toward smaller and export-oriented firms compared with the official NBS PMI. Often diverges from the state survey, so a gap between the two draws extra attention from FX traders."
+        },
+        {
+          "time": "08:00",
+          "currency": "EUR",
+          "event": "Eurozone final Manufacturing PMI (July)",
+          "importance": "medium",
+          "previous": "52.0 (July flash estimate)",
+          "description": "The revised, final version of the earlier flash Manufacturing PMI reading for the Eurozone. Usually a minor market mover unless it deviates meaningfully from the flash estimate already published in July."
+        },
+        {
+          "time": "09:30",
+          "currency": "GBP",
+          "event": "UK final Manufacturing PMI (July)",
+          "importance": "medium",
+          "description": "The revised, final version of the flash UK Manufacturing PMI, which had earlier pointed to a 22-month high for manufacturing output. Confirms whether the rebound in the UK private sector held up through month-end."
+        },
+        {
+          "time": "15:00",
+          "currency": "USD",
+          "event": "ISM Manufacturing PMI (July)",
+          "importance": "high",
+          "previous": "53.3 (June)",
+          "description": "The Institute for Supply Management's survey of US factory activity, one of the most closely watched real-time gauges of the manufacturing sector. A reading above 50 signals expansion, and surprises here can move the dollar and US yields."
         }
       ]
     }
