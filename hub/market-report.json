@@ -1,7 +1,79 @@
 {
-  "updated": "2026-07-27T23:55:00+01:00",
+  "updated": "2026-07-28T09:20:00+01:00",
   "timezone": "BST",
   "reports": [
+    {
+      "date": "2026-07-28",
+      "label": "Tuesday 28 July",
+      "sessions": [
+        {
+          "session": "morning",
+          "time": "08:30",
+          "currencies": [
+            {
+              "code": "GBP",
+              "headline": "Sterling softens as a firmer dollar dominates ahead of back to back central bank decisions.",
+              "commentary": "Sterling has drifted lower overnight, giving back some of yesterday's gains as the dollar firms broadly ahead of Wednesday's Fed decision. There's no fresh UK-specific news behind the move, it's largely a function of traders turning cautious and adding to dollar positions ahead of what's shaping up to be an unusually dense week of central bank action.\n\nThis week is genuinely unusual: the Fed, Bank of England and Bank of Japan all meet within three days of each other, Wednesday, Thursday and Friday respectively. That clustering tends to keep individual currencies more reactive to the broad dollar mood than to their own fundamentals until each decision actually lands, which is largely what's playing out for sterling this morning.",
+              "watchToday": "Nothing further is scheduled for GBP today. Attention builds toward Thursday's Bank of England decision (Bank Rate currently 3.75%), where a new Monetary Policy Report will be published alongside the vote."
+            },
+            {
+              "code": "EUR",
+              "headline": "Euro consolidates near its recent lows as traders await the Fed.",
+              "commentary": "The euro has been stuck in a narrow range overnight, hovering close to its weakest levels of the past month as the broader dollar firms across the board. Traders appear reluctant to place aggressive bets in either direction with the two-day FOMC meeting concluding tomorrow, preferring to wait for the outcome before committing.\n\nWith the ECB on hold and no fresh Eurozone data overnight, the euro's next real catalyst is domestic rather than external: Thursday brings both German and Eurozone flash GDP for the second quarter, followed by Friday's Eurozone flash inflation print, either of which could move the currency more than today's quiet session.",
+              "watchToday": "ECB Executive Board member Isabel Schnabel speaks this morning (09:00 UK time), watched closely for any shift in tone on the path of rates. Governing Council member Pierre Wunsch follows this afternoon (13:00), though his remarks are typically lower profile."
+            },
+            {
+              "code": "USD",
+              "headline": "Dollar holds at a one month high as traders keep a hike back on the table.",
+              "commentary": "The dollar has firmed further overnight to its strongest level in around a month, as markets continue to price a slim but real chance that the Fed surprises with a rate hike at tomorrow's decision rather than the widely expected hold. That two-sided uncertainty, hold versus hike, is unusual this late in a cycle and is part of why the dollar has been able to grind higher even after yesterday's sharp pullback on easing Middle East tensions.\n\nThe press conference that follows tomorrow's decision will likely matter more than the decision itself for how the dollar trades afterwards, since that's typically where the Fed Chair gives the clearest signal on the pace and timing of any further moves. Markets are essentially using today's session to position ahead of that.",
+              "watchToday": "US Conference Board Consumer Confidence data lands this afternoon (15:00 UK time), followed by a speech from Fed Governor Christopher Waller at 17:00, both of which could shift expectations further ahead of tomorrow's rate decision."
+            },
+            {
+              "code": "JPY",
+              "headline": "Yen holds flat near four decade lows as the dollar's firmness dominates.",
+              "commentary": "The yen has been broadly flat against the dollar overnight, continuing to linger near its weakest level in roughly four decades as the dollar's own firmness, rather than any fresh yen-specific news, keeps the pair pinned near recent extremes. With the Fed decision tomorrow and the Bank of Japan's own meeting concluding Friday, traders appear content to wait rather than push the pair meaningfully in either direction today.\n\nThat calm is unlikely to last: this week features Japan's national CPI print on Thursday and Friday's BoJ decision, where the central bank is expected to hold but faces growing pressure to signal a faster path of future hikes. Any hawkish shift in tone from Governor Ueda would likely matter far more for the yen than today's quiet overnight session.",
+              "watchToday": "Nothing further is scheduled for JPY today. Japan's national CPI print lands Thursday, setting the stage for Friday's Bank of Japan decision (rate currently 1.00%)."
+            },
+            {
+              "code": "CHF",
+              "headline": "Franc weakens toward its softest level in over a year as fresh US tariffs bite.",
+              "commentary": "The franc has slipped against the dollar overnight, trading close to its weakest level in more than a year, as the broader dollar firms and fresh details emerge on US tariffs affecting Swiss imports. Washington has confirmed those tariffs will stay within the ceiling previously announced, which removes some uncertainty but keeps a genuine headwind in place for a Swiss economy that relies heavily on exports.\n\nThat combination, a firmer dollar and a confirmed tariff burden, is a more specifically CHF-negative story than the broad market mood alone would suggest. With no Swiss data due domestically this week beyond Friday's KOF Barometer, the franc is likely to keep tracking both the dollar's direction and any further tariff-related headlines rather than its own fundamentals.",
+              "watchToday": "No CHF-specific events are scheduled today. The KOF Economic Barometer is due Friday, alongside broader dollar direction into Wednesday's Fed decision, as the main things to watch this week."
+            },
+            {
+              "code": "CAD",
+              "headline": "Loonie near a two week low as oil's slide deepens and the BoC stays dovish.",
+              "commentary": "The Canadian dollar has weakened to its softest level in roughly two weeks this morning, weighed down by a further slide in oil prices and a Bank of Canada seen as leaning dovish after last month's hold. Oil has now dropped sharply from last week's highs as the pause in US-Iran hostilities continues to hold, and with Canada a major energy exporter, that decline is doing more damage to the loonie than the broader dollar mood is helping other currencies.\n\nThat said, the same de-escalation capping oil prices is also capping how far the dollar itself can run, which is providing some offsetting support. Speculative positioning against the loonie has reportedly been trimmed in recent sessions, suggesting some traders see the current weakness as closer to a floor than a fresh trend.",
+              "watchToday": "The Bank of Canada's Summary of Deliberations from its most recent decision is due this evening (18:30 UK time), which could offer clues on how divided policymakers were and what might come next."
+            },
+            {
+              "code": "NZD",
+              "headline": "Kiwi softens as the firmer dollar and a broader bond selloff weigh.",
+              "commentary": "The New Zealand dollar has eased overnight alongside the Australian dollar, as a broadly firmer US dollar and a selloff in government bond markets both weigh on higher-yielding currencies. It's a reversal from yesterday afternoon's relief rally, when easing Middle East tensions had briefly lifted risk appetite and the kiwi along with it.\n\nThe underlying story for NZD hasn't fundamentally changed: this month's RBNZ hike and hawkish signals for further tightening still provide a floor of support, but with the next Official Cash Rate decision not until September, the kiwi is likely to keep taking its cues mainly from the broader dollar and global risk mood rather than domestic developments in the near term.",
+              "watchToday": "No New Zealand data is due today. With the next RBNZ meeting not until September, the kiwi is likely to stay reactive to broader dollar moves and Wednesday's Fed decision."
+            },
+            {
+              "code": "AUD",
+              "headline": "Aussie eases as government bonds sell off and the dollar firms.",
+              "commentary": "The Australian dollar has softened this morning as a broader selloff in government bonds and a firmer US dollar both weigh on sentiment, giving back some of yesterday's gains from the pullback in oil prices. Australia's own inflation data lands tomorrow and is likely to matter more for direction than today's broader market mood.\n\nThat inflation print carries real weight for the Reserve Bank of Australia's thinking heading into its mid-August meeting, where markets are still debating the odds of a further hike. China's economic performance remains the other key swing factor given how much of Australia's exports go there, and a Chinese manufacturing survey due later this week will add to that picture.",
+              "watchToday": "Australia's second quarter CPI print lands overnight tonight into tomorrow (02:30 UK time), the most important domestic data point ahead of the RBA's mid-August meeting."
+            },
+            {
+              "code": "CNY",
+              "headline": "Yuan steady as traders await China's manufacturing snapshot later this week.",
+              "commentary": "The offshore yuan has been little changed overnight, continuing the relative stability that's characterised its trading in recent weeks even as the broader dollar has firmed against most other majors. The PBoC continues to manage the currency mainly through its daily fixing rather than large moves, which is part of why CNY tends to see smaller swings than higher-beta currencies during periods of dollar strength.\n\nThe more interesting test comes later this week with China's official manufacturing survey, a timely read on how the world's second largest economy is tracking and a release that matters not just for the yuan but for AUD and NZD too, given how closely both are tied to Chinese demand.",
+              "watchToday": "China's official NBS Manufacturing PMI for July is due Friday, the main domestic release to watch this week alongside broader dollar direction into Wednesday's Fed decision."
+            },
+            {
+              "code": "ZAR",
+              "headline": "Rand extends its slide to a fresh two month low after last week's surprise SARB hold.",
+              "commentary": "The rand has weakened further overnight to its softest level since mid-May, continuing to digest last week's SARB decision to hold its policy rate steady when markets had widely expected a hike. That dovish surprise, combined with South African inflation running at a two-year high, has left the currency exposed at a moment when the broader dollar is also firming across the board.\n\nThe combination is a difficult one for the rand: a central bank seen as reluctant to raise rates further even as inflation runs hot, at the same time as global dollar strength adds an external headwind. With no SARB meeting scheduled this week, the rand is likely to stay sensitive to broader dollar moves and any further Middle East developments rather than domestic news.",
+              "watchToday": "No SARB meeting is scheduled this week. The rand is likely to stay driven by external factors, particularly broader dollar direction into Wednesday's Fed decision, rather than domestic news."
+            }
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-07-27",
       "label": "Monday 27 July",
