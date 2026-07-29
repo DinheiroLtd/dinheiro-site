@@ -495,6 +495,75 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phcs-x { color: rgba(210,60,60,0.9); font-weight: 700; flex-shrink: 0; }
 .phcs-tick { color: var(--accent); font-weight: 700; flex-shrink: 0; }
 @media (max-width: 900px) { .phcs-panel { display: none; } }
+
+/* ─── GHOST TYPE HERO (Personal + Business) ─────────────── */
+.ph-ghost {
+  min-height: calc(100vh - 94px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 56px 80px 68px;
+}
+.ph-ghost-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent);
+  z-index: 2;
+}
+.ph-ghost-word {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(120px, 18vw, 220px);
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+  pointer-events: none;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  user-select: none;
+  z-index: 0;
+}
+.ph-ghost-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+.ph-ghost-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.ph-ghost-h1 {
+  font-size: clamp(2.1rem, 3.2vw, 3.1rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.06;
+  letter-spacing: -0.75px;
+  margin-bottom: 18px;
+}
+.ph-ghost-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.52);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.ph-ghost-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 900px) {
+  .ph-ghost { padding: 100px 20px 52px 20px !important; min-height: auto !important; }
+  .ph-ghost-bar { display: none; }
+  .ph-ghost-word { display: none; }
+}
+
 .page-hero-stat-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
