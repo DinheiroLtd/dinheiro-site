@@ -503,7 +503,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 80px 56px 80px 68px;
+  padding: 80px 48px;
 }
 .ph-ghost-bar {
   position: absolute;
@@ -532,7 +532,9 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .ph-ghost-content {
   position: relative;
   z-index: 1;
-  max-width: 680px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 .ph-ghost-eyebrow {
   font-size: 0.6875rem;
