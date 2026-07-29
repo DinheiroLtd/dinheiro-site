@@ -31,7 +31,7 @@ body {
   color: var(--navy);
   background: var(--white);
   line-height: 1.6;
-  padding-top: 122px; /* utility bar 38px + 12px gap + nav 62px + 10px gap */
+  padding-top: 94px;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -103,8 +103,9 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 }
 
 /* ─── TOP BAR ───────────────────────────────────────────── */
-/* ─── UTILITY BAR ────────────────────────────────────────── */
+/* ─── UTILITY BAR (hidden — using single-tier nav) ──────── */
 .utility-bar {
+  display: none !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -154,7 +155,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   gap: 5px;
 }
 .utility-bar-login:hover { color: white; }
-@media (max-width: 768px) { .utility-bar { display: none; } body { padding-top: 94px; } }
+@media (max-width: 768px) { .utility-bar { display: none; } }
 
 /* ─── LEGACY TOP-BAR (kept for compatibility) ────────────── */
 .top-bar { display: none; }
@@ -163,7 +164,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 /* ─── NAV ───────────────────────────────────────────────── */
 #navbar {
   position: fixed;
-  top: 50px;
+  top: 16px;
   left: 24px;
   right: 24px;
   z-index: 1000;
