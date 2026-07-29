@@ -42,116 +42,29 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <section id="compare-hero" class="page-hero" style="min-height: calc(100vh - 72px); display: flex; flex-direction: row; align-items: center; padding: 80px 48px; gap: 80px;">
-    <div style="flex: 1;">
-      <h1 style="font-size: clamp(2.1rem, 3.2vw, 3.1rem); line-height: 1.08; letter-spacing: -0.75px; margin-bottom: 24px;">See exactly how much you could save with Dinheiro.</h1>
-      <p>Banks and online platforms profit from the exchange rate they quote you. We show you exactly what you get, and what you would lose elsewhere.</p>
-      <div class="hero-btns" style="margin-top: 32px;">
-        <a href="#rate-tool" class="btn btn-white btn-lg">Get a Live Rate</a>
-        <a href="#contact" class="btn btn-outline-white btn-lg">Speak to a Relationship Manager</a>
+  <section class="page-hero ph-circle">
+    <div class="phc-inner">
+      <div class="phc-text">
+        <div class="phc-eyebrow">Compare</div>
+        <h1 class="phc-h1">See exactly how much you could save with Dinheiro.</h1>
+        <p class="phc-sub">Banks and online platforms profit from the exchange rate they quote you. We show you exactly what you get — and what you lose elsewhere.</p>
+        <div class="phc-btns">
+          <a href="#rate-tool" class="btn btn-white btn-lg">Get a live rate</a>
+          <a href="index.html#quote" class="btn btn-outline-white btn-lg">Speak to a relationship manager</a>
+        </div>
       </div>
-    </div>
-    <div style="flex: 1; align-self: center; max-height: calc(100vh - 232px); overflow: hidden;">
-
-      <style>
-        @keyframes countUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
-        @keyframes fadeSlide { from { opacity:0; transform:translateX(12px); } to { opacity:1; transform:translateX(0); } }
-        .sc-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.13); border-radius:20px; overflow:hidden; }
-        .sc-scenario { display:flex; align-items:center; gap:16px; padding:16px 22px; border-bottom:1px solid rgba(255,255,255,0.07); }
-        .sc-scenario:last-child { border-bottom:none; }
-        .sc-icon-wrap { width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.25rem; flex-shrink:0; }
-        .sc-meta { flex:1; min-width:0; }
-        .sc-type { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:rgba(255,255,255,0.4); margin-bottom:3px; }
-        .sc-desc { font-size:0.88rem; font-weight:600; color:#fff; line-height:1.3; }
-        .sc-amount { font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:2px; }
-        .sc-saving { text-align:right; flex-shrink:0; }
-        .sc-saving-label { font-size:0.68rem; color:rgba(255,255,255,0.4); margin-bottom:3px; }
-        .sc-saving-amount { font-size:1.05rem; font-weight:800; color:#4ade80; letter-spacing:-0.3px; }
-      </style>
-
-      <!-- Top stat -->
-      <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.13); border-radius:20px; padding:24px 26px; margin-bottom:16px;">
-        <div style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; color:rgba(255,255,255,0.4); margin-bottom:10px;">The scale of the problem</div>
-        <div style="font-size:2.4rem; font-weight:800; color:#fff; letter-spacing:-1px; line-height:1.1; margin-bottom:8px;">£26.4 billion</div>
-        <div style="font-size:0.85rem; color:rgba(255,255,255,0.55); line-height:1.5;">lost by UK businesses and individuals to bank foreign exchange costs every year, built quietly into the exchange rate you are quoted.</div>
+      <div class="phc-visual">
+        <div class="phc-ring phc-ring-1"></div>
+        <div class="phc-ring phc-ring-2"></div>
+        <div class="phc-ring phc-ring-3"></div>
+        <div class="phc-core">
+          <div class="phc-core-num">£0</div>
+          <div class="phc-core-label">transfer fees</div>
+        </div>
       </div>
-
-      <!-- Scenario cards -->
-      <div class="sc-card">
-
-        <div style="padding:16px 22px 12px; border-bottom:1px solid rgba(255,255,255,0.07);">
-          <span style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.6px; color:rgba(255,255,255,0.4);">What Dinheiro clients actually save</span>
-        </div>
-
-        <div class="sc-scenario">
-          <div class="sc-icon-wrap" style="background:rgba(143,203,235,0.18); border:1px solid rgba(143,203,235,0.25);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div class="sc-meta">
-            <div class="sc-type">Property Purchase</div>
-            <div class="sc-desc">Buying a home in southern France</div>
-            <div class="sc-amount">£380,000.00 transferred</div>
-          </div>
-          <div class="sc-saving">
-            <div class="sc-saving-label">saved vs bank</div>
-            <div class="sc-saving-amount">+£11,400.00</div>
-          </div>
-        </div>
-
-        <div class="sc-scenario">
-          <div class="sc-icon-wrap" style="background:rgba(143,203,235,0.18); border:1px solid rgba(143,203,235,0.25);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-          </div>
-          <div class="sc-meta">
-            <div class="sc-type">Business Payments</div>
-            <div class="sc-desc">SME paying EU suppliers monthly</div>
-            <div class="sc-amount">£60,000.00/month</div>
-          </div>
-          <div class="sc-saving">
-            <div class="sc-saving-label">saved per year</div>
-            <div class="sc-saving-amount">+£21,600.00</div>
-          </div>
-        </div>
-
-        <div class="sc-scenario">
-          <div class="sc-icon-wrap" style="background:rgba(143,203,235,0.18); border:1px solid rgba(143,203,235,0.25);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div class="sc-meta">
-            <div class="sc-type">Relocation</div>
-            <div class="sc-desc">Moving to Dubai, transferring personal assets</div>
-            <div class="sc-amount">£210,000.00 transferred</div>
-          </div>
-          <div class="sc-saving">
-            <div class="sc-saving-label">saved vs bank</div>
-            <div class="sc-saving-amount">+£6,300.00</div>
-          </div>
-        </div>
-
-        <div class="sc-scenario">
-          <div class="sc-icon-wrap" style="background:rgba(143,203,235,0.18); border:1px solid rgba(143,203,235,0.25);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="sc-meta">
-            <div class="sc-type">Regular Remittance</div>
-            <div class="sc-desc">Supporting family abroad every month</div>
-            <div class="sc-amount">£3,000.00/month</div>
-          </div>
-          <div class="sc-saving">
-            <div class="sc-saving-label">saved per year</div>
-            <div class="sc-saving-amount">+£1,080.00</div>
-          </div>
-        </div>
-
-        <div style="padding:14px 22px; background:rgba(0,0,0,0.15); display:flex; align-items:center; justify-content:space-between;">
-          <span style="font-size:0.72rem; color:rgba(255,255,255,0.35);">Based on typical savings vs a bank exchange rate</span>
-          <a href="#rate-tool" style="font-size:0.75rem; font-weight:700; color:rgba(255,255,255,0.55); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Calculate yours ↓</a>
-        </div>
-
-      </div>
-
     </div>
   </section>
+
 
   <!-- RATE TOOL -->
   <section class="section-rate-tool" id="rate-tool" style="background:var(--gray-light); padding:100px 48px;">

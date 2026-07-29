@@ -392,6 +392,24 @@ nav.scrolled { box-shadow: 0 12px 48px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.2
 .page-hero-sub { font-size: 1.0625rem; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 36px; font-weight: 400; }
 .page-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .page-hero-right {}
+
+/* ─── CIRCLE HERO LAYOUT ──────────────────────────────── */
+.ph-circle { min-height: calc(100vh - 122px); display: flex; align-items: center; }
+.phc-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; display: flex; align-items: center; gap: 64px; }
+.phc-text { flex: 1.3; }
+.phc-eyebrow { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 20px; }
+.phc-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
+.phc-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 480px; margin-bottom: 32px; }
+.phc-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.phc-visual { flex: 0 0 240px; height: 240px; position: relative; display: flex; align-items: center; justify-content: center; }
+.phc-ring { position: absolute; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.phc-ring-1 { width: 240px; height: 240px; border: 1px solid rgba(143,203,235,0.12); }
+.phc-ring-2 { width: 164px; height: 164px; border: 1px solid rgba(143,203,235,0.09); }
+.phc-ring-3 { width: 88px; height: 88px; border: 1px solid rgba(143,203,235,0.07); }
+.phc-core { width: 64px; height: 64px; border-radius: 50%; background: rgba(143,203,235,0.1); border: 1px solid rgba(143,203,235,0.28); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; z-index: 1; }
+.phc-core-num { font-size: 0.875rem; font-weight: 800; color: var(--accent); letter-spacing: -0.2px; line-height: 1.1; text-align: center; }
+.phc-core-label { font-size: 0.5rem; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.07em; text-align: center; margin-top: 2px; }
+@media (max-width: 900px) { .phc-visual { display: none; } }
 .page-hero-stat-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
