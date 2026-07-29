@@ -496,6 +496,22 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phcs-tick { color: var(--accent); font-weight: 700; flex-shrink: 0; }
 @media (max-width: 900px) { .phcs-panel { display: none; } }
 
+/* ─── PROMISE HERO (Personal + Business) ────────────────── */
+.ph-promise { min-height: calc(100vh - 94px); display: flex; align-items: center; }
+.phpr-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; display: flex; align-items: center; gap: 64px; }
+.phpr-text { flex: 1.2; }
+.phpr-eyebrow { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 20px; }
+.phpr-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
+.phpr-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
+.phpr-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.phpr-box { flex: 0 0 300px; background: rgba(143,203,235,0.07); border: 1px solid rgba(143,203,235,0.2); border-radius: 16px; padding: 32px 30px; }
+.phpr-box-label { font-size: 0.6875rem; font-weight: 600; color: rgba(255,255,255,0.28); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; }
+.phpr-box-h { font-size: clamp(1.5rem, 2vw, 1.875rem); font-weight: 800; color: white; line-height: 1.1; margin-bottom: 4px; }
+.phpr-box-h-accent { font-size: clamp(1.5rem, 2vw, 1.875rem); font-weight: 800; color: var(--accent); line-height: 1.1; margin-bottom: 20px; }
+.phpr-box-divider { height: 1px; background: rgba(255,255,255,0.07); margin-bottom: 16px; }
+.phpr-box-desc { font-size: 0.8125rem; color: rgba(255,255,255,0.4); line-height: 1.75; }
+@media (max-width: 900px) { .phpr-box { display: none; } }
+
 /* ─── GHOST TYPE HERO (Personal + Business) ─────────────── */
 .ph-ghost {
   min-height: calc(100vh - 94px);
