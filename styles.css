@@ -476,25 +476,25 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phsr-row:last-child .phsr-row-icon { color: var(--accent); }
 @media (max-width: 900px) { .phsr-panel { display: none; } }
 
-/* ─── COMPARE HERO: SPLIT PANELS ────────────────── */
-.ph-compare-split { padding-bottom: 0 !important; }
-.phcs-top { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; text-align: center; padding-bottom: 40px; }
-.phcs-eyebrow { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 16px; }
-.phcs-h1 { font-size: clamp(1.9rem, 2.8vw, 2.8rem); font-weight: 800; color: white; line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 14px; }
-.phcs-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.7; max-width: 520px; margin: 0 auto; }
-.phcs-panels { display: flex; margin: 0 -48px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 1; }
-.phcs-bank { flex: 1; padding: 32px 48px; opacity: 0.5; }
-.phcs-din { flex: 1; padding: 32px 48px; background: rgba(143,203,235,0.05); border-left: 1px solid rgba(255,255,255,0.08); }
-.phcs-col-label { font-size: 0.75rem; font-weight: 700; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 20px; }
-.phcs-din .phcs-col-label { color: var(--accent); }
-.phcs-item { display: flex; align-items: center; gap: 10px; margin-bottom: 13px; }
-.phcs-mark { font-size: 0.875rem; font-weight: 700; flex-shrink: 0; width: 18px; text-align: center; }
-.phcs-x { color: rgba(220,70,70,0.9); }
-.phcs-tick { color: var(--accent); }
-.phcs-item-text { font-size: 0.875rem; color: rgba(255,255,255,0.65); }
-.phcs-din .phcs-item-text { color: rgba(255,255,255,0.85); }
-.phcs-din-cta { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
-@media (max-width: 768px) { .phcs-bank { display: none; } .phcs-panels { margin: 0 -48px; } }
+/* ─── COMPARE HERO: SIDE-BY-SIDE CARD ───────────── */
+.ph-compare-split { min-height: calc(100vh - 94px); display: flex; align-items: center; }
+.phcs-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; width: 100%; display: flex; align-items: center; gap: 64px; }
+.phcs-text { flex: 1.2; }
+.phcs-eyebrow { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 20px; }
+.phcs-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
+.phcs-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
+.phcs-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.phcs-panel { flex: 0 0 340px; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; }
+.phcs-panel-head { display: flex; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.phcs-head-bank { flex: 1; padding: 13px 16px; font-size: 0.6875rem; font-weight: 700; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.09em; }
+.phcs-head-din { flex: 1; padding: 13px 16px; font-size: 0.6875rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.09em; background: rgba(143,203,235,0.06); border-left: 1px solid rgba(255,255,255,0.08); }
+.phcs-row { display: flex; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.phcs-row:last-child { border-bottom: none; }
+.phcs-cell-bank { flex: 1; padding: 13px 16px; font-size: 0.8125rem; color: rgba(255,255,255,0.38); display: flex; align-items: center; gap: 8px; }
+.phcs-cell-din { flex: 1; padding: 13px 16px; font-size: 0.8125rem; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 8px; background: rgba(143,203,235,0.05); border-left: 1px solid rgba(255,255,255,0.06); }
+.phcs-x { color: rgba(210,60,60,0.9); font-weight: 700; flex-shrink: 0; }
+.phcs-tick { color: var(--accent); font-weight: 700; flex-shrink: 0; }
+@media (max-width: 900px) { .phcs-panel { display: none; } }
 .page-hero-stat-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
