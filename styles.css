@@ -467,7 +467,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phsr-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
 .phsr-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 400px; margin-bottom: 32px; }
 .phsr-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.phsr-panel { flex: 0 0 320px; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; }
+.phsr-panel { flex: 0 0 480px; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
 .phsr-row { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.07); text-decoration: none; }
 .phsr-row:last-child { border-bottom: none; background: rgba(143,203,235,0.06); }
 .phsr-row-name { font-size: 0.9375rem; font-weight: 600; color: white; }
