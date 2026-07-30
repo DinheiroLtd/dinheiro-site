@@ -1,55 +1,25 @@
 {
-  "updated": "2026-07-29T16:35:00+01:00",
+  "updated": "2026-07-30T09:50:00+01:00",
   "timezone": "BST",
   "days": [
-    {
-      "date": "2026-07-29",
-      "label": "Wednesday 29 July",
-      "events": [
-        {
-          "time": "02:30",
-          "currency": "AUD",
-          "event": "Australia CPI (Q2)",
-          "importance": "high",
-          "previous": "4.1% y/y (Q1)",
-          "consensus": "4.1% y/y",
-          "description": "The Australian Bureau of Statistics' quarterly inflation report, the single most important domestic data point for the Reserve Bank of Australia's rate decisions. This morning's print came in at 4.0% year on year, a touch below the 4.1% consensus and down slightly from the first quarter, with the trimmed mean core measure also easing. A softer than expected read takes some pressure off the RBA ahead of its mid-August meeting."
-        },
-        {
-          "time": "18:30",
-          "currency": "CAD",
-          "event": "Bank of Canada Summary of Deliberations",
-          "importance": "medium",
-          "description": "A written account of the discussion behind the Bank of Canada's most recent rate decision, published roughly two weeks after the meeting. It can reveal how divided or confident the Governing Council was, which matters for how markets price the next move."
-        },
-        {
-          "time": "19:00",
-          "currency": "USD",
-          "event": "Federal Reserve interest rate decision",
-          "importance": "high",
-          "previous": "3.50%-3.75%",
-          "consensus": "Hold at 3.50%-3.75%",
-          "description": "The Federal Reserve's Open Market Committee (FOMC) announces its target range for the US federal funds rate. This is one of the single biggest drivers of the US dollar and global markets: a surprise move, or surprise language in the statement, can cause sharp swings across all major currency pairs."
-        },
-        {
-          "time": "19:30",
-          "currency": "USD",
-          "event": "Fed Chair press conference",
-          "importance": "high",
-          "description": "The Fed Chair takes questions from reporters straight after the rate decision. Often more market-moving than the decision itself, since this is where the Fed explains its reasoning and gives clues about what comes next."
-        }
-      ]
-    },
     {
       "date": "2026-07-30",
       "label": "Thursday 30 July",
       "events": [
         {
-          "time": "00:30",
-          "currency": "JPY",
-          "event": "Japan national CPI (June)",
-          "importance": "medium",
-          "description": "Japan's headline Consumer Price Index, measuring the change in prices for a typical basket of goods and services. A key input for the Bank of Japan's policy decisions, and released just ahead of this week's BoJ meeting."
+          "time": "02:00",
+          "currency": "NZD",
+          "event": "ANZ Business Confidence (July)",
+          "importance": "low",
+          "previous": "36.6 (June)",
+          "description": "ANZ's monthly survey of New Zealand business sentiment. July's reading jumped sharply to 56.1, a broad based improvement in confidence with exporters, investment and employment intentions all firmer. A useful, if noisy, early read on how firms are feeling ahead of the harder activity data."
+        },
+        {
+          "time": "02:30",
+          "currency": "AUD",
+          "event": "Australia building approvals (June)",
+          "importance": "low",
+          "description": "A monthly count of permits granted for new residential construction. A leading indicator for future building activity and, indirectly, for housing supply pressures the Reserve Bank of Australia has to weigh when setting policy. Rarely a major mover for the Australian dollar on its own."
         },
         {
           "time": "07:00",
@@ -58,13 +28,17 @@
           "importance": "medium",
           "previous": "-0.6% m/m (May, revised)",
           "consensus": "+0.5% m/m",
-          "description": "A monthly measure of the volume of goods sold by retailers in the Eurozone's largest economy. Since German consumer spending accounts for a big share of Eurozone demand, a surprise here can move the euro ahead of the bloc-wide growth and inflation figures due later the same morning."
+          "description": "A monthly measure of the volume of goods sold by retailers in the Eurozone's largest economy. Since German consumer spending accounts for a big share of Eurozone demand, a surprise here can move the euro ahead of the bloc wide growth and inflation figures due later the same morning."
         },
         {
           "time": "07:00",
           "currency": "EUR",
           "event": "German flash GDP (Q2)",
           "importance": "medium",
+          "previous": "0.3% q/q (Q1)",
+          "consensus": "0.1% q/q",
+          "revised": true,
+          "revisedNote": "This morning's preliminary print came in at 0.2% quarter on quarter, ahead of the 0.1% consensus though still slower than the prior quarter's 0.3% pace.",
           "description": "An early estimate of quarterly economic growth in Germany, the Eurozone's largest economy. Often moves the euro ahead of the full Eurozone GDP figure released later the same morning."
         },
         {
@@ -74,14 +48,14 @@
           "importance": "high",
           "previous": "-0.2% q/q (Q1)",
           "consensus": "+0.1% q/q",
-          "description": "An early estimate of quarterly economic growth across the whole Eurozone. One of the most closely watched growth indicators for the euro, as it feeds directly into the ECB's outlook for the bloc, coming after a contraction in the first quarter."
+          "description": "An early estimate of quarterly economic growth across the whole Eurozone. One of the most closely watched growth indicators for the euro, feeding directly into the ECB's outlook for the bloc, and today's print is expected to be just enough to avoid a second straight quarter of contraction."
         },
         {
           "time": "10:00",
           "currency": "EUR",
           "event": "ECB's Philip Lane speech",
           "importance": "low",
-          "description": "A public speech by Philip Lane, the ECB's Chief Economist. His remarks are watched particularly closely as he's seen as a bellwether for the Governing Council's internal economic thinking."
+          "description": "A public appearance by Philip Lane, the ECB's Chief Economist. His remarks are watched closely as he is seen as a bellwether for the Governing Council's internal thinking on inflation and growth."
         },
         {
           "time": "12:00",
@@ -90,37 +64,40 @@
           "importance": "high",
           "previous": "3.75%",
           "consensus": "Hold at 3.75%",
-          "description": "The Bank of England's Monetary Policy Committee (MPC) announces its decision on Bank Rate, the UK's main interest rate. Money markets currently price around an 86% chance of a hold, with the rest priced for a surprise hike to 4.00%, following June's split 7-2 vote and hawkish signals from Chief Economist Huw Pill. A surprise decision or shift in the vote split can move sterling sharply."
+          "description": "The Bank of England's Monetary Policy Committee announces its decision on Bank Rate, the UK's main interest rate. Economists widely expect a hold at 3.75% following June's split 7-2 vote, but with UK services inflation still running above target, any shift in the vote split or tone can move sterling sharply."
         },
         {
           "time": "12:00",
           "currency": "GBP",
           "event": "BoE Monetary Policy Report & Financial Stability Report",
           "importance": "medium",
-          "description": "Published alongside the rate decision, this sets out the Bank's updated forecasts for inflation and growth, plus its assessment of risks to the UK financial system. Markets read this for clues on the future path of rates."
+          "description": "Published alongside the rate decision, this sets out the Bank's updated forecasts for inflation and growth, plus its assessment of risks to the UK financial system. Markets read this closely for clues on the future path of rates."
         },
         {
           "time": "13:00",
           "currency": "GBP",
           "event": "BoE Governor press conference",
           "importance": "high",
-          "description": "The Governor of the Bank of England answers questions from journalists straight after the rate decision. Often the moment that moves sterling most, as it's where the Bank explains its reasoning in its own words."
+          "description": "Governor Andrew Bailey takes questions from journalists straight after the rate decision. Often the moment that moves sterling most, since this is where the Bank explains its reasoning in its own words."
         },
         {
           "time": "13:00",
           "currency": "EUR",
           "event": "German flash CPI (July)",
           "importance": "medium",
-          "description": "An early estimate of German inflation, released ahead of the full Eurozone inflation figure. As the bloc's largest economy, Germany's number often sets the tone for how the euro reacts the next day."
+          "previous": "2.3% y/y (June)",
+          "description": "An early estimate of German inflation, released ahead of the full Eurozone inflation figure the following day. Economists expect a pick up from June's 2.3% as a temporary fuel duty cut expires. As the bloc's largest economy, Germany's number often sets the tone for how the euro reacts to the Eurozone print."
         },
         {
           "time": "13:30",
           "currency": "USD",
           "event": "US GDP (Q2, advance estimate)",
           "importance": "high",
-          "previous": "1.6% annualized (Q1)",
-          "consensus": "Around 2.0% annualized",
-          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: surprises here tend to move the dollar broadly, and land just a day after the Fed's own decision."
+          "previous": "2.1% annualized (Q1, revised)",
+          "consensus": "2.3% annualized",
+          "revised": true,
+          "revisedNote": "The Q1 growth figure has since been revised up to 2.1% annualized, and the consensus for today's Q2 advance estimate has firmed to around 2.3%, a touch stronger than earlier expectations nearer 2.0%.",
+          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: surprises here tend to move the dollar broadly, and land the day after the Fed's own decision."
         },
         {
           "time": "13:30",
@@ -129,14 +106,15 @@
           "importance": "high",
           "previous": "3.4% y/y (core, May)",
           "consensus": "3.3% y/y (core)",
-          "description": "The Personal Consumption Expenditures price index, the Federal Reserve's preferred measure of inflation. Often more market-moving than CPI because of how directly it feeds into the Fed's own policy framework."
+          "description": "The Personal Consumption Expenditures price index, the Federal Reserve's preferred measure of inflation. Often more market moving than CPI because of how directly it feeds into the Fed's own policy framework; a further easing toward 3.3% would support the case that price pressures are gradually cooling."
         },
         {
           "time": "13:30",
           "currency": "USD",
           "event": "US weekly initial jobless claims",
           "importance": "low",
-          "description": "The number of people filing for unemployment benefits for the first time that week. A high-frequency, early read on the US labour market; usually a minor mover unless it deviates sharply from expectations."
+          "previous": "187,000 (week to 18 July)",
+          "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market; usually a minor mover unless it deviates sharply from expectations."
         }
       ]
     },
@@ -145,12 +123,23 @@
       "label": "Friday 31 July",
       "events": [
         {
+          "time": "00:30",
+          "currency": "JPY",
+          "event": "Tokyo core CPI (July)",
+          "importance": "medium",
+          "consensus": "1.8% y/y (core)",
+          "description": "Inflation data for Tokyo, published about three weeks ahead of the nationwide figure and widely used as a leading indicator for Japan wide price pressure. Released hours before the Bank of Japan's own decision, it can shift expectations for future rate hikes and move the yen."
+        },
+        {
           "time": "02:30",
           "currency": "CNY",
           "event": "China NBS Manufacturing PMI (July)",
           "importance": "medium",
-          "previous": "50.6",
-          "description": "China's official, government-compiled gauge of manufacturing activity, released on the last day of the month. A reading above 50 signals expansion; below signals contraction. One of the more closely watched early signals of Chinese economic health, which matters for AUD and NZD as much as CNY given trade links."
+          "previous": "50.3 (June)",
+          "consensus": "50.0",
+          "revised": true,
+          "revisedNote": "June's official reading has been confirmed at 50.3, not the 50.6 previously indicated, and a Reuters poll of economists points to a further slip to 50.0 in July, right at the growth and contraction line.",
+          "description": "China's official, government compiled gauge of manufacturing activity, released on the last day of the month. A reading above 50 signals expansion; below signals contraction. One of the more closely watched early signals of Chinese economic health, which matters for AUD and NZD as much as CNY given trade links."
         },
         {
           "time": "04:00",
@@ -159,7 +148,7 @@
           "importance": "high",
           "previous": "1.00%",
           "consensus": "Hold at 1.00%",
-          "description": "The Bank of Japan announces its target for short-term interest rates, alongside its quarterly Outlook Report. Following the BoJ's recent shift toward tighter policy, each decision is watched closely for signs of further rate rises, which tend to strengthen the yen. A Reuters poll of economists found the large majority expect a further 25 basis point hike by the end of the year."
+          "description": "The Bank of Japan announces its target for short term interest rates alongside its quarterly Outlook Report. The BoJ is expected to hold today, but with the yen trading near 40 year lows, markets will focus on whether the report's growth upgrade points to the next hike landing in October or December."
         },
         {
           "time": "07:00",
@@ -172,9 +161,16 @@
         {
           "time": "07:30",
           "currency": "JPY",
-          "event": "BoJ Governor press conference",
+          "event": "BoJ Governor Ueda press conference",
           "importance": "high",
-          "description": "The BoJ Governor explains the decision and answers questions from the press. Often moves the yen more than the decision itself, particularly any comments on the pace of future policy normalisation and the timing of the next hike."
+          "description": "Governor Kazuo Ueda explains the decision and answers questions from the press. Often moves the yen more than the decision itself, particularly any comments on the pace of further policy normalisation and the timing of the next hike."
+        },
+        {
+          "time": "09:00",
+          "currency": "ZAR",
+          "event": "SARB Governor Kganyago speaks at Reserve Bank AGM",
+          "importance": "medium",
+          "description": "Governor Lesetja Kganyago addresses the South African Reserve Bank's annual general meeting. As the SARB's chief policymaker, his remarks on inflation and the rand are watched for signals ahead of the next Monetary Policy Committee meeting."
         },
         {
           "time": "10:00",
@@ -183,7 +179,7 @@
           "importance": "high",
           "previous": "2.8% y/y (June)",
           "consensus": "3.0% y/y",
-          "description": "An early estimate of Eurozone-wide inflation for the month. One of the key inputs into the ECB's interest rate decisions, and a regular source of euro volatility on release. Core inflation, which strips out food and energy, is expected to hold steady at 2.4%."
+          "description": "An early estimate of Eurozone wide inflation for the month. One of the key inputs into the ECB's interest rate decisions and a regular source of euro volatility on release; today's expected rebound is being driven mainly by higher energy prices, while core inflation is seen holding near 2.4%."
         },
         {
           "time": "10:00",
@@ -191,14 +187,14 @@
           "event": "Eurozone unemployment rate (June)",
           "importance": "low",
           "previous": "6.2% (May)",
-          "description": "The percentage of the Eurozone workforce that is unemployed. A slower-moving indicator that rarely surprises markets, but still forms part of the broader picture of Eurozone economic health, with the rate recently sitting at a record low."
+          "description": "The percentage of the Eurozone workforce that is unemployed. A slower moving indicator that rarely surprises markets, but still forms part of the broader picture of Eurozone economic health."
         },
         {
           "time": "13:30",
           "currency": "CAD",
           "event": "Canada GDP by industry (May, with June advance estimate)",
           "importance": "medium",
-          "description": "Statistics Canada's monthly measure of economic output by industry. Released with a roughly two-month lag, it gives an early read on how the Canadian economy is tracking heading into the third quarter."
+          "description": "Statistics Canada's monthly measure of economic output by industry. Released with a roughly two month lag, it gives an early read on how the Canadian economy is tracking heading into the third quarter."
         },
         {
           "time": "14:45",
@@ -216,10 +212,10 @@
         {
           "time": "01:45",
           "currency": "CNY",
-          "event": "China RatingDog (Caixin) Manufacturing PMI (July)",
+          "event": "China Caixin manufacturing PMI (July)",
           "importance": "medium",
           "previous": "51.7 (June)",
-          "description": "A private-sector survey of Chinese manufacturing activity, skewed toward smaller, export- and tech-oriented firms, released a few days after the official NBS PMI. Often diverges from the official gauge and is watched as a cross-check on the health of China's factory sector, with knock-on relevance for AUD and NZD."
+          "description": "A private sector survey of Chinese manufacturing activity, skewed toward smaller, export and tech oriented firms, released a few days after the official NBS PMI. Often diverges from the official gauge and is watched as a cross check on the health of China's factory sector, with knock on relevance for AUD and NZD."
         },
         {
           "time": "07:30",
@@ -234,7 +230,7 @@
           "currency": "EUR",
           "event": "Eurozone final manufacturing PMI (July)",
           "importance": "low",
-          "description": "The final, revised reading of S&P Global's Eurozone manufacturing survey, usually only a small adjustment from the flash estimate published earlier in the month. A confirmation-style release that rarely moves the euro much on its own."
+          "description": "The final, revised reading of S&P Global's Eurozone manufacturing survey, usually only a small adjustment from the flash estimate published earlier in the month. A confirmation style release that rarely moves the euro much on its own."
         },
         {
           "time": "09:30",
@@ -248,8 +244,8 @@
           "currency": "USD",
           "event": "US ISM Manufacturing PMI (July)",
           "importance": "medium",
-          "previous": "53.3 (June)",
-          "description": "The Institute for Supply Management's survey of US manufacturing activity, released on the first business day of the month. A reading above 50 signals expansion. Watched as an early, broad-based signal of US industrial health for the month just ended."
+          "previous": "53.8 (June)",
+          "description": "The Institute for Supply Management's survey of US manufacturing activity, released on the first business day of the month. A reading above 50 signals expansion. Watched as an early, broad based signal of US industrial health for the month just ended."
         }
       ]
     },
@@ -258,12 +254,19 @@
       "label": "Tuesday 4 August",
       "events": [
         {
+          "time": "09:30",
+          "currency": "GBP",
+          "event": "UK construction PMI (July)",
+          "importance": "low",
+          "description": "S&P Global's survey of activity in the UK construction sector. Housebuilding has been the weakest part of the industry recently, so this is watched for signs of whether that drag is easing; typically a minor mover for sterling."
+        },
+        {
           "time": "15:00",
           "currency": "USD",
           "event": "US JOLTS job openings (June)",
           "importance": "medium",
           "previous": "7.594 million (May)",
-          "description": "The Job Openings and Labor Turnover Survey, a measure of unfilled positions across the US economy that the Federal Reserve watches closely as a gauge of labour market slack. A drop toward levels seen before the pandemic would support the case for further Fed easing."
+          "description": "The Job Openings and Labor Turnover Survey, a measure of unfilled positions across the US economy that the Federal Reserve watches closely as a gauge of labour market slack. A drop toward pre pandemic levels would support the case for further Fed easing."
         },
         {
           "time": "15:00",
@@ -271,6 +274,42 @@
           "event": "US factory orders (June)",
           "importance": "low",
           "description": "A broader measure of new orders placed with US manufacturers than the durable goods report released a few days earlier. Usually a secondary market mover, since much of the durable goods component is already known by the time this is published."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "label": "Wednesday 5 August",
+      "events": [
+        {
+          "time": "09:00",
+          "currency": "EUR",
+          "event": "Eurozone final services PMI (July)",
+          "importance": "low",
+          "description": "The final, revised reading of S&P Global's Eurozone services survey. Usually only a small adjustment from the flash estimate, and a secondary mover for the euro compared with the manufacturing print."
+        },
+        {
+          "time": "09:30",
+          "currency": "GBP",
+          "event": "UK final services PMI (July)",
+          "importance": "low",
+          "description": "The final, revised reading of S&P Global's UK services survey, covering the much larger part of the UK economy than manufacturing. Confirms or slightly adjusts the flash estimate published earlier in the month."
+        },
+        {
+          "time": "13:15",
+          "currency": "USD",
+          "event": "ADP employment change (July)",
+          "importance": "medium",
+          "previous": "57,000 (June)",
+          "description": "ADP's estimate of private sector payroll growth, released two days ahead of the official US jobs report. June's reading was a weak 57,000, well below forecasts, so this print will be watched closely for whether the labour market cooling is continuing."
+        },
+        {
+          "time": "15:00",
+          "currency": "USD",
+          "event": "US ISM Services PMI (July)",
+          "importance": "high",
+          "previous": "54.0 (June)",
+          "description": "The Institute for Supply Management's survey of the much larger US services sector, released on the third business day of the month. June's reading of 54.0 kept the sector in expansion for a 24th straight month; a reading above 50 signals growth, and this is one of the most closely watched US data points of the week."
         }
       ]
     }
