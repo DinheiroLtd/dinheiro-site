@@ -1,0 +1,35 @@
+{
+  "_note": "Internal broker-facing market commentary for Dinheiro's Broker Hub. Refreshed periodically by an automated task. Written for brokers to use in client conversations, not for external distribution.",
+  "entries": [
+    {
+      "date": "2026-07-30",
+      "headline": "Bank of England holds, but a growing minority want a hike",
+      "body": "The Bank of England left interest rates unchanged at 3.75% today. What is drawing more attention than the decision itself is the vote split, with some policymakers thought to be pushing for a hike given persistently high services inflation and firmer energy costs. For clients watching sterling, this growing internal debate is worth flagging as a genuine driver of where rates go next, not just background noise.",
+      "tags": ["GBP", "Central banks"]
+    },
+    {
+      "date": "2026-07-30",
+      "headline": "US Federal Reserve holds rates again, though not unanimously",
+      "body": "The Federal Reserve kept its policy rate at 3.50 to 3.75% this week, its fifth hold in a row under new chair Kevin Warsh. Three regional presidents voted against the decision, arguing that inflation running above target for several years now warranted a hike. That kind of hawkish dissent is unusual this late in a cycle and has helped keep the dollar firm, a point worth raising with clients weighing the timing of dollar purchases.",
+      "tags": ["USD", "Federal Reserve"]
+    },
+    {
+      "date": "2026-07-30",
+      "headline": "Euro stuck between sterling and dollar moves this week",
+      "body": "With the European Central Bank on hold since its last meeting and little fresh domestic data due, the euro has mostly been taking its cues from decisions elsewhere. This week's Federal Reserve and Bank of England announcements have done more to move EUR than anything happening in the eurozone itself. Clients trading GBP or USD against the euro should expect that pattern to continue until the next round of eurozone growth and inflation figures land.",
+      "tags": ["EUR", "Central banks"]
+    },
+    {
+      "date": "2026-07-30",
+      "headline": "Oil back above $88 a barrel as Middle East tensions flare again",
+      "body": "Brent crude has climbed sharply after renewed attacks on oil facilities in Saudi Arabia and fresh military exchanges involving Iran. Higher energy costs tend to feed through into inflation expectations fairly quickly, which is one reason central banks including the Bank of England have been reluctant to rule out further rate rises. It is a useful, plain reason to give clients who ask why rate expectations keep shifting even when domestic data looks steady.",
+      "tags": ["Oil", "Inflation"]
+    },
+    {
+      "date": "2026-07-30",
+      "headline": "Yen remains close to multi-decade lows ahead of Friday's Bank of Japan decision",
+      "body": "The yen continues to trade near its weakest levels in roughly four decades against the dollar. The Bank of Japan is expected to hold its policy rate at 1.00% on Friday but is under increasing pressure to signal a faster pace of future increases. Clients with JPY exposure may want a heads up that this week's run of central bank decisions, ending with Japan, could bring more movement than usual.",
+      "tags": ["JPY", "Bank of Japan"]
+    }
+  ]
+}
