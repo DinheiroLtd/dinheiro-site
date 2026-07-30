@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T12:07:51+01:00",
+  "updated": "2026-07-30T16:15:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -12,14 +12,7 @@
           "event": "ANZ Business Confidence (July)",
           "importance": "low",
           "previous": "36.6 (June)",
-          "description": "ANZ's monthly survey of New Zealand business sentiment. July's reading jumped sharply to 56.1, a broad based improvement in confidence with exporters, investment and employment intentions all firmer. A useful, if noisy, early read on how firms are feeling ahead of the harder activity data."
-        },
-        {
-          "time": "02:30",
-          "currency": "AUD",
-          "event": "Australia building approvals (June)",
-          "importance": "low",
-          "description": "A monthly count of permits granted for new residential construction. A leading indicator for future building activity and, indirectly, for housing supply pressures the Reserve Bank of Australia has to weigh when setting policy. Rarely a major mover for the Australian dollar on its own."
+          "description": "ANZ's monthly survey of New Zealand business sentiment. July's reading jumped to 56.1, its strongest level since February, with exporters, investment and employment intentions all firmer. A useful, if noisy, early read on how firms are feeling ahead of the harder activity data."
         },
         {
           "time": "07:00",
@@ -38,6 +31,17 @@
           "previous": "0.3% q/q (Q1)",
           "consensus": "0.1% q/q",
           "description": "An early estimate of quarterly economic growth in Germany, the Eurozone's largest economy. This morning's preliminary print came in at 0.2% quarter on quarter, ahead of the 0.1% consensus though still slower than Q1's 0.3% pace, with exports doing the heavy lifting while consumer spending stayed subdued. Often moves the euro ahead of the full Eurozone GDP figure released later the same morning."
+        },
+        {
+          "time": "08:32",
+          "currency": "CHF",
+          "event": "KOF Economic Barometer (July)",
+          "importance": "medium",
+          "previous": "102.1 (June)",
+          "consensus": "100.7",
+          "revised": true,
+          "revisedNote": "Corrected from the previous update, which had placed this release on Friday 31 July with a June comparison figure of 101.2. The KOF Swiss Economic Institute confirmed the barometer was actually published this morning, Thursday 30 July, with June's reading standing at 102.1. The July figure came in at 103.5, comfortably above the 100.7 consensus and the highest level since February.",
+          "description": "A monthly composite leading indicator for the Swiss economy from the KOF Swiss Economic Institute, pointing to likely activity over the next six months. Today's better than expected reading, driven by broad based improvement across manufacturing, construction and services, reinforces signs that Switzerland's recovery is gaining traction, though it typically moves the franc less than a central bank event would."
         },
         {
           "time": "10:00",
@@ -64,7 +68,7 @@
           "importance": "high",
           "previous": "3.75%",
           "consensus": "Hold at 3.75%",
-          "description": "The Bank of England's Monetary Policy Committee announces its decision on Bank Rate, the UK's main interest rate. Markets have priced in a roughly 96% chance of a hold following June's split 7-2 vote, but with UK services inflation still running above target, any shift in the vote split or tone can move sterling sharply."
+          "description": "The Bank of England's Monetary Policy Committee announces its decision on Bank Rate, the UK's main interest rate. The Bank held at 3.75% for a fifth consecutive meeting, matching consensus, after a bigger than expected drop in inflation last month gave the Committee room to look through the market volatility caused by renewed fighting in Iran. Alongside the decision the Bank published its quarterly Monetary Policy Report and the minutes recording how each member voted."
         },
         {
           "time": "12:00",
@@ -85,7 +89,7 @@
           "currency": "GBP",
           "event": "BoE Governor press conference",
           "importance": "high",
-          "description": "Governor Andrew Bailey takes questions from journalists straight after the rate decision. Often the moment that moves sterling most, since this is where the Bank explains its reasoning in its own words."
+          "description": "Governor Andrew Bailey takes questions from journalists straight after the rate decision. Often the moment that moves sterling most, since this is where the Bank explains its reasoning in its own words, including how it is weighing the inflation undershoot against the risks from the wider geopolitical backdrop."
         },
         {
           "time": "13:00",
@@ -102,7 +106,9 @@
           "importance": "high",
           "previous": "2.1% annualized (Q1, revised)",
           "consensus": "2.3% annualized",
-          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: surprises here tend to move the dollar broadly, and land the day after the Fed's own decision, which held rates this week during its blackout period."
+          "revised": true,
+          "revisedNote": "The advance estimate landed well short of forecasts: real GDP grew at an annualized 1.5% in Q2, versus the 2.3% consensus and down from Q1's 2.1% pace. The Bureau of Economic Analysis attributed the slowdown to softer consumer spending and investment, partly offset by a smaller drag from government spending.",
+          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: today's sizeable miss is likely to feed the debate over whether the Fed's hold this week left policy too tight, and has weighed on the dollar."
         },
         {
           "time": "13:30",
@@ -111,15 +117,18 @@
           "importance": "high",
           "previous": "3.4% y/y (core, May)",
           "consensus": "3.3% y/y (core)",
-          "description": "The Personal Consumption Expenditures price index, the Federal Reserve's preferred measure of inflation. Often more market moving than CPI because of how directly it feeds into the Fed's own policy framework; a further easing toward 3.3% would support the case that price pressures are gradually cooling."
+          "description": "The Personal Consumption Expenditures price index, the Federal Reserve's preferred measure of inflation. Today's reading came in exactly in line with consensus at 3.3% year on year, with the quarterly core rate easing to 3.4% from 4.4% in Q1. Confirms inflation is cooling gradually rather than sharply, keeping the Fed on a cautious, data dependent footing."
         },
         {
           "time": "13:30",
           "currency": "USD",
           "event": "US weekly initial jobless claims",
           "importance": "low",
-          "previous": "187,000 (week to 18 July)",
-          "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market; usually a minor mover unless it deviates sharply from expectations."
+          "previous": "188,000 (week to 18 July, revised)",
+          "consensus": "200,000",
+          "revised": true,
+          "revisedNote": "The prior week's reading was revised up slightly to 188,000 from the previously reported 187,000. This week's claims (for the period to 25 July) rose 9,000 to 197,000, coming in below the 200,000 consensus and pointing to a still resilient, if gradually cooling, labour market.",
+          "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market; usually a minor mover unless it deviates sharply from expectations, though today's release lands alongside the GDP and PCE data for extra scrutiny."
         },
         {
           "time": "15:30",
@@ -128,7 +137,7 @@
           "importance": "low",
           "previous": "2.5% (May)",
           "consensus": "2.5%",
-          "description": "The share of Japan's labour force out of work. Japan's jobless rate has stayed extremely low for years, so this is rarely a big yen mover, but it feeds into the Bank of Japan's broader assessment of wage and price pressure alongside today's policy decision."
+          "description": "The share of Japan's labour force out of work. Japan's jobless rate has stayed extremely low for years, so this is rarely a big yen mover, but it feeds into the Bank of Japan's broader assessment of wage and price pressure ahead of tomorrow's policy decision."
         },
         {
           "time": "15:50",
@@ -150,17 +159,25 @@
           "currency": "JPY",
           "event": "Tokyo core CPI (July)",
           "importance": "medium",
+          "previous": "1.7% y/y (core, June)",
           "consensus": "1.8% y/y (core)",
           "description": "Inflation data for Tokyo, published about three weeks ahead of the nationwide figure and widely used as a leading indicator for Japan wide price pressure. Released hours after the Bank of Japan's own decision, it can shift expectations for future rate hikes and move the yen."
         },
         {
           "time": "02:30",
           "currency": "CNY",
-          "event": "China NBS Manufacturing PMI (July)",
+          "event": "China NBS Manufacturing and Non-Manufacturing PMI (July)",
           "importance": "medium",
-          "previous": "50.3 (June)",
-          "consensus": "50.0",
-          "description": "China's official, government compiled gauge of manufacturing activity, released on the last day of the month. A reading above 50 signals expansion; below signals contraction. One of the more closely watched early signals of Chinese economic health, which matters for AUD and NZD as much as CNY given trade links."
+          "previous": "50.3 manufacturing, 50.2 non-manufacturing (June)",
+          "consensus": "50.0 manufacturing",
+          "description": "China's official, government compiled gauges of manufacturing and services and construction activity, released on the last day of the month. A reading above 50 signals expansion; below signals contraction. Among the more closely watched early signals of Chinese economic health, which matters for AUD and NZD as much as CNY given trade links."
+        },
+        {
+          "time": "02:30",
+          "currency": "AUD",
+          "event": "Australia Producer Price Index (Q2)",
+          "importance": "low",
+          "description": "The Australian Bureau of Statistics' quarterly measure of price changes faced by producers before they reach consumers. A slower moving gauge than the CPI, but one the RBA watches for early signs of cost pressures building up through supply chains, particularly relevant given the Bank's recent focus on upside inflation risks."
         },
         {
           "time": "04:00",
@@ -170,14 +187,6 @@
           "previous": "1.00%",
           "consensus": "Hold at 1.00%",
           "description": "The Bank of Japan announces its target for short term interest rates alongside its quarterly Outlook Report. The BoJ is expected to hold today, but with the yen trading near multi decade lows, markets will focus on whether the report's growth outlook points to the next hike landing in October or December."
-        },
-        {
-          "time": "07:00",
-          "currency": "CHF",
-          "event": "KOF Economic Barometer (July)",
-          "importance": "medium",
-          "previous": "101.2 (June)",
-          "description": "A monthly composite leading indicator for the Swiss economy from the KOF Swiss Economic Institute, pointing to likely activity over the next six months. A widely watched gauge of Swiss business sentiment, though it typically moves the franc less than a central bank event would."
         },
         {
           "time": "07:30",
@@ -191,7 +200,7 @@
           "currency": "ZAR",
           "event": "SARB Governor Kganyago speaks at Reserve Bank AGM",
           "importance": "medium",
-          "description": "Governor Lesetja Kganyago addresses the South African Reserve Bank's annual general meeting. As the SARB's chief policymaker, his remarks on inflation and the rand are watched for signals ahead of the next Monetary Policy Committee meeting in September."
+          "description": "Governor Lesetja Kganyago addresses the South African Reserve Bank's 106th Ordinary Annual General Meeting of shareholders. As the SARB's chief policymaker, his remarks on inflation and the rand are watched for signals ahead of the next Monetary Policy Committee meeting in September."
         },
         {
           "time": "10:00",
@@ -231,7 +240,7 @@
       "label": "Monday 3 August",
       "events": [
         {
-          "time": "01:45",
+          "time": "02:45",
           "currency": "CNY",
           "event": "China Caixin manufacturing PMI (July)",
           "importance": "medium",
@@ -273,7 +282,7 @@
           "event": "US ISM Manufacturing PMI (July)",
           "importance": "medium",
           "previous": "53.8 (June)",
-          "description": "The Institute for Supply Management's survey of US manufacturing activity, released on the first business day of the month. A reading above 50 signals expansion. Watched as an early, broad based signal of US industrial health for the month just ended."
+          "description": "The Institute for Supply Management's survey of US manufacturing activity, released on the first business day of the month. A reading above 50 signals expansion. Watched as an early, broad based signal of US industrial health for the month just ended, and takes on extra weight this week following Thursday's weak GDP print."
         }
       ]
     },
@@ -281,6 +290,13 @@
       "date": "2026-08-04",
       "label": "Tuesday 4 August",
       "events": [
+        {
+          "time": "00:01",
+          "currency": "GBP",
+          "event": "BRC Shop Price Index (July)",
+          "importance": "low",
+          "description": "The British Retail Consortium's monthly gauge of average shop prices, published around ten days ahead of the official ONS inflation figures. A useful early steer on the direction of UK consumer price pressure, though it rarely moves sterling much on its own."
+        },
         {
           "time": "09:30",
           "currency": "GBP",
@@ -309,6 +325,14 @@
           "event": "US factory orders (June)",
           "importance": "low",
           "description": "A broader measure of new orders placed with US manufacturers than the durable goods report released a few days earlier. Usually a secondary market mover, since much of the durable goods component is already known by the time this is published."
+        },
+        {
+          "time": "23:45",
+          "currency": "NZD",
+          "event": "New Zealand employment change and unemployment rate (Q2)",
+          "importance": "high",
+          "previous": "+0.2% employment change, 5.3% unemployment rate (Q1)",
+          "description": "Stats NZ's quarterly snapshot of the labour market, covering the change in the number of people employed and the jobless rate. A high reading for employment growth and a lower unemployment rate are both supportive for the New Zealand dollar; a weaker than expected set of figures would add to the case for the RBNZ to keep policy accommodative."
         }
       ]
     },
@@ -321,6 +345,7 @@
           "currency": "CNY",
           "event": "China Caixin services PMI (July)",
           "importance": "low",
+          "previous": "54.1 (June)",
           "description": "A private sector survey of activity in China's much larger services sector, released a few days after the manufacturing equivalent. Rounds out the picture from the official PMIs and the manufacturing Caixin print, with relevance for AUD and NZD given trade links to China."
         },
         {
@@ -343,7 +368,7 @@
           "event": "ADP employment change (July)",
           "importance": "medium",
           "previous": "57,000 (June)",
-          "description": "ADP's estimate of private sector payroll growth, released two days ahead of the official US jobs report. June's reading was a weak 57,000, well below forecasts, so this print will be watched closely for whether the labour market cooling is continuing."
+          "description": "ADP's estimate of private sector payroll growth, released two days ahead of the official US jobs report. June's reading was a weak 57,000, well below forecasts, so this print will be watched closely for whether the labour market cooling flagged by Thursday's GDP miss is continuing."
         },
         {
           "time": "15:00",
