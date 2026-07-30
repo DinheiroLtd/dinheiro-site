@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T09:50:00+01:00",
+  "updated": "2026-07-30T12:07:51+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -37,18 +37,18 @@
           "importance": "medium",
           "previous": "0.3% q/q (Q1)",
           "consensus": "0.1% q/q",
-          "revised": true,
-          "revisedNote": "This morning's preliminary print came in at 0.2% quarter on quarter, ahead of the 0.1% consensus though still slower than the prior quarter's 0.3% pace.",
-          "description": "An early estimate of quarterly economic growth in Germany, the Eurozone's largest economy. Often moves the euro ahead of the full Eurozone GDP figure released later the same morning."
+          "description": "An early estimate of quarterly economic growth in Germany, the Eurozone's largest economy. This morning's preliminary print came in at 0.2% quarter on quarter, ahead of the 0.1% consensus though still slower than Q1's 0.3% pace, with exports doing the heavy lifting while consumer spending stayed subdued. Often moves the euro ahead of the full Eurozone GDP figure released later the same morning."
         },
         {
           "time": "10:00",
           "currency": "EUR",
           "event": "Eurozone flash GDP (Q2)",
           "importance": "high",
-          "previous": "-0.2% q/q (Q1)",
-          "consensus": "+0.1% q/q",
-          "description": "An early estimate of quarterly economic growth across the whole Eurozone. One of the most closely watched growth indicators for the euro, feeding directly into the ECB's outlook for the bloc, and today's print is expected to be just enough to avoid a second straight quarter of contraction."
+          "previous": "0.0% q/q (Q1, revised)",
+          "consensus": "+0.2% q/q",
+          "revised": true,
+          "revisedNote": "Q1 growth has been revised up to flat from the previously reported 0.2% contraction, and this morning's Q2 flash estimate surprised to the upside at +0.4% quarter on quarter, well above the roughly 0.2% consensus that had been pencilled in.",
+          "description": "An early estimate of quarterly economic growth across the whole Eurozone. One of the most closely watched growth indicators for the euro, feeding directly into the ECB's outlook for the bloc; today's print came in well ahead of expectations, easing fears of a second straight weak quarter."
         },
         {
           "time": "10:00",
@@ -64,7 +64,7 @@
           "importance": "high",
           "previous": "3.75%",
           "consensus": "Hold at 3.75%",
-          "description": "The Bank of England's Monetary Policy Committee announces its decision on Bank Rate, the UK's main interest rate. Economists widely expect a hold at 3.75% following June's split 7-2 vote, but with UK services inflation still running above target, any shift in the vote split or tone can move sterling sharply."
+          "description": "The Bank of England's Monetary Policy Committee announces its decision on Bank Rate, the UK's main interest rate. Markets have priced in a roughly 96% chance of a hold following June's split 7-2 vote, but with UK services inflation still running above target, any shift in the vote split or tone can move sterling sharply."
         },
         {
           "time": "12:00",
@@ -72,6 +72,13 @@
           "event": "BoE Monetary Policy Report & Financial Stability Report",
           "importance": "medium",
           "description": "Published alongside the rate decision, this sets out the Bank's updated forecasts for inflation and growth, plus its assessment of risks to the UK financial system. Markets read this closely for clues on the future path of rates."
+        },
+        {
+          "time": "12:15",
+          "currency": "GBP",
+          "event": "BoE National MPC Agency briefing (Huw Pill and Fergal Shortall)",
+          "importance": "low",
+          "description": "A briefing from Chief Economist Huw Pill and Fergal Shortall, head of the BoE's Agency network, held straight after the rate decision. Focuses on regional business conditions feeding into the MPC's thinking; a secondary event compared with the Governor's press conference."
         },
         {
           "time": "13:00",
@@ -95,9 +102,7 @@
           "importance": "high",
           "previous": "2.1% annualized (Q1, revised)",
           "consensus": "2.3% annualized",
-          "revised": true,
-          "revisedNote": "The Q1 growth figure has since been revised up to 2.1% annualized, and the consensus for today's Q2 advance estimate has firmed to around 2.3%, a touch stronger than earlier expectations nearer 2.0%.",
-          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: surprises here tend to move the dollar broadly, and land the day after the Fed's own decision."
+          "description": "The first official estimate of US economic growth for the quarter. A core input into how the Fed and markets judge the health of the world's largest economy: surprises here tend to move the dollar broadly, and land the day after the Fed's own decision, which held rates this week during its blackout period."
         },
         {
           "time": "13:30",
@@ -115,6 +120,24 @@
           "importance": "low",
           "previous": "187,000 (week to 18 July)",
           "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market; usually a minor mover unless it deviates sharply from expectations."
+        },
+        {
+          "time": "15:30",
+          "currency": "JPY",
+          "event": "Japan unemployment rate (June)",
+          "importance": "low",
+          "previous": "2.5% (May)",
+          "consensus": "2.5%",
+          "description": "The share of Japan's labour force out of work. Japan's jobless rate has stayed extremely low for years, so this is rarely a big yen mover, but it feeds into the Bank of Japan's broader assessment of wage and price pressure alongside today's policy decision."
+        },
+        {
+          "time": "15:50",
+          "currency": "JPY",
+          "event": "Japan retail sales and industrial production (June)",
+          "importance": "low",
+          "previous": "1.9% m/m retail sales, 0.1% m/m industrial production (May)",
+          "consensus": "-1.5% m/m retail sales, -0.5% m/m industrial production",
+          "description": "Monthly gauges of Japanese household spending and factory output. Together they give an early steer on how the economy is tracking into the third quarter, and are watched by the BoJ for signs of whether domestic demand can support further policy normalisation."
         }
       ]
     },
@@ -128,7 +151,7 @@
           "event": "Tokyo core CPI (July)",
           "importance": "medium",
           "consensus": "1.8% y/y (core)",
-          "description": "Inflation data for Tokyo, published about three weeks ahead of the nationwide figure and widely used as a leading indicator for Japan wide price pressure. Released hours before the Bank of Japan's own decision, it can shift expectations for future rate hikes and move the yen."
+          "description": "Inflation data for Tokyo, published about three weeks ahead of the nationwide figure and widely used as a leading indicator for Japan wide price pressure. Released hours after the Bank of Japan's own decision, it can shift expectations for future rate hikes and move the yen."
         },
         {
           "time": "02:30",
@@ -137,8 +160,6 @@
           "importance": "medium",
           "previous": "50.3 (June)",
           "consensus": "50.0",
-          "revised": true,
-          "revisedNote": "June's official reading has been confirmed at 50.3, not the 50.6 previously indicated, and a Reuters poll of economists points to a further slip to 50.0 in July, right at the growth and contraction line.",
           "description": "China's official, government compiled gauge of manufacturing activity, released on the last day of the month. A reading above 50 signals expansion; below signals contraction. One of the more closely watched early signals of Chinese economic health, which matters for AUD and NZD as much as CNY given trade links."
         },
         {
@@ -148,7 +169,7 @@
           "importance": "high",
           "previous": "1.00%",
           "consensus": "Hold at 1.00%",
-          "description": "The Bank of Japan announces its target for short term interest rates alongside its quarterly Outlook Report. The BoJ is expected to hold today, but with the yen trading near 40 year lows, markets will focus on whether the report's growth upgrade points to the next hike landing in October or December."
+          "description": "The Bank of Japan announces its target for short term interest rates alongside its quarterly Outlook Report. The BoJ is expected to hold today, but with the yen trading near multi decade lows, markets will focus on whether the report's growth outlook points to the next hike landing in October or December."
         },
         {
           "time": "07:00",
@@ -170,7 +191,7 @@
           "currency": "ZAR",
           "event": "SARB Governor Kganyago speaks at Reserve Bank AGM",
           "importance": "medium",
-          "description": "Governor Lesetja Kganyago addresses the South African Reserve Bank's annual general meeting. As the SARB's chief policymaker, his remarks on inflation and the rand are watched for signals ahead of the next Monetary Policy Committee meeting."
+          "description": "Governor Lesetja Kganyago addresses the South African Reserve Bank's annual general meeting. As the SARB's chief policymaker, his remarks on inflation and the rand are watched for signals ahead of the next Monetary Policy Committee meeting in September."
         },
         {
           "time": "10:00",
@@ -218,6 +239,13 @@
           "description": "A private sector survey of Chinese manufacturing activity, skewed toward smaller, export and tech oriented firms, released a few days after the official NBS PMI. Often diverges from the official gauge and is watched as a cross check on the health of China's factory sector, with knock on relevance for AUD and NZD."
         },
         {
+          "time": "07:00",
+          "currency": "ZAR",
+          "event": "Absa/BER Manufacturing PMI (July)",
+          "importance": "low",
+          "description": "A survey of purchasing managers in South Africa's manufacturing sector, compiled by Absa and the Bureau for Economic Research and usually published on the first business day of the month. A reading above 50 signals expansion; a below consensus print tends to weigh on the rand given the sector's fragile recent run."
+        },
+        {
           "time": "07:30",
           "currency": "CHF",
           "event": "Swiss CPI (July)",
@@ -261,6 +289,13 @@
           "description": "S&P Global's survey of activity in the UK construction sector. Housebuilding has been the weakest part of the industry recently, so this is watched for signs of whether that drag is easing; typically a minor mover for sterling."
         },
         {
+          "time": "13:30",
+          "currency": "CAD",
+          "event": "Canada merchandise trade balance (June)",
+          "importance": "medium",
+          "description": "Statistics Canada's monthly snapshot of the gap between exports and imports of goods. With a large share of Canadian trade tied to the US, this is watched as a barometer of cross border demand and, indirectly, of how tariff related frictions are feeding through to the loonie."
+        },
+        {
           "time": "15:00",
           "currency": "USD",
           "event": "US JOLTS job openings (June)",
@@ -281,6 +316,13 @@
       "date": "2026-08-05",
       "label": "Wednesday 5 August",
       "events": [
+        {
+          "time": "02:45",
+          "currency": "CNY",
+          "event": "China Caixin services PMI (July)",
+          "importance": "low",
+          "description": "A private sector survey of activity in China's much larger services sector, released a few days after the manufacturing equivalent. Rounds out the picture from the official PMIs and the manufacturing Caixin print, with relevance for AUD and NZD given trade links to China."
+        },
         {
           "time": "09:00",
           "currency": "EUR",
