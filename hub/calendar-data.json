@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T12:06:00+01:00",
+  "updated": "2026-07-31T16:07:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -11,9 +11,9 @@
           "currency": "JPY",
           "event": "Tokyo core CPI (July)",
           "importance": "medium",
-          "previous": "1.7% y/y (core, June)",
+          "previous": "1.6% y/y (core, June)",
           "consensus": "1.8% y/y (core)",
-          "description": "Inflation data for Tokyo, published about three weeks ahead of the nationwide figure and widely used as a leading indicator for Japan wide price pressure. Released hours ahead of the Bank of Japan's own decision, it can shift expectations for future rate hikes and move the yen."
+          "description": "Inflation data for Tokyo, published about three weeks ahead of the nationwide figure and widely used as a leading indicator for Japan wide price pressure. Tokyo core inflation accelerated to 1.9% year on year in July, beating the 1.8% consensus and quickening from June's 1.6% pace, released a few hours ahead of the Bank of Japan's own decision and reinforcing the case for further gradual tightening."
         },
         {
           "time": "02:30",
@@ -22,9 +22,7 @@
           "importance": "medium",
           "previous": "50.3 manufacturing, 50.2 non-manufacturing (June)",
           "consensus": "50.0 manufacturing",
-          "revised": true,
-          "revisedNote": "The official July manufacturing print came in at 49.2, well below the 50.0 consensus and June's 50.3 reading, confirming a slide back into contraction.",
-          "description": "China's official, government compiled gauges of manufacturing and services and construction activity, released on the last day of the month. A reading above 50 signals expansion, below signals contraction. Among the more closely watched early signals of Chinese economic health, which matters for AUD and NZD as much as CNY given trade links."
+          "description": "China's official, government compiled gauges of manufacturing and services and construction activity, released on the last day of the month. A reading above 50 signals expansion, below signals contraction. The official July manufacturing print came in at 49.2, well below the 50.0 consensus and June's 50.3 reading, confirming a slide back into contraction and one of the more closely watched early signals of Chinese economic health, which matters for AUD and NZD as much as CNY given trade links."
         },
         {
           "time": "02:30",
@@ -32,9 +30,7 @@
           "event": "Australia Producer Price Index (Q2)",
           "importance": "low",
           "previous": "0.4% q/q (Q1)",
-          "revised": true,
-          "revisedNote": "The Q2 print surged to 1.3% quarter on quarter, up sharply from Q1's 0.4% pace.",
-          "description": "The Australian Bureau of Statistics' quarterly measure of price changes faced by producers before they reach consumers. A slower moving gauge than the CPI, but one the RBA watches for early signs of cost pressures building through supply chains, particularly relevant given the Bank's recent focus on upside inflation risks."
+          "description": "The Australian Bureau of Statistics' quarterly measure of price changes faced by producers before they reach consumers. The Q2 print surged to 1.3% quarter on quarter, up sharply from Q1's 0.4% pace. A slower moving gauge than the CPI, but one the RBA watches for early signs of cost pressures building through supply chains, particularly relevant given the Bank's recent focus on upside inflation risks."
         },
         {
           "time": "04:00",
@@ -43,7 +39,7 @@
           "importance": "high",
           "previous": "1.00%",
           "consensus": "Hold at 1.00%",
-          "description": "The Bank of Japan held its policy rate at 1.00% by an 8-1 vote, matching consensus. Board member Hajime Takata dissented, arguing for an immediate hike to 1.25%. The Bank flagged that underlying inflation is likely to move clearly above its 2% target from the second half of the fiscal year, citing wage rises, oil prices and yen weakness, all of which keeps the door open to further tightening later this year."
+          "description": "The Bank of Japan held its policy rate at 1.00% by an 8-1 vote, matching consensus. Board member Hajime Takata dissented, arguing for an immediate hike to 1.25%. The Bank raised its fiscal 2026 GDP forecast to 0.8% and flagged that underlying inflation is likely to move clearly above its 2% target from the second half of the fiscal year, citing wage rises, oil prices and yen weakness, all of which keeps the door open to further tightening later this year."
         },
         {
           "time": "07:00",
@@ -58,20 +54,23 @@
           "currency": "JPY",
           "event": "BoJ Governor Ueda press conference",
           "importance": "high",
-          "description": "Governor Kazuo Ueda explains the Bank's decision and answers questions from the press. Often moves the yen more than the decision itself, particularly any comments on the timing of the next hike given the dissent in favour of immediate tightening and the yen's recent weakness."
+          "description": "Governor Kazuo Ueda explains the Bank's decision and answers questions from the press. Often moves the yen more than the decision itself, particularly any comments on the timing of the next hike given the dissent in favour of immediate tightening, the yen's recent weakness near multi decade lows, and reports of a Ministry of Finance intervention overnight."
         },
         {
           "time": "09:00",
           "currency": "ZAR",
           "event": "SARB Governor Kganyago speaks at Reserve Bank AGM",
           "importance": "medium",
-          "description": "Governor Lesetja Kganyago addresses the South African Reserve Bank's Ordinary Annual General Meeting of shareholders. As the SARB's chief policymaker, his remarks on inflation and the rand are watched for signals ahead of the next Monetary Policy Committee meeting in September."
+          "description": "Governor Lesetja Kganyago addressed the South African Reserve Bank's 106th Annual Ordinary General Meeting of shareholders, reflecting on the institution's history and setting out its priorities: holding to the new 3% inflation target, strengthening financial stability, modernising payments and supporting responsible innovation. He also warned that renewed conflict in the Middle East could add to inflation risk through higher oil and fertiliser prices. As the SARB's chief policymaker, his remarks on inflation and the rand are watched for signals ahead of the next Monetary Policy Committee meeting in September."
         },
         {
           "time": "13:30",
           "currency": "CAD",
-          "event": "Canada GDP by industry (May, with June advance estimate)",
+          "event": "Canada GDP by industry (May, with Q2 advance estimate)",
           "importance": "medium",
+          "previous": "+0.1% m/m (April, initial estimate)",
+          "revised": true,
+          "revisedNote": "Real GDP rose 0.3% in May, topping Statistics Canada's own initial estimate of 0.1% growth, with gains in both goods and services. The accompanying advance estimate puts annualised Q2 growth at 3.4%, a sharp rebound from Q1's mild contraction.",
           "description": "Statistics Canada's monthly measure of economic output by industry. Released with a roughly two month lag, it gives an early read on how the Canadian economy is tracking heading into the third quarter, at a time when the Bank of Canada has no meeting scheduled until early September."
         },
         {
@@ -80,8 +79,10 @@
           "event": "Eurozone flash CPI (July)",
           "importance": "high",
           "previous": "2.8% y/y (June)",
-          "consensus": "3.0% y/y",
-          "description": "An early estimate of Eurozone wide inflation for the month. One of the key inputs into the ECB's interest rate decisions and a regular source of euro volatility on release, with today's expected rebound driven mainly by higher energy prices, while core inflation is seen holding near 2.4%."
+          "consensus": "2.9% y/y",
+          "revised": true,
+          "revisedNote": "Headline inflation rose to 2.9% y/y as expected, driven mainly by higher energy costs, but core inflation unexpectedly accelerated to 2.5% from June's 2.4%, versus a consensus for an unchanged reading, a hawkish surprise that reinforces the case for the ECB to stay on hold for longer.",
+          "description": "An early estimate of Eurozone wide inflation for the month. One of the key inputs into the ECB's interest rate decisions and a regular source of euro volatility on release. Energy prices had the highest annual rate in July at 10.0%, up from 8.5% in June, while services inflation edged up to 3.3%."
         },
         {
           "time": "14:45",
@@ -89,6 +90,8 @@
           "event": "US Chicago PMI (July)",
           "importance": "low",
           "previous": "56.7 (June)",
+          "revised": true,
+          "revisedNote": "July's reading jumped to 57.6, comfortably beating expectations and building on June's expansion, with new orders and production both firmer.",
           "description": "A regional survey of purchasing managers in the Chicago area, used as an early signal for the following week's national ISM manufacturing survey. Usually a modest, secondary market mover for the dollar."
         },
         {
@@ -97,7 +100,7 @@
           "event": "University of Michigan Consumer Sentiment (July, final)",
           "importance": "low",
           "previous": "54.4 (preliminary, July)",
-          "description": "The final revision of the University of Michigan's survey of US household sentiment, including its closely watched inflation expectations components. Rarely a major mover on its own since the preliminary reading is already known, but the inflation expectations gauge is watched closely by the Fed."
+          "description": "The final revision of the University of Michigan's survey of US household sentiment, including its closely watched inflation expectations components. The preliminary July reading had jumped to 54.4, the highest since February, with one year inflation expectations easing to 4.2% from 4.6%. Rarely a major mover on its own since the preliminary reading is already known, but the inflation expectations gauge is watched closely by the Fed."
         }
       ]
     },
@@ -111,7 +114,7 @@
           "event": "China Caixin manufacturing PMI (July)",
           "importance": "medium",
           "previous": "51.7 (June)",
-          "description": "A private sector survey of Chinese manufacturing activity, skewed toward smaller, export and tech oriented firms, released a few days after the official NBS PMI. Often diverges from the official gauge and is watched as a cross check on the health of China's factory sector, with knock on relevance for AUD and NZD."
+          "description": "A private sector survey of Chinese manufacturing activity, skewed toward smaller, export and tech oriented firms, released a few days after the official NBS PMI. Often diverges from the official gauge and is watched as a cross check on the health of China's factory sector, with knock on relevance for AUD and NZD, especially after the official PMI's slide back into contraction."
         },
         {
           "time": "07:00",
@@ -148,11 +151,9 @@
           "currency": "USD",
           "event": "US ISM Manufacturing PMI (July)",
           "importance": "medium",
-          "previous": "53.3 (June)",
+          "previous": "53.3 (June, revised)",
           "consensus": "54.0",
-          "revised": true,
-          "revisedNote": "June's reading has been confirmed at 53.3, down from the previously reported 53.8, with the employment sub-index still stuck in contraction.",
-          "description": "The Institute for Supply Management's survey of US manufacturing activity, released on the first business day of the month. A reading above 50 signals expansion. Watched as an early, broad based signal of US industrial health, with markets also focused on the prices paid and new orders sub-indices for clues on inflation and demand."
+          "description": "The Institute for Supply Management's survey of US manufacturing activity, released on the first business day of the month. A reading above 50 signals expansion. June's reading was confirmed at 53.3, down from the previously reported 53.8, with the employment sub-index still stuck in contraction. Watched as an early, broad based signal of US industrial health, with markets also focused on the prices paid and new orders sub-indices for clues on inflation and demand."
         }
       ]
     },
@@ -248,7 +249,7 @@
           "event": "Eurozone Producer Price Index (June)",
           "importance": "medium",
           "previous": "+0.2% m/m, +5.9% y/y (May)",
-          "description": "A measure of the prices charged by Eurozone producers at the factory gate, seen as a leading indicator for future consumer price inflation. Less market moving than the CPI print, but still watched by the ECB as part of its broader inflation picture."
+          "description": "A measure of the prices charged by Eurozone producers at the factory gate, seen as a leading indicator for future consumer price inflation. Less market moving than the CPI print, but still watched by the ECB as part of its broader inflation picture, particularly after July's core CPI surprise."
         },
         {
           "time": "09:30",
@@ -263,10 +264,8 @@
           "currency": "USD",
           "event": "ADP employment change (July)",
           "importance": "medium",
-          "previous": "98,000 (June)",
-          "revised": true,
-          "revisedNote": "June's ADP print has been corrected to 98,000. An earlier update had incorrectly shown 57,000 against this event, which was in fact the same month's official Nonfarm Payrolls figure rather than the ADP number.",
-          "description": "ADP's estimate of private sector payroll growth, released two days ahead of the official US jobs report. Watched closely as an early, if imperfect, signal of how Friday's Nonfarm Payrolls report might land, at a time when the labour market has been showing signs of cooling."
+          "previous": "98,000 (June, corrected)",
+          "description": "ADP's estimate of private sector payroll growth, released two days ahead of the official US jobs report. June's ADP print was corrected to 98,000 after an earlier mix-up had shown 57,000 against this event, which was in fact the same month's official Nonfarm Payrolls figure. Watched closely as an early, if imperfect, signal of how the following week's Nonfarm Payrolls report might land, at a time when the labour market has been showing signs of cooling."
         },
         {
           "time": "15:00",
@@ -288,7 +287,7 @@
           "event": "Australia trade balance (June)",
           "importance": "medium",
           "previous": "A$3.018 billion deficit (May)",
-          "description": "The Australian Bureau of Statistics' measure of the gap between exports and imports of goods. A wider surplus is generally supportive for the Australian dollar, and the release is watched closely given China's status as Australia's largest trading partner."
+          "description": "The Australian Bureau of Statistics' measure of the gap between exports and imports of goods. A wider surplus is generally supportive for the Australian dollar, and the release is watched closely given China's status as Australia's largest trading partner, especially against the backdrop of a weakening official Chinese PMI."
         },
         {
           "time": "04:00",
