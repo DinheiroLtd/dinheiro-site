@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T10:05:35+01:00",
+  "updated": "2026-07-31T12:06:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -274,7 +274,7 @@
           "event": "US ISM Services PMI (July)",
           "importance": "high",
           "previous": "54.0 (June)",
-          "description": "The Institute for Supply Management's survey of the much larger US services sector, released on the third business day of the month. June's reading of 54.0 kept the sector in expansion; a reading above 50 signals growth, and this is one of the most closely watched US data points of the week."
+          "description": "The Institute for Supply Management's survey of the much larger US services sector, released on the third business day of the month. June's reading of 54.0 kept the sector in expansion; a reading above 50 signals growth, with market pricing split fairly evenly between a reading in the low 53s and one closer to 54, making this one of the most closely watched US data points of the week."
         }
       ]
     },
@@ -312,7 +312,7 @@
           "event": "US weekly initial jobless claims",
           "importance": "low",
           "previous": "197,000 (week to 25 July)",
-          "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market, usually a minor mover unless it deviates sharply from expectations, and watched closely this week ahead of Friday's July jobs report."
+          "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market, usually a minor mover unless it deviates sharply from expectations, and watched closely this week ahead of the following week's July jobs report."
         }
       ]
     }
