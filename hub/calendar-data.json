@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T12:10:00+01:00",
+  "updated": "2026-08-03T16:10:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -64,6 +64,8 @@
           "importance": "medium",
           "previous": "53.3 (June, revised)",
           "consensus": "54.0",
+          "revised": true,
+          "revisedNote": "The actual reading, published this afternoon, came in at 55.6, well above the 54.0 consensus and the highest level since May 2022, with the prices paid and new orders sub-indices both firming.",
           "description": "The Institute for Supply Management's survey of US manufacturing activity, released on the first business day of the month. A reading above 50 signals expansion. Watched as an early, broad based signal of US industrial health, with markets also focused on the prices paid and new orders sub-indices for clues on inflation and demand."
         }
       ]
