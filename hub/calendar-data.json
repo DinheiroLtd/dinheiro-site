@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T09:23:00+01:00",
+  "updated": "2026-08-03T12:10:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -12,15 +12,17 @@
           "event": "RatingDog China Manufacturing PMI (July)",
           "importance": "medium",
           "previous": "51.7 (June)",
+          "consensus": "51.5",
           "revised": true,
-          "revisedNote": "This private manufacturing survey has been rebranded from Caixin to RatingDog, though it is still compiled with S&P Global; the methodology and panel are unchanged.",
-          "description": "A private sector survey of Chinese manufacturing activity, skewed toward smaller, export and tech oriented firms, published a few days ahead of the equivalent services reading. Since China is the world's second largest economy, a reading below 50 or a miss versus forecast tends to weigh on the yuan and on the growth sensitive Australian and New Zealand dollars given their trade links to China."
+          "revisedNote": "The actual reading, published this morning, came in at 50.9, missing the 51.5 consensus and easing from June's 51.7, the softest print in several months even though the index stayed in expansion territory.",
+          "description": "A private sector survey of Chinese manufacturing activity, skewed toward smaller, export and tech oriented firms, published a few days ahead of the equivalent services reading. The gauge was rebranded from Caixin to RatingDog this year but keeps the same S&P Global compiled methodology. Since China is the world's second largest economy, a soft print tends to weigh on the yuan and on the growth sensitive Australian and New Zealand dollars given their trade links to China."
         },
         {
           "time": "07:00",
           "currency": "ZAR",
           "event": "Absa Manufacturing PMI (July)",
           "importance": "low",
+          "previous": "47.3 (June)",
           "description": "A survey of purchasing managers in South Africa's manufacturing sector, compiled by the Bureau for Economic Research for Absa and usually published on the first business day of the month. A reading above 50 signals expansion; a weak print tends to weigh on the rand given the sector's fragile recent run."
         },
         {
@@ -29,6 +31,8 @@
           "event": "Swiss Consumer Price Index (July)",
           "importance": "medium",
           "previous": "0% m/m, +0.5% y/y (June)",
+          "revised": true,
+          "revisedNote": "The actual July print, published this morning, eased to +0.4% y/y (-0.1% m/m) from June's +0.5% y/y, with core inflation steady at +0.3% y/y as fuel prices and airfares fell.",
           "description": "Switzerland's headline inflation reading from the Federal Statistical Office. With Swiss inflation running well below other major economies, this feeds directly into the SNB's assessment of whether its current policy stance remains appropriate, and it is one of the few scheduled CHF data points before the Bank's next quarterly decision in September."
         },
         {
@@ -36,6 +40,10 @@
           "currency": "EUR",
           "event": "Eurozone final manufacturing PMI (July)",
           "importance": "low",
+          "previous": "51.4 (June)",
+          "consensus": "52.0 (flash estimate)",
+          "revised": true,
+          "revisedNote": "The final reading, published this morning, was confirmed at 51.9, a touch below the 52.0 flash estimate but still the strongest level since April, with German factory output at a four year high.",
           "description": "The final, revised reading of S&P Global's Eurozone manufacturing survey, usually only a small adjustment from the flash estimate published earlier in the month. A confirmation style release that rarely moves the euro much on its own."
         },
         {
@@ -46,8 +54,8 @@
           "previous": "52.5 (final, June)",
           "consensus": "52.8 (flash estimate)",
           "revised": true,
-          "revisedNote": "The flash July reading came in at 52.8, a fresh 22-month high for the output sub-index; today's final figure will confirm whether that holds, a consensus figure not available at the time of the last update.",
-          "description": "The final, revised reading of S&P Global's UK manufacturing survey. Usually a modest adjustment to the flash figure and a secondary mover for sterling, though this month's flash pointed to the strongest momentum in almost two years."
+          "revisedNote": "The final reading, published this morning, was revised down sharply to 51.9, a four month low and well below both the 52.8 flash estimate and June's 52.5, as new order growth and hiring both cooled.",
+          "description": "The final, revised reading of S&P Global's UK manufacturing survey. Usually a modest adjustment to the flash figure and a secondary mover for sterling, though this month's downward revision marked a notable loss of momentum from the earlier flash estimate."
         },
         {
           "time": "15:00",
@@ -129,9 +137,7 @@
           "event": "RatingDog China Services PMI (July)",
           "importance": "low",
           "previous": "54.1 (June)",
-          "revised": true,
-          "revisedNote": "As with the manufacturing survey, this services gauge has been rebranded from Caixin to RatingDog while retaining the same S&P Global compiled methodology.",
-          "description": "A private sector survey of activity in China's much larger services sector, released a few days after the manufacturing equivalent. Rounds out the picture of Chinese demand, with relevance for the Australian and New Zealand dollars given their trade exposure to China."
+          "description": "A private sector survey of activity in China's much larger services sector, released a few days after the manufacturing equivalent and compiled with the same S&P Global methodology under its new RatingDog name (formerly Caixin). Rounds out the picture of Chinese demand, with relevance for the Australian and New Zealand dollars given their trade exposure to China."
         },
         {
           "time": "09:00",
@@ -155,9 +161,7 @@
           "importance": "low",
           "previous": "48.8 (final, June)",
           "consensus": "51.8 (flash estimate)",
-          "revised": true,
-          "revisedNote": "The flash July services PMI jumped to 51.8, well above the 49.4 expected and a sharp rebound from June's 48.8 contraction; today's final reading should confirm the improvement, a swing that was not yet known at the time of the last update.",
-          "description": "The final, revised reading of S&P Global's UK services survey, covering the largest part of the UK economy. June marked the sector's steepest contraction since January 2023, so this month's flash rebound is being watched closely for confirmation."
+          "description": "The final, revised reading of S&P Global's UK services survey, covering the largest part of the UK economy. June marked the sector's steepest contraction since January 2023, so this month's flash rebound to 51.8 is being watched closely for confirmation."
         },
         {
           "time": "13:15",
@@ -196,6 +200,14 @@
       "label": "Thursday 6 August",
       "events": [
         {
+          "time": "00:30",
+          "currency": "JPY",
+          "event": "Japan average cash earnings and household spending (June)",
+          "importance": "medium",
+          "previous": "nominal wages +3.2% y/y, real wages +1.4% y/y, household spending -0.4% y/y real (May)",
+          "description": "The Ministry of Health, Labour and Welfare's monthly wage survey alongside the household spending report. The Bank of Japan watches wage growth closely as the key input into whether consumption can sustainably support the inflation outlook, particularly after the Bank held rates on 31 July."
+        },
+        {
           "time": "02:30",
           "currency": "AUD",
           "event": "Australia trade balance (June)",
@@ -216,9 +228,7 @@
           "currency": "GBP",
           "event": "Lloyds House Price Index (July)",
           "importance": "medium",
-          "revised": true,
-          "revisedNote": "This series was known as the Halifax House Price Index; it has been rebranded as the Lloyds House Price Index from July 2026 onward, with the same underlying mortgage lending data and methodology.",
-          "description": "A monthly gauge of UK house prices based on Lloyds Banking Group's own mortgage approvals data, formerly published under the Halifax name. Read alongside the Nationwide index as a proxy for household wealth and confidence, which feeds into the Bank of England's broader view of consumer demand."
+          "description": "A monthly gauge of UK house prices based on Lloyds Banking Group's own mortgage approvals data, formerly published under the Halifax name and rebranded as the Lloyds House Price Index from July 2026 onward with the same underlying methodology. Read alongside the Nationwide index as a proxy for household wealth and confidence, which feeds into the Bank of England's broader view of consumer demand."
         },
         {
           "time": "09:30",
@@ -226,8 +236,6 @@
           "event": "UK construction PMI (July)",
           "importance": "low",
           "previous": "38.4 (final, June)",
-          "revised": true,
-          "revisedNote": "This release has been moved to Thursday to match S&P Global's standard fourth business day publication slot for the UK construction survey; the previous update had it scheduled for Tuesday.",
           "description": "S&P Global's survey of activity in the UK construction sector. Housebuilding has been the weakest part of the industry recently, with June's reading barely above May's six year low, so this is watched for signs of whether that drag is easing. Typically a minor mover for sterling."
         },
         {
@@ -237,8 +245,6 @@
           "importance": "medium",
           "previous": "+1.9% y/y (May, revised)",
           "consensus": "+2.6% y/y",
-          "revised": true,
-          "revisedNote": "May's annual retail sales growth was revised up to 1.9% from an initially reported 1.6%, and the consensus for June has firmed to 2.6% y/y from the low single digits expected previously.",
           "description": "The main measure of consumer spending across the Eurozone. A high reading strengthens the euro, while a low one weakens it, since consumer demand is a key input into the ECB's growth and inflation outlook."
         },
         {
