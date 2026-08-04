@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T12:07:00+01:00",
+  "updated": "2026-08-04T16:10:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -33,6 +33,8 @@
           "currency": "USD",
           "event": "US trade balance (June)",
           "importance": "medium",
+          "previous": "$77.6 billion deficit (May)",
+          "consensus": "$73.0 billion deficit",
           "description": "The Census Bureau and BEA's monthly measure of the gap between US exports and imports of goods and services, released alongside factory orders on the first Tuesday of the month. Feeds into GDP tracking and is watched for how tariff related shifts in trade flows are showing up in the data."
         },
         {
@@ -48,6 +50,7 @@
           "event": "US JOLTS job openings (June)",
           "importance": "medium",
           "previous": "7.594 million (May)",
+          "consensus": "7.3 million",
           "description": "The Job Openings and Labor Turnover Survey, a measure of unfilled positions across the US economy that the Federal Reserve watches closely as a gauge of labour market slack. A drop toward pre pandemic levels would support the case for further Fed easing, while a steady reading supports the view that the labour market is cooling only gradually."
         },
         {
@@ -203,6 +206,14 @@
           "description": "A monthly gauge of UK house prices based on Lloyds Banking Group's own mortgage approvals data, formerly published under the Halifax name and rebranded as the Lloyds House Price Index from July 2026 onward with the same underlying methodology. Read alongside the Nationwide index as a proxy for household wealth and confidence, which feeds into the Bank of England's broader view of consumer demand."
         },
         {
+          "time": "07:45",
+          "currency": "CHF",
+          "event": "Switzerland unemployment rate (July)",
+          "importance": "low",
+          "previous": "3.1% s.a. (June)",
+          "description": "SECO's monthly count of registered jobseekers as a share of the labour force. Switzerland's jobless rate has been drifting higher through 2026 as the export sector feels the pinch from a strong franc and soft external demand; a further increase would add to the case for the SNB to keep policy loose when it next meets in September."
+        },
+        {
           "time": "09:00",
           "currency": "EUR",
           "event": "ECB Economic Bulletin (Issue 5/2026)",
@@ -255,12 +266,12 @@
       "label": "Friday 7 August",
       "events": [
         {
-          "time": "03:00",
+          "time": "04:00",
           "currency": "CNY",
           "event": "China trade balance (July)",
           "importance": "medium",
           "previous": "$125.62 billion surplus (June)",
-          "description": "China customs data on the gap between exports and imports. June's surplus was the second largest on record, driven by surging chip and AI data centre hardware related exports; the release is watched for whether that export strength has been sustained into July, with knock on relevance for the Australian and New Zealand dollars."
+          "description": "China customs data on the gap between exports and imports, usually released without a fixed time in the first week of the month. June's surplus was the second largest on record, driven by surging chip and AI data centre hardware related exports; the release is watched for whether that export strength has been sustained into July, with knock on relevance for the Australian and New Zealand dollars."
         },
         {
           "time": "06:00",
@@ -278,6 +289,13 @@
           "description": "The Japan Machine Tool Builders' Association's early estimate of new orders for machine tools, a proxy for capital spending intentions in the manufacturing sector both at home and among export customers such as China. A niche but closely watched gauge of global industrial demand."
         },
         {
+          "time": "07:00",
+          "currency": "EUR",
+          "event": "German industrial production and trade balance (June)",
+          "importance": "medium",
+          "description": "Destatis figures on output from Germany's factories and mines, released alongside the trade balance. As the Eurozone's largest economy and biggest exporter, German industrial data is watched as a bellwether for the currency bloc's manufacturing recovery and for how tariff related trade frictions are showing up in the numbers."
+        },
+        {
           "time": "13:30",
           "currency": "CAD",
           "event": "Canada Labour Force Survey: employment and unemployment rate (July)",
@@ -292,8 +310,6 @@
           "importance": "high",
           "previous": "57,000 jobs, +0.3% m/m earnings, 4.2% unemployment rate (June)",
           "consensus": "around 80,000 jobs, +0.3% m/m earnings, unemployment rate steady at 4.2%",
-          "revised": true,
-          "revisedNote": "Consensus for July payroll growth has been revised down since this morning, from around 130,000 to roughly 80,000, though the unemployment rate forecast is unchanged at 4.2%.",
           "description": "The US Department of Labor's monthly employment report, the single most closely watched release on the calendar. June's payrolls figure of just 57,000 was well below expectations and reopened debate about the timing of the Fed's next move; a second soft print in July would add to that debate, while a strong number would support the more hawkish tone struck by some FOMC members at July's meeting."
         },
         {
