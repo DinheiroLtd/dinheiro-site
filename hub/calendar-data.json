@@ -1,75 +1,7 @@
 {
-  "updated": "2026-08-03T16:10:00+01:00",
+  "updated": "2026-08-04T08:57:00+01:00",
   "timezone": "BST",
   "days": [
-    {
-      "date": "2026-08-03",
-      "label": "Monday 3 August",
-      "events": [
-        {
-          "time": "02:45",
-          "currency": "CNY",
-          "event": "RatingDog China Manufacturing PMI (July)",
-          "importance": "medium",
-          "previous": "51.7 (June)",
-          "consensus": "51.5",
-          "revised": true,
-          "revisedNote": "The actual reading, published this morning, came in at 50.9, missing the 51.5 consensus and easing from June's 51.7, the softest print in several months even though the index stayed in expansion territory.",
-          "description": "A private sector survey of Chinese manufacturing activity, skewed toward smaller, export and tech oriented firms, published a few days ahead of the equivalent services reading. The gauge was rebranded from Caixin to RatingDog this year but keeps the same S&P Global compiled methodology. Since China is the world's second largest economy, a soft print tends to weigh on the yuan and on the growth sensitive Australian and New Zealand dollars given their trade links to China."
-        },
-        {
-          "time": "07:00",
-          "currency": "ZAR",
-          "event": "Absa Manufacturing PMI (July)",
-          "importance": "low",
-          "previous": "47.3 (June)",
-          "description": "A survey of purchasing managers in South Africa's manufacturing sector, compiled by the Bureau for Economic Research for Absa and usually published on the first business day of the month. A reading above 50 signals expansion; a weak print tends to weigh on the rand given the sector's fragile recent run."
-        },
-        {
-          "time": "07:30",
-          "currency": "CHF",
-          "event": "Swiss Consumer Price Index (July)",
-          "importance": "medium",
-          "previous": "0% m/m, +0.5% y/y (June)",
-          "revised": true,
-          "revisedNote": "The actual July print, published this morning, eased to +0.4% y/y (-0.1% m/m) from June's +0.5% y/y, with core inflation steady at +0.3% y/y as fuel prices and airfares fell.",
-          "description": "Switzerland's headline inflation reading from the Federal Statistical Office. With Swiss inflation running well below other major economies, this feeds directly into the SNB's assessment of whether its current policy stance remains appropriate, and it is one of the few scheduled CHF data points before the Bank's next quarterly decision in September."
-        },
-        {
-          "time": "09:00",
-          "currency": "EUR",
-          "event": "Eurozone final manufacturing PMI (July)",
-          "importance": "low",
-          "previous": "51.4 (June)",
-          "consensus": "52.0 (flash estimate)",
-          "revised": true,
-          "revisedNote": "The final reading, published this morning, was confirmed at 51.9, a touch below the 52.0 flash estimate but still the strongest level since April, with German factory output at a four year high.",
-          "description": "The final, revised reading of S&P Global's Eurozone manufacturing survey, usually only a small adjustment from the flash estimate published earlier in the month. A confirmation style release that rarely moves the euro much on its own."
-        },
-        {
-          "time": "09:30",
-          "currency": "GBP",
-          "event": "UK final manufacturing PMI (July)",
-          "importance": "low",
-          "previous": "52.5 (final, June)",
-          "consensus": "52.8 (flash estimate)",
-          "revised": true,
-          "revisedNote": "The final reading, published this morning, was revised down sharply to 51.9, a four month low and well below both the 52.8 flash estimate and June's 52.5, as new order growth and hiring both cooled.",
-          "description": "The final, revised reading of S&P Global's UK manufacturing survey. Usually a modest adjustment to the flash figure and a secondary mover for sterling, though this month's downward revision marked a notable loss of momentum from the earlier flash estimate."
-        },
-        {
-          "time": "15:00",
-          "currency": "USD",
-          "event": "US ISM Manufacturing PMI (July)",
-          "importance": "medium",
-          "previous": "53.3 (June, revised)",
-          "consensus": "54.0",
-          "revised": true,
-          "revisedNote": "The actual reading, published this afternoon, came in at 55.6, well above the 54.0 consensus and the highest level since May 2022, with the prices paid and new orders sub-indices both firming.",
-          "description": "The Institute for Supply Management's survey of US manufacturing activity, released on the first business day of the month. A reading above 50 signals expansion. Watched as an early, broad based signal of US industrial health, with markets also focused on the prices paid and new orders sub-indices for clues on inflation and demand."
-        }
-      ]
-    },
     {
       "date": "2026-08-04",
       "label": "Tuesday 4 August",
@@ -88,6 +20,13 @@
           "importance": "low",
           "previous": "+1.9% y/y (June)",
           "description": "A monthly measure of UK retail sales growth compiled by the British Retail Consortium and KPMG, released a few weeks ahead of the official ONS retail sales figures. Gives an early, if noisy, read on the health of the UK consumer."
+        },
+        {
+          "time": "13:30",
+          "currency": "USD",
+          "event": "US trade balance (June)",
+          "importance": "medium",
+          "description": "The Census Bureau and BEA's monthly measure of the gap between US exports and imports of goods and services, released alongside factory orders on the first Tuesday of the month. Feeds into GDP tracking and is watched for how tariff related shifts in trade flows are showing up in the data."
         },
         {
           "time": "13:30",
@@ -110,6 +49,20 @@
           "event": "US factory orders (June)",
           "importance": "low",
           "description": "A broader measure of new orders placed with US manufacturers than the durable goods report released a few days earlier. Usually a secondary market mover, since much of the durable goods component is already known by the time this is published."
+        },
+        {
+          "time": "15:00",
+          "currency": "USD",
+          "event": "US durable goods orders (June, final)",
+          "importance": "low",
+          "description": "The final, revised reading of new orders for long lasting manufactured goods such as machinery, vehicles and aircraft. Usually only a minor adjustment to the preliminary estimate published in late July, so it tends to be a secondary market mover."
+        },
+        {
+          "time": "17:45",
+          "currency": "USD",
+          "event": "Fed Vice Chair Michelle Bowman fireside chat",
+          "importance": "medium",
+          "description": "Federal Reserve Vice Chair for Supervision Michelle Bowman takes part in a discussion and fireside chat at the CEO and Senior Management Summit. As a sitting FOMC voter who has pushed for faster rate cuts, her remarks are watched for any fresh signal on where she stands ahead of the Fed's September meeting."
         },
         {
           "time": "23:45",
@@ -189,7 +142,7 @@
           "description": "The detailed record of the Federal Reserve's 29 July meeting, at which the Fed held its target range at 3.50 to 3.75% in a 9-3 vote, with three policymakers preferring a quarter point increase. Markets will scrutinise the minutes for how deep that hawkish split ran and for any signal on the conditions needed for the Fed's next move, under new Chair Kevin Warsh."
         },
         {
-          "time": "21:00",
+          "time": "21:05",
           "currency": "USD",
           "event": "Fed Governor Lisa Cook speaks on the economic outlook",
           "importance": "medium",
@@ -233,6 +186,13 @@
           "description": "A monthly gauge of UK house prices based on Lloyds Banking Group's own mortgage approvals data, formerly published under the Halifax name and rebranded as the Lloyds House Price Index from July 2026 onward with the same underlying methodology. Read alongside the Nationwide index as a proxy for household wealth and confidence, which feeds into the Bank of England's broader view of consumer demand."
         },
         {
+          "time": "09:00",
+          "currency": "EUR",
+          "event": "ECB Economic Bulletin (Issue 5/2026)",
+          "importance": "low",
+          "description": "The European Central Bank's regular bulletin setting out the economic and monetary analysis behind its latest policy decisions. Not a policy event in itself, but can move the euro at the margin if it contains fresh staff commentary on the inflation or growth outlook."
+        },
+        {
           "time": "09:30",
           "currency": "GBP",
           "event": "UK construction PMI (July)",
@@ -252,10 +212,24 @@
         {
           "time": "13:30",
           "currency": "USD",
+          "event": "US productivity (Q2, preliminary)",
+          "importance": "medium",
+          "description": "The Bureau of Labor Statistics' preliminary estimate of non-farm business sector productivity and unit labour costs for the second quarter. The Fed watches this as a gauge of how much wage growth is being absorbed by efficiency gains rather than feeding through to inflation."
+        },
+        {
+          "time": "13:30",
+          "currency": "USD",
           "event": "US weekly initial jobless claims",
           "importance": "low",
           "previous": "197,000 (week to 25 July)",
           "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market, usually a minor mover unless it deviates sharply from expectations, and watched closely this week just a day ahead of the July jobs report."
+        },
+        {
+          "time": "15:00",
+          "currency": "USD",
+          "event": "US wholesale inventories (June, final)",
+          "importance": "low",
+          "description": "The final reading of stock levels held by US wholesalers, a minor input into later GDP revisions. Rarely a market mover on its own."
         }
       ]
     },
@@ -272,7 +246,22 @@
           "description": "China customs data on the gap between exports and imports. June's surplus was the second largest on record, driven by surging chip and AI data centre hardware related exports; the release is watched for whether that export strength has been sustained into July, with knock on relevance for the Australian and New Zealand dollars."
         },
         {
-          "time": "12:30",
+          "time": "06:00",
+          "currency": "JPY",
+          "event": "Japan Leading Economic Index (June, preliminary)",
+          "importance": "low",
+          "consensus": "116.0",
+          "description": "The Cabinet Office's composite gauge of indicators, such as job offers and stock prices, designed to signal the direction of the Japanese economy a few months ahead. A useful but rarely market moving cross check on the broader growth picture the Bank of Japan is watching."
+        },
+        {
+          "time": "06:00",
+          "currency": "JPY",
+          "event": "Japan machine tool orders (July, preliminary)",
+          "importance": "low",
+          "description": "The Japan Machine Tool Builders' Association's early estimate of new orders for machine tools, a proxy for capital spending intentions in the manufacturing sector both at home and among export customers such as China. A niche but closely watched gauge of global industrial demand."
+        },
+        {
+          "time": "13:30",
           "currency": "CAD",
           "event": "Canada Labour Force Survey: employment and unemployment rate (July)",
           "importance": "high",
@@ -280,15 +269,27 @@
           "description": "Statistics Canada's monthly labour market report, covering the change in employment and the jobless rate. Released alongside the US jobs report, it is watched for signs of how much slack is building in the Canadian economy while the Bank of Canada remains on hold until its next meeting in September."
         },
         {
-          "time": "12:30",
+          "time": "13:30",
           "currency": "USD",
           "event": "US Nonfarm Payrolls, average hourly earnings and unemployment rate (July)",
           "importance": "high",
           "previous": "57,000 jobs, +0.3% m/m earnings, 4.2% unemployment rate (June)",
           "consensus": "around 130,000 jobs, unemployment rate unchanged at 4.2%",
           "description": "The US Department of Labor's monthly employment report, the single most closely watched release on the calendar. June's payrolls figure of just 57,000 was well below expectations and reopened debate about the timing of the Fed's next move; a second soft print in July would add to that debate, while a strong number would support the more hawkish tone struck by some FOMC members at July's meeting."
+        },
+        {
+          "time": "15:00",
+          "currency": "USD",
+          "event": "US consumer credit (June)",
+          "importance": "low",
+          "description": "The Federal Reserve's monthly measure of outstanding credit card and other consumer borrowing. Watched for a gradual slowdown as a sign of how stretched US household finances have become after several years of high borrowing costs, though it is typically a low impact release."
         }
       ]
+    },
+    {
+      "date": "2026-08-10",
+      "label": "Monday 10 August",
+      "events": []
     }
   ]
 }
