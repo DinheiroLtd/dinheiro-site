@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T08:57:00+01:00",
+  "updated": "2026-08-04T12:07:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -20,6 +20,13 @@
           "importance": "low",
           "previous": "+1.9% y/y (June)",
           "description": "A monthly measure of UK retail sales growth compiled by the British Retail Consortium and KPMG, released a few weeks ahead of the official ONS retail sales figures. Gives an early, if noisy, read on the health of the UK consumer."
+        },
+        {
+          "time": "09:00",
+          "currency": "GBP",
+          "event": "SMMT UK new car registrations (July)",
+          "importance": "low",
+          "description": "The Society of Motor Manufacturers and Traders' monthly count of new vehicle registrations, watched as a proxy for consumer and business confidence and for the pace of the shift to electrified vehicles. Rarely a significant driver of sterling on its own."
         },
         {
           "time": "13:30",
@@ -87,6 +94,14 @@
           "description": "The detailed record of policymakers' discussion from the Bank of Japan's June meeting, published with the usual roughly six week lag. Read for clues on how the Board's thinking evolved ahead of its most recent decision to hold rates on 31 July, and on the depth of any dissent for tightening."
         },
         {
+          "time": "01:30",
+          "currency": "JPY",
+          "event": "au Jibun Bank Japan Services PMI (July, final)",
+          "importance": "low",
+          "consensus": "52.6",
+          "description": "The final, revised reading of the au Jibun Bank survey of Japan's services sector. Rounds out the picture of domestic demand alongside the manufacturing PMI, and is generally a secondary mover for the yen."
+        },
+        {
           "time": "02:45",
           "currency": "CNY",
           "event": "RatingDog China Services PMI (July)",
@@ -139,7 +154,8 @@
           "currency": "USD",
           "event": "FOMC meeting minutes (29 July meeting)",
           "importance": "high",
-          "description": "The detailed record of the Federal Reserve's 29 July meeting, at which the Fed held its target range at 3.50 to 3.75% in a 9-3 vote, with three policymakers preferring a quarter point increase. Markets will scrutinise the minutes for how deep that hawkish split ran and for any signal on the conditions needed for the Fed's next move, under new Chair Kevin Warsh."
+          "previous": "held at 3.50 to 3.75%, 9-3 vote with three dissents for a quarter point hike",
+          "description": "The detailed record of the Federal Reserve's 29 July meeting, at which the Fed held its target range at 3.50 to 3.75% in a 9-3 vote, with three regional presidents preferring a quarter point increase, the first unified hawkish dissent of its kind since 2016. Markets will scrutinise the minutes for how deep that split ran and for any signal on the conditions needed for the Fed's next move under Chair Kevin Warsh."
         },
         {
           "time": "21:05",
@@ -160,6 +176,7 @@
           "event": "Japan average cash earnings and household spending (June)",
           "importance": "medium",
           "previous": "nominal wages +3.2% y/y, real wages +1.4% y/y, household spending -0.4% y/y real (May)",
+          "consensus": "household spending -1.8% y/y, +0.9% m/m",
           "description": "The Ministry of Health, Labour and Welfare's monthly wage survey alongside the household spending report. The Bank of Japan watches wage growth closely as the key input into whether consumption can sustainably support the inflation outlook, particularly after the Bank held rates on 31 July."
         },
         {
@@ -274,7 +291,9 @@
           "event": "US Nonfarm Payrolls, average hourly earnings and unemployment rate (July)",
           "importance": "high",
           "previous": "57,000 jobs, +0.3% m/m earnings, 4.2% unemployment rate (June)",
-          "consensus": "around 130,000 jobs, unemployment rate unchanged at 4.2%",
+          "consensus": "around 80,000 jobs, +0.3% m/m earnings, unemployment rate steady at 4.2%",
+          "revised": true,
+          "revisedNote": "Consensus for July payroll growth has been revised down since this morning, from around 130,000 to roughly 80,000, though the unemployment rate forecast is unchanged at 4.2%.",
           "description": "The US Department of Labor's monthly employment report, the single most closely watched release on the calendar. June's payrolls figure of just 57,000 was well below expectations and reopened debate about the timing of the Fed's next move; a second soft print in July would add to that debate, while a strong number would support the more hawkish tone struck by some FOMC members at July's meeting."
         },
         {
