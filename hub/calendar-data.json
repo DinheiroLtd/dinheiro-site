@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T12:10:00+01:00",
+  "updated": "2026-08-05T16:15:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -51,7 +51,9 @@
           "importance": "low",
           "previous": "48.8 (final, June)",
           "consensus": "51.8 (flash estimate)",
-          "description": "The final, revised reading of S&P Global's UK services survey, covering the largest part of the UK economy. June marked the sector's steepest contraction since January 2023, so this month's flash rebound to 51.8 is being watched closely for confirmation."
+          "revised": true,
+          "revisedNote": "The final reading came in at 52.1, above the 51.8 flash estimate, confirming a stronger rebound in the services sector than first signalled.",
+          "description": "The final, revised reading of S&P Global's UK services survey, covering the largest part of the UK economy. June marked the sector's steepest contraction since January 2023, so this month's flash rebound to 51.8 was being watched closely for confirmation, which today's final print has now provided."
         },
         {
           "time": "13:15",
@@ -59,6 +61,8 @@
           "event": "ADP employment change (July)",
           "importance": "medium",
           "previous": "98,000 (June, corrected)",
+          "revised": true,
+          "revisedNote": "The actual print landed well short of expectations at just 44,000 versus roughly 70,000 forecast, reinforcing signs of a cooling US labour market.",
           "description": "ADP's estimate of private sector payroll growth, released two days ahead of the official US jobs report. Watched closely as an early, if imperfect, signal of how Friday's Nonfarm Payrolls report might land, at a time when the labour market has been showing signs of cooling."
         },
         {
@@ -67,14 +71,9 @@
           "event": "US ISM Services PMI (July)",
           "importance": "high",
           "previous": "54.0 (June)",
+          "revised": true,
+          "revisedNote": "The index printed at 54.1 versus 54.5 expected, with the employment sub-index dropping sharply to 47.4 from 51.2, echoing the soft ADP report released earlier the same day.",
           "description": "The Institute for Supply Management's survey of the much larger US services sector, released on the third business day of the month. A reading above 50 signals growth; this is one of the most closely watched US releases of the week alongside Friday's jobs report."
-        },
-        {
-          "time": "21:05",
-          "currency": "USD",
-          "event": "Fed Governor Lisa Cook speaks on the economic outlook",
-          "importance": "medium",
-          "description": "Federal Reserve Governor Lisa Cook addresses the Anchorage Economic Development Corporation's 2026 Economic Luncheon in Alaska. As a sitting voting member of the FOMC, her remarks on inflation, employment and the policy outlook are watched for signals on where she sits relative to the hawkish dissenters from July's meeting."
         }
       ]
     },
@@ -90,6 +89,15 @@
           "previous": "nominal wages +3.2% y/y, real wages +1.4% y/y, household spending -0.4% y/y real (May)",
           "consensus": "household spending -1.8% y/y, +0.9% m/m",
           "description": "The Ministry of Health, Labour and Welfare's monthly wage survey alongside the household spending report. The Bank of Japan watches wage growth closely as the key input into whether consumption can sustainably support the inflation outlook, particularly after the Bank held rates on 31 July."
+        },
+        {
+          "time": "01:05",
+          "currency": "USD",
+          "event": "Fed Governor Lisa Cook speaks on the economic outlook",
+          "importance": "medium",
+          "revised": true,
+          "revisedNote": "Corrected timing: the Anchorage speech is scheduled for 4:05pm Alaska time on 5 August, which converts to the early hours of 6 August in the UK, not the evening of 5 August as shown in the previous update.",
+          "description": "Federal Reserve Governor Lisa Cook addresses the Anchorage Economic Development Corporation's 2026 Economic Luncheon in Alaska. As a sitting voting member of the FOMC, her remarks on inflation, employment and the policy outlook are watched for signals on where she sits relative to the hawkish dissenters from July's meeting."
         },
         {
           "time": "02:30",
@@ -237,6 +245,13 @@
         },
         {
           "time": "15:00",
+          "currency": "CAD",
+          "event": "Ivey PMI (July)",
+          "importance": "low",
+          "description": "The Richard Ivey School of Business's seasonally adjusted survey of purchasing managers across Canada, covering activity, employment, prices and inventories. A secondary release compared with the Labour Force Survey out the same morning, but still watched as a timely, broad based read on Canadian business activity."
+        },
+        {
+          "time": "15:00",
           "currency": "USD",
           "event": "US consumer credit (June)",
           "importance": "low",
@@ -247,7 +262,15 @@
     {
       "date": "2026-08-10",
       "label": "Monday 10 August",
-      "events": []
+      "events": [
+        {
+          "time": "09:30",
+          "currency": "EUR",
+          "event": "Sentix Investor Confidence (August)",
+          "importance": "low",
+          "description": "A monthly survey of roughly a thousand investors and analysts gauging both current conditions and expectations for the Eurozone economy. Released earlier in the month than the more closely watched ZEW survey, it offers an early, sentiment based read on the currency bloc's growth outlook, though it is usually only a minor mover for the euro."
+        }
+      ]
     },
     {
       "date": "2026-08-11",
