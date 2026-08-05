@@ -1,90 +1,7 @@
 {
-  "updated": "2026-08-04T16:10:00+01:00",
+  "updated": "2026-08-05T10:08:00+01:00",
   "timezone": "BST",
   "days": [
-    {
-      "date": "2026-08-04",
-      "label": "Tuesday 4 August",
-      "events": [
-        {
-          "time": "00:01",
-          "currency": "GBP",
-          "event": "BRC Shop Price Index (July)",
-          "importance": "low",
-          "description": "The British Retail Consortium's monthly gauge of average shop prices, published around ten days ahead of the official ONS inflation figures. A useful early steer on the direction of UK consumer price pressure, though it rarely moves sterling much on its own."
-        },
-        {
-          "time": "00:01",
-          "currency": "GBP",
-          "event": "BRC-KPMG Retail Sales Monitor (July)",
-          "importance": "low",
-          "previous": "+1.9% y/y (June)",
-          "description": "A monthly measure of UK retail sales growth compiled by the British Retail Consortium and KPMG, released a few weeks ahead of the official ONS retail sales figures. Gives an early, if noisy, read on the health of the UK consumer."
-        },
-        {
-          "time": "09:00",
-          "currency": "GBP",
-          "event": "SMMT UK new car registrations (July)",
-          "importance": "low",
-          "description": "The Society of Motor Manufacturers and Traders' monthly count of new vehicle registrations, watched as a proxy for consumer and business confidence and for the pace of the shift to electrified vehicles. Rarely a significant driver of sterling on its own."
-        },
-        {
-          "time": "13:30",
-          "currency": "USD",
-          "event": "US trade balance (June)",
-          "importance": "medium",
-          "previous": "$77.6 billion deficit (May)",
-          "consensus": "$73.0 billion deficit",
-          "description": "The Census Bureau and BEA's monthly measure of the gap between US exports and imports of goods and services, released alongside factory orders on the first Tuesday of the month. Feeds into GDP tracking and is watched for how tariff related shifts in trade flows are showing up in the data."
-        },
-        {
-          "time": "13:30",
-          "currency": "CAD",
-          "event": "Canada merchandise trade balance (June)",
-          "importance": "medium",
-          "description": "Statistics Canada's monthly snapshot of the gap between exports and imports of goods. With a large share of Canadian trade tied to the US, this is watched as a barometer of cross border demand and, indirectly, of how tariff related frictions are feeding through to the loonie."
-        },
-        {
-          "time": "15:00",
-          "currency": "USD",
-          "event": "US JOLTS job openings (June)",
-          "importance": "medium",
-          "previous": "7.594 million (May)",
-          "consensus": "7.3 million",
-          "description": "The Job Openings and Labor Turnover Survey, a measure of unfilled positions across the US economy that the Federal Reserve watches closely as a gauge of labour market slack. A drop toward pre pandemic levels would support the case for further Fed easing, while a steady reading supports the view that the labour market is cooling only gradually."
-        },
-        {
-          "time": "15:00",
-          "currency": "USD",
-          "event": "US factory orders (June)",
-          "importance": "low",
-          "description": "A broader measure of new orders placed with US manufacturers than the durable goods report released a few days earlier. Usually a secondary market mover, since much of the durable goods component is already known by the time this is published."
-        },
-        {
-          "time": "15:00",
-          "currency": "USD",
-          "event": "US durable goods orders (June, final)",
-          "importance": "low",
-          "description": "The final, revised reading of new orders for long lasting manufactured goods such as machinery, vehicles and aircraft. Usually only a minor adjustment to the preliminary estimate published in late July, so it tends to be a secondary market mover."
-        },
-        {
-          "time": "17:45",
-          "currency": "USD",
-          "event": "Fed Vice Chair Michelle Bowman fireside chat",
-          "importance": "medium",
-          "description": "Federal Reserve Vice Chair for Supervision Michelle Bowman takes part in a discussion and fireside chat at the CEO and Senior Management Summit. As a sitting FOMC voter who has pushed for faster rate cuts, her remarks are watched for any fresh signal on where she stands ahead of the Fed's September meeting."
-        },
-        {
-          "time": "23:45",
-          "currency": "NZD",
-          "event": "New Zealand employment change and unemployment rate (Q2)",
-          "importance": "high",
-          "previous": "+0.2% employment change, 5.3% unemployment rate (Q1)",
-          "consensus": "5.4% unemployment rate",
-          "description": "Stats NZ's quarterly snapshot of the labour market, covering the change in the number of people employed and the jobless rate. It lands with the Reserve Bank of New Zealand's next policy statement not due until early September, so a soft print would raise questions about how much room the Bank has to keep policy on hold without hurting employment."
-        }
-      ]
-    },
     {
       "date": "2026-08-05",
       "label": "Wednesday 5 August",
@@ -153,19 +70,11 @@
           "description": "The Institute for Supply Management's survey of the much larger US services sector, released on the third business day of the month. A reading above 50 signals growth; this is one of the most closely watched US releases of the week alongside Friday's jobs report."
         },
         {
-          "time": "19:00",
-          "currency": "USD",
-          "event": "FOMC meeting minutes (29 July meeting)",
-          "importance": "high",
-          "previous": "held at 3.50 to 3.75%, 9-3 vote with three dissents for a quarter point hike",
-          "description": "The detailed record of the Federal Reserve's 29 July meeting, at which the Fed held its target range at 3.50 to 3.75% in a 9-3 vote, with three regional presidents preferring a quarter point increase, the first unified hawkish dissent of its kind since 2016. Markets will scrutinise the minutes for how deep that split ran and for any signal on the conditions needed for the Fed's next move under Chair Kevin Warsh."
-        },
-        {
           "time": "21:05",
           "currency": "USD",
           "event": "Fed Governor Lisa Cook speaks on the economic outlook",
           "importance": "medium",
-          "description": "Federal Reserve Governor Lisa Cook addresses an economic luncheon in Anchorage, Alaska. As a sitting voting member of the FOMC, her remarks on inflation, employment and the policy outlook are watched for signals on where she sits relative to the hawkish dissenters from July's meeting."
+          "description": "Federal Reserve Governor Lisa Cook addresses the Anchorage Economic Development Corporation's 2026 Economic Luncheon in Alaska. As a sitting voting member of the FOMC, her remarks on inflation, employment and the policy outlook are watched for signals on where she sits relative to the hawkish dissenters from July's meeting."
         }
       ]
     },
@@ -258,6 +167,13 @@
           "event": "US wholesale inventories (June, final)",
           "importance": "low",
           "description": "The final reading of stock levels held by US wholesalers, a minor input into later GDP revisions. Rarely a market mover on its own."
+        },
+        {
+          "time": "22:30",
+          "currency": "USD",
+          "event": "Fed's Alberto Musalem (St. Louis) speaks",
+          "importance": "medium",
+          "description": "St. Louis Fed President Alberto Musalem discusses the economic outlook and monetary policy. As a regional Fed president speaking days after the FOMC's unusually hawkish three way dissent at July's meeting, his remarks are watched for whether he leans toward that camp or toward the majority who voted to hold."
         }
       ]
     },
@@ -315,6 +231,13 @@
         {
           "time": "15:00",
           "currency": "USD",
+          "event": "Fed's Thomas Barkin (Richmond) speaks",
+          "importance": "medium",
+          "description": "Richmond Fed President Thomas Barkin comments on the economy, arriving just hours after the July jobs report. As a regional Fed president, his reaction to the data and his framing of the path ahead are watched for clues on how the Committee's centre of gravity is shifting after July's split decision."
+        },
+        {
+          "time": "15:00",
+          "currency": "USD",
           "event": "US consumer credit (June)",
           "importance": "low",
           "description": "The Federal Reserve's monthly measure of outstanding credit card and other consumer borrowing. Watched for a gradual slowdown as a sign of how stretched US household finances have become after several years of high borrowing costs, though it is typically a low impact release."
@@ -325,6 +248,44 @@
       "date": "2026-08-10",
       "label": "Monday 10 August",
       "events": []
+    },
+    {
+      "date": "2026-08-11",
+      "label": "Tuesday 11 August",
+      "events": [
+        {
+          "time": "05:30",
+          "currency": "AUD",
+          "event": "RBA interest rate decision and Statement on Monetary Policy",
+          "importance": "high",
+          "previous": "held at 4.35%",
+          "consensus": "hold at 4.35%",
+          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. All four major Australian banks expect a hold, though June's slightly softer than expected inflation print has left a live minority view that the Board could still tighten once more before its cycle ends."
+        },
+        {
+          "time": "06:30",
+          "currency": "AUD",
+          "event": "RBA Governor press conference",
+          "importance": "high",
+          "description": "Governor Michele Bullock's press conference following the rate decision. Traders parse the Governor's language on the inflation and growth outlook for hints on whether the Board still has room to raise the cash rate again or has reached the peak of the current tightening cycle."
+        },
+        {
+          "time": "10:30",
+          "currency": "ZAR",
+          "event": "South Africa Quarterly Labour Force Survey (Q2)",
+          "importance": "high",
+          "previous": "32.7% unemployment rate (Q1 2026)",
+          "description": "Stats SA's quarterly survey of employment and unemployment, one of the most closely watched domestic releases for the rand given South Africa's persistently high jobless rate. The Q1 reading marked a jump to 32.7%, so this update is watched for whether the labour market weakness has continued into the second quarter."
+        },
+        {
+          "time": "11:00",
+          "currency": "USD",
+          "event": "NFIB Small Business Optimism Index (July)",
+          "importance": "low",
+          "previous": "97.4 (June)",
+          "description": "The National Federation of Independent Business's monthly survey of small business sentiment on hiring, sales and pricing plans, usually released on the second Tuesday of the month. A useful cross check on the health of Main Street businesses, though typically a secondary mover for the dollar."
+        }
+      ]
     }
   ]
 }
