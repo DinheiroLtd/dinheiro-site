@@ -492,7 +492,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phsr-text { flex: 1; }
 .phsr-eyebrow { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 20px; }
 .phsr-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
-.phsr-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 400px; margin-bottom: 32px; }
+.phsr-sub { font-size: 1.0625rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 400px; margin-bottom: 32px; }
 .phsr-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .phsr-panel { flex: 0 0 580px; height: 420px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; align-self: center; display: flex; flex-direction: column; }
 .phsr-row { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid rgba(255,255,255,0.07); text-decoration: none; flex: 1; }
@@ -509,7 +509,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phcs-text { flex: 1.2; }
 .phcs-eyebrow { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 20px; }
 .phcs-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
-.phcs-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
+.phcs-sub { font-size: 1.0625rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
 .phcs-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .phcs-panel { flex: 0 0 580px; height: 420px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; align-self: center; display: flex; flex-direction: column; }
 .phcs-panel-head { display: flex; border-bottom: 1px solid rgba(255,255,255,0.1); flex-shrink: 0; }
@@ -529,7 +529,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phpr-text { flex: 1.2; }
 .phpr-eyebrow { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 20px; }
 .phpr-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
-.phpr-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
+.phpr-sub { font-size: 1.0625rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
 .phpr-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .phpr-box { flex: 0 0 580px; height: 420px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 36px 32px; align-self: center; display: flex; flex-direction: column; justify-content: center; }
 .phpr-box-label { font-size: 0.6875rem; font-weight: 600; color: rgba(255,255,255,0.28); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 18px; }
