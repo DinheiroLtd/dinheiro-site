@@ -531,7 +531,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phpr-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
 .phpr-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
 .phpr-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.phpr-box { flex: 0 0 480px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 36px 32px; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+.phpr-box { flex: 0 0 580px; height: 420px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 36px 32px; align-self: center; display: flex; flex-direction: column; justify-content: center; }
 .phpr-box-label { font-size: 0.6875rem; font-weight: 600; color: rgba(255,255,255,0.28); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 18px; }
 .phpr-box-h { font-size: 1.625rem; font-weight: 800; color: white; line-height: 1.1; margin-bottom: 4px; }
 .phpr-box-h-accent { font-size: 1.625rem; font-weight: 800; color: var(--accent); line-height: 1.1; margin-bottom: 22px; }
