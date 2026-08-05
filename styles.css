@@ -511,11 +511,11 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .phcs-h1 { font-size: clamp(2.1rem, 3.2vw, 3.1rem); font-weight: 800; color: white; line-height: 1.06; letter-spacing: -0.75px; margin-bottom: 18px; }
 .phcs-sub { font-size: 1rem; color: rgba(255,255,255,0.52); line-height: 1.8; max-width: 440px; margin-bottom: 32px; }
 .phcs-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-.phcs-panel { flex: 0 0 580px; height: 420px; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; align-self: center; }
-.phcs-panel-head { display: flex; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.phcs-panel { flex: 0 0 580px; height: 420px; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; align-self: center; display: flex; flex-direction: column; }
+.phcs-panel-head { display: flex; border-bottom: 1px solid rgba(255,255,255,0.1); flex-shrink: 0; }
 .phcs-head-bank { flex: 1; padding: 13px 16px; font-size: 0.6875rem; font-weight: 700; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.09em; }
 .phcs-head-din { flex: 1; padding: 13px 16px; font-size: 0.6875rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.09em; background: rgba(143,203,235,0.06); border-left: 1px solid rgba(255,255,255,0.08); }
-.phcs-row { display: flex; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.phcs-row { display: flex; border-bottom: 1px solid rgba(255,255,255,0.06); flex: 1; }
 .phcs-row:last-child { border-bottom: none; }
 .phcs-cell-bank { flex: 1; padding: 13px 16px; font-size: 0.8125rem; color: rgba(255,255,255,0.38); display: flex; align-items: center; gap: 8px; }
 .phcs-cell-din { flex: 1; padding: 13px 16px; font-size: 0.8125rem; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 8px; background: rgba(143,203,235,0.05); border-left: 1px solid rgba(255,255,255,0.06); }
