@@ -1230,6 +1230,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   /* Global — all page heroes stack on mobile */
   .page-hero { flex-direction: column !important; min-height: auto !important; padding: 100px 20px 52px !important; gap: 0 !important; justify-content: flex-start !important; }
   .page-hero > div { flex: none !important; width: 100% !important; }
+  .hero-photo { flex: none !important; width: 100% !important; height: 240px !important; margin-top: 32px; }
 
   /* Services page */
   #services-hero-grid { grid-template-columns: 1fr !important; }
