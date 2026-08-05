@@ -260,15 +260,22 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .btn-lg { padding: 14px 32px; font-size: 0.9625rem; }
 .btn-sm { padding: 8px 18px; font-size: 0.8125rem; }
 
-/* ─── DIAGONAL PATTERN ──────────────────────────────────── */
+/* ─── LIGHT RAYS PATTERN ──────────────────────────────────── */
 .diag-pattern::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    -50deg, transparent, transparent 80px,
-    rgba(255,255,255,0.018) 80px, rgba(255,255,255,0.018) 82px
-  );
+  background:
+    linear-gradient(135deg, rgba(26,111,160,0.18) 0%, transparent 55%),
+    linear-gradient(135deg,
+      transparent 0%, transparent 8%,
+      rgba(255,255,255,0.045) 8%, rgba(255,255,255,0.045) 22%,
+      transparent 22%, transparent 40%,
+      rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.03) 52%,
+      transparent 52%, transparent 70%,
+      rgba(255,255,255,0.025) 70%, rgba(255,255,255,0.025) 78%,
+      transparent 78%
+    );
   pointer-events: none;
 }
 
@@ -282,7 +289,17 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(-50deg, transparent, transparent 80px, rgba(255,255,255,0.018) 80px, rgba(255,255,255,0.018) 82px);
+  background:
+    linear-gradient(135deg, rgba(26,111,160,0.18) 0%, transparent 55%),
+    linear-gradient(135deg,
+      transparent 0%, transparent 8%,
+      rgba(255,255,255,0.045) 8%, rgba(255,255,255,0.045) 22%,
+      transparent 22%, transparent 40%,
+      rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.03) 52%,
+      transparent 52%, transparent 70%,
+      rgba(255,255,255,0.025) 70%, rgba(255,255,255,0.025) 78%,
+      transparent 78%
+    );
   pointer-events: none;
 }
 .hero::after {
@@ -359,7 +376,17 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(-50deg, transparent, transparent 80px, rgba(255,255,255,0.018) 80px, rgba(255,255,255,0.018) 82px);
+  background:
+    linear-gradient(135deg, rgba(26,111,160,0.18) 0%, transparent 55%),
+    linear-gradient(135deg,
+      transparent 0%, transparent 8%,
+      rgba(255,255,255,0.045) 8%, rgba(255,255,255,0.045) 22%,
+      transparent 22%, transparent 40%,
+      rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.03) 52%,
+      transparent 52%, transparent 70%,
+      rgba(255,255,255,0.025) 70%, rgba(255,255,255,0.025) 78%,
+      transparent 78%
+    );
   pointer-events: none;
 }
 .page-hero::after {
@@ -631,7 +658,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 
 /* ─── SERVICES (dark grid) ──────────────────────────────── */
 .section-services { background: var(--navy); padding: 100px 48px; position: relative; overflow: hidden; }
-.section-services::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-50deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 82px); }
+.section-services::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,111,160,0.18) 0%, transparent 55%), linear-gradient(135deg, transparent 0%, transparent 8%, rgba(255,255,255,0.045) 8%, rgba(255,255,255,0.045) 22%, transparent 22%, transparent 40%, rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.03) 52%, transparent 52%, transparent 70%, rgba(255,255,255,0.025) 70%, rgba(255,255,255,0.025) 78%, transparent 78%); }
 .section-services-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
 .section-header-row { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 56px; gap: 40px; }
 .section-header-row h2 { font-size: clamp(2rem, 3vw, 2.875rem); font-weight: 800; color: white; line-height: 1.15; letter-spacing: -0.5px; max-width: 560px; }
@@ -687,7 +714,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 
 /* ─── QUOTE FORM ────────────────────────────────────────── */
 .section-quote { background: var(--navy); padding: 100px 48px; position: relative; overflow: hidden; }
-.section-quote::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-50deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 82px); }
+.section-quote::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,111,160,0.18) 0%, transparent 55%), linear-gradient(135deg, transparent 0%, transparent 8%, rgba(255,255,255,0.045) 8%, rgba(255,255,255,0.045) 22%, transparent 22%, transparent 40%, rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.03) 52%, transparent 52%, transparent 70%, rgba(255,255,255,0.025) 70%, rgba(255,255,255,0.025) 78%, transparent 78%); }
 .section-quote-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
 .quote-header { text-align: center; margin-bottom: 48px; }
 .quote-header h2 { font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; color: white; letter-spacing: -0.5px; margin-bottom: 12px; }
@@ -750,7 +777,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 
 /* ─── CTA BANNER ────────────────────────────────────────── */
 .section-cta-banner { background: var(--navy); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
-.section-cta-banner::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-50deg, transparent, transparent 80px, rgba(255,255,255,0.015) 80px, rgba(255,255,255,0.015) 82px); }
+.section-cta-banner::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,111,160,0.18) 0%, transparent 55%), linear-gradient(135deg, transparent 0%, transparent 8%, rgba(255,255,255,0.045) 8%, rgba(255,255,255,0.045) 22%, transparent 22%, transparent 40%, rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.03) 52%, transparent 52%, transparent 70%, rgba(255,255,255,0.025) 70%, rgba(255,255,255,0.025) 78%, transparent 78%); }
 .section-cta-banner-inner { max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
 .section-cta-banner h2 { font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: white; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.5px; }
 .section-cta-banner p { font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 40px; }
