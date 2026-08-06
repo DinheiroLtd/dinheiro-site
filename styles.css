@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 }
 #navbar.scrolled { box-shadow: none; }
 .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-.nav-logo img { height: 46px; width: auto; filter: brightness(0) invert(1); }
+.nav-logo img { height: 46px; width: auto; filter: brightness(0) invert(1); transition: opacity 0.4s ease; }
 .nav-links { display: flex; gap: 28px; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
 .nav-links a {
   font-size: 0.875rem;
