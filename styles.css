@@ -968,24 +968,23 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   cursor: pointer;
   width: 48px;
   height: 48px;
-  background: rgba(8, 18, 28, 0.72);
-  border: 1px solid rgba(255,255,255,0.14);
+  background: #ffffff;
+  border: none;
   border-radius: 12px;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   padding: 0;
   flex-shrink: 0;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
 .nav-hamburger:hover {
-  background: rgba(8, 18, 28, 0.92);
-  border-color: rgba(255,255,255,0.28);
+  background: #f0f0f0;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
 }
 .nav-hamburger span {
   display: block;
   width: 18px;
-  height: 1.5px;
-  background: white;
+  height: 2px;
+  background: #1C3C57;
   border-radius: 2px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
