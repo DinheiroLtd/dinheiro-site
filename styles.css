@@ -1001,15 +1001,15 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   /* ── Nav: logo left, hamburger right, no bar ── */
   #navbar {
     top: 14px;
-    left: 16px;
-    right: 16px;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: auto;
     min-height: auto;
-    padding: 0;
+    padding: 0 20px;
   }
   .nav-logo {
     display: flex;
