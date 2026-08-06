@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T12:17:00+01:00",
+  "updated": "2026-08-06T16:14:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -36,7 +36,7 @@
           "event": "RBNZ inflation expectations survey (Q3)",
           "importance": "low",
           "previous": "+2.53% (Q2)",
-          "description": "The Reserve Bank of New Zealand's quarterly survey of businesses' and forecasters' expectations for inflation over the next two years. A rise in expectations reinforces the case for a firmer policy stance, and a high reading is generally supportive for the New Zealand dollar."
+          "description": "The Reserve Bank of New Zealand's quarterly survey of businesses' and forecasters' expectations for inflation over the next two years. It follows the RBNZ's July decision to lift the Official Cash Rate 25 basis points to 2.50%, its first hike in more than three years, so a rise in expectations here would reinforce the case for further tightening and is generally supportive for the New Zealand dollar."
         },
         {
           "time": "07:00",
@@ -86,7 +86,9 @@
           "importance": "low",
           "previous": "38.4 (final, June)",
           "consensus": "40.0",
-          "description": "S&P Global's survey of activity in the UK construction sector. Housebuilding has been the weakest part of the industry recently, with June's reading barely above May's six year low, so this is watched for signs of whether that drag is easing. Typically a minor mover for sterling."
+          "revised": true,
+          "revisedNote": "This release has now been published: the index jumped to a four month high of 44.7, comfortably above the 40.0 consensus, with housebuilding activity recording its slowest decline since October, so the figures below reflect the pre release consensus rather than the confirmed outturn.",
+          "description": "S&P Global's survey of activity in the UK construction sector. Housebuilding has been the weakest part of the industry recently, so this is watched for signs of whether that drag is easing. Typically a minor mover for sterling."
         },
         {
           "time": "10:00",
@@ -180,7 +182,7 @@
           "event": "Canada Labour Force Survey: employment and unemployment rate (July)",
           "importance": "high",
           "previous": "6.5% unemployment rate (June)",
-          "description": "Statistics Canada's monthly labour market report, covering the change in employment and the jobless rate. Released alongside the US jobs report, it is watched for signs of how much slack is building in the Canadian economy while the Bank of Canada remains on hold until its next meeting in September."
+          "description": "Statistics Canada's monthly labour market report, covering the change in employment and the jobless rate. Released alongside the US jobs report, it is watched for signs of how much slack is building in the Canadian economy while the Bank of Canada remains on hold until its next meeting on 27 August."
         },
         {
           "time": "13:30",
@@ -188,7 +190,9 @@
           "event": "US Nonfarm Payrolls, average hourly earnings and unemployment rate (July)",
           "importance": "high",
           "previous": "57,000 jobs, +0.3% m/m earnings, 4.2% unemployment rate (June)",
-          "consensus": "around 80,000 jobs, +0.3% m/m earnings, unemployment rate steady at 4.2%",
+          "consensus": "around 85,000-95,000 jobs on average, though bank estimates range widely from roughly 40,000 to 120,000; average hourly earnings seen around +3.5% y/y; unemployment rate steady at 4.2%",
+          "revised": true,
+          "revisedNote": "The jobs consensus has firmed since this morning's update, from a single estimate of around 80,000 to a wider band of bank forecasts averaging closer to 85,000-95,000, with Wells Fargo at 95,000 and Continuum Economics at 120,000, alongside a newly confirmed year on year earnings forecast of +3.5%.",
           "description": "The US Department of Labor's monthly employment report, the single most closely watched release on the calendar. June's payrolls figure of just 57,000 was well below expectations and reopened debate about the timing of the Fed's next move; a second soft print in July would add to that debate, while a strong number would support the more hawkish tone struck by some FOMC members at July's meeting."
         },
         {
@@ -265,7 +269,7 @@
           "importance": "high",
           "previous": "held at 4.35%",
           "consensus": "hold at 4.35%",
-          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. All four major Australian banks expect a hold, though a still above target trimmed mean inflation reading has left a live minority view that the Board could tighten once more before its cycle ends."
+          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. All four major Australian banks expect a hold, and ASX interbank futures put around an 82% probability on a hold, though Westpac is the outlier calling for a 25 basis point hike, and a Finder survey found a majority of economists still expect at least one more increase later in 2026."
         },
         {
           "time": "06:30",
@@ -318,7 +322,7 @@
           "event": "US Consumer Price Index (July)",
           "importance": "high",
           "previous": "+3.5% y/y headline, +2.6% y/y core (June)",
-          "description": "The Bureau of Labor Statistics' inflation report, the most closely watched US data release of the week. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling seen in Friday's jobs report. A hot print would bolster the hawkish minority on the FOMC, while a softer one would support the case for the Fed to look through the energy spike and keep open the door to a near term rate cut."
+          "description": "The Bureau of Labor Statistics' inflation report, the most closely watched US data release of the week, due at 8.30am Eastern time. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling seen in Friday's jobs report. A hot print would bolster the hawkish minority on the FOMC, while a softer one would support the case for the Fed to look through the energy spike and keep open the door to a near term rate cut."
         }
       ]
     }
