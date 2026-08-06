@@ -1574,12 +1574,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
     gap: 12px;
   }
   .site-menu-contact { gap: 20px; flex-wrap: wrap; }
-  .site-menu-util {
-    padding: 10px 20px;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .site-menu-util-links { gap: 12px; flex-wrap: wrap; }
+  .site-menu-util { display: none; }
 }
 
 /* Hide dashboard card on mobile */
