@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T09:01:54+01:00",
+  "updated": "2026-08-06T13:11:35+01:00",
   "timezone": "BST",
   "reports": [
     {
@@ -69,6 +69,72 @@
               "headline": "Rand extends its recovery from last month's lows as falling oil prices ease import cost pressures.",
               "commentary": "The South African rand has continued to claw back ground from the more than three-month low it touched in late July, helped along by this week's sharp slide in oil prices. As a significant net importer of energy, South Africa benefits directly when crude prices fall, both through lower import costs and reduced upward pressure on domestic inflation, and that dynamic has been the primary driver behind the rand's steadier tone over the past week rather than any improvement in the currency's domestic fundamentals.\n\nThose domestic fundamentals remain genuinely mixed: annual inflation accelerated to a two-year high in June, comfortably above the upper end of the South African Reserve Bank's target range, yet the central bank still opted to hold rates at its July meeting in a split decision, with two of six committee members preferring a hike. That combination of elevated inflation and a central bank reluctant to tighten further leaves the rand's recent recovery looking more a function of favourable external conditions, cheaper oil and improved global risk appetite, than any genuine resolution of its underlying vulnerabilities, particularly with August historically one of the weaker months of the year for the currency.",
               "watchToday": "No South African economic data is due today, and the calendar remains light for the rest of the week. With the SARB's next meeting still some weeks away, the rand is likely to keep trading mainly on oil prices and broader global risk sentiment."
+            }
+          ]
+        },
+        {
+          "session": "afternoon",
+          "time": "13:00",
+          "currencies": [
+            {
+              "code": "GBP",
+              "headline": "Sterling ticks higher as broad dollar softness offsets a quiet UK data day.",
+              "commentary": "This morning's Lloyds house price data and UK construction PMI reading passed without much fanfare, and sterling has taken its afternoon direction largely from developments elsewhere. A run of soft US data has left the dollar broadly on the back foot into the European afternoon, and sterling has firmed modestly against it as a result. Against the euro, the pound has held a tight range, with little to separate the two currencies since this morning's update.\n\nThe bigger story remains the interest rate gap between the Bank of England and its peers, which continues to underpin sterling even without fresh domestic news today. With no more UK data due before the weekend, sterling's next real test lies elsewhere: Friday's US employment report should set the tone for the dollar, and by extension for where the pound heads into next week.",
+              "watchToday": "Nothing further is scheduled for sterling today. The pound will continue to take its cue from the dollar's reaction to this afternoon's US jobless claims and productivity data, with Friday's non-farm payrolls report the next major test for the broader dollar backdrop that sterling trades against."
+            },
+            {
+              "code": "EUR",
+              "headline": "Euro extends its advance as Middle East optimism and a softer dollar lift risk appetite.",
+              "commentary": "The euro has pushed further ahead since this morning, building on its recent advance to trade at its firmest in several weeks. The move has been driven less by anything domestic, this morning's German factory orders and eurozone retail sales releases passed with limited market reaction, and more by a broadly weaker dollar and an improving risk backdrop, as hopes for a deal to reopen the Strait of Hormuz continue to ease some of the energy driven inflation anxiety that had weighed on sentiment in recent weeks.\n\nEuropean equity markets have rallied into the afternoon, echoing the mood in the currency market, and the combination of a patient European Central Bank and a Federal Reserve under pressure to acknowledge a cooling US labour market has kept the policy narrative tilted in the euro's favour for now. Attention turns to Germany's industrial production and trade figures tomorrow morning for the next read on the currency bloc's largest economy.",
+              "watchToday": "Nothing further is scheduled for the euro today. Tomorrow brings German industrial production and trade balance data for June, a useful gauge of whether the recent run of soft factory orders is translating into weaker output."
+            },
+            {
+              "code": "USD",
+              "headline": "Dollar stays on the back foot as weak private payrolls data continues to weigh.",
+              "commentary": "The dollar has extended this week's slide into the afternoon session, still digesting Wednesday's ADP employment report, which showed private payrolls rising by only a fraction of what was expected in July. That soft print has reinforced bets that the Federal Reserve will have room to look through the hawkish dissents seen at its last meeting, and the currency has weakened broadly as a result, particularly against the euro and other risk sensitive currencies benefiting from today's improved sentiment.\n\nThis afternoon's US calendar adds to the picture: preliminary second quarter productivity and unit labour cost figures and the weekly jobless claims report land at half past one UK time, both worth watching for confirmation of the softer labour market narrative the ADP data set up. All of it builds toward Friday's non-farm payrolls report, now firmly the week's key event and the next major signpost for how much further the dollar's slide has to run.",
+              "watchToday": "US productivity and unit labour cost data along with weekly jobless claims are due this afternoon at half past one UK time, followed by wholesale inventories and an evening speech from the Fed's Alberto Musalem. Friday's non-farm payrolls report is the standout event, with the market on alert for confirmation of the softer hiring trend."
+            },
+            {
+              "code": "JPY",
+              "headline": "Yen holds onto its recent recovery with little fresh to move it since this morning.",
+              "commentary": "The yen has been the quietest of the majors this afternoon, essentially holding the ground it built over the past three sessions. This morning's wage and household spending data broadly supported the case for further Bank of Japan tightening, with real wages extending a run of consecutive monthly gains, but the reaction has been muted, and the currency has traded in a narrow band since.\n\nThe bigger driver behind the yen's recent strength remains the market's sense that Japanese and US authorities are aligned on preventing excessive weakness; talk of coordinated support has kept traders cautious about pressing the currency lower. With the Bank of Japan's next move still some way off following last week's hold, the yen looks set to keep trading on that intervention risk and on the broader dollar story rather than anything domestic in the near term.",
+              "watchToday": "Nothing further is scheduled for the yen today. Tomorrow brings Japan's preliminary Leading Economic Index and machine tool orders, both lower tier releases, so the currency is likely to keep taking its cue from the broader dollar trend and intervention chatter."
+            },
+            {
+              "code": "CHF",
+              "headline": "Franc lags today's risk rally as safe-haven demand fades.",
+              "commentary": "The franc has slipped a touch since this morning, an unsurprising move given the broadly risk-on tone across markets today. With European equities rallying and oil extending its slide on hopes for a Strait of Hormuz agreement, demand for traditional havens has cooled, and the franc has underperformed the more risk sensitive currencies as a result, even as it has still managed to hold its ground against a broadly weaker dollar. This morning's unemployment data, showing the jobless rate continuing its gradual climb through the year, added to a sense that the domestic backdrop offers little support of its own.\n\nThe Swiss National Bank remains on watch for excessive currency strength rather than weakness, so today's softer tone is unlikely to trouble policymakers. With the SNB's next meeting not until September, the franc looks set to keep trading mainly on global risk appetite rather than domestic developments for the time being.",
+              "watchToday": "Nothing further is scheduled for the franc today, and tomorrow's calendar holds only the low tier SECO consumer climate survey. The franc is likely to keep taking its lead from broader risk sentiment, with the SNB's September meeting the next major domestic event."
+            },
+            {
+              "code": "CAD",
+              "headline": "Loonie claws back some ground as oil stabilises and the dollar softens broadly.",
+              "commentary": "The Canadian dollar has recovered a little since this morning, helped by oil prices steadying after this week's sharp slide and by a broadly weaker US dollar following Wednesday's soft ADP employment report. Crude remains down heavily on the week on hopes that Iran and Oman's progress toward reopening the Strait of Hormuz will ease supply concerns, and that continues to cap how far the loonie can recover given Canada's status as a major oil exporter, but the pace of the decline has clearly slowed.\n\nWith no domestic data due today, the loonie remains a hostage to the broader oil and dollar narrative for now. That changes tomorrow, when Canada's Labour Force Survey lands alongside the US non-farm payrolls report, arguably the most important pairing of data all week for where the currency heads into the weekend.",
+              "watchToday": "Nothing further is scheduled for the Canadian dollar today. Tomorrow is the big one: Canada's Labour Force Survey and the Ivey PMI both land alongside US non-farm payrolls, making it the most consequential day of the week for the currency."
+            },
+            {
+              "code": "NZD",
+              "headline": "Kiwi drifts higher in sympathy with the broader risk rally.",
+              "commentary": "The New Zealand dollar has firmed modestly this afternoon, carried along by the same improvement in risk appetite that has lifted its Australian counterpart and other growth sensitive currencies. This morning's RBNZ inflation expectations survey passed with little market reaction, so today's move has been almost entirely a function of the broader backdrop: a weaker US dollar and optimism that easing Middle East tensions will support global growth.\n\nWith little domestic news to digest and no RBNZ meeting until late September, the kiwi looks set to keep trading as a high beta play on global risk sentiment into the end of the week. That leaves it vulnerable to any reversal in the current optimism around the Strait of Hormuz talks, as well as sensitive to how Friday's US jobs data shapes the dollar.",
+              "watchToday": "Nothing further is scheduled for the New Zealand dollar today or tomorrow. The currency will likely keep trading on broader risk sentiment and the dollar's reaction to Friday's US employment report, with the RBNZ's next decision not due until 23 September."
+            },
+            {
+              "code": "AUD",
+              "headline": "Aussie advances as easing Middle East tensions lift risk appetite.",
+              "commentary": "The Australian dollar has been one of the stronger performers this afternoon, extending its gains as hopes firm for an interim deal between the US, Iran and Oman to reopen the Strait of Hormuz. That optimism has fed through into a broader risk-on tone across equity and currency markets, and the Aussie, as one of the more risk sensitive major currencies, has been a natural beneficiary alongside a US dollar that remains under pressure from this week's soft jobs data. This morning's trade balance data passed with little fanfare against that backdrop.\n\nThe currency's advance also reflects growing confidence that China's demand backdrop, still Australia's largest trading relationship, is not deteriorating further, even if the recovery there remains uneven. With no more domestic data due before next week, the focus now shifts to the Reserve Bank of Australia's decision on 11 August, where markets remain split on whether policymakers will move.",
+              "watchToday": "Nothing further is scheduled for the Australian dollar today or tomorrow. The next major domestic event is the Reserve Bank of Australia's policy decision on 11 August, with the currency likely to keep trading on broader risk sentiment until then."
+            },
+            {
+              "code": "CNY",
+              "headline": "Yuan holds firm near its strongest levels in years.",
+              "commentary": "The yuan has traded quietly since this morning, continuing to hold close to its firmest levels against the dollar in roughly three and a half years. The People's Bank of China has kept its daily fixing on the softer side relative to market estimates, a signal that policymakers are comfortable with gradual strength but not keen to see the currency run too far too fast. Broader dollar weakness following this week's soft US jobs data has done more to support the yuan's recent climb than any domestic development.\n\nAuthorities have reiterated their preference for keeping the currency basically stable at a balanced level for the second half of the year, language that suggests further sharp moves are unlikely to be welcomed either way. Attention now turns to tomorrow's trade balance figures, the next meaningful read on whether external demand is holding up.",
+              "watchToday": "China's trade balance for July is due tomorrow, the next significant data point for the yuan and a read on whether export demand is holding up. Nothing further is scheduled for today, so the currency should keep trading on the PBoC's daily fixing and broader risk sentiment in the meantime."
+            },
+            {
+              "code": "ZAR",
+              "headline": "Rand extends its recovery as falling oil and a softer dollar work in its favour.",
+              "commentary": "The rand has continued to firm this afternoon, building on its recovery from last month's lows. A broadly weaker US dollar, still reacting to this week's soft ADP employment data, has been the main driver, while the continued slide in oil prices is easing import cost pressures for South Africa, a net energy importer. Elevated gold prices are offering an additional layer of support given South Africa's position as a major producer, even as the metal's moves are being driven more by global risk dynamics than anything domestic.\n\nThe improvement comes despite a domestic inflation backdrop that remains uncomfortable, with the annual rate having accelerated to 5.0% in June and core inflation running at 4.1%, both above the top of the South African Reserve Bank's target range. That combination of an external tailwind and a sticky inflation problem at home leaves the rand's gains looking more a function of global sentiment than a genuine improvement in the domestic story.",
+              "watchToday": "No South African economic data is due today or tomorrow, so the rand will continue to trade mainly on oil prices, gold, and broader global risk appetite. The next major domestic catalyst is the South African Reserve Bank's upcoming policy meeting."
             }
           ]
         }
