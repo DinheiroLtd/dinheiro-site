@@ -1571,3 +1571,8 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   }
   .site-menu-util-links { gap: 12px; flex-wrap: wrap; }
 }
+
+/* Hide dashboard card on mobile */
+@media (max-width: 900px) {
+  .hero-dashboard-card { display: none !important; }
+}
