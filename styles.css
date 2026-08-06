@@ -1018,6 +1018,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
     position: static;
     transform: none;
     order: 1;
+    margin-left: -20px;
   }
   .nav-hamburger {
     display: flex;
