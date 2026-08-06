@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 }
 #navbar.scrolled { box-shadow: none; }
 .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-.nav-logo img { height: 38px; width: auto; filter: brightness(0) invert(1); }
+.nav-logo img { height: 46px; width: auto; filter: brightness(0) invert(1); }
 .nav-links { display: flex; gap: 28px; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
 .nav-links a {
   font-size: 0.875rem;
@@ -989,9 +989,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   flex-shrink: 0;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
 
 /* ─── MOBILE — 900px and below ───────────────────────────── */
 @media (max-width: 900px) {
