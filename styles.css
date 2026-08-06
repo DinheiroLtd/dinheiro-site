@@ -975,7 +975,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   height: 2px;
   background: white;
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
@@ -1346,12 +1346,16 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   flex-direction: column;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.4s;
+  transform: translateY(-10px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.5s,
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 .site-menu.open {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 
 /* Close button — top left circle */
@@ -1397,8 +1401,25 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   border-bottom: 1px solid rgba(255,255,255,0.07);
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.15s ease;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.15s ease, transform 0.15s ease,
+              color 0.15s ease;
 }
+.site-menu.open .site-menu-row {
+  opacity: 1;
+  transform: translateY(0);
+}
+.site-menu.open .site-menu-row:nth-child(1)  { transition-delay: 0.08s; }
+.site-menu.open .site-menu-row:nth-child(2)  { transition-delay: 0.12s; }
+.site-menu.open .site-menu-row:nth-child(3)  { transition-delay: 0.16s; }
+.site-menu.open .site-menu-row:nth-child(4)  { transition-delay: 0.20s; }
+.site-menu.open .site-menu-row:nth-child(5)  { transition-delay: 0.24s; }
+.site-menu.open .site-menu-row:nth-child(6)  { transition-delay: 0.28s; }
+.site-menu.open .site-menu-row:nth-child(7)  { transition-delay: 0.32s; }
+.site-menu.open .site-menu-row:nth-child(8)  { transition-delay: 0.36s; }
+.site-menu.open .site-menu-row:nth-child(9)  { transition-delay: 0.40s; }
+.site-menu.open .site-menu-row:nth-child(10) { transition-delay: 0.44s; }
 .site-menu-row:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
 .site-menu-row:hover .site-menu-num { color: var(--accent); }
 .site-menu-row:hover .site-menu-name { color: #fff; }
