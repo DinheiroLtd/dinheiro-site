@@ -881,8 +881,8 @@
   <!--Start of Tawk.to Script-->
 
   <!--End of Tawk.to Script-->
-  <script>
-  (function() {
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
     var btn = document.getElementById('nav-hamburger');
     var menu = document.getElementById('site-menu');
     var closeBtn = document.getElementById('site-menu-close');
@@ -915,7 +915,7 @@
         navbar.classList.toggle('scrolled', window.scrollY > 20);
       }, { passive: true });
     }
-  })();
+  });
   </script>
 <script src="protect.js"></script>
 
