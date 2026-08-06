@@ -6,7 +6,7 @@
   <title>About Us | Dinheiro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=21">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon-192.png">
 </head>
@@ -17,16 +17,6 @@
     <a href="index.html" class="nav-logo">
       <img src="Dinheiro_logo.png" alt="Dinheiro">
     </a>
-    <ul class="nav-links">
-      <li><a href="personal.html">Personal</a></li>
-      <li><a href="business.html">Business</a></li>
-      <li><a href="services.html">Solutions</a></li>
-      <li><a href="compare.html">Compare</a></li>
-      <li><a href="insights.html">Insights</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="introducers.html">Introducers</a></li>
-      <li><a href="careers.html">Careers</a></li>
-    </ul>
     <div class="nav-actions">
       <a href="https://dinheiro.sciopay.co/login" class="btn-nav-login" target="_blank" rel="noopener">Client Login</a>
       <a href="#contact" class="btn btn-primary btn-sm">Get a Quote</a>
@@ -429,21 +419,106 @@
   <script>
   (function() {
     var btn = document.getElementById('nav-hamburger');
-    if (!btn) return;
-    btn.addEventListener('click', function() {
-      btn.classList.toggle('open');
-      document.querySelector('.nav-links').classList.toggle('open');
-      document.querySelector('.nav-actions').classList.toggle('open');
+    var menu = document.getElementById('site-menu');
+    var closeBtn = document.getElementById('site-menu-close');
+    if (!btn || !menu) return;
+
+    function openMenu() {
+      menu.classList.add('open');
+      menu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      btn.classList.add('open');
+    }
+
+    function closeMenu() {
+      menu.classList.remove('open');
+      menu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      btn.classList.remove('open');
+    }
+
+    btn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMenu();
     });
-    document.querySelectorAll('.nav-links a, .nav-actions a, .nav-actions button').forEach(function(link) {
-      link.addEventListener('click', function() {
-        btn.classList.remove('open');
-        document.querySelector('.nav-links').classList.remove('open');
-        document.querySelector('.nav-actions').classList.remove('open');
-      });
-    });
+
+    var navbar = document.getElementById('navbar');
+    if (navbar) {
+      window.addEventListener('scroll', function() {
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
+      }, { passive: true });
+    }
   })();
   </script>
 <script src="protect.js"></script>
+
+  <!-- FULL-SCREEN MENU -->
+  <div id="site-menu" class="site-menu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
+    <button class="site-menu-close" id="site-menu-close" aria-label="Close menu">&#x2715;</button>
+    <nav class="site-menu-links">
+      <a href="personal.html" class="site-menu-row">
+        <span class="site-menu-num">01</span>
+        <span class="site-menu-name">Personal</span>
+      </a>
+      <a href="business.html" class="site-menu-row">
+        <span class="site-menu-num">02</span>
+        <span class="site-menu-name">Business</span>
+      </a>
+      <a href="services.html" class="site-menu-row">
+        <span class="site-menu-num">03</span>
+        <span class="site-menu-name">Solutions</span>
+      </a>
+      <a href="compare.html" class="site-menu-row">
+        <span class="site-menu-num">04</span>
+        <span class="site-menu-name">Compare</span>
+      </a>
+      <a href="insights.html" class="site-menu-row">
+        <span class="site-menu-num">05</span>
+        <span class="site-menu-name">Insights</span>
+      </a>
+      <a href="about.html" class="site-menu-row">
+        <span class="site-menu-num">06</span>
+        <span class="site-menu-name">About</span>
+      </a>
+      <a href="introducers.html" class="site-menu-row">
+        <span class="site-menu-num">07</span>
+        <span class="site-menu-name">Introducers</span>
+      </a>
+      <a href="careers.html" class="site-menu-row">
+        <span class="site-menu-num">08</span>
+        <span class="site-menu-name">Careers</span>
+      </a>
+    </nav>
+    <div class="site-menu-bottom">
+      <div class="site-menu-contact">
+        <div class="site-menu-contact-group">
+          <div class="site-menu-contact-label">Email</div>
+          <div class="site-menu-contact-val">hello@dinheirogroup.com</div>
+        </div>
+        <div class="site-menu-contact-group">
+          <div class="site-menu-contact-label">Telephone</div>
+          <div class="site-menu-contact-val">+44 (0)20 1234 5678</div>
+        </div>
+      </div>
+      <div class="site-menu-social">
+        <span class="site-menu-social-label">Social</span>
+        <a href="https://www.linkedin.com/company/dinheiro" class="site-menu-social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.27h-3v-5.5c0-1.32-.48-2.22-1.67-2.22-.91 0-1.45.61-1.69 1.2-.09.21-.11.51-.11.81v5.71h-3v-10h3v1.37c.4-.61 1.11-1.49 2.7-1.49 1.97 0 3.45 1.29 3.45 4.06v6.06z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="site-menu-util">
+      <div class="site-menu-util-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="general-terms.html">Terms of Service</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="compliance.html">Regulatory Information</a>
+      </div>
+      <span class="site-menu-copy">&copy; 2026 Dinheiro Limited</span>
+    </div>
+  </div>
+
 </body>
 </html>
