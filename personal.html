@@ -450,23 +450,6 @@
       }, { passive: true });
     }
 
-    // Fade logo and hamburger on scroll
-    var logoImg = document.querySelector('.nav-logo img');
-    var hamburger = document.getElementById('nav-hamburger');
-    var fadeStart = 40;
-    var fadeEnd = 220;
-    window.addEventListener('scroll', function() {
-      var y = window.scrollY;
-      var opacity = 1 - Math.min(1, Math.max(0, (y - fadeStart) / (fadeEnd - fadeStart)));
-      if (logoImg) {
-        logoImg.style.opacity = opacity;
-        logoImg.style.pointerEvents = opacity < 0.1 ? 'none' : '';
-      }
-      if (hamburger) {
-        hamburger.style.opacity = opacity;
-        hamburger.style.pointerEvents = opacity < 0.1 ? 'none' : '';
-      }
-    }, { passive: true });
   });
   </script>
 <script src="protect.js"></script>
