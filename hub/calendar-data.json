@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T09:10:00+01:00",
+  "updated": "2026-08-06T12:17:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -40,6 +40,15 @@
         },
         {
           "time": "07:00",
+          "currency": "EUR",
+          "event": "German factory orders (June)",
+          "importance": "medium",
+          "previous": "+1.9% m/m (May)",
+          "consensus": "+0.5% m/m",
+          "description": "Destatis figures on new orders placed with German manufacturers, a leading indicator for the Eurozone's largest economy. A run of soft prints would add to concerns about the German industrial recovery and can weigh on the euro."
+        },
+        {
+          "time": "07:00",
           "currency": "GBP",
           "event": "Lloyds House Price Index (July)",
           "importance": "medium",
@@ -51,6 +60,7 @@
           "event": "Switzerland unemployment rate (July)",
           "importance": "low",
           "previous": "3.1% s.a. (June)",
+          "consensus": "3.1% s.a.",
           "description": "SECO's monthly count of registered jobseekers as a share of the labour force. Switzerland's jobless rate has been drifting higher through 2026 as the export sector feels the pinch from a strong franc and soft external demand; a further increase would add to the case for the SNB to keep policy loose when it next meets in September."
         },
         {
@@ -61,11 +71,21 @@
           "description": "The European Central Bank's regular bulletin setting out the economic and monetary analysis behind its latest policy decisions. Not a policy event in itself, but can move the euro at the margin if it contains fresh staff commentary on the inflation or growth outlook."
         },
         {
+          "time": "09:00",
+          "currency": "EUR",
+          "event": "Italian industrial production (June)",
+          "importance": "low",
+          "previous": "-0.3% m/m (May)",
+          "consensus": "+0.3% m/m",
+          "description": "Istat's monthly measure of output from Italy's factories and mines. A lower tier release compared with the German equivalent, but still a useful cross check on how broadly based the Eurozone's manufacturing picture is."
+        },
+        {
           "time": "09:30",
           "currency": "GBP",
           "event": "UK construction PMI (July)",
           "importance": "low",
           "previous": "38.4 (final, June)",
+          "consensus": "40.0",
           "description": "S&P Global's survey of activity in the UK construction sector. Housebuilding has been the weakest part of the industry recently, with June's reading barely above May's six year low, so this is watched for signs of whether that drag is easing. Typically a minor mover for sterling."
         },
         {
@@ -80,8 +100,10 @@
         {
           "time": "13:30",
           "currency": "USD",
-          "event": "US productivity (Q2, preliminary)",
+          "event": "US productivity and unit labour costs (Q2, preliminary)",
           "importance": "medium",
+          "previous": "productivity +0.3% (Q1, revised)",
+          "consensus": "productivity around +0.6%",
           "description": "The Bureau of Labor Statistics' preliminary estimate of non-farm business sector productivity and unit labour costs for the second quarter. The Fed watches this as a gauge of how much wage growth is being absorbed by efficiency gains rather than feeding through to inflation."
         },
         {
@@ -90,6 +112,7 @@
           "event": "US weekly initial jobless claims",
           "importance": "low",
           "previous": "197,000 (week to 25 July)",
+          "consensus": "around 203,000",
           "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market, usually a minor mover unless it deviates sharply from expectations, and watched closely this week just a day ahead of the July jobs report."
         },
         {
@@ -143,6 +166,15 @@
           "description": "Destatis figures on output from Germany's factories and mines, released alongside the trade balance. As the Eurozone's largest economy and biggest exporter, German industrial data is watched as a bellwether for the currency bloc's manufacturing recovery and for how tariff related trade frictions are showing up in the numbers."
         },
         {
+          "time": "08:00",
+          "currency": "CHF",
+          "event": "Switzerland SECO consumer climate (Q3)",
+          "importance": "low",
+          "previous": "-36",
+          "consensus": "-34",
+          "description": "The State Secretariat for Economic Affairs' quarterly survey of Swiss household sentiment on their own finances and the wider economy. A gradual improvement would support the case that the SNB's ultra low rate setting is cushioning domestic demand even as the export sector struggles with franc strength."
+        },
+        {
           "time": "13:30",
           "currency": "CAD",
           "event": "Canada Labour Force Survey: employment and unemployment rate (July)",
@@ -171,6 +203,8 @@
           "currency": "CAD",
           "event": "Ivey PMI (July)",
           "importance": "low",
+          "previous": "56.2",
+          "consensus": "55.4",
           "description": "The Richard Ivey School of Business's seasonally adjusted survey of purchasing managers across Canada, covering activity, employment, prices and inventories. A secondary release compared with the Labour Force Survey out the same morning, but still watched as a timely, broad based read on Canadian business activity."
         },
         {
@@ -187,10 +221,19 @@
       "label": "Monday 10 August",
       "events": [
         {
+          "time": "06:00",
+          "currency": "JPY",
+          "event": "Japan Economy Watchers Survey (July)",
+          "importance": "medium",
+          "previous": "44.0",
+          "description": "A Cabinet Office survey of workers in consumer facing jobs, such as taxi drivers and retail staff, on near term economic conditions. Regarded as a well timed, real world sentiment gauge that feeds into the Bank of Japan's assessment of domestic demand."
+        },
+        {
           "time": "09:30",
           "currency": "EUR",
           "event": "Sentix Investor Confidence (August)",
           "importance": "low",
+          "previous": "-3.1",
           "description": "A monthly survey of roughly a thousand investors and analysts gauging both current conditions and expectations for the Eurozone economy. Released earlier in the month than the more closely watched ZEW survey, it offers an early, sentiment based read on the currency bloc's growth outlook, though it is usually only a minor mover for the euro."
         }
       ]
@@ -199,6 +242,22 @@
       "date": "2026-08-11",
       "label": "Tuesday 11 August",
       "events": [
+        {
+          "time": "00:01",
+          "currency": "GBP",
+          "event": "BRC retail sales monitor (July)",
+          "importance": "medium",
+          "previous": "+1.7% y/y (June)",
+          "description": "The British Retail Consortium's monthly tracker of like for like store and online spending, released ahead of the official ONS retail sales figures. An early, partial read on UK consumer demand that can move sterling at the margin if it diverges sharply from recent trend."
+        },
+        {
+          "time": "02:30",
+          "currency": "AUD",
+          "event": "NAB business confidence (July)",
+          "importance": "medium",
+          "previous": "-5",
+          "description": "National Australia Bank's monthly survey of business sentiment and conditions. Released the day before the RBA's decision, it is watched closely for any last minute shift in the domestic backdrop that could tilt the Board's language."
+        },
         {
           "time": "05:30",
           "currency": "AUD",
@@ -244,6 +303,14 @@
           "importance": "medium",
           "previous": "preliminary estimate +2.8% y/y (July)",
           "description": "The final, confirmed reading of Germany's HICP inflation figure, the measure used for comparison across the euro area and a key input into the ECB's policy thinking. It rarely diverges from the flash estimate, but as the bloc's largest economy, any surprise revision can move the euro at the margin."
+        },
+        {
+          "time": "13:30",
+          "currency": "CAD",
+          "event": "Canada building permits (June)",
+          "importance": "low",
+          "previous": "-1.7% m/m (May)",
+          "description": "Statistics Canada's forward looking measure of planned construction activity, based on permits issued by municipalities. A useful, if volatile, early signal for the housing sensitive parts of the Canadian growth outlook."
         },
         {
           "time": "13:30",
