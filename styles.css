@@ -1334,7 +1334,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 /* Always show hamburger, always hide old inline nav links */
 .nav-hamburger { display: flex !important; }
 .nav-links { display: none !important; }
-.nav-actions { display: flex !important; }
+.nav-actions { display: none !important; }
 
 /* Overlay container */
 .site-menu {
