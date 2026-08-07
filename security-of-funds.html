@@ -233,6 +233,22 @@
     });
   })();
   </script>
+
+  <script>
+  (function() {
+    var logoImg = document.querySelector('.nav-logo img');
+    if (logoImg) {
+      var fadeStart = 40;
+      var fadeEnd = 220;
+      window.addEventListener('scroll', function() {
+        var y = window.scrollY;
+        var opacity = 1 - Math.min(1, Math.max(0, (y - fadeStart) / (fadeEnd - fadeStart)));
+        logoImg.style.opacity = opacity;
+        logoImg.style.pointerEvents = opacity < 0.1 ? 'none' : '';
+      }, { passive: true });
+    }
+  })();
+  </script>
 <script src="protect.js"></script>
 </body>
 </html>
