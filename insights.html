@@ -620,65 +620,45 @@
 
   <!-- FULL-SCREEN MENU -->
   <div id="site-menu" class="site-menu" role="dialog" aria-label="Navigation menu" aria-hidden="true">
-    <button class="site-menu-close" id="site-menu-close" aria-label="Close menu">&#x2715;</button>
-    <nav class="site-menu-links">
-      <a href="personal.html" class="site-menu-row">
-        <span class="site-menu-num">01</span>
-        <span class="site-menu-name">Personal</span>
-      </a>
-      <a href="business.html" class="site-menu-row">
-        <span class="site-menu-num">02</span>
-        <span class="site-menu-name">Business</span>
-      </a>
-      <a href="services.html" class="site-menu-row">
-        <span class="site-menu-num">03</span>
-        <span class="site-menu-name">Solutions</span>
-      </a>
-      <a href="compare.html" class="site-menu-row">
-        <span class="site-menu-num">04</span>
-        <span class="site-menu-name">Compare</span>
-      </a>
-      <a href="insights.html" class="site-menu-row">
-        <span class="site-menu-num">05</span>
-        <span class="site-menu-name">Insights</span>
-      </a>
-      <a href="about.html" class="site-menu-row">
-        <span class="site-menu-num">06</span>
-        <span class="site-menu-name">About</span>
-      </a>
-      <a href="introducers.html" class="site-menu-row">
-        <span class="site-menu-num">07</span>
-        <span class="site-menu-name">Introducers</span>
-      </a>
-      <a href="careers.html" class="site-menu-row">
-        <span class="site-menu-num">08</span>
-        <span class="site-menu-name">Careers</span>
-      </a>
-      <a href="https://dinheiro.sciopay.co/login" class="site-menu-row" target="_blank" rel="noopener">
-        <span class="site-menu-num">09</span>
-        <span class="site-menu-name">Client Login</span>
-      </a>
-      <a href="#quote" class="site-menu-row">
-        <span class="site-menu-num">10</span>
-        <span class="site-menu-name">Get a Quote</span>
-      </a>
-    </nav>
-    <div class="site-menu-bottom">
-      <div class="site-menu-contact">
-        <div class="site-menu-contact-group">
+    <div class="site-menu-inner">
+      <button class="site-menu-close" id="site-menu-close" aria-label="Close menu">&#x2715;</button>
+      <nav class="site-menu-links">
+        <a href="personal.html" class="site-menu-row"><span class="site-menu-num">01</span><span class="site-menu-name">Personal</span></a>
+        <a href="business.html" class="site-menu-row"><span class="site-menu-num">02</span><span class="site-menu-name">Business</span></a>
+        <a href="services.html" class="site-menu-row"><span class="site-menu-num">03</span><span class="site-menu-name">Solutions</span></a>
+        <a href="compare.html" class="site-menu-row"><span class="site-menu-num">04</span><span class="site-menu-name">Compare</span></a>
+        <a href="insights.html" class="site-menu-row"><span class="site-menu-num">05</span><span class="site-menu-name">Insights</span></a>
+        <a href="about.html" class="site-menu-row"><span class="site-menu-num">06</span><span class="site-menu-name">About</span></a>
+        <a href="introducers.html" class="site-menu-row"><span class="site-menu-num">07</span><span class="site-menu-name">Introducers</span></a>
+        <a href="careers.html" class="site-menu-row"><span class="site-menu-num">08</span><span class="site-menu-name">Careers</span></a>
+      </nav>
+      <div class="site-menu-divider"></div>
+      <div class="site-menu-right">
+        <div>
           <div class="site-menu-contact-label">Email</div>
-          <div class="site-menu-contact-val">hello@dinheirogroup.com</div>
-        </div>
-        <div class="site-menu-contact-group">
+          <div class="site-menu-contact-val accent">hello@dinheirogroup.com</div>
           <div class="site-menu-contact-label">Telephone</div>
           <div class="site-menu-contact-val">+44 (0)20 3098 5525</div>
+          <div class="site-menu-contact-label" style="margin-top:8px;">Follow us</div>
+          <div class="site-menu-social-grid">
+            <a href="https://www.linkedin.com/company/dinheiro" class="site-menu-social-tile" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.27h-3v-5.5c0-1.32-.48-2.22-1.67-2.22-.91 0-1.45.61-1.69 1.2-.09.21-.11.51-.11.81v5.71h-3v-10h3v1.37c.4-.61 1.11-1.49 2.7-1.49 1.97 0 3.45 1.29 3.45 4.06v6.06z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.facebook.com/dinheiro" class="site-menu-social-tile" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/dinheiro" class="site-menu-social-tile" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="site-menu-social">
-        <span class="site-menu-social-label">Social</span>
-        <a href="https://www.linkedin.com/company/dinheiro" class="site-menu-social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.27h-3v-5.5c0-1.32-.48-2.22-1.67-2.22-.91 0-1.45.61-1.69 1.2-.09.21-.11.51-.11.81v5.71h-3v-10h3v1.37c.4-.61 1.11-1.49 2.7-1.49 1.97 0 3.45 1.29 3.45 4.06v6.06z"/></svg>
-        </a>
+        <div>
+          <a href="https://dinheiro.sciopay.co/clientregistration" class="site-menu-cta-primary" target="_blank" rel="noopener">Open an Account</a>
+          <a href="https://dinheiro.sciopay.co/login" class="site-menu-cta-outline" target="_blank" rel="noopener">Client Login</a>
+        </div>
       </div>
     </div>
     <div class="site-menu-util">
