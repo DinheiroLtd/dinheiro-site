@@ -1503,7 +1503,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   transition: border-color 0.2s, background 0.2s;
 }
 .site-menu-social-tile:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22); }
-.site-menu-social-tile svg { width: 30px; height: 30px; }
+.site-menu-social-tile svg { width: 42px; height: 42px; }
 .site-menu-social-tile:nth-child(1) svg { fill: #0A8FCA; }
 .site-menu-social-tile:nth-child(2) svg { fill: #4A90E2; }
 .site-menu-social-tile:nth-child(3) svg { fill: #E1306C; }
