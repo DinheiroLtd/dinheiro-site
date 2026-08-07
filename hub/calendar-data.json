@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T10:55:00+01:00",
+  "updated": "2026-08-07T13:10:00+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -138,7 +138,7 @@
           "importance": "high",
           "previous": "held at 4.35%",
           "consensus": "hold at 4.35%",
-          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. Most major Australian banks expect a hold, though at least one is calling for a further 25 basis point hike, and a number of economists still expect at least one more increase later in 2026 given elevated inflation."
+          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. A Reuters poll found all 37 economists surveyed, and all four major Australian banks, expect a hold at 4.35%, though a number still flag the risk of one further hike later in 2026 given elevated inflation, so the tone of the statement matters more than the rate itself."
         },
         {
           "time": "06:30",
@@ -199,6 +199,14 @@
       "date": "2026-08-13",
       "label": "Thursday 13 August",
       "events": [
+        {
+          "time": "03:00",
+          "currency": "NZD",
+          "event": "RBNZ Survey of Expectations: two year inflation expectations (Q3)",
+          "importance": "medium",
+          "previous": "2.53% (Q2 2026)",
+          "description": "The Reserve Bank of New Zealand's quarterly survey of businesses and forecasters on where they expect inflation to sit two years out. Two year expectations climbed to 2.53% in the second quarter from 2.37% in the first, so this update is watched for whether that upward drift has continued, since a further rise would narrow the RBNZ's room to ease policy."
+        },
         {
           "time": "06:00",
           "currency": "GBP",
