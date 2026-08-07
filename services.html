@@ -598,11 +598,11 @@
           <div class="site-menu-quote-form">
             <div class="site-menu-contact-label" style="margin-bottom:10px;">Get a Quote</div>
             <div class="site-menu-quote-row">
-              <input class="site-menu-quote-input" type="text" placeholder="First name">
-              <input class="site-menu-quote-input" type="text" placeholder="Surname">
+              <input class="site-menu-quote-input" type="text" placeholder="First name" id="smqf-firstname" required>
+              <input class="site-menu-quote-input" type="text" placeholder="Surname" id="smqf-surname" required>
             </div>
             <div class="site-menu-quote-row">
-              <input class="site-menu-quote-input" type="email" placeholder="Email address">
+              <input class="site-menu-quote-input" type="email" placeholder="Email address" id="smqf-email" required>
             </div>
             <div class="site-menu-quote-row">
               <div class="site-menu-quote-dd">
@@ -630,9 +630,9 @@
                   <li>ZAR – South African Rand</li>
                 </ul>
               </div>
-              <input class="site-menu-quote-input" type="text" placeholder="Amount" style="max-width:120px;flex-shrink:0;">
+              <input class="site-menu-quote-input" type="text" placeholder="Amount" style="max-width:120px;flex-shrink:0;" id="smqf-amount" required>
             </div>
-            <button class="site-menu-quote-btn" onclick="this.textContent='Request Sent ✓';this.disabled=true;setTimeout(()=>{this.textContent='Get a Quote';this.disabled=false;},3000);">Get a Quote</button>
+            <button class="site-menu-quote-btn" id="smqf-btn" onclick="smqfSubmit(this)">Get a Quote</button>
           </div>
           <a href="https://dinheiro.sciopay.co/clientregistration" class="site-menu-cta-primary" target="_blank" rel="noopener">Open an Account</a>
           <a href="https://dinheiro.sciopay.co/login" class="site-menu-cta-outline" target="_blank" rel="noopener">Client Login</a>
@@ -666,6 +666,76 @@
   </div>
 
 
+  <script>
+  function smqfSubmit(btn) {
+    var form = btn.closest('.site-menu-quote-form');
+    var firstname = form.querySelector('#smqf-firstname');
+    var surname   = form.querySelector('#smqf-surname');
+    var email     = form.querySelector('#smqf-email');
+    var amount    = form.querySelector('#smqf-amount');
+    var ddBtn     = form.querySelector('.site-menu-quote-dd-btn');
+    var currencySpan = ddBtn ? ddBtn.querySelector('span') : null;
+    var currency  = currencySpan && currencySpan.textContent !== 'Currency to buy' ? currencySpan.textContent : '';
+
+    // Clear previous errors
+    [firstname, surname, email, amount].forEach(function(el) { el.style.borderColor = ''; });
+    if (ddBtn) ddBtn.style.borderColor = '';
+
+    // Validate
+    var valid = true;
+    [firstname, surname, email, amount].forEach(function(el) {
+      if (!el.value.trim()) { el.style.borderColor = 'rgba(231,76,60,0.75)'; valid = false; }
+    });
+    if (!currency) {
+      if (ddBtn) ddBtn.style.borderColor = 'rgba(231,76,60,0.75)';
+      valid = false;
+    }
+    if (!valid) { btn.textContent = 'Please fill all fields'; setTimeout(function(){ btn.textContent = 'Get a Quote'; }, 2500); return; }
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
+        subject: 'Quote Request – ' + firstname.value.trim() + ' ' + surname.value.trim(),
+        from_name: 'Dinheiro Website',
+        name: firstname.value.trim() + ' ' + surname.value.trim(),
+        email: email.value.trim(),
+        message: [
+          'Name: ' + firstname.value.trim() + ' ' + surname.value.trim(),
+          'Email: ' + email.value.trim(),
+          'Currency to buy: ' + currency,
+          'Amount: ' + amount.value.trim()
+        ].join('\n'),
+        botcheck: false
+      })
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if (data.success) {
+        btn.textContent = 'Sent! We\'ll be in touch ✓';
+        setTimeout(function(){
+          btn.textContent = 'Get a Quote';
+          btn.disabled = false;
+          firstname.value = ''; surname.value = ''; email.value = ''; amount.value = '';
+          if (currencySpan) { currencySpan.textContent = 'Currency to buy'; ddBtn.classList.remove('has-value'); }
+          [firstname, surname, email, amount].forEach(function(el){ el.style.borderColor = ''; });
+          if (ddBtn) ddBtn.style.borderColor = '';
+        }, 4000);
+      } else {
+        btn.textContent = 'Error – please try again';
+        btn.disabled = false;
+      }
+    })
+    .catch(function(){
+      btn.textContent = 'Error – please try again';
+      btn.disabled = false;
+    });
+  }
+  </script>
   <script>
   (function() {
     function initCurrencyDropdowns() {
