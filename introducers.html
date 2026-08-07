@@ -11,6 +11,7 @@
   <link rel="apple-touch-icon" href="favicon-192.png">
 </head>
 <body>
+  <div id="page-transition" style="position:fixed;inset:0;background:#071420;z-index:99999;pointer-events:none;opacity:1;transition:opacity 0.45s ease;"></div>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -618,5 +619,33 @@
     </div>
   </div>
 
+
+  <script>
+  (function() {
+    var overlay = document.getElementById('page-transition');
+    if (!overlay) return;
+
+    // Fade page in on load
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        overlay.style.opacity = '0';
+      });
+    });
+
+    // Intercept internal link clicks — fade out then navigate
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href]');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      if (!href) return;
+      if (href.startsWith('http') || href.startsWith('#') ||
+          href.startsWith('mailto:') || href.startsWith('tel:') ||
+          link.getAttribute('target') === '_blank') return;
+      e.preventDefault();
+      overlay.style.opacity = '1';
+      setTimeout(function() { window.location.href = href; }, 450);
+    });
+  })();
+  </script>
 </body>
 </html>
