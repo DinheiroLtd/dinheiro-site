@@ -1459,50 +1459,50 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 
 /* Right panel */
 .site-menu-right {
-  width: 320px;
+  width: 420px;
   flex-shrink: 0;
-  padding: 88px 40px 32px;
+  padding: 88px 56px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .site-menu-contact-label {
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   color: rgba(255,255,255,0.28);
   text-transform: uppercase;
   letter-spacing: 0.13em;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 .site-menu-contact-val {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: rgba(255,255,255,0.65);
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 .site-menu-contact-val.accent { color: var(--accent); }
 
 /* Social tiles grid */
 .site-menu-social-grid {
   display: flex;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 12px;
+  margin-top: 16px;
 }
 .site-menu-social-tile {
   flex: 1;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 12px;
-  padding: 14px 8px;
+  border-radius: 14px;
+  padding: 20px 8px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
   text-decoration: none;
   transition: border-color 0.2s, background 0.2s;
 }
 .site-menu-social-tile:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22); }
-.site-menu-social-tile svg { width: 24px; height: 24px; fill: white; }
-.site-menu-social-tile span { font-size: 10px; color: rgba(255,255,255,0.38); letter-spacing: 0.04em; }
+.site-menu-social-tile svg { width: 30px; height: 30px; fill: white; }
+.site-menu-social-tile span { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.05em; font-weight: 500; }
 
 /* CTA buttons */
 .site-menu-cta-primary {
@@ -1510,12 +1510,12 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   background: white;
   color: #071420;
   text-align: center;
-  padding: 13px;
-  border-radius: 10px;
-  font-size: 13px;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   transition: background 0.2s;
 }
 .site-menu-cta-primary:hover { background: rgba(255,255,255,0.88); }
@@ -1524,10 +1524,10 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   background: transparent;
   color: white;
   text-align: center;
-  padding: 13px;
-  border-radius: 10px;
+  padding: 16px;
+  border-radius: 12px;
   border: 1.5px solid rgba(255,255,255,0.22);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   transition: border-color 0.2s, background 0.2s;
