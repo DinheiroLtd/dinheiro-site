@@ -1563,7 +1563,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   background: var(--accent);
   color: var(--navy);
   text-align: center;
-  padding: 11px;
+  padding: 12px;
   border-radius: 10px;
   font-size: 13px;
   font-weight: 700;
