@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="favicon-192.png">
 </head>
 <body>
-  <div id="page-transition" style="position:fixed;inset:0;background:#071420;z-index:99999;pointer-events:none;opacity:1;transition:opacity 0.45s ease;"></div>
+  <div id="page-transition" style="position:fixed;inset:0;background:#071420;z-index:99999;pointer-events:none;opacity:1;transition:opacity 0.25s ease;"></div>
 
   <!-- NAV -->
   <nav id="navbar">
@@ -1032,7 +1032,7 @@
           link.getAttribute('target') === '_blank') return;
       e.preventDefault();
       overlay.style.opacity = '1';
-      setTimeout(function() { window.location.href = href; }, 450);
+      setTimeout(function() { window.location.href = href; }, 260);
     });
   })();
   </script>
