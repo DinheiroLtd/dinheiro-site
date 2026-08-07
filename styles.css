@@ -1459,9 +1459,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 
 /* Right panel */
 .site-menu-right {
-  width: 660px;
+  width: 820px;
   flex-shrink: 0;
-  padding: 88px 72px 40px;
+  padding: 88px 88px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
