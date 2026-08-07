@@ -1599,7 +1599,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 .site-menu-social-tile:nth-child(1) svg { fill: #0A8FCA; }
 .site-menu-social-tile:nth-child(2) svg { fill: #4A90E2; }
 .site-menu-social-tile:nth-child(3) svg { fill: #E1306C; }
-.site-menu-social-tile span { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 0.05em; font-weight: 500; }
+.site-menu-social-tile span { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 0.05em; font-weight: 500; line-height: 1; }
 
 /* CTA buttons */
 .site-menu-cta-primary {
