@@ -1468,7 +1468,8 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   padding: 130px 88px 56px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 28px;
 }
 .site-menu-contact-label {
   font-size: 0.8rem;
