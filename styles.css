@@ -899,8 +899,11 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 .footer-brand-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); margin-bottom: 20px; margin-left: -18px; }
 .footer-brand p { font-size: 0.875rem; line-height: 1.75; color: rgba(255,255,255,0.45); max-width: 280px; margin-bottom: 28px; }
 .footer-social { display: flex; gap: 10px; }
-.footer-social-btn { width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; text-decoration: none; color: rgba(255,255,255,0.6); transition: background 0.2s; }
-.footer-social-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+.footer-social-btn { width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; text-decoration: none; transition: background 0.2s, opacity 0.2s; }
+.footer-social-btn:hover { background: rgba(255,255,255,0.15); opacity: 0.8; }
+.footer-social-btn:nth-child(1) { color: #0A8FCA; }
+.footer-social-btn:nth-child(2) { color: #4A90E2; }
+.footer-social-btn:nth-child(3) { color: #E1306C; }
 .footer-col-title { font-size: 0.75rem; font-weight: 700; color: white; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-links li { font-size: 0.875rem; color: rgba(255,255,255,0.5); }
