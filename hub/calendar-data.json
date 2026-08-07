@@ -1,138 +1,7 @@
 {
-  "updated": "2026-08-06T16:14:00+01:00",
+  "updated": "2026-08-07T10:55:00+01:00",
   "timezone": "BST",
   "days": [
-    {
-      "date": "2026-08-06",
-      "label": "Thursday 6 August",
-      "events": [
-        {
-          "time": "00:30",
-          "currency": "JPY",
-          "event": "Japan average cash earnings and household spending (June)",
-          "importance": "medium",
-          "previous": "nominal wages +3.2% y/y, real wages +1.4% y/y, household spending -0.4% y/y real (May)",
-          "consensus": "household spending -1.8% y/y, +0.9% m/m",
-          "description": "The Ministry of Health, Labour and Welfare's monthly wage survey alongside the household spending report. The Bank of Japan watches wage growth closely as the key input into whether consumption can sustainably support the inflation outlook, particularly after the Bank held rates on 31 July."
-        },
-        {
-          "time": "01:05",
-          "currency": "USD",
-          "event": "Fed Governor Lisa Cook speaks on the economic outlook",
-          "importance": "medium",
-          "description": "Federal Reserve Governor Lisa Cook addresses the Anchorage Economic Development Corporation's 2026 Economic Luncheon in Alaska. As a sitting voting member of the FOMC, her remarks on inflation, employment and the policy outlook are watched for signals on where she sits relative to the hawkish dissenters from July's meeting."
-        },
-        {
-          "time": "02:30",
-          "currency": "AUD",
-          "event": "Australia trade balance (June)",
-          "importance": "medium",
-          "previous": "A$3.018 billion deficit (May)",
-          "description": "The Australian Bureau of Statistics' measure of the gap between exports and imports of goods. A wider surplus is generally supportive for the Australian dollar, and the release is watched closely given China's status as Australia's largest trading partner."
-        },
-        {
-          "time": "04:00",
-          "currency": "NZD",
-          "event": "RBNZ inflation expectations survey (Q3)",
-          "importance": "low",
-          "previous": "+2.53% (Q2)",
-          "description": "The Reserve Bank of New Zealand's quarterly survey of businesses' and forecasters' expectations for inflation over the next two years. It follows the RBNZ's July decision to lift the Official Cash Rate 25 basis points to 2.50%, its first hike in more than three years, so a rise in expectations here would reinforce the case for further tightening and is generally supportive for the New Zealand dollar."
-        },
-        {
-          "time": "07:00",
-          "currency": "EUR",
-          "event": "German factory orders (June)",
-          "importance": "medium",
-          "previous": "+1.9% m/m (May)",
-          "consensus": "+0.5% m/m",
-          "description": "Destatis figures on new orders placed with German manufacturers, a leading indicator for the Eurozone's largest economy. A run of soft prints would add to concerns about the German industrial recovery and can weigh on the euro."
-        },
-        {
-          "time": "07:00",
-          "currency": "GBP",
-          "event": "Lloyds House Price Index (July)",
-          "importance": "medium",
-          "description": "A monthly gauge of UK house prices based on Lloyds Banking Group's own mortgage approvals data, formerly published under the Halifax name and rebranded as the Lloyds House Price Index from July 2026 onward with the same underlying methodology. Read alongside the Nationwide index as a proxy for household wealth and confidence, which feeds into the Bank of England's broader view of consumer demand."
-        },
-        {
-          "time": "07:45",
-          "currency": "CHF",
-          "event": "Switzerland unemployment rate (July)",
-          "importance": "low",
-          "previous": "3.1% s.a. (June)",
-          "consensus": "3.1% s.a.",
-          "description": "SECO's monthly count of registered jobseekers as a share of the labour force. Switzerland's jobless rate has been drifting higher through 2026 as the export sector feels the pinch from a strong franc and soft external demand; a further increase would add to the case for the SNB to keep policy loose when it next meets in September."
-        },
-        {
-          "time": "09:00",
-          "currency": "EUR",
-          "event": "ECB Economic Bulletin (Issue 5/2026)",
-          "importance": "low",
-          "description": "The European Central Bank's regular bulletin setting out the economic and monetary analysis behind its latest policy decisions. Not a policy event in itself, but can move the euro at the margin if it contains fresh staff commentary on the inflation or growth outlook."
-        },
-        {
-          "time": "09:00",
-          "currency": "EUR",
-          "event": "Italian industrial production (June)",
-          "importance": "low",
-          "previous": "-0.3% m/m (May)",
-          "consensus": "+0.3% m/m",
-          "description": "Istat's monthly measure of output from Italy's factories and mines. A lower tier release compared with the German equivalent, but still a useful cross check on how broadly based the Eurozone's manufacturing picture is."
-        },
-        {
-          "time": "09:30",
-          "currency": "GBP",
-          "event": "UK construction PMI (July)",
-          "importance": "low",
-          "previous": "38.4 (final, June)",
-          "consensus": "40.0",
-          "revised": true,
-          "revisedNote": "This release has now been published: the index jumped to a four month high of 44.7, comfortably above the 40.0 consensus, with housebuilding activity recording its slowest decline since October, so the figures below reflect the pre release consensus rather than the confirmed outturn.",
-          "description": "S&P Global's survey of activity in the UK construction sector. Housebuilding has been the weakest part of the industry recently, so this is watched for signs of whether that drag is easing. Typically a minor mover for sterling."
-        },
-        {
-          "time": "10:00",
-          "currency": "EUR",
-          "event": "Eurozone retail sales (June)",
-          "importance": "medium",
-          "previous": "+1.9% y/y (May, revised)",
-          "consensus": "+2.6% y/y",
-          "description": "The main measure of consumer spending across the Eurozone. A high reading strengthens the euro, while a low one weakens it, since consumer demand is a key input into the ECB's growth and inflation outlook."
-        },
-        {
-          "time": "13:30",
-          "currency": "USD",
-          "event": "US productivity and unit labour costs (Q2, preliminary)",
-          "importance": "medium",
-          "previous": "productivity +0.3% (Q1, revised)",
-          "consensus": "productivity around +0.6%",
-          "description": "The Bureau of Labor Statistics' preliminary estimate of non-farm business sector productivity and unit labour costs for the second quarter. The Fed watches this as a gauge of how much wage growth is being absorbed by efficiency gains rather than feeding through to inflation."
-        },
-        {
-          "time": "13:30",
-          "currency": "USD",
-          "event": "US weekly initial jobless claims",
-          "importance": "low",
-          "previous": "197,000 (week to 25 July)",
-          "consensus": "around 203,000",
-          "description": "The number of people filing for unemployment benefits for the first time that week. A high frequency, early read on the US labour market, usually a minor mover unless it deviates sharply from expectations, and watched closely this week just a day ahead of the July jobs report."
-        },
-        {
-          "time": "15:00",
-          "currency": "USD",
-          "event": "US wholesale inventories (June, final)",
-          "importance": "low",
-          "description": "The final reading of stock levels held by US wholesalers, a minor input into later GDP revisions. Rarely a market mover on its own."
-        },
-        {
-          "time": "22:30",
-          "currency": "USD",
-          "event": "Fed's Alberto Musalem (St. Louis) speaks",
-          "importance": "medium",
-          "description": "St. Louis Fed President Alberto Musalem discusses the economic outlook and monetary policy. As a regional Fed president speaking days after the FOMC's unusually hawkish three way dissent at July's meeting, his remarks are watched for whether he leans toward that camp or toward the majority who voted to hold."
-        }
-      ]
-    },
     {
       "date": "2026-08-07",
       "label": "Friday 7 August",
@@ -182,7 +51,8 @@
           "event": "Canada Labour Force Survey: employment and unemployment rate (July)",
           "importance": "high",
           "previous": "6.5% unemployment rate (June)",
-          "description": "Statistics Canada's monthly labour market report, covering the change in employment and the jobless rate. Released alongside the US jobs report, it is watched for signs of how much slack is building in the Canadian economy while the Bank of Canada remains on hold until its next meeting on 27 August."
+          "consensus": "employment +20,000; unemployment rate holding around 6.5%",
+          "description": "Statistics Canada's monthly labour market report, covering the change in employment and the jobless rate. Released alongside the US jobs report, it is watched for signs of how much slack is building in the Canadian economy while the Bank of Canada weighs the timing of its next move."
         },
         {
           "time": "13:30",
@@ -190,9 +60,7 @@
           "event": "US Nonfarm Payrolls, average hourly earnings and unemployment rate (July)",
           "importance": "high",
           "previous": "57,000 jobs, +0.3% m/m earnings, 4.2% unemployment rate (June)",
-          "consensus": "around 85,000-95,000 jobs on average, though bank estimates range widely from roughly 40,000 to 120,000; average hourly earnings seen around +3.5% y/y; unemployment rate steady at 4.2%",
-          "revised": true,
-          "revisedNote": "The jobs consensus has firmed since this morning's update, from a single estimate of around 80,000 to a wider band of bank forecasts averaging closer to 85,000-95,000, with Wells Fargo at 95,000 and Continuum Economics at 120,000, alongside a newly confirmed year on year earnings forecast of +3.5%.",
+          "consensus": "around 85,000-95,000 jobs on average, though bank estimates range from roughly 40,000 to 120,000; average hourly earnings seen around +3.5% y/y; unemployment rate steady at 4.2%",
           "description": "The US Department of Labor's monthly employment report, the single most closely watched release on the calendar. June's payrolls figure of just 57,000 was well below expectations and reopened debate about the timing of the Fed's next move; a second soft print in July would add to that debate, while a strong number would support the more hawkish tone struck by some FOMC members at July's meeting."
         },
         {
@@ -230,6 +98,7 @@
           "event": "Japan Economy Watchers Survey (July)",
           "importance": "medium",
           "previous": "44.0",
+          "consensus": "43.6",
           "description": "A Cabinet Office survey of workers in consumer facing jobs, such as taxi drivers and retail staff, on near term economic conditions. Regarded as a well timed, real world sentiment gauge that feeds into the Bank of Japan's assessment of domestic demand."
         },
         {
@@ -269,7 +138,7 @@
           "importance": "high",
           "previous": "held at 4.35%",
           "consensus": "hold at 4.35%",
-          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. All four major Australian banks expect a hold, and ASX interbank futures put around an 82% probability on a hold, though Westpac is the outlier calling for a 25 basis point hike, and a Finder survey found a majority of economists still expect at least one more increase later in 2026."
+          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. Most major Australian banks expect a hold, though at least one is calling for a further 25 basis point hike, and a number of economists still expect at least one more increase later in 2026 given elevated inflation."
         },
         {
           "time": "06:30",
@@ -322,7 +191,44 @@
           "event": "US Consumer Price Index (July)",
           "importance": "high",
           "previous": "+3.5% y/y headline, +2.6% y/y core (June)",
-          "description": "The Bureau of Labor Statistics' inflation report, the most closely watched US data release of the week, due at 8.30am Eastern time. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling seen in Friday's jobs report. A hot print would bolster the hawkish minority on the FOMC, while a softer one would support the case for the Fed to look through the energy spike and keep open the door to a near term rate cut."
+          "description": "The Bureau of Labor Statistics' inflation report, the most closely watched US data release of the week, due at 8.30am Eastern time. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling. A hot print would bolster the hawkish minority on the FOMC, while a softer one would support the case for the Fed to look through the energy spike and keep open the door to a near term rate cut."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "label": "Thursday 13 August",
+      "events": [
+        {
+          "time": "06:00",
+          "currency": "GBP",
+          "event": "UK GDP, preliminary estimate (Q2 2026)",
+          "importance": "high",
+          "previous": "+0.6% q/q (Q1 2026)",
+          "description": "The Office for National Statistics' first estimate of UK economic growth for the second quarter, published alongside the June monthly GDP figure. GDP grew 0.6% in the first quarter, so this reading is the key gauge of whether that momentum has been sustained; a stronger than expected print is generally supportive for sterling, while a miss adds to the case for the Bank of England to keep policy accommodative."
+        },
+        {
+          "time": "06:00",
+          "currency": "GBP",
+          "event": "UK trade balance, index of production and construction output (June)",
+          "importance": "medium",
+          "description": "Released alongside the GDP figures, this bundle covers the goods and services trade balance, manufacturing and industrial output, and construction sector activity for June. These are the underlying components that feed into the quarterly growth number and are watched for a more granular read on where UK momentum is coming from."
+        },
+        {
+          "time": "13:30",
+          "currency": "USD",
+          "event": "US Producer Price Index (July)",
+          "importance": "high",
+          "previous": "-0.3% m/m, +5.5% y/y (June)",
+          "consensus": "annual rate expected to ease from June's 5.5%, with some estimates near 5.1% or lower",
+          "description": "The Bureau of Labor Statistics' measure of wholesale price pressures, released a day after CPI. June's headline PPI fell 0.3% on the month but was still up 5.5% on the year, and this report is watched for whether producer level inflation is cooling from that pace or if the energy driven price pressures seen in the consumer figures are also showing up further up the supply chain."
+        },
+        {
+          "time": "13:30",
+          "currency": "USD",
+          "event": "US weekly initial jobless claims",
+          "importance": "low",
+          "description": "The Department of Labor's weekly count of new unemployment benefit claims, released alongside PPI. A high frequency, early read on the US labour market that typically has limited standalone impact but is watched closely for any signs of a sharper turn in hiring conditions following recent soft payrolls prints."
         }
       ]
     }
