@@ -676,26 +676,31 @@
               <input class="site-menu-quote-input" type="email" placeholder="Email address">
             </div>
             <div class="site-menu-quote-row">
-              <select class="site-menu-quote-input site-menu-quote-select">
-                <option value="" disabled selected>Currency to buy</option>
-                <option>USD – US Dollar</option>
-                <option>EUR – Euro</option>
-                <option>JPY – Japanese Yen</option>
-                <option>CHF – Swiss Franc</option>
-                <option>NOK – Norwegian Krone</option>
-                <option>DKK – Danish Krone</option>
-                <option>SEK – Swedish Krona</option>
-                <option>CAD – Canadian Dollar</option>
-                <option>NZD – New Zealand Dollar</option>
-                <option>AUD – Australian Dollar</option>
-                <option>MXN – Mexican Peso</option>
-                <option>SGD – Singapore Dollar</option>
-                <option>KRW – South Korean Won</option>
-                <option>HKD – Hong Kong Dollar</option>
-                <option>CNY – Chinese Yuan</option>
-                <option>CNH – Chinese Yuan (Offshore)</option>
-                <option>ZAR – South African Rand</option>
-              </select>
+              <div class="site-menu-quote-dd">
+                <button class="site-menu-quote-dd-btn" type="button" aria-haspopup="listbox">
+                  <span>Currency to buy</span>
+                  <svg class="site-menu-quote-dd-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <ul class="site-menu-quote-dd-list" role="listbox">
+                  <li>USD – US Dollar</li>
+                  <li>EUR – Euro</li>
+                  <li>JPY – Japanese Yen</li>
+                  <li>CHF – Swiss Franc</li>
+                  <li>NOK – Norwegian Krone</li>
+                  <li>DKK – Danish Krone</li>
+                  <li>SEK – Swedish Krona</li>
+                  <li>CAD – Canadian Dollar</li>
+                  <li>NZD – New Zealand Dollar</li>
+                  <li>AUD – Australian Dollar</li>
+                  <li>MXN – Mexican Peso</li>
+                  <li>SGD – Singapore Dollar</li>
+                  <li>KRW – South Korean Won</li>
+                  <li>HKD – Hong Kong Dollar</li>
+                  <li>CNY – Chinese Yuan</li>
+                  <li>CNH – Chinese Yuan (Offshore)</li>
+                  <li>ZAR – South African Rand</li>
+                </ul>
+              </div>
               <input class="site-menu-quote-input" type="text" placeholder="Amount" style="max-width:120px;flex-shrink:0;">
             </div>
             <button class="site-menu-quote-btn" onclick="this.textContent='Request Sent ✓';this.disabled=true;setTimeout(()=>{this.textContent='Get a Quote';this.disabled=false;},3000);">Get a Quote</button>
@@ -732,6 +737,40 @@
   </div>
 
 
+  <script>
+  (function() {
+    function initCurrencyDropdowns() {
+      document.querySelectorAll('.site-menu-quote-dd').forEach(function(dd) {
+        if (dd.dataset.ddInit) return;
+        dd.dataset.ddInit = '1';
+        var btn = dd.querySelector('.site-menu-quote-dd-btn');
+        var list = dd.querySelector('.site-menu-quote-dd-list');
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isOpen = dd.classList.contains('open');
+          document.querySelectorAll('.site-menu-quote-dd.open').forEach(function(el) { el.classList.remove('open'); });
+          if (!isOpen) dd.classList.add('open');
+        });
+        list.querySelectorAll('li').forEach(function(li) {
+          li.addEventListener('click', function() {
+            list.querySelectorAll('li').forEach(function(el) { el.classList.remove('smqd-selected'); });
+            li.classList.add('smqd-selected');
+            btn.querySelector('span').textContent = li.textContent;
+            btn.classList.add('has-value');
+            dd.classList.remove('open');
+          });
+        });
+      });
+    }
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.site-menu-quote-dd.open').forEach(function(el) { el.classList.remove('open'); });
+    });
+    // Init on load and whenever menu opens
+    document.addEventListener('DOMContentLoaded', initCurrencyDropdowns);
+    var hamburger = document.getElementById('site-menu-open');
+    if (hamburger) hamburger.addEventListener('click', function() { setTimeout(initCurrencyDropdowns, 50); });
+  })();
+  </script>
   <script>
   (function() {
     var overlay = document.getElementById('page-transition');
