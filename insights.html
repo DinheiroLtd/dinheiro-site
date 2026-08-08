@@ -290,7 +290,17 @@
     .newsletter-submit:hover { background: var(--accent-dark); }
 
     @media (max-width: 900px) {
-      .insights-hero { padding: 48px 24px; }
+      .insights-hero {
+        padding: 100px 20px 52px;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .insights-hero::after { display: none; }
+      .insights-hero-inner { position: relative; z-index: 1; }
+      .insights-hero h1 { font-size: 1.65rem !important; line-height: 1.12 !important; margin-bottom: 14px !important; }
+      .insights-hero p { font-size: 0.9rem !important; line-height: 1.7 !important; }
       .cat-bar { padding: 0 24px; overflow-x: auto; }
       .posts-body { padding: 32px 24px 60px; }
       .featured-row { grid-template-columns: 1fr; }
