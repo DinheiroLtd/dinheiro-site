@@ -1090,6 +1090,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
     margin-bottom: 14px !important;
     line-height: 1.12 !important;
   }
+  /* Lift content above ::after radial gradient which covers full width on mobile */
+  section.hero::after, .hero::after { display: none; }
+  section.hero > div, .hero > div { position: relative; z-index: 1; }
 
   /* Index hero — full height on mobile */
   section.hero,
