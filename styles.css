@@ -1763,9 +1763,14 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .site-menu-contact-label:first-child { margin-top: 0; }
   .site-menu-contact-val { font-size: 0.82rem; margin-bottom: 0; }
 
-  /* Buttons full width, smaller */
-  .site-menu-cta-primary { margin-top: 18px; margin-bottom: 8px; padding: 11px; font-size: 0.8rem; }
-  .site-menu-cta-outline { padding: 11px; font-size: 0.8rem; }
+  /* Buttons full width, compact */
+  .site-menu-cta-primary { margin-top: 18px; margin-bottom: 6px; padding: 9px; font-size: 0.75rem; }
+  .site-menu-cta-outline { padding: 9px; font-size: 0.75rem; }
+
+  /* Smaller social tiles */
+  .site-menu-social-tile { height: 60px !important; padding: 6px !important; gap: 5px !important; }
+  .site-menu-social-tile svg { width: 22px !important; height: 22px !important; }
+  .site-menu-social-tile span { font-size: 8.5px !important; }
 
   /* Social tiles */
   .site-menu-contact-label[style*="margin-top:16px"] { margin-top: 18px !important; }
