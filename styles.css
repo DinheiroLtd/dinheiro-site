@@ -1097,6 +1097,13 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   section.hero::after, .hero::after { display: none; }
   section.hero > div, .hero > div { position: relative; z-index: 1; }
 
+  /* Hero subheadings — smaller on mobile */
+  .hero-sub, .page-hero-sub, .phpr-sub, .phsr-sub, .phcs-sub,
+  section.hero > div p, section.page-hero > div p, .page-hero > div p {
+    font-size: 0.9rem !important;
+    line-height: 1.7 !important;
+  }
+
   /* Subpage hero buttons — stack + full width like index */
   .phpr-btns, .phsr-btns, .phcs-btns { flex-direction: column !important; }
   .phpr-btns .btn, .phsr-btns .btn, .phcs-btns .btn {
