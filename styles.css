@@ -1715,18 +1715,60 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   white-space: nowrap;
 }
 
-/* Mobile — hide right panel, show links only */
+/* Mobile — Option A: single column scroll, 2-per-row nav */
 @media (max-width: 900px) {
+  .site-menu { overflow-y: auto; }
+  .site-menu-inner { flex-direction: column; min-height: 0; overflow-y: visible; }
   .site-menu-divider { display: none; }
-  .site-menu-right { display: none; }
-  .site-menu-links { padding: 82px 24px 20px; }
-  .site-menu-util { padding: 10px 24px; }
-}
-@media (max-width: 600px) {
-  .site-menu-links { padding: 82px 20px 8px; }
-  .site-menu-name { font-size: 1.4rem !important; }
-  .site-menu-row { padding: 8px 0; }
   .site-menu-util { display: none; }
+
+  /* Nav links — 2-column grid */
+  .site-menu-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    padding: 86px 20px 0;
+    flex: none;
+    justify-content: initial;
+    overflow-y: visible;
+  }
+  .site-menu-row {
+    padding: 12px 10px;
+    gap: 8px;
+    border-top: none;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-right: none;
+  }
+  .site-menu-row:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+  /* Left column gets right border */
+  .site-menu-row:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.07); }
+  /* Last pair — no bottom border */
+  .site-menu-row:nth-last-child(-n+2) { border-bottom: none; }
+  .site-menu-name { font-size: 1.15rem !important; }
+  .site-menu-num { font-size: 0.6rem; }
+
+  /* Right panel — show below nav */
+  .site-menu-right {
+    display: flex !important;
+    flex-direction: column;
+    width: 100% !important;
+    padding: 24px 20px 40px !important;
+    flex-shrink: 0;
+    gap: 0;
+  }
+  /* Hide quote form on mobile */
+  .site-menu-quote-form { display: none !important; }
+
+  /* Contact labels/vals stacked, compact */
+  .site-menu-contact-label { font-size: 0.58rem; margin-bottom: 3px; margin-top: 14px; }
+  .site-menu-contact-label:first-child { margin-top: 0; }
+  .site-menu-contact-val { font-size: 0.82rem; margin-bottom: 0; }
+
+  /* Buttons full width, smaller */
+  .site-menu-cta-primary { margin-top: 18px; margin-bottom: 8px; padding: 11px; font-size: 0.8rem; }
+  .site-menu-cta-outline { padding: 11px; font-size: 0.8rem; }
+
+  /* Social tiles */
+  .site-menu-contact-label[style*="margin-top:16px"] { margin-top: 18px !important; }
 }
 
 /* Dashboard image on mobile */
