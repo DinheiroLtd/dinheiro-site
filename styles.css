@@ -1404,6 +1404,53 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 
   /* Savings card padding */
   #rt-outer-grid > div:last-child > div:nth-child(2) { padding: 20px 16px !important; }
+
+  /* ── Mobile typography — scale all body/section text proportionately ── */
+  /* Section intro paragraphs */
+  .intro-left p,
+  .intro-right p,
+  .section-intro p { font-size: 0.875rem !important; line-height: 1.75 !important; }
+
+  /* Section header descriptions */
+  .section-header-row p { font-size: 0.825rem !important; }
+
+  /* Process section */
+  .process-header p { font-size: 0.875rem !important; }
+  .process-step p { font-size: 0.8125rem !important; }
+
+  /* Feature/intro feature descriptions */
+  .intro-feature-text p { font-size: 0.8125rem !important; }
+
+  /* Service cards */
+  .service-card p { font-size: 0.8125rem !important; }
+
+  /* Testimonials */
+  .testimonials-header p { font-size: 0.875rem !important; }
+  .testimonial-quote { font-size: 0.875rem !important; line-height: 1.7 !important; }
+
+  /* FAQ / values / benefits / careers */
+  .faq-answer p,
+  .faq-answer { font-size: 0.875rem !important; line-height: 1.75 !important; }
+  .value-desc,
+  .benefit-desc,
+  .phv-value-desc { font-size: 0.8125rem !important; }
+
+  /* CTA / built-differently sections */
+  .section-cta-banner p,
+  .cta-text p,
+  .bd-card p { font-size: 0.875rem !important; }
+
+  /* Section split / generic section paragraphs */
+  .split-panel p,
+  .section-built-differently p { font-size: 0.875rem !important; }
+
+  /* Section h2 headings — slightly tighter on mobile */
+  .section-intro h2,
+  .process-header h2,
+  .testimonials-header h2,
+  .section-header-row h2,
+  .section-values h2,
+  .section-benefits h2 { font-size: clamp(1.5rem, 5vw, 1.875rem) !important; }
 }
 
 
