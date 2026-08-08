@@ -1743,7 +1743,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .site-menu-row:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.07); }
   /* Last pair — no bottom border */
   .site-menu-row:nth-last-child(-n+2) { border-bottom: none; }
-  .site-menu-name { font-size: 1.15rem !important; }
+  .site-menu-name { font-size: 1.45rem !important; }
   .site-menu-num { font-size: 0.6rem; }
 
   /* Right panel — show below nav */
