@@ -1726,7 +1726,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .site-menu-links {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
-    padding: 86px 20px 0;
+    padding: 120px 20px 0;
     flex: none;
     justify-content: initial;
     overflow-y: visible;
