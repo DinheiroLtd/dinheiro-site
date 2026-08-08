@@ -1225,7 +1225,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .values-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .hero-btns, .page-hero-btns { flex-direction: column; }
-  .hero-btns .btn, .page-hero-btns .btn { width: 100%; justify-content: center; }
+  .hero-btns .btn, .page-hero-btns .btn { width: 100%; justify-content: center; padding: 10px 24px; font-size: 0.875rem; }
   .rate-tool-row { grid-template-columns: 1fr; }
   .rate-tool-swap { margin: 0 auto; }
 
