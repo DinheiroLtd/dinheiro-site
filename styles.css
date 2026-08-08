@@ -1107,9 +1107,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
     text-align: center !important;
   }
 
-  /* Mobile hero images — hidden by default, shown inside hero content */
+  /* Mobile hero images — shown inline on mobile */
   .hero-photo-mobile {
-    display: block;
+    display: block !important;
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
