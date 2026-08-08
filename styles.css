@@ -1086,7 +1086,8 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 
   /* All hero headings — consistent size on mobile */
   section.hero h1, .hero h1,
-  section.page-hero h1, .page-hero h1 {
+  section.page-hero h1, .page-hero h1,
+  .phpr-h1, .phsr-h1, .phcs-h1 {
     color: #ffffff !important;
     font-size: 1.65rem !important;
     margin-bottom: 14px !important;
@@ -1095,6 +1096,31 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   /* Lift content above ::after radial gradient which covers full width on mobile */
   section.hero::after, .hero::after { display: none; }
   section.hero > div, .hero > div { position: relative; z-index: 1; }
+
+  /* Subpage hero buttons — stack + full width like index */
+  .phpr-btns, .phsr-btns, .phcs-btns { flex-direction: column !important; }
+  .phpr-btns .btn, .phsr-btns .btn, .phcs-btns .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 10px 24px !important;
+    font-size: 0.875rem !important;
+    text-align: center !important;
+  }
+
+  /* Mobile hero images — hidden by default, shown inside hero content */
+  .hero-photo-mobile {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  }
+  .hero-photo-mobile img {
+    width: 100%; height: 220px; object-fit: cover; object-position: center; display: block;
+  }
+  /* Hide the desktop right-panel hero photo since we show mobile copy inline */
+  .hero-photo { display: none !important; }
 
   /* Index hero — full height on mobile */
   section.hero,
@@ -1698,6 +1724,8 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 
 /* Dashboard image on mobile */
 .hero-dashboard-mobile { display: none; }
+/* Subpage hero images on mobile — hidden on desktop, shown inline on mobile */
+.hero-photo-mobile { display: none; }
 @media (max-width: 900px) {
   .hero-dashboard-card { display: none !important; }
   .hero-dashboard-mobile {
