@@ -1083,6 +1083,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .bd-card { padding: 1.5rem 1.25rem; }
   .bd-bank-compare { font-size: 0.78rem; }
 
+  /* Index hero heading — full brightness on mobile */
+  section.hero h1, .hero h1 { color: #ffffff !important; }
+
   /* Index hero — full height on mobile */
   section.hero,
   .hero {
