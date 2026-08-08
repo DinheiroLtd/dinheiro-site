@@ -1163,7 +1163,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .page-hero {
     display: flex !important;
     flex-direction: column !important;
-    padding: 100px 20px 52px !important;
+    padding: 100px 20px 80px !important;
     min-height: 100svh !important;
     gap: 0 !important;
     align-items: flex-start !important;
@@ -1290,7 +1290,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   #compare-table-inner > div:nth-child(2) { border-radius: 20px !important; margin-left: 8px !important; }
 
   /* Global — all page heroes stack on mobile */
-  .page-hero { flex-direction: column !important; min-height: 100svh !important; padding: 100px 20px 52px !important; gap: 0 !important; justify-content: flex-start !important; }
+  .page-hero { flex-direction: column !important; min-height: 100svh !important; padding: 100px 20px 80px !important; gap: 0 !important; justify-content: flex-start !important; }
   .page-hero > div { flex: none !important; width: 100% !important; }
   .hero-photo { flex: none !important; width: 100% !important; height: 240px !important; margin-top: 32px; }
 
@@ -1774,6 +1774,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 
   /* Social tiles */
   .site-menu-contact-label[style*="margin-top:16px"] { margin-top: 18px !important; }
+
+  /* X close button — pin to exact hamburger position */
+  .site-menu-close { top: 14px !important; right: 20px !important; }
 }
 
 /* Dashboard image on mobile */
