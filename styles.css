@@ -7,6 +7,21 @@ img {
   user-drag: none;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-touch-callout: none; /* iOS: suppress long-press save/share sheet */
+}
+
+/* Hero photo containers — transparent overlay blocks long-press on mobile */
+.hero-photo,
+.hero-photo-mobile {
+  position: relative;
+}
+.hero-photo::after,
+.hero-photo-mobile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
