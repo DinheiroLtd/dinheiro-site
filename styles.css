@@ -1294,7 +1294,8 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .mobile-intro-card { flex-direction: column !important; min-height: auto !important; }
   .mobile-intro-text { width: 100% !important; padding: 32px 24px !important; }
   .mobile-intro-features { width: 100% !important; padding: 28px 24px !important; border-left: none !important; border-top: 1px solid rgba(255,255,255,0.08) !important; }
-  .mobile-intro-photo { width: 100% !important; height: 220px !important; flex-shrink: 0 !important; }
+  .mobile-intro-photo { width: 100% !important; height: 260px !important; flex-shrink: 0 !important; }
+  .mobile-intro-photo img { object-position: top !important; }
 
   /* ── Navy+photo CTA cards ── */
   .mobile-cta-card { flex-direction: column !important; }
