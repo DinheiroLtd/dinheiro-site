@@ -1084,8 +1084,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .bd-card { padding: 1.5rem 1.25rem; }
   .bd-bank-compare { font-size: 0.78rem; }
 
-  /* Index hero heading — smaller + bright on mobile */
-  section.hero h1, .hero h1 {
+  /* All hero headings — consistent size on mobile */
+  section.hero h1, .hero h1,
+  section.page-hero h1, .page-hero h1 {
     color: #ffffff !important;
     font-size: 1.65rem !important;
     margin-bottom: 14px !important;
