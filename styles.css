@@ -1588,6 +1588,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 .site-menu.open .site-menu-row:nth-child(6) { transition-delay: 0.28s; }
 .site-menu.open .site-menu-row:nth-child(7) { transition-delay: 0.32s; }
 .site-menu.open .site-menu-row:nth-child(8) { transition-delay: 0.36s; }
+.site-menu.open .site-menu-row:nth-child(9) { transition-delay: 0.40s; }
 .site-menu-row:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
 .site-menu-row:hover .site-menu-num { color: var(--accent); }
 .site-menu-row:hover .site-menu-name { color: #fff; }
