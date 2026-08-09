@@ -1914,7 +1914,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
 
   /* X close button — pin to exact hamburger position */
   .site-menu-close { top: 14px !important; right: 20px !important; }
-  .site-menu-logo { top: 16px !important; left: 20px !important; }
+  .site-menu-logo { top: 16px !important; left: 0px !important; }
   .site-menu-logo img { height: 34px !important; }
 }
 
