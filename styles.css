@@ -1251,7 +1251,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .section-header-row p { text-align: left; max-width: none; }
 
   /* Process */
-  .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .process-steps,
+  .process-steps.five-col,
+  .process-steps.three-col { grid-template-columns: 1fr 1fr; gap: 32px; }
   .process-steps::before { display: none; }
 
   /* Card grids */
@@ -1312,7 +1314,9 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .bd-card-title { font-size: 0.9375rem; }
   .bd-card-body { font-size: 0.85rem; }
   .bd-bank-compare { font-size: 0.75rem; }
-  .process-steps { grid-template-columns: 1fr; }
+  .process-steps,
+  .process-steps.five-col,
+  .process-steps.three-col { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .hero-btns, .page-hero-btns { flex-direction: column; }
