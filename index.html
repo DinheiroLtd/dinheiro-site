@@ -71,54 +71,54 @@
 
   <!-- INTRO -->
   <section class="mobile-section-pad" style="padding: 32px 48px; background: white;">
-    <div style="max-width: 1280px; margin: 0 auto; border-radius: 20px; overflow: hidden;">
+    <div style="max-width: 1280px; margin: 0 auto; border-radius: 20px; overflow: hidden; background: var(--navy); position: relative;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,111,160,0.18) 0%,transparent 55%),linear-gradient(135deg,transparent 0%,transparent 8%,rgba(255,255,255,0.045) 8%,rgba(255,255,255,0.045) 22%,transparent 22%,transparent 40%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0.03) 52%,transparent 52%,transparent 70%,rgba(255,255,255,0.025) 70%,rgba(255,255,255,0.025) 78%,transparent 78%);pointer-events:none;z-index:0;"></div>
 
-      <!-- Top: unified text + features -->
-      <div style="background: var(--navy); padding: 52px 56px; position: relative; overflow: hidden;">
-        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,111,160,0.18) 0%,transparent 55%),linear-gradient(135deg,transparent 0%,transparent 8%,rgba(255,255,255,0.045) 8%,rgba(255,255,255,0.045) 22%,transparent 22%,transparent 40%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0.03) 52%,transparent 52%,transparent 70%,rgba(255,255,255,0.025) 70%,rgba(255,255,255,0.025) 78%,transparent 78%);pointer-events:none;"></div>
-        <div style="position:relative;z-index:1;">
-          <div style="max-width:520px;margin-bottom:40px;">
-            <h2 style="font-size:clamp(1.4rem,1.9vw,2rem);font-weight:800;color:white;line-height:1.2;letter-spacing:-0.5px;margin-bottom:16px;">A different kind of foreign exchange partner.</h2>
-            <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:28px;">Dinheiro was founded on the belief that businesses and private clients deserve better than the opaque pricing and impersonal service offered by high-street banks.</p>
-            <a href="about.html" class="btn btn-white">About Dinheiro &rarr;</a>
-          </div>
-          <div style="border-top:1px solid rgba(255,255,255,0.12);margin-bottom:36px;"></div>
-          <div class="mobile-intro-feat-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:28px 36px;">
-            <div style="display:flex;gap:14px;align-items:flex-start;">
-              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;"><img src="icons/Asset 78.png" class="icon-img icon-white" style="width:20px;height:20px;"></div>
-              <div>
-                <h4 style="color:white;font-size:0.875rem;font-weight:700;margin-bottom:6px;">Dedicated Account Management</h4>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.8125rem;line-height:1.6;margin:0;">Every client is assigned a dedicated relationship manager who understands your currency needs, timeline, and risk appetite.</p>
-              </div>
-            </div>
-            <div style="display:flex;gap:14px;align-items:flex-start;">
-              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;"><img src="icons/Asset 80.png" class="icon-img icon-white" style="width:20px;height:20px;"></div>
-              <div>
-                <h4 style="color:white;font-size:0.875rem;font-weight:700;margin-bottom:6px;">Transparent, Competitive Pricing</h4>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.8125rem;line-height:1.6;margin:0;">No hidden fees. No surprise charges. Your rate is agreed upfront, and that is the rate you get.</p>
-              </div>
-            </div>
-            <div style="display:flex;gap:14px;align-items:flex-start;">
-              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;"><img src="icons/Asset 83.png" class="icon-img icon-white" style="width:20px;height:20px;"></div>
-              <div>
-                <h4 style="color:white;font-size:0.875rem;font-weight:700;margin-bottom:6px;">Payments FCA Regulated via Sciopay</h4>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.8125rem;line-height:1.6;margin:0;">Payment services are provided by Sciopay Ltd, authorised by the FCA. Your funds are safeguarded in segregated client accounts.</p>
-              </div>
-            </div>
-            <div style="display:flex;gap:14px;align-items:flex-start;">
-              <div style="flex-shrink:0;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;"><img src="icons/Asset 81.png" class="icon-img icon-white" style="width:20px;height:20px;"></div>
-              <div>
-                <h4 style="color:white;font-size:0.875rem;font-weight:700;margin-bottom:6px;">Fast, Reliable Settlement</h4>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.8125rem;line-height:1.6;margin:0;">Same-day and next-day settlement options across all major currencies with our global banking network.</p>
-              </div>
-            </div>
-          </div>
+      <!-- Top row: text left, photo right -->
+      <div class="mobile-intro-card" style="display:flex;align-items:stretch;position:relative;z-index:1;">
+        <div class="mobile-intro-text" style="flex:1;padding:52px 56px 40px;">
+          <h2 style="font-size:clamp(1.4rem,1.9vw,2rem);font-weight:800;color:white;line-height:1.2;letter-spacing:-0.5px;margin-bottom:16px;">A different kind of foreign exchange partner.</h2>
+          <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:28px;">Dinheiro was founded on the belief that businesses and private clients deserve better than the opaque pricing and impersonal service offered by high-street banks.</p>
+          <a href="about.html" class="btn btn-white">About Dinheiro &rarr;</a>
+        </div>
+        <div class="mobile-intro-photo" style="width:44%;flex-shrink:0;overflow:hidden;border-radius:0 0 0 16px;">
+          <img src="index-card-image.webp" alt="Dinheiro relationship manager" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center 25%;">
         </div>
       </div>
 
-      <!-- Bottom: horizontal photo -->
-      <div style="height: 280px; overflow: hidden;">
-        <img src="index-card-image.webp" alt="Dinheiro relationship manager" style="width: 100%; height: 100%; object-fit: cover; display: block; object-position: center 30%;">
+      <!-- Divider -->
+      <div style="border-top:1px solid rgba(255,255,255,0.12);margin:0 56px;position:relative;z-index:1;"></div>
+
+      <!-- Bottom: 4 features -->
+      <div class="mobile-intro-feat-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;position:relative;z-index:1;">
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:32px 28px;border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="flex-shrink:0;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;"><img src="icons/Asset 78.png" class="icon-img icon-white" style="width:20px;height:20px;"></div>
+          <div>
+            <h4 style="color:white;font-size:0.875rem;font-weight:700;margin-bottom:6px;">Dedicated Account Management</h4>
+            <p style="color:rgba(255,255,255,0.6);font-size:0.8125rem;line-height:1.6;margin:0;">Every client is assigned a dedicated relationship manager who understands your currency needs, timeline, and risk appetite.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:32px 28px;border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="flex-shrink:0;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;"><img src="icons/Asset 80.png" class="icon-img icon-white" style="width:20px;height:20px;"></div>
+          <div>
+            <h4 style="color:white;font-size:0.875rem;font-weight:700;margin-bottom:6px;">Transparent, Competitive Pricing</h4>
+            <p style="color:rgba(255,255,255,0.6);font-size:0.8125rem;line-height:1.6;margin:0;">No hidden fees. No surprise charges. Your rate is agreed upfront, and that is the rate you get.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:32px 28px;border-right:1px solid rgba(255,255,255,0.08);">
+          <div style="flex-shrink:0;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;"><img src="icons/Asset 83.png" class="icon-img icon-white" style="width:20px;height:20px;"></div>
+          <div>
+            <h4 style="color:white;font-size:0.875rem;font-weight:700;margin-bottom:6px;">Payments FCA Regulated via Sciopay</h4>
+            <p style="color:rgba(255,255,255,0.6);font-size:0.8125rem;line-height:1.6;margin:0;">Payment services are provided by Sciopay Ltd, authorised by the FCA. Your funds are safeguarded in segregated client accounts.</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:32px 28px;">
+          <div style="flex-shrink:0;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;"><img src="icons/Asset 81.png" class="icon-img icon-white" style="width:20px;height:20px;"></div>
+          <div>
+            <h4 style="color:white;font-size:0.875rem;font-weight:700;margin-bottom:6px;">Fast, Reliable Settlement</h4>
+            <p style="color:rgba(255,255,255,0.6);font-size:0.8125rem;line-height:1.6;margin:0;">Same-day and next-day settlement options across all major currencies with our global banking network.</p>
+          </div>
+        </div>
       </div>
 
     </div>
