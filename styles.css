@@ -1385,7 +1385,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   /* ── Index: intro card ── */
   .mobile-intro-card { flex-direction: column !important; min-height: auto !important; }
   .mobile-intro-text { width: 100% !important; padding: 32px 24px !important; }
-  .mobile-intro-feat-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .mobile-intro-feat-grid { grid-template-columns: 1fr 1fr !important; gap: 20px !important; }
   .mobile-intro-photo { width: 100% !important; height: 260px !important; flex-shrink: 0 !important; }
   .mobile-intro-photo img { object-position: center 20% !important; }
 
