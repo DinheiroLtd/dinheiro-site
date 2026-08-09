@@ -500,6 +500,13 @@
     requestAnimationFrame(function() {
       requestAnimationFrame(function() { overlay.style.opacity = '0'; });
     });
+    window.addEventListener('pageshow', function(e) {
+      if (e.persisted) {
+        overlay.style.transition = 'none';
+        overlay.style.opacity = '0';
+        setTimeout(function() { overlay.style.transition = ''; }, 50);
+      }
+    });
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a[href]');
       if (!link) return;

@@ -888,6 +888,15 @@
       });
     });
 
+    // Fix bfcache: when browser restores page via back/forward, reset the overlay
+    window.addEventListener('pageshow', function(e) {
+      if (e.persisted) {
+        overlay.style.transition = 'none';
+        overlay.style.opacity = '0';
+        setTimeout(function() { overlay.style.transition = ''; }, 50);
+      }
+    });
+
     // Intercept internal link clicks — fade out then navigate
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a[href]');
