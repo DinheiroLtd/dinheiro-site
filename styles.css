@@ -1393,7 +1393,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   .mobile-intro-feat-grid > div { padding: 20px 20px !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
   .mobile-intro-feat-grid > div:last-child { border-bottom: none !important; }
   .mobile-intro-divider { margin: 0 20px !important; }
-  .mobile-intro-photo { width: 100% !important; height: 220px !important; flex-shrink: 0 !important; padding: 12px !important; box-sizing: border-box !important; }
+  .mobile-intro-photo { width: 100% !important; height: 220px !important; flex-shrink: 0 !important; padding: 12px 12px 24px !important; box-sizing: border-box !important; }
   .mobile-intro-photo img { border-radius: 10px !important; object-position: center 20% !important; }
 
   /* ── Navy+photo CTA cards ── */
