@@ -1578,7 +1578,7 @@ footer { background: #0f2233; color: rgba(255,255,255,0.6); }
   text-decoration: none;
 }
 .site-menu-logo img {
-  height: 22px;
+  height: 34px;
   width: auto;
   display: block;
   filter: brightness(0) invert(1);
