@@ -1,105 +1,7 @@
 {
-  "updated": "2026-08-07T16:06:49+01:00",
+  "updated": "2026-08-10T09:37:05+01:00",
   "timezone": "BST",
   "days": [
-    {
-      "date": "2026-08-07",
-      "label": "Friday 7 August",
-      "events": [
-        {
-          "time": "04:00",
-          "currency": "CNY",
-          "event": "China trade balance (July)",
-          "importance": "medium",
-          "previous": "$125.62 billion surplus (June)",
-          "consensus": "$107.1 billion surplus",
-          "revised": true,
-          "revisedNote": "Now released: the July surplus came in at $112.5 billion, wider than the $107.1 billion forecast, as exports rose 23.9% year on year (beating estimates) while imports jumped 27.5%, though the surplus narrowed from June's record as export growth slowed a touch.",
-          "description": "China customs data on the gap between exports and imports, usually released without a fixed time in the first week of the month. The July reading showed continued export strength, driven by chip and AI data centre hardware related shipments, even as the pace eased slightly from June's record; the release carries knock on relevance for the Australian and New Zealand dollars given China's role as their largest trading partner."
-        },
-        {
-          "time": "06:00",
-          "currency": "JPY",
-          "event": "Japan Leading Economic Index (June, preliminary)",
-          "importance": "low",
-          "consensus": "116.0",
-          "description": "The Cabinet Office's composite gauge of indicators, such as job offers and stock prices, designed to signal the direction of the Japanese economy a few months ahead. A useful but rarely market moving cross check on the broader growth picture the Bank of Japan is watching."
-        },
-        {
-          "time": "06:00",
-          "currency": "JPY",
-          "event": "Japan machine tool orders (July, preliminary)",
-          "importance": "low",
-          "description": "The Japan Machine Tool Builders' Association's early estimate of new orders for machine tools, a proxy for capital spending intentions in the manufacturing sector both at home and among export customers such as China. A niche but closely watched gauge of global industrial demand."
-        },
-        {
-          "time": "07:00",
-          "currency": "EUR",
-          "event": "German industrial production and trade balance (June)",
-          "importance": "medium",
-          "previous": "industrial production and trade data for May",
-          "revised": true,
-          "revisedNote": "Now released: industrial production fell 1.9% month on month in June, a sharp miss against the roughly 0.5% increase expected, while exports rose 0.9% and imports rose 4.4% on the month, narrowing the trade surplus.",
-          "description": "Destatis figures on output from Germany's factories and mines, released alongside the trade balance. As the Eurozone's largest economy and biggest exporter, German industrial data is watched as a bellwether for the currency bloc's manufacturing recovery; the sizeable drop in production is a soft signal for euro area growth and for the ECB's assessment of how tariff related trade frictions are showing up in the numbers."
-        },
-        {
-          "time": "08:00",
-          "currency": "CHF",
-          "event": "Switzerland SECO consumer climate (Q3)",
-          "importance": "low",
-          "previous": "-36",
-          "consensus": "-34",
-          "description": "The State Secretariat for Economic Affairs' quarterly survey of Swiss household sentiment on their own finances and the wider economy. A gradual improvement would support the case that the SNB's ultra low, near zero rate setting is cushioning domestic demand even as the export sector struggles with franc strength."
-        },
-        {
-          "time": "13:30",
-          "currency": "CAD",
-          "event": "Canada Labour Force Survey: employment and unemployment rate (July)",
-          "importance": "high",
-          "previous": "6.5% unemployment rate (June)",
-          "consensus": "employment +15,000 to +20,000; unemployment rate holding around 6.5%",
-          "revised": true,
-          "revisedNote": "Now released: Canada added a much stronger than expected 75,000 jobs in July, well above the roughly 15,000 to 20,000 forecast, and the unemployment rate fell to 6.4%, its lowest in two years, from 6.5% in June.",
-          "description": "Statistics Canada's monthly labour market report, covering the change in employment and the jobless rate. Released alongside the US jobs report, the much stronger than expected July print points to less slack in the Canadian economy than feared and reduces the near term pressure on the Bank of Canada to cut rates."
-        },
-        {
-          "time": "13:30",
-          "currency": "USD",
-          "event": "US Nonfarm Payrolls, average hourly earnings and unemployment rate (July)",
-          "importance": "high",
-          "previous": "57,000 jobs, +0.3% m/m earnings, 4.2% unemployment rate (June)",
-          "consensus": "around 85,000-95,000 jobs on average, though bank estimates range from roughly 40,000 to 120,000; average hourly earnings seen around +3.5% y/y; unemployment rate steady at 4.2%",
-          "revised": true,
-          "revisedNote": "Now released: payrolls fell by 23,000 in July, a large miss against consensus for a roughly 85,000 gain and the first outright drop in months, while the unemployment rate unexpectedly eased to 4.1% from 4.2% and annual wage growth slowed to 3.2%, the weakest pace since 2021.",
-          "description": "The US Department of Labor's monthly employment report, the single most closely watched release on the calendar. The outright July payrolls decline, against a backdrop of a falling unemployment rate and softer wage growth, is a confusing mix that adds to the debate over the Fed's next move: the weak headline jobs number supports the case for a near term rate cut, while the drop in unemployment complicates that narrative, so the reaction in the dollar has been choppy."
-        },
-        {
-          "time": "15:00",
-          "currency": "USD",
-          "event": "Fed's Thomas Barkin (Richmond) speaks",
-          "importance": "medium",
-          "revised": true,
-          "revisedNote": "Speech has now taken place. Barkin described July's data as consistent with a loosening labour market and modest hiring, said he is seeing disinflation across the economy but wants more confirmation before drawing conclusions, and noted the Fed's policy rate now sits at the higher end of neutral rate estimates.",
-          "description": "Richmond Fed President Thomas Barkin comments on the economy, arriving just hours after the July jobs report. His characterisation of the labour market as loosening, alongside a cautious tone on inflation, is being read as consistent with the more dovish end of the FOMC's recent debate rather than a strong signal either way."
-        },
-        {
-          "time": "15:00",
-          "currency": "CAD",
-          "event": "Ivey PMI (July)",
-          "importance": "low",
-          "previous": "56.2",
-          "consensus": "55.4",
-          "description": "The Richard Ivey School of Business's seasonally adjusted survey of purchasing managers across Canada, covering activity, employment, prices and inventories. A secondary release compared with the Labour Force Survey out the same morning, but still watched as a timely, broad based read on Canadian business activity."
-        },
-        {
-          "time": "15:00",
-          "currency": "USD",
-          "event": "US consumer credit (June)",
-          "importance": "low",
-          "description": "The Federal Reserve's monthly measure of outstanding credit card and other consumer borrowing. Watched for a gradual slowdown as a sign of how stretched US household finances have become after several years of high borrowing costs, though it is typically a low impact release."
-        }
-      ]
-    },
     {
       "date": "2026-08-10",
       "label": "Monday 10 August",
@@ -203,6 +105,9 @@
           "event": "US Consumer Price Index (July)",
           "importance": "high",
           "previous": "+3.5% y/y headline, +2.6% y/y core (June)",
+          "consensus": "market pricing and early bank estimates point to roughly +3.5% to +3.6% y/y headline and around +3.0% y/y core; a formal economist poll consensus was still settling at time of writing",
+          "revised": true,
+          "revisedNote": "Consensus figures have firmed up since the last update: markets are now pricing in a headline reading near 3.5% to 3.6% y/y with core around 3.0% y/y, whereas no clear consensus had crystallised as of the previous run.",
           "description": "The Bureau of Labor Statistics' inflation report, the most closely watched US data release of the week, due at 8.30am Eastern time. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling. After a weak and confusing July jobs report, this print carries extra weight: a hot number would bolster the hawkish minority on the FOMC and complicate the case for a near term rate cut, while a softer one would support the view that the Fed can look through the energy spike and prioritise the cooling labour market."
         }
       ]
@@ -218,6 +123,15 @@
           "importance": "medium",
           "previous": "2.53% (Q2 2026)",
           "description": "The Reserve Bank of New Zealand's quarterly survey of businesses and forecasters on where they expect inflation to sit two years out. Two year expectations climbed to 2.53% in the second quarter from 2.37% in the first, so this update is watched for whether that upward drift has continued, since a further rise would narrow the RBNZ's room to ease policy."
+        },
+        {
+          "time": "04:00",
+          "currency": "CNY",
+          "event": "China money supply (M0, M1, M2), new yuan loans and Total Social Financing (July)",
+          "importance": "medium",
+          "previous": "new loans of RMB 1.61 trillion; outstanding loan growth of 5.2% y/y (June)",
+          "consensus": "new loans seen roughly flat to modestly higher year on year at around RMB 50 billion, with outstanding loan growth easing slightly to about 5.1% y/y; TSF growth around 7.4% y/y",
+          "description": "The People's Bank of China's monthly credit bundle, covering broad money supply growth, new bank lending and total social financing, the broadest gauge of credit flowing into the real economy. Usually published without a fixed hour, it is watched closely for whether Beijing's stimulus is gaining traction, with a weak reading pointing to soft domestic demand that carries knock on relevance for the Australian and New Zealand dollars given China's role as their top trading partner."
         },
         {
           "time": "06:00",
@@ -249,6 +163,42 @@
           "event": "US weekly initial jobless claims",
           "importance": "low",
           "description": "The Department of Labor's weekly count of new unemployment benefit claims, released alongside PPI. A high frequency, early read on the US labour market that typically has limited standalone impact but is watched closely for any signs of a sharper turn in hiring conditions following the weak and confusing July payrolls print."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "label": "Friday 14 August",
+      "events": [
+        {
+          "time": "04:00",
+          "currency": "CNY",
+          "event": "China total electricity consumption (July)",
+          "importance": "low",
+          "description": "The National Energy Administration's monthly tally of nationwide power usage, released without a fixed hour. A high frequency, real economy proxy for industrial activity that investors sometimes trust more than the official GDP figures, with relevance for the Australian and New Zealand dollars given trade linkages to Chinese factory demand."
+        },
+        {
+          "time": "13:30",
+          "currency": "USD",
+          "event": "US Retail Sales and Retail Sales Control Group (July)",
+          "importance": "high",
+          "previous": "+0.2% m/m headline (June)",
+          "description": "The Census Bureau's monthly report on spending at US retailers, a leading indicator of consumer demand and a key input into the GDP outlook. The Control Group strips out volatile categories such as autos and gasoline and feeds directly into GDP calculations, so it is watched closely alongside the headline number; a soft print would add to the case for the Fed to look past sticky inflation and focus on a cooling consumer, while a strong one would complicate the argument for a near term rate cut."
+        },
+        {
+          "time": "13:30",
+          "currency": "CAD",
+          "event": "Canada manufacturing sales (June)",
+          "importance": "low",
+          "description": "Statistics Canada's monthly measure of factory sales, a timely gauge of demand for Canadian manufactured goods both at home and among export customers such as the US. A secondary release that offers a useful, if volatile, cross check on the health of Canada's industrial sector."
+        },
+        {
+          "time": "15:00",
+          "currency": "USD",
+          "event": "University of Michigan Consumer Sentiment Index, preliminary (August)",
+          "importance": "medium",
+          "previous": "55.2 (July, final)",
+          "description": "The University of Michigan's early read on US household confidence, covering current conditions and expectations for the economy, jobs and inflation. Sentiment has been unusually weak and volatile through 2026, and the survey's inflation expectations components are watched almost as closely as the headline index for what they imply about the Fed's inflation fight."
         }
       ]
     }
