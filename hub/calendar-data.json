@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10T09:37:05+01:00",
+  "updated": "2026-08-10T12:05:15+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -52,7 +52,7 @@
           "importance": "high",
           "previous": "held at 4.35%",
           "consensus": "hold at 4.35%",
-          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. A Reuters poll found all 37 economists surveyed, and all four major Australian banks, expect a hold at 4.35%, though a number still flag the risk of one further hike later in 2026 given elevated inflation, so the tone of the statement matters more than the rate itself."
+          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. A Reuters poll found all economists surveyed, and all four major Australian banks, expect a hold at 4.35% after June's CPI came in below expectations, though some still flag the risk of a further hike later in 2026 given elevated inflation, so the tone of the statement matters more than the rate itself."
         },
         {
           "time": "06:30",
@@ -105,9 +105,7 @@
           "event": "US Consumer Price Index (July)",
           "importance": "high",
           "previous": "+3.5% y/y headline, +2.6% y/y core (June)",
-          "consensus": "market pricing and early bank estimates point to roughly +3.5% to +3.6% y/y headline and around +3.0% y/y core; a formal economist poll consensus was still settling at time of writing",
-          "revised": true,
-          "revisedNote": "Consensus figures have firmed up since the last update: markets are now pricing in a headline reading near 3.5% to 3.6% y/y with core around 3.0% y/y, whereas no clear consensus had crystallised as of the previous run.",
+          "consensus": "roughly +3.5% to +3.6% y/y headline and around +3.0% y/y core, though a firm formal economist poll consensus was still settling at time of writing",
           "description": "The Bureau of Labor Statistics' inflation report, the most closely watched US data release of the week, due at 8.30am Eastern time. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling. After a weak and confusing July jobs report, this print carries extra weight: a hot number would bolster the hawkish minority on the FOMC and complicate the case for a near term rate cut, while a softer one would support the view that the Fed can look through the energy spike and prioritise the cooling labour market."
         }
       ]
@@ -139,7 +137,10 @@
           "event": "UK GDP, preliminary estimate (Q2 2026)",
           "importance": "high",
           "previous": "+0.6% q/q (Q1 2026)",
-          "description": "The Office for National Statistics' first estimate of UK economic growth for the second quarter, published alongside the June monthly GDP figure. GDP grew 0.6% in the first quarter, so this reading is the key gauge of whether that momentum has been sustained; a stronger than expected print is generally supportive for sterling, while a miss adds to the case for the Bank of England to keep policy accommodative."
+          "consensus": "+0.4% q/q",
+          "revised": true,
+          "revisedNote": "A consensus figure of +0.4% q/q has now firmed up, whereas the previous update carried no consensus for this release.",
+          "description": "The Office for National Statistics' first estimate of UK economic growth for the second quarter, published alongside the June monthly GDP figure. GDP grew 0.6% in the first quarter and consensus looks for a slowdown to around 0.4% in the second, so this reading is the key gauge of whether momentum has eased as expected; a stronger than expected print is generally supportive for sterling, while a miss adds to the case for the Bank of England to keep policy accommodative."
         },
         {
           "time": "06:00",
