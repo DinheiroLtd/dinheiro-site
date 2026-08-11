@@ -1,7 +1,79 @@
 {
-  "updated": "2026-08-10T13:05:31+01:00",
+  "updated": "2026-08-11T09:02:33+01:00",
   "timezone": "BST",
   "reports": [
+    {
+      "date": "2026-08-11",
+      "label": "Tuesday 11 August",
+      "sessions": [
+        {
+          "session": "morning",
+          "time": "08:30",
+          "currencies": [
+            {
+              "code": "GBP",
+              "headline": "Sterling steady after the BoE holds rates amid a three way policy split.",
+              "commentary": "Sterling has traded in a calm, narrow range through the Asian and early European sessions, still digesting last week's Bank of England decision to leave Bank Rate unchanged with the Monetary Policy Committee split three ways. That split, alongside fresh warnings that energy driven inflation risks remain elevated, has left traders reluctant to push the pound decisively in either direction this morning, with the currency broadly holding its recent gains against both the euro and the dollar.\n\nThe bigger story for sterling watchers is whether that recent strength can be sustained. The pound's advance this year has leaned heavily on a favourable interest rate gap versus the eurozone, but several UK banks now expect that gap to narrow as BoE rate hike bets fade and concerns build around the autumn Budget. That matters because it suggests today's calm could give way to more two way volatility once growth and inflation data, and fiscal headlines, start to bite later this month.",
+              "watchToday": "The BRC retail sales monitor for July was released first thing this morning, an early partial read on UK consumer spending ahead of the official ONS figures. With nothing else major due today, focus turns to Thursday's preliminary Q2 GDP reading, expected to show growth slowing from the first quarter's pace."
+            },
+            {
+              "code": "EUR",
+              "headline": "Euro holds a tight range as traders weigh a mixed rate outlook.",
+              "commentary": "The euro has been quiet overnight and into this morning, consolidating within a well worn range against the dollar as neither side of the market finds a fresh catalyst to push it higher or lower. Eurozone inflation cooling to 2.8% in June from 3.2% in May has reinforced the view that the ECB's tightening cycle is largely done, removing one potential source of near term euro support.\n\nBeyond the inflation backdrop, the euro's fate this week is tied more to the dollar side of the equation than to anything domestic. Major banks remain split on the pair's direction into year end, with some expecting further dollar strength to weigh on the euro and others looking for a softer greenback to lift it. That divergence of views is itself a reason for the current lack of conviction, and leaves the currency vulnerable to being pushed around by US data surprises rather than eurozone news in the sessions ahead.",
+              "watchToday": "No major euro data is due today. The final German inflation reading for July is released tomorrow, though as a confirmed rather than a fresh figure it rarely moves markets; the more significant test for the euro this week comes indirectly, via Wednesday's US CPI report and its impact on the dollar."
+            },
+            {
+              "code": "USD",
+              "headline": "Dollar nurses recent losses as rate hike bets fade after a soft jobs report.",
+              "commentary": "The dollar has stayed on the back foot this morning, still digesting last week's slide to its weakest level since May after a soft and confusing July employment report cooled expectations for near term Federal Reserve tightening. Trading has been relatively subdued in the early hours, with the currency holding just above those lows rather than extending the decline, as markets await fresh catalysts later this week.\n\nThe tension shaping the dollar right now is between a cooling labour market and inflation that keeps threatening to reaccelerate, with energy costs pushed higher by the ongoing standoff around the Strait of Hormuz. That combination leaves the Fed in an awkward spot, and explains why the dollar has struggled to find a clear direction even as growth concerns mount. Wednesday's CPI report is likely to be the week's key swing factor, since a hot print would revive the case for the hawkish minority on the FOMC while a soft one would cement expectations for easier policy ahead.",
+              "watchToday": "Today's calendar is light, with only the NFIB Small Business Optimism survey for July due, typically a minor mover. The bigger test comes Wednesday with the July CPI report, which carries extra weight given the weak jobs data and the risk that energy costs have kept underlying inflation elevated."
+            },
+            {
+              "code": "JPY",
+              "headline": "Yen remains under pressure as policy divergence with the Fed persists.",
+              "commentary": "The yen has stayed soft through the overnight session, continuing to trade near its weakest levels of the past few months as the gap between an ultra loose Bank of Japan and a Federal Reserve still seen eventually easing keeps working against it. There has been little fresh domestic news to shift that dynamic since yesterday's Economy Watchers Survey, leaving the currency largely at the mercy of broader dollar moves and shifting rate expectations.\n\nWhat keeps the longer term picture more balanced is the accumulating evidence of underlying strength in Japan's economy: real wages have now risen for six straight months, which continues to build the case for further Bank of Japan rate hikes even if the pace stays gradual. That slow moving domestic story sits awkwardly against the yen's near term weakness, and any more hawkish signalling from BoJ officials would be the type of catalyst that could turn sentiment quickly, particularly if it coincides with softer US data.",
+              "watchToday": "No Japanese data is scheduled today, following yesterday's Economy Watchers Survey. The yen's near term direction is likely to be dictated by the broader dollar narrative, with Wednesday's US CPI report the next major test."
+            },
+            {
+              "code": "CHF",
+              "headline": "Franc holds firm on safe haven demand with the SNB on hold.",
+              "commentary": "The Swiss franc has traded steadily this morning, continuing to benefit from its safe haven status amid ongoing geopolitical uncertainty, including the standoff around the Strait of Hormuz. With the Swiss National Bank on hold at its rock bottom policy rate since June, there is little in the way of a domestic monetary policy catalyst to shift the currency, leaving global risk sentiment as the main driver of day to day moves.\n\nThe bigger picture for the franc is a tug of war between structural safe haven appreciation pressure and the SNB's clear discomfort with excessive strength. The Bank has flagged a greater readiness to intervene in currency markets if needed, downgraded its growth forecasts on the back of higher US tariffs, and expects inflation to stay muted through 2027. That combination suggests officials would rather see the franc's gains capped than accelerate, even though cyclical factors such as a potential recovery in the wider European economy could take some of the pressure off further down the line.",
+              "watchToday": "No Swiss data is scheduled this week. The franc's path continues to hinge on broader risk sentiment and developments around the Strait of Hormuz standoff, with any shift in SNB intervention rhetoric the main domestic risk to watch."
+            },
+            {
+              "code": "CAD",
+              "headline": "Loonie choppy as it tracks swinging oil prices and rate expectations.",
+              "commentary": "The Canadian dollar has traded choppily through the overnight session, closely tracking swings in oil prices as the ongoing Strait of Hormuz standoff keeps energy markets on edge. As a major oil exporter, Canada's currency remains unusually sensitive to these crude price gyrations right now, and that relationship has been the dominant driver of day to day moves over recent sessions rather than any purely domestic catalyst.\n\nBeyond oil, the loonie is also navigating a Bank of Canada outlook that has grown less certain, with the Bank's own projections pencilling in a gradual decline in oil prices over the coming year that would, if realised, remove a support the currency currently enjoys. That makes today's price action less about a single headline and more about how durable the current combination of firmer crude and shifting rate expectations proves to be, particularly with major US data due later this week likely to move the US side of the pair as much as anything happening in Canada.",
+              "watchToday": "No Canadian data is due today. Wednesday brings building permits alongside the closely watched US CPI report, with oil price direction remaining the more immediate driver in the meantime."
+            },
+            {
+              "code": "NZD",
+              "headline": "Kiwi holds near recent highs as traders reassess the RBNZ's hike path.",
+              "commentary": "The New Zealand dollar has held up well through the overnight session, trading near its best levels in more than two months as broad dollar softness continues to provide support. That backdrop has helped offset a more cautious domestic narrative following last quarter's surprisingly weak labour market data, which has led markets to scale back expectations for how aggressively the Reserve Bank of New Zealand will continue tightening policy.\n\nThe RBNZ started its hiking cycle only last month, lifting the cash rate in response to inflation running above its target band, and had signalled that further tightening might be needed. Since then, a jump in unemployment to its highest level in more than a decade has complicated that picture, reinforcing the view that any additional hikes are likely to be delivered gradually rather than aggressively. That tension between still elevated inflation and a softening labour market is likely to keep the kiwi sensitive to any fresh data surprises in the weeks ahead.",
+              "watchToday": "No New Zealand data is due today. Thursday's RBNZ survey of inflation expectations is the next scheduled release, with markets still weighing the odds of a further hike at the September meeting."
+            },
+            {
+              "code": "AUD",
+              "headline": "Aussie choppy after the RBA holds as expected but keeps a hawkish door open.",
+              "commentary": "The Australian dollar has swung both ways this morning after the Reserve Bank of Australia delivered the widely expected hold on its cash rate, alongside its quarterly Statement on Monetary Policy. The initial reaction saw the currency dip as traders who had positioned for a hawkish surprise adjusted, but losses were limited once the accompanying language made clear that policymakers are not ruling out another hike later this year given inflation still running above target.\n\nThat combination, a hold delivered with a hawkish undertone, is why the Aussie's reaction has been more two way than a simple relief rally or selloff. Annual inflation remains well above the RBA's target band even though the core measure came in a touch softer than feared, leaving the central bank walking a careful line between acknowledging progress and guarding against declaring victory too early. Governor Bullock's press conference commentary is being parsed closely for any further clues on that balance, with the currency also drawing some background support from firm Chinese trade data given China's role as Australia's largest trading partner.",
+              "watchToday": "Today's key domestic events, NAB business confidence, the RBA rate decision and Governor Bullock's press conference, have already crossed the wires this morning with a hold delivered as expected. Attention now shifts to any further follow through commentary during the session and to Wednesday's US CPI report for the broader risk backdrop."
+            },
+            {
+              "code": "CNY",
+              "headline": "Yuan firm near multi year highs on resilient trade data and a steady fixing.",
+              "commentary": "The offshore yuan has held close to its strongest levels in several years this morning, continuing to draw support from resilient trade figures that showed exports holding up well even as growth moderated slightly from the prior month's pace. The People's Bank of China has also kept its daily fixing relatively firm, a signal that authorities remain comfortable with gradual currency strength even as they periodically set the midpoint a touch weaker than expected to slow the pace of gains.\n\nThe bigger picture is that Beijing appears to be tolerating, and to some extent encouraging, a stronger yuan as part of a broader push toward currency internationalisation, a shift from the more defensive stance seen in prior years. For markets, this matters well beyond China's own borders since firm Chinese demand and a stable currency underpin sentiment in the Australian and New Zealand dollars given their trade exposure to the Chinese economy. The PBoC has signalled it will keep prioritising stability and flexibility through the second half of the year, which should keep outsized swings in check.",
+              "watchToday": "No Chinese data is due today. Thursday's money supply, new loan and total social financing figures for July are the next major release, with the yuan's path also hinging on the PBoC's daily fixing and broader dollar sentiment in the meantime."
+            },
+            {
+              "code": "ZAR",
+              "headline": "Rand steady into today's closely watched labour market data.",
+              "commentary": "The South African rand has traded steadily this morning, continuing to hold on to its recovery from the three month low touched in late July as improving global risk sentiment, a firmer gold price and softer oil combine to support the currency. That backdrop of a genuinely improving external environment has been the more important driver for the rand over the past couple of weeks than anything happening domestically.\n\nThe domestic picture remains more mixed. The South African Reserve Bank held its policy rate steady in July even as it flagged rising inflation risks, with both headline and core inflation running above the top of its target range. Today's Q2 Quarterly Labour Force Survey is a significant test of that domestic backdrop, watched closely after the first quarter's jump to a jobless rate above 32%, since persistently weak employment remains one of the rand's chief structural vulnerabilities regardless of how supportive the external backdrop looks in any given week.",
+              "watchToday": "The Quarterly Labour Force Survey for Q2 is due mid morning, the standout release for the rand today, watched closely after the first quarter's jump to a jobless rate above 32%. A further deterioration would reinforce concerns about structural weakness even as the currency benefits from firmer risk appetite this week."
+            }
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-08-10",
       "label": "Monday 10 August",
