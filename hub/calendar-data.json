@@ -1,30 +1,7 @@
 {
-  "updated": "2026-08-10T12:05:15+01:00",
+  "updated": "2026-08-11T09:01:38+01:00",
   "timezone": "BST",
   "days": [
-    {
-      "date": "2026-08-10",
-      "label": "Monday 10 August",
-      "events": [
-        {
-          "time": "06:00",
-          "currency": "JPY",
-          "event": "Japan Economy Watchers Survey (July)",
-          "importance": "medium",
-          "previous": "44.0",
-          "consensus": "43.6",
-          "description": "A Cabinet Office survey of workers in consumer facing jobs, such as taxi drivers and retail staff, on near term economic conditions. Regarded as a well timed, real world sentiment gauge that feeds into the Bank of Japan's assessment of domestic demand."
-        },
-        {
-          "time": "09:30",
-          "currency": "EUR",
-          "event": "Sentix Investor Confidence (August)",
-          "importance": "low",
-          "previous": "-3.1",
-          "description": "A monthly survey of roughly a thousand investors and analysts gauging both current conditions and expectations for the Eurozone economy. Released earlier in the month than the more closely watched ZEW survey, it offers an early, sentiment based read on the currency bloc's growth outlook, though it is usually only a minor mover for the euro."
-        }
-      ]
-    },
     {
       "date": "2026-08-11",
       "label": "Tuesday 11 August",
@@ -52,14 +29,14 @@
           "importance": "high",
           "previous": "held at 4.35%",
           "consensus": "hold at 4.35%",
-          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. A Reuters poll found all economists surveyed, and all four major Australian banks, expect a hold at 4.35% after June's CPI came in below expectations, though some still flag the risk of a further hike later in 2026 given elevated inflation, so the tone of the statement matters more than the rate itself."
+          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. The Board held the cash rate at 4.35% for a second straight meeting, a unanimous and widely expected decision after June's CPI came in below expectations. The RBA signalled inflation could stay above target until mid 2027 and said it would raise rates further if needed, so the accompanying statement's tone mattered as much as the decision itself."
         },
         {
           "time": "06:30",
           "currency": "AUD",
-          "event": "RBA Governor press conference",
+          "event": "RBA Governor Bullock press conference",
           "importance": "high",
-          "description": "Governor Michele Bullock's press conference following the rate decision. Traders parse the Governor's language on the inflation and growth outlook for hints on whether the Board still has room to raise the cash rate again or has reached the peak of the current tightening cycle."
+          "description": "Governor Michele Bullock's press conference following the rate decision. She said the economy was slowing as expected but that the Board would do what is necessary to bring inflation back to its 2 to 3 percent target, including raising the cash rate further if upside risks materialise, a message markets read as keeping a hike on the table despite today's hold."
         },
         {
           "time": "10:30",
@@ -105,8 +82,10 @@
           "event": "US Consumer Price Index (July)",
           "importance": "high",
           "previous": "+3.5% y/y headline, +2.6% y/y core (June)",
-          "consensus": "roughly +3.5% to +3.6% y/y headline and around +3.0% y/y core, though a firm formal economist poll consensus was still settling at time of writing",
-          "description": "The Bureau of Labor Statistics' inflation report, the most closely watched US data release of the week, due at 8.30am Eastern time. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling. After a weak and confusing July jobs report, this print carries extra weight: a hot number would bolster the hawkish minority on the FOMC and complicate the case for a near term rate cut, while a softer one would support the view that the Fed can look through the energy spike and prioritise the cooling labour market."
+          "consensus": "+3.4% y/y headline, +2.5% y/y core, both a touch cooler than June",
+          "revised": true,
+          "revisedNote": "Consensus has firmed up since the last update: economists now look for headline CPI to ease to 3.4% y/y and core to 2.5% y/y, versus the vaguer 3.5 to 3.6% range carried previously.",
+          "description": "The Bureau of Labor Statistics' inflation report for July, due at 8.30am Eastern time (1.30pm UK time), is the most closely watched US release of the week. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling. Consensus looks for a slight cooling to 3.4% y/y headline and 2.5% y/y core, and after a weak and confusing July jobs report this print carries extra weight: a hot number would bolster the hawkish minority on the FOMC and complicate the case for a near term rate cut, while an in line or softer number would support the view that the Fed can look through the energy spike and prioritise the cooling labour market."
         }
       ]
     },
@@ -138,8 +117,6 @@
           "importance": "high",
           "previous": "+0.6% q/q (Q1 2026)",
           "consensus": "+0.4% q/q",
-          "revised": true,
-          "revisedNote": "A consensus figure of +0.4% q/q has now firmed up, whereas the previous update carried no consensus for this release.",
           "description": "The Office for National Statistics' first estimate of UK economic growth for the second quarter, published alongside the June monthly GDP figure. GDP grew 0.6% in the first quarter and consensus looks for a slowdown to around 0.4% in the second, so this reading is the key gauge of whether momentum has eased as expected; a stronger than expected print is generally supportive for sterling, while a miss adds to the case for the Bank of England to keep policy accommodative."
         },
         {
@@ -200,6 +177,36 @@
           "importance": "medium",
           "previous": "55.2 (July, final)",
           "description": "The University of Michigan's early read on US household confidence, covering current conditions and expectations for the economy, jobs and inflation. Sentiment has been unusually weak and volatile through 2026, and the survey's inflation expectations components are watched almost as closely as the headline index for what they imply about the Fed's inflation fight."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "label": "Monday 17 August",
+      "events": [
+        {
+          "time": "13:30",
+          "currency": "CAD",
+          "event": "Canada Consumer Price Index (July)",
+          "importance": "high",
+          "previous": "-0.4% m/m, +2.8% y/y (June)",
+          "description": "Statistics Canada's headline inflation report for July, the top domestic release of the week for the Canadian dollar. Annual inflation cooled to 2.8% in June from 3.2% in May as gasoline price gains slowed, with the core CPI trim and CPI median measures both dipping below the Bank of Canada's 2% target. This report is watched closely for whether that cooling trend continued into July, shaping expectations for the Bank of Canada's next policy move."
+        },
+        {
+          "time": "13:30",
+          "currency": "USD",
+          "event": "Empire State Manufacturing Index (August)",
+          "importance": "medium",
+          "previous": "15.6 (July)",
+          "description": "The Federal Reserve Bank of New York's monthly gauge of manufacturing activity in its district, one of the earliest regional Fed surveys each month and a useful early signal for the national ISM manufacturing report. July's reading jumped to 15.6 from 5.7 in June, comfortably beating forecasts, so this update is watched for whether that strength has been sustained into August."
+        },
+        {
+          "time": "15:00",
+          "currency": "USD",
+          "event": "NAHB Housing Market Index (August)",
+          "importance": "low",
+          "previous": "34 (July)",
+          "description": "The National Association of Home Builders' monthly gauge of builder confidence in the market for newly built single family homes, based on a survey of current sales conditions, sales expectations and buyer traffic. Sentiment has stayed below the neutral 50 level for well over a year on affordability concerns, and this update is watched as an early signal ahead of the following day's housing starts data."
         }
       ]
     }
