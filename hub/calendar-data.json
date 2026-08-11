@@ -1,11 +1,18 @@
 {
-  "updated": "2026-08-11T09:01:38+01:00",
+  "updated": "2026-08-11T12:07:28+01:00",
   "timezone": "BST",
   "days": [
     {
       "date": "2026-08-11",
       "label": "Tuesday 11 August",
       "events": [
+        {
+          "time": "00:00",
+          "currency": "JPY",
+          "event": "Japan public holiday: Mountain Day, markets closed",
+          "importance": "low",
+          "description": "Japan's stock, bond and money markets are shut for the Mountain Day public holiday. Liquidity in yen crosses is typically thinner than usual through the Tokyo session as a result, which can exaggerate price moves on any other news that lands today."
+        },
         {
           "time": "00:01",
           "currency": "GBP",
@@ -15,11 +22,30 @@
           "description": "The British Retail Consortium's monthly tracker of like for like store and online spending, released ahead of the official ONS retail sales figures. An early, partial read on UK consumer demand that can move sterling at the margin if it diverges sharply from recent trend."
         },
         {
+          "time": "00:30",
+          "currency": "JPY",
+          "event": "Reuters Tankan Index (August)",
+          "importance": "low",
+          "previous": "13 (July)",
+          "description": "A privately run monthly survey of large Japanese manufacturers that acts as an early, unofficial preview of the Bank of Japan's own quarterly Tankan survey. Useful for gauging shifts in corporate sentiment between the official releases, though it typically has limited standalone impact on the yen."
+        },
+        {
+          "time": "00:50",
+          "currency": "JPY",
+          "event": "Japan money supply, M2 and M3 (July)",
+          "importance": "low",
+          "previous": "M2 +2.2% y/y; M3 JPY 2,327.9 trillion (June)",
+          "consensus": "M2 +2.1% y/y",
+          "description": "The Bank of Japan's monthly measures of broad money circulating in the economy. A slow moving indicator that rarely surprises markets on its own, but forms part of the backdrop economists use to judge whether the BoJ's policy stance is loosening or tightening financial conditions."
+        },
+        {
           "time": "02:30",
           "currency": "AUD",
           "event": "NAB business confidence (July)",
           "importance": "medium",
-          "previous": "-5",
+          "previous": "-6 (June)",
+          "revised": true,
+          "revisedNote": "The June reading has been corrected to -6; it was carried as -5 in the last update. National Australia Bank's July survey has since printed unchanged at -6.",
           "description": "National Australia Bank's monthly survey of business sentiment and conditions. Released the day before the RBA's decision, it is watched closely for any last minute shift in the domestic backdrop that could tilt the Board's language."
         },
         {
@@ -52,6 +78,9 @@
           "event": "NFIB Small Business Optimism Index (July)",
           "importance": "low",
           "previous": "97.4 (June)",
+          "consensus": "97.5",
+          "revised": true,
+          "revisedNote": "A consensus estimate of 97.5 has now been published for this release; none was available in the last update.",
           "description": "The National Federation of Independent Business's monthly survey of small business sentiment on hiring, sales and pricing plans, usually released on the second Tuesday of the month. A useful cross check on the health of Main Street businesses, though typically a secondary mover for the dollar."
         }
       ]
@@ -83,8 +112,6 @@
           "importance": "high",
           "previous": "+3.5% y/y headline, +2.6% y/y core (June)",
           "consensus": "+3.4% y/y headline, +2.5% y/y core, both a touch cooler than June",
-          "revised": true,
-          "revisedNote": "Consensus has firmed up since the last update: economists now look for headline CPI to ease to 3.4% y/y and core to 2.5% y/y, versus the vaguer 3.5 to 3.6% range carried previously.",
           "description": "The Bureau of Labor Statistics' inflation report for July, due at 8.30am Eastern time (1.30pm UK time), is the most closely watched US release of the week. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling. Consensus looks for a slight cooling to 3.4% y/y headline and 2.5% y/y core, and after a weak and confusing July jobs report this print carries extra weight: a hot number would bolster the hawkish minority on the FOMC and complicate the case for a near term rate cut, while an in line or softer number would support the view that the Fed can look through the energy spike and prioritise the cooling labour market."
         }
       ]
@@ -184,6 +211,15 @@
       "date": "2026-08-17",
       "label": "Monday 17 August",
       "events": [
+        {
+          "time": "00:50",
+          "currency": "JPY",
+          "event": "Japan GDP, preliminary estimate (Q2 2026)",
+          "importance": "high",
+          "previous": "+1.8% annualised, revised down from +2.1% (Q1 2026)",
+          "consensus": "around +2.0% annualised",
+          "description": "The Cabinet Office's first estimate of Japanese growth for the second quarter, due at 8.50am Tokyo time (12.50am UK time). First quarter growth was revised down to 1.8% annualised on weaker capital spending, and economists expect a further quarter of solid, if unspectacular, expansion of around 2.0%. The number feeds directly into the debate over how much room the Bank of Japan has to keep normalising policy, so a strong beat would support a firmer yen while a miss would push back expectations for further BoJ tightening."
+        },
         {
           "time": "13:30",
           "currency": "CAD",
