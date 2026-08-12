@@ -1,101 +1,26 @@
 {
-  "updated": "2026-08-11T12:07:28+01:00",
+  "updated": "2026-08-12T10:11:08+01:00",
   "timezone": "BST",
   "days": [
-    {
-      "date": "2026-08-11",
-      "label": "Tuesday 11 August",
-      "events": [
-        {
-          "time": "00:00",
-          "currency": "JPY",
-          "event": "Japan public holiday: Mountain Day, markets closed",
-          "importance": "low",
-          "description": "Japan's stock, bond and money markets are shut for the Mountain Day public holiday. Liquidity in yen crosses is typically thinner than usual through the Tokyo session as a result, which can exaggerate price moves on any other news that lands today."
-        },
-        {
-          "time": "00:01",
-          "currency": "GBP",
-          "event": "BRC retail sales monitor (July)",
-          "importance": "medium",
-          "previous": "+1.7% y/y (June)",
-          "description": "The British Retail Consortium's monthly tracker of like for like store and online spending, released ahead of the official ONS retail sales figures. An early, partial read on UK consumer demand that can move sterling at the margin if it diverges sharply from recent trend."
-        },
-        {
-          "time": "00:30",
-          "currency": "JPY",
-          "event": "Reuters Tankan Index (August)",
-          "importance": "low",
-          "previous": "13 (July)",
-          "description": "A privately run monthly survey of large Japanese manufacturers that acts as an early, unofficial preview of the Bank of Japan's own quarterly Tankan survey. Useful for gauging shifts in corporate sentiment between the official releases, though it typically has limited standalone impact on the yen."
-        },
-        {
-          "time": "00:50",
-          "currency": "JPY",
-          "event": "Japan money supply, M2 and M3 (July)",
-          "importance": "low",
-          "previous": "M2 +2.2% y/y; M3 JPY 2,327.9 trillion (June)",
-          "consensus": "M2 +2.1% y/y",
-          "description": "The Bank of Japan's monthly measures of broad money circulating in the economy. A slow moving indicator that rarely surprises markets on its own, but forms part of the backdrop economists use to judge whether the BoJ's policy stance is loosening or tightening financial conditions."
-        },
-        {
-          "time": "02:30",
-          "currency": "AUD",
-          "event": "NAB business confidence (July)",
-          "importance": "medium",
-          "previous": "-6 (June)",
-          "revised": true,
-          "revisedNote": "The June reading has been corrected to -6; it was carried as -5 in the last update. National Australia Bank's July survey has since printed unchanged at -6.",
-          "description": "National Australia Bank's monthly survey of business sentiment and conditions. Released the day before the RBA's decision, it is watched closely for any last minute shift in the domestic backdrop that could tilt the Board's language."
-        },
-        {
-          "time": "05:30",
-          "currency": "AUD",
-          "event": "RBA interest rate decision and Statement on Monetary Policy",
-          "importance": "high",
-          "previous": "held at 4.35%",
-          "consensus": "hold at 4.35%",
-          "description": "The Reserve Bank's Monetary Policy Board decision, released alongside the quarterly Statement on Monetary Policy that carries the Bank's updated growth and inflation forecasts. The Board held the cash rate at 4.35% for a second straight meeting, a unanimous and widely expected decision after June's CPI came in below expectations. The RBA signalled inflation could stay above target until mid 2027 and said it would raise rates further if needed, so the accompanying statement's tone mattered as much as the decision itself."
-        },
-        {
-          "time": "06:30",
-          "currency": "AUD",
-          "event": "RBA Governor Bullock press conference",
-          "importance": "high",
-          "description": "Governor Michele Bullock's press conference following the rate decision. She said the economy was slowing as expected but that the Board would do what is necessary to bring inflation back to its 2 to 3 percent target, including raising the cash rate further if upside risks materialise, a message markets read as keeping a hike on the table despite today's hold."
-        },
-        {
-          "time": "10:30",
-          "currency": "ZAR",
-          "event": "South Africa Quarterly Labour Force Survey (Q2)",
-          "importance": "high",
-          "previous": "32.7% unemployment rate (Q1 2026)",
-          "description": "Stats SA's quarterly survey of employment and unemployment, one of the most closely watched domestic releases for the rand given South Africa's persistently high jobless rate. The Q1 reading marked a jump to 32.7%, so this update is watched for whether the labour market weakness has continued into the second quarter."
-        },
-        {
-          "time": "11:00",
-          "currency": "USD",
-          "event": "NFIB Small Business Optimism Index (July)",
-          "importance": "low",
-          "previous": "97.4 (June)",
-          "consensus": "97.5",
-          "revised": true,
-          "revisedNote": "A consensus estimate of 97.5 has now been published for this release; none was available in the last update.",
-          "description": "The National Federation of Independent Business's monthly survey of small business sentiment on hiring, sales and pricing plans, usually released on the second Tuesday of the month. A useful cross check on the health of Main Street businesses, though typically a secondary mover for the dollar."
-        }
-      ]
-    },
     {
       "date": "2026-08-12",
       "label": "Wednesday 12 August",
       "events": [
         {
+          "time": "06:00",
+          "currency": "JPY",
+          "event": "Japan preliminary machine tool orders (July)",
+          "importance": "low",
+          "previous": "52.7% y/y, revised (June)",
+          "description": "The Japan Machine Tool Builders' Association's early read on orders for industrial machinery, a leading indicator of business capital spending and export demand. It rarely moves the yen on its own but offers a useful cross check on manufacturing momentum. Exact release time can vary slightly."
+        },
+        {
           "time": "07:00",
           "currency": "EUR",
-          "event": "German Harmonised Index of Consumer Prices, final (July)",
+          "event": "German final Harmonised Index of Consumer Prices (July)",
           "importance": "medium",
           "previous": "preliminary estimate +2.8% y/y (July)",
-          "description": "The final, confirmed reading of Germany's HICP inflation figure, the measure used for comparison across the euro area and a key input into the ECB's policy thinking. It rarely diverges from the flash estimate, but as the bloc's largest economy, any surprise revision can move the euro at the margin."
+          "description": "The confirmed reading of Germany's HICP inflation figure, the measure used for comparison across the euro area and a key input into the ECB's policy thinking. It rarely diverges from the flash estimate, but as the bloc's largest economy any surprise revision can move the euro at the margin."
         },
         {
           "time": "13:30",
@@ -103,6 +28,7 @@
           "event": "Canada building permits (June)",
           "importance": "low",
           "previous": "-1.7% m/m (May)",
+          "consensus": "+0.8% m/m",
           "description": "Statistics Canada's forward looking measure of planned construction activity, based on permits issued by municipalities. A useful, if volatile, early signal for the housing sensitive parts of the Canadian growth outlook."
         },
         {
@@ -112,7 +38,7 @@
           "importance": "high",
           "previous": "+3.5% y/y headline, +2.6% y/y core (June)",
           "consensus": "+3.4% y/y headline, +2.5% y/y core, both a touch cooler than June",
-          "description": "The Bureau of Labor Statistics' inflation report for July, due at 8.30am Eastern time (1.30pm UK time), is the most closely watched US release of the week. Headline CPI has been reaccelerating in recent months as the conflict driven jump in oil prices around the Strait of Hormuz feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling. Consensus looks for a slight cooling to 3.4% y/y headline and 2.5% y/y core, and after a weak and confusing July jobs report this print carries extra weight: a hot number would bolster the hawkish minority on the FOMC and complicate the case for a near term rate cut, while an in line or softer number would support the view that the Fed can look through the energy spike and prioritise the cooling labour market."
+          "description": "The Bureau of Labor Statistics' inflation report for July is the most closely watched US release of the week. Headline CPI has been reaccelerating in recent months as an oil price jump feeds into energy costs, keeping the Fed under pressure to balance its inflation fight against signs of labour market cooling. After a weak and confusing July jobs report this print carries extra weight: a hot number would bolster the hawkish minority on the FOMC and complicate the case for a near term rate cut, while an in line or softer number would support the view that the Fed can look through the energy spike and prioritise the cooling labour market."
         }
       ]
     },
@@ -121,37 +47,80 @@
       "label": "Thursday 13 August",
       "events": [
         {
-          "time": "03:00",
+          "time": "00:50",
+          "currency": "JPY",
+          "event": "Japan Producer Price Index (July)",
+          "importance": "medium",
+          "previous": "+7.1% y/y (June)",
+          "consensus": "+7.4% y/y",
+          "description": "The Bank of Japan's gauge of factory gate and import price inflation, an upstream pipeline indicator for future consumer prices. Persistently high readings are one reason the BoJ has kept the door open to further policy normalisation."
+        },
+        {
+          "time": "01:15",
+          "currency": "AUD",
+          "event": "RBA Assistant Governor Christopher Kent speaks",
+          "importance": "medium",
+          "description": "A livestreamed newsmaker interview with the RBA's Assistant Governor for Financial Markets, coming two days after the Board held the cash rate at 4.35%. With the next RBA meeting not until late September, markets will parse any comments for clues on the rate path."
+        },
+        {
+          "time": "02:00",
+          "currency": "AUD",
+          "event": "Melbourne Institute consumer inflation expectations (August)",
+          "importance": "medium",
+          "previous": "4.7% (July)",
+          "description": "A monthly survey of what Australian households expect inflation to be over the coming year. The RBA watches it as a gauge of inflation psychology; a move away from 4.7% would be notable given the Bank's own forecasts show inflation only returning to the target midpoint in late 2027."
+        },
+        {
+          "time": "02:30",
+          "currency": "AUD",
+          "event": "Australia average weekly earnings, six-monthly survey (May)",
+          "importance": "low",
+          "previous": "annual growth of 3.8% to AUD 2,051.10 (November 2025 survey)",
+          "description": "A broader, less frequent wage gauge from the Bureau of Statistics than the quarterly Wage Price Index. It offers background on income growth and consumer spending power but is rarely a market mover for the Australian dollar."
+        },
+        {
+          "time": "04:00",
           "currency": "NZD",
           "event": "RBNZ Survey of Expectations: two year inflation expectations (Q3)",
           "importance": "medium",
           "previous": "2.53% (Q2 2026)",
-          "description": "The Reserve Bank of New Zealand's quarterly survey of businesses and forecasters on where they expect inflation to sit two years out. Two year expectations climbed to 2.53% in the second quarter from 2.37% in the first, so this update is watched for whether that upward drift has continued, since a further rise would narrow the RBNZ's room to ease policy."
+          "description": "The Reserve Bank of New Zealand's quarterly survey of businesses and forecasters on where they expect inflation to sit two years out. Expectations climbed to 2.53% in the second quarter from 2.37% in the first, so this update is watched for whether that upward drift has continued, since a further rise would narrow the RBNZ's room to ease policy."
         },
         {
-          "time": "04:00",
-          "currency": "CNY",
-          "event": "China money supply (M0, M1, M2), new yuan loans and Total Social Financing (July)",
-          "importance": "medium",
-          "previous": "new loans of RMB 1.61 trillion; outstanding loan growth of 5.2% y/y (June)",
-          "consensus": "new loans seen roughly flat to modestly higher year on year at around RMB 50 billion, with outstanding loan growth easing slightly to about 5.1% y/y; TSF growth around 7.4% y/y",
-          "description": "The People's Bank of China's monthly credit bundle, covering broad money supply growth, new bank lending and total social financing, the broadest gauge of credit flowing into the real economy. Usually published without a fixed hour, it is watched closely for whether Beijing's stimulus is gaining traction, with a weak reading pointing to soft domestic demand that carries knock on relevance for the Australian and New Zealand dollars given China's role as their top trading partner."
-        },
-        {
-          "time": "06:00",
+          "time": "07:00",
           "currency": "GBP",
           "event": "UK GDP, preliminary estimate (Q2 2026)",
           "importance": "high",
           "previous": "+0.6% q/q (Q1 2026)",
           "consensus": "+0.4% q/q",
+          "revised": true,
+          "revisedNote": "Release time corrected to 07:00 BST; the last update carried this as 06:00, but the ONS's standard publication slot for this bundle is 7am.",
           "description": "The Office for National Statistics' first estimate of UK economic growth for the second quarter, published alongside the June monthly GDP figure. GDP grew 0.6% in the first quarter and consensus looks for a slowdown to around 0.4% in the second, so this reading is the key gauge of whether momentum has eased as expected; a stronger than expected print is generally supportive for sterling, while a miss adds to the case for the Bank of England to keep policy accommodative."
         },
         {
-          "time": "06:00",
+          "time": "07:00",
           "currency": "GBP",
           "event": "UK trade balance, index of production and construction output (June)",
           "importance": "medium",
+          "revised": true,
+          "revisedNote": "Release time corrected to 07:00 BST; the last update carried this as 06:00 alongside the GDP release.",
           "description": "Released alongside the GDP figures, this bundle covers the goods and services trade balance, manufacturing and industrial output, and construction sector activity for June. These are the underlying components that feed into the quarterly growth number and are watched for a more granular read on where UK momentum is coming from."
+        },
+        {
+          "time": "07:30",
+          "currency": "CHF",
+          "event": "Switzerland Producer and Import Price Index (July)",
+          "importance": "low",
+          "previous": "-0.3% m/m (June)",
+          "consensus": "-0.2% m/m",
+          "description": "An early pipeline inflation gauge for Switzerland, covering prices at the factory gate and for imported goods, released ahead of Swiss CPI. It is generally a modest mover for the franc but feeds into the SNB's broader inflation outlook."
+        },
+        {
+          "time": "10:00",
+          "currency": "EUR",
+          "event": "Eurozone industrial production (June)",
+          "importance": "medium",
+          "description": "Eurostat's monthly measure of factory, mining and utilities output across the currency bloc. A soft reading would reinforce the narrative of a sluggish manufacturing sector and support the case for continued ECB accommodation."
         },
         {
           "time": "13:30",
@@ -159,7 +128,7 @@
           "event": "US Producer Price Index (July)",
           "importance": "high",
           "previous": "-0.3% m/m, +5.5% y/y (June)",
-          "consensus": "annual rate expected to ease from June's 5.5%, with some estimates near 5.1% or lower",
+          "consensus": "annual rate expected to ease from June's 5.5%, with some estimates nearer 5.1%",
           "description": "The Bureau of Labor Statistics' measure of wholesale price pressures, released a day after CPI. June's headline PPI fell 0.3% on the month but was still up 5.5% on the year, and this report is watched for whether producer level inflation is cooling from that pace or if the energy driven price pressures seen in the consumer figures are also showing up further up the supply chain."
         },
         {
@@ -168,6 +137,22 @@
           "event": "US weekly initial jobless claims",
           "importance": "low",
           "description": "The Department of Labor's weekly count of new unemployment benefit claims, released alongside PPI. A high frequency, early read on the US labour market that typically has limited standalone impact but is watched closely for any signs of a sharper turn in hiring conditions following the weak and confusing July payrolls print."
+        },
+        {
+          "time": "23:30",
+          "currency": "NZD",
+          "event": "BusinessNZ Performance of Manufacturing Index (July)",
+          "importance": "low",
+          "previous": "59.7 (June)",
+          "description": "A private sector survey tracking activity in New Zealand's manufacturing sector. A timely, if second tier, growth signal that offers an early look at momentum ahead of official production data."
+        },
+        {
+          "time": "23:45",
+          "currency": "NZD",
+          "event": "New Zealand visitor arrivals (June)",
+          "importance": "low",
+          "previous": "-2.4% m/m (May)",
+          "description": "Stats NZ's monthly count of overseas visitor arrivals, a gauge of tourism activity that feeds into the services trade balance. A minor release that rarely moves the New Zealand dollar."
         }
       ]
     },
@@ -176,6 +161,25 @@
       "label": "Friday 14 August",
       "events": [
         {
+          "time": "02:30",
+          "currency": "AUD",
+          "event": "Australia lending indicators (Q2 2026)",
+          "importance": "low",
+          "previous": "total new housing loan commitments of AUD 103.0 billion, up 18.5% y/y (Q1 2026)",
+          "description": "The Bureau of Statistics' quarterly measure of new borrower accepted finance commitments across housing, personal and business lending. A read on credit demand and housing market momentum, generally a low impact release for the Australian dollar."
+        },
+        {
+          "time": "04:00",
+          "currency": "CNY",
+          "event": "China new bank loans, money supply and Total Social Financing (July)",
+          "importance": "high",
+          "previous": "new loans of RMB 1.61 trillion; outstanding loan growth of 5.2% y/y (June)",
+          "consensus": "a sharp seasonal drop in new loans from June, with economist estimates widely dispersed and some clustering between roughly RMB 450 billion and RMB 1 trillion; outstanding loan growth expected to ease further toward about 5.1% y/y",
+          "revised": true,
+          "revisedNote": "The People's Bank of China does not pre-announce this release; updated reporting now points to Friday 14 August rather than Thursday 13 as previously flagged, and the consensus range for new loans has been refined following fresh economist polling.",
+          "description": "The People's Bank of China's monthly credit bundle, covering broad money supply growth, new bank lending and total social financing, the broadest gauge of credit flowing into the real economy. It is watched closely for whether Beijing's stimulus is gaining traction, with a weak reading pointing to soft domestic demand that carries knock on relevance for the Australian and New Zealand dollars given China's role as their top trading partner. No fixed release hour is confirmed in advance."
+        },
+        {
           "time": "04:00",
           "currency": "CNY",
           "event": "China total electricity consumption (July)",
@@ -183,19 +187,45 @@
           "description": "The National Energy Administration's monthly tally of nationwide power usage, released without a fixed hour. A high frequency, real economy proxy for industrial activity that investors sometimes trust more than the official GDP figures, with relevance for the Australian and New Zealand dollars given trade linkages to Chinese factory demand."
         },
         {
+          "time": "10:00",
+          "currency": "EUR",
+          "event": "Eurozone GDP, second estimate, and employment change (Q2 2026)",
+          "importance": "medium",
+          "previous": "flash estimate +0.4% q/q, +1.0% y/y",
+          "description": "Eurostat's confirmed second reading of second quarter growth across the currency bloc, published alongside the quarterly employment change. It typically only moves markets if there is a meaningful revision from the flash estimate."
+        },
+        {
+          "time": "10:00",
+          "currency": "EUR",
+          "event": "Eurozone trade balance (June)",
+          "importance": "low",
+          "description": "Eurostat's monthly goods trade balance for the currency bloc. Usually a low impact release for the euro unless the surplus or deficit shifts sharply from recent trend."
+        },
+        {
           "time": "13:30",
           "currency": "USD",
-          "event": "US Retail Sales and Retail Sales Control Group (July)",
+          "event": "US retail sales and retail sales control group (July)",
           "importance": "high",
           "previous": "+0.2% m/m headline (June)",
-          "description": "The Census Bureau's monthly report on spending at US retailers, a leading indicator of consumer demand and a key input into the GDP outlook. The Control Group strips out volatile categories such as autos and gasoline and feeds directly into GDP calculations, so it is watched closely alongside the headline number; a soft print would add to the case for the Fed to look past sticky inflation and focus on a cooling consumer, while a strong one would complicate the argument for a near term rate cut."
+          "description": "The Census Bureau's monthly report on spending at US retailers, a leading indicator of consumer demand and a key input into the GDP outlook. The control group strips out volatile categories such as autos and gasoline and feeds directly into GDP calculations, so it is watched closely alongside the headline number; a soft print would add to the case for the Fed to look past sticky inflation and focus on a cooling consumer, while a strong one would complicate the argument for a near term rate cut."
         },
         {
           "time": "13:30",
           "currency": "CAD",
           "event": "Canada manufacturing sales (June)",
+          "importance": "medium",
+          "previous": "+1.3% m/m (May)",
+          "consensus": "-0.1% m/m",
+          "description": "Statistics Canada's monthly measure of factory shipments, a timely gauge of demand for Canadian manufactured goods both at home and among export customers such as the US. A hard data cross check on the health of Canada's industrial sector."
+        },
+        {
+          "time": "13:30",
+          "currency": "CAD",
+          "event": "Canada wholesale sales (June)",
           "importance": "low",
-          "description": "Statistics Canada's monthly measure of factory sales, a timely gauge of demand for Canadian manufactured goods both at home and among export customers such as the US. A secondary release that offers a useful, if volatile, cross check on the health of Canada's industrial sector."
+          "previous": "0.0% m/m (May)",
+          "consensus": "+2.7% m/m",
+          "description": "Statistics Canada's monthly measure of the value of wholesale trade. A secondary growth and inventory cycle indicator that is usually a minor mover for the Canadian dollar."
         },
         {
           "time": "15:00",
@@ -217,16 +247,65 @@
           "event": "Japan GDP, preliminary estimate (Q2 2026)",
           "importance": "high",
           "previous": "+1.8% annualised, revised down from +2.1% (Q1 2026)",
-          "consensus": "around +2.0% annualised",
-          "description": "The Cabinet Office's first estimate of Japanese growth for the second quarter, due at 8.50am Tokyo time (12.50am UK time). First quarter growth was revised down to 1.8% annualised on weaker capital spending, and economists expect a further quarter of solid, if unspectacular, expansion of around 2.0%. The number feeds directly into the debate over how much room the Bank of Japan has to keep normalising policy, so a strong beat would support a firmer yen while a miss would push back expectations for further BoJ tightening."
+          "consensus": "roughly +0.8% to +2.0% annualised, with estimates varying widely across surveys",
+          "revised": true,
+          "revisedNote": "The consensus range has widened since the last update, which had pointed to a tighter estimate of around +2.0% annualised.",
+          "description": "The Cabinet Office's first estimate of Japanese growth for the second quarter. First quarter growth was revised down to 1.8% annualised on weaker capital spending, and this number feeds directly into the debate over how much room the Bank of Japan has to keep normalising policy, so a strong beat would support a firmer yen while a miss would push back expectations for further BoJ tightening."
+        },
+        {
+          "time": "00:50",
+          "currency": "JPY",
+          "event": "Japan GDP price index, preliminary (Q2 2026)",
+          "importance": "medium",
+          "previous": "+3.2% y/y",
+          "description": "The broadest, economy wide measure of Japanese inflation, released alongside the GDP figures. It is a companion gauge to consumer price data that the BoJ weighs when assessing the durability of price pressures."
+        },
+        {
+          "time": "02:30",
+          "currency": "CNY",
+          "event": "China house prices, 70 major cities (July)",
+          "importance": "medium",
+          "description": "The National Bureau of Statistics' monthly gauge of new and existing home prices across 70 major Chinese cities. Continued price falls would reinforce concerns about the property sector's drag on growth, a theme watched closely for both the yuan and the trade linked Australian dollar."
+        },
+        {
+          "time": "03:00",
+          "currency": "CNY",
+          "event": "China industrial production, retail sales and fixed asset investment (July)",
+          "importance": "high",
+          "previous": "industrial output +5.3% y/y, retail sales +1.0% y/y, fixed asset investment -5.7% cumulative y/y for the first half (June)",
+          "description": "China's single biggest monthly data release, covering factory output, consumer spending and investment alongside real estate figures. It gives the clearest read yet on third quarter growth momentum and is historically a significant mover for the yuan and, given China is Australia's largest trading partner, for the Australian dollar too."
+        },
+        {
+          "time": "05:30",
+          "currency": "JPY",
+          "event": "Japan revised industrial production (June)",
+          "importance": "low",
+          "previous": "+1.3% m/m, preliminary",
+          "description": "The final, confirmed version of Japan's earlier preliminary industrial output reading. A hard data confirmation of factory sector momentum that rarely diverges much from the initial estimate."
+        },
+        {
+          "time": "05:30",
+          "currency": "JPY",
+          "event": "Japan tertiary industry activity index (June)",
+          "importance": "low",
+          "previous": "+1.1% m/m",
+          "description": "A monthly gauge of activity in Japan's services sector, used alongside industrial production to build a fuller picture of overall economic momentum."
         },
         {
           "time": "13:30",
           "currency": "CAD",
           "event": "Canada Consumer Price Index (July)",
           "importance": "high",
-          "previous": "-0.4% m/m, +2.8% y/y (June)",
-          "description": "Statistics Canada's headline inflation report for July, the top domestic release of the week for the Canadian dollar. Annual inflation cooled to 2.8% in June from 3.2% in May as gasoline price gains slowed, with the core CPI trim and CPI median measures both dipping below the Bank of Canada's 2% target. This report is watched closely for whether that cooling trend continued into July, shaping expectations for the Bank of Canada's next policy move."
+          "previous": "-0.4% m/m, +2.8% y/y headline; core trim +1.8% y/y, median +1.9% y/y, common +2.6% y/y (June)",
+          "description": "Statistics Canada's headline inflation report for July, the top domestic release of the week for the Canadian dollar. Annual inflation cooled to 2.8% in June from 3.2% in May as gasoline price gains slowed, with the Bank of Canada's three preferred core measures, trim, median and common, all sitting at or below its 2% target. This report is watched closely for whether that cooling trend continued into July, shaping expectations for the Bank of Canada's next policy move."
+        },
+        {
+          "time": "13:30",
+          "currency": "CAD",
+          "event": "Canada foreign securities purchases (June)",
+          "importance": "low",
+          "previous": "CAD 7.90 billion (May)",
+          "description": "Statistics Canada's monthly measure of foreign investors' net purchases of Canadian securities. A secondary balance of payments indicator that occasionally offers colour on portfolio flows into the Canadian dollar."
         },
         {
           "time": "13:30",
@@ -243,6 +322,94 @@
           "importance": "low",
           "previous": "34 (July)",
           "description": "The National Association of Home Builders' monthly gauge of builder confidence in the market for newly built single family homes, based on a survey of current sales conditions, sales expectations and buyer traffic. Sentiment has stayed below the neutral 50 level for well over a year on affordability concerns, and this update is watched as an early signal ahead of the following day's housing starts data."
+        }
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "label": "Tuesday 18 August",
+      "events": [
+        {
+          "time": "02:00",
+          "currency": "AUD",
+          "event": "Westpac-Melbourne Institute Consumer Sentiment Index (August)",
+          "importance": "medium",
+          "previous": "index rose 4.1% to 83.9 in July, still in the bottom 10% of readings in the survey's 50 year history",
+          "description": "Australia's main monthly household confidence gauge. Watched for whether the RBA's recent hold and lower petrol prices are enough to sustain July's rebound."
+        },
+        {
+          "time": "02:30",
+          "currency": "AUD",
+          "event": "Counts of Australian businesses, entries and exits (to June 2026)",
+          "importance": "low",
+          "description": "Structural data from the Bureau of Statistics on business formation, closure and survival rates across the economy. Rarely market moving but useful background on the health of the business sector."
+        },
+        {
+          "time": "07:00",
+          "currency": "GBP",
+          "event": "UK labour market overview: claimant count, unemployment rate and average weekly earnings (July)",
+          "importance": "high",
+          "previous": "claimant count 1.689 million (June); ILO unemployment rate 4.9% (March to May 2026 rolling quarter)",
+          "description": "One of the most important sterling releases of the fortnight, combining the claimant count, the ILO unemployment rate and average weekly earnings. Wage growth in particular is central to the Bank of England's debate over second round inflation effects that is currently driving a split vote on the MPC."
+        },
+        {
+          "time": "10:00",
+          "currency": "EUR",
+          "event": "German and Eurozone ZEW Economic Sentiment Index (August)",
+          "importance": "medium",
+          "description": "ZEW's survey of roughly 350 institutional investors and analysts on their six month economic outlook for Germany and the euro area. A forward looking sentiment gauge that often moves ahead of the harder growth data."
+        },
+        {
+          "time": "13:00",
+          "currency": "NZD",
+          "event": "Global Dairy Trade auction, event 410",
+          "importance": "medium",
+          "description": "The fortnightly online dairy auction that sets a benchmark for whole milk powder and other dairy prices. Dairy is New Zealand's largest export category, so a sizeable swing in the price index can move the New Zealand dollar."
+        },
+        {
+          "time": "13:15",
+          "currency": "CAD",
+          "event": "Canada housing starts (July)",
+          "importance": "medium",
+          "previous": "239,000 annualised units (June)",
+          "description": "Canada Mortgage and Housing Corporation's monthly measure of the pace of new home construction. A timely read on the housing sector's contribution to growth and on how the sector is coping with the current level of interest rates."
+        },
+        {
+          "time": "13:30",
+          "currency": "USD",
+          "event": "US housing starts and building permits (July)",
+          "importance": "medium",
+          "description": "The Census Bureau's monthly report on the pace of new home construction and permits issued for future building. A leading indicator of housing sector activity that is sensitive to mortgage rates and feeds into GDP tracking estimates."
+        },
+        {
+          "time": "14:15",
+          "currency": "USD",
+          "event": "US industrial production and capacity utilisation (July)",
+          "importance": "low",
+          "description": "The Federal Reserve's monthly measure of output at factories, mines and utilities, alongside how much of the country's productive capacity is in use. A second tier release for the dollar but a useful input into GDP tracking models."
+        },
+        {
+          "time": "14:30",
+          "currency": "CAD",
+          "event": "CREA national home sales report (July)",
+          "importance": "low",
+          "description": "The Canadian Real Estate Association's monthly report on existing home sales and prices nationwide. Complements the official Statistics Canada housing data and is generally a secondary indicator unless the surprise is large. Exact release time can vary."
+        },
+        {
+          "time": "23:45",
+          "currency": "NZD",
+          "event": "New Zealand Producer Price Index, inputs (Q2 2026)",
+          "importance": "low",
+          "previous": "+1.4% q/q (Q1 2026)",
+          "description": "Stats NZ's quarterly measure of price changes for goods and services used by producers. An early pipeline cost gauge for New Zealand businesses that feeds through to consumer prices with a lag."
+        },
+        {
+          "time": "23:45",
+          "currency": "NZD",
+          "event": "New Zealand Producer Price Index, outputs (Q2 2026)",
+          "importance": "low",
+          "previous": "+0.8% q/q (Q1 2026)",
+          "description": "The companion release to producer input prices, tracking factory gate pricing pressure for goods and services sold by New Zealand producers."
         }
       ]
     }
