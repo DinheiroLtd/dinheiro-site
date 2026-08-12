@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T10:11:08+01:00",
+  "updated": "2026-08-12T12:14:08+01:00",
   "timezone": "BST",
   "days": [
     {
@@ -58,9 +58,11 @@
         {
           "time": "01:15",
           "currency": "AUD",
-          "event": "RBA Assistant Governor Christopher Kent speaks",
+          "event": "RBA Governor Michele Bullock speaks (Reuters NEXT Newsmaker Interview)",
           "importance": "medium",
-          "description": "A livestreamed newsmaker interview with the RBA's Assistant Governor for Financial Markets, coming two days after the Board held the cash rate at 4.35%. With the next RBA meeting not until late September, markets will parse any comments for clues on the rate path."
+          "revised": true,
+          "revisedNote": "Corrected the speaker for this slot: it is Governor Michele Bullock in a Reuters NEXT Newsmaker Interview at the InterContinental Sydney, not Assistant Governor Kent as previously listed.",
+          "description": "A livestreamed newsmaker interview with the RBA Governor, coming two days after the Board held the cash rate at 4.35%. With the next RBA meeting not until late September, markets will parse any comments for clues on the rate path."
         },
         {
           "time": "02:00",
@@ -93,8 +95,6 @@
           "importance": "high",
           "previous": "+0.6% q/q (Q1 2026)",
           "consensus": "+0.4% q/q",
-          "revised": true,
-          "revisedNote": "Release time corrected to 07:00 BST; the last update carried this as 06:00, but the ONS's standard publication slot for this bundle is 7am.",
           "description": "The Office for National Statistics' first estimate of UK economic growth for the second quarter, published alongside the June monthly GDP figure. GDP grew 0.6% in the first quarter and consensus looks for a slowdown to around 0.4% in the second, so this reading is the key gauge of whether momentum has eased as expected; a stronger than expected print is generally supportive for sterling, while a miss adds to the case for the Bank of England to keep policy accommodative."
         },
         {
@@ -102,8 +102,6 @@
           "currency": "GBP",
           "event": "UK trade balance, index of production and construction output (June)",
           "importance": "medium",
-          "revised": true,
-          "revisedNote": "Release time corrected to 07:00 BST; the last update carried this as 06:00 alongside the GDP release.",
           "description": "Released alongside the GDP figures, this bundle covers the goods and services trade balance, manufacturing and industrial output, and construction sector activity for June. These are the underlying components that feed into the quarterly growth number and are watched for a more granular read on where UK momentum is coming from."
         },
         {
@@ -161,6 +159,13 @@
       "label": "Friday 14 August",
       "events": [
         {
+          "time": "00:30",
+          "currency": "AUD",
+          "event": "RBA Governor Michele Bullock speaks",
+          "importance": "medium",
+          "description": "A further public appearance from the RBA Governor, this time the day after her Reuters NEXT interview. As with that appearance, markets will scan for any fresh signal on the rate path given the next Board meeting is not until late September."
+        },
+        {
           "time": "02:30",
           "currency": "AUD",
           "event": "Australia lending indicators (Q2 2026)",
@@ -175,8 +180,6 @@
           "importance": "high",
           "previous": "new loans of RMB 1.61 trillion; outstanding loan growth of 5.2% y/y (June)",
           "consensus": "a sharp seasonal drop in new loans from June, with economist estimates widely dispersed and some clustering between roughly RMB 450 billion and RMB 1 trillion; outstanding loan growth expected to ease further toward about 5.1% y/y",
-          "revised": true,
-          "revisedNote": "The People's Bank of China does not pre-announce this release; updated reporting now points to Friday 14 August rather than Thursday 13 as previously flagged, and the consensus range for new loans has been refined following fresh economist polling.",
           "description": "The People's Bank of China's monthly credit bundle, covering broad money supply growth, new bank lending and total social financing, the broadest gauge of credit flowing into the real economy. It is watched closely for whether Beijing's stimulus is gaining traction, with a weak reading pointing to soft domestic demand that carries knock on relevance for the Australian and New Zealand dollars given China's role as their top trading partner. No fixed release hour is confirmed in advance."
         },
         {
@@ -248,8 +251,6 @@
           "importance": "high",
           "previous": "+1.8% annualised, revised down from +2.1% (Q1 2026)",
           "consensus": "roughly +0.8% to +2.0% annualised, with estimates varying widely across surveys",
-          "revised": true,
-          "revisedNote": "The consensus range has widened since the last update, which had pointed to a tighter estimate of around +2.0% annualised.",
           "description": "The Cabinet Office's first estimate of Japanese growth for the second quarter. First quarter growth was revised down to 1.8% annualised on weaker capital spending, and this number feeds directly into the debate over how much room the Bank of Japan has to keep normalising policy, so a strong beat would support a firmer yen while a miss would push back expectations for further BoJ tightening."
         },
         {
@@ -297,6 +298,9 @@
           "event": "Canada Consumer Price Index (July)",
           "importance": "high",
           "previous": "-0.4% m/m, +2.8% y/y headline; core trim +1.8% y/y, median +1.9% y/y, common +2.6% y/y (June)",
+          "consensus": "headline inflation seen ticking up to around 3.0% y/y (bank estimates spanning roughly 2.9% to 3.1%), with the core trim and median measures expected to ease slightly",
+          "revised": true,
+          "revisedNote": "Added a consensus range from a survey of six major Canadian banks; the prior update did not carry a market consensus for this release.",
           "description": "Statistics Canada's headline inflation report for July, the top domestic release of the week for the Canadian dollar. Annual inflation cooled to 2.8% in June from 3.2% in May as gasoline price gains slowed, with the Bank of Canada's three preferred core measures, trim, median and common, all sitting at or below its 2% target. This report is watched closely for whether that cooling trend continued into July, shaping expectations for the Bank of Canada's next policy move."
         },
         {
@@ -379,6 +383,7 @@
           "currency": "USD",
           "event": "US housing starts and building permits (July)",
           "importance": "medium",
+          "previous": "starts 1,427,000 annualised units, +19.0% m/m; permits 1,367,000 annualised units, -3.0% m/m (June)",
           "description": "The Census Bureau's monthly report on the pace of new home construction and permits issued for future building. A leading indicator of housing sector activity that is sensitive to mortgage rates and feeds into GDP tracking estimates."
         },
         {
@@ -386,6 +391,7 @@
           "currency": "USD",
           "event": "US industrial production and capacity utilisation (July)",
           "importance": "low",
+          "previous": "+0.1% m/m (June)",
           "description": "The Federal Reserve's monthly measure of output at factories, mines and utilities, alongside how much of the country's productive capacity is in use. A second tier release for the dollar but a useful input into GDP tracking models."
         },
         {
