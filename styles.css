@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--navy);
+  background: url('navy-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
