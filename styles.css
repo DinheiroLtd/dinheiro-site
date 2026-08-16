@@ -92,9 +92,6 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-  to   { transform: scaleX(1); }
-}
-
 @keyframes introSlideUp {
   from { transform: translateY(0); }
   to   { transform: translateY(-100%); }
