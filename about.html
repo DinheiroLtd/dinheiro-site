@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="styles.css?v=27">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon-192.png">
+  <style>
+    @media (max-width: 700px) {
+      #about-regulatory > div > div:last-child { grid-template-columns: 1fr !important; }
+      #about-regulatory { padding: 64px 20px !important; }
+    }
+  </style>
 </head>
 <body>
   <div id="page-transition" style="position:fixed;inset:0;background:#071420;z-index:99999;pointer-events:none;opacity:1;transition:opacity 0.45s ease;"></div>
@@ -188,43 +194,34 @@
   </section>
 
   <!-- REGULATORY -->
-  <section id="about-regulatory" style="padding:100px 48px; background:white;">
+  <section id="about-regulatory" style="padding:100px 48px; background:#f7f9fb;">
     <div style="max-width:1280px; margin:0 auto;">
-      <div class="section-intro-inner" style="grid-template-columns:1fr 1fr 280px; gap:48px; align-items:stretch;">
-        <div class="intro-left">
-          <h2>Regulated payment services, and fully accountable.</h2>
-          <p>Dinheiro takes its regulatory obligations seriously. Payment services are provided by Sciopay Ltd, which is authorised and regulated by the Financial Conduct Authority as an Authorised Payment Institution (FRN: 927951), subject to rigorous ongoing oversight on capital, safeguarding, compliance, and conduct.</p>
-          <p>Your funds are held in segregated safeguarding accounts with tier-1 UK regulated partners. They are never commingled with Dinheiro's own operational funds, and in the unlikely event of our insolvency, they are protected for return to you.</p>
+      <!-- Header -->
+      <div style="max-width:680px; margin:0 auto 64px; text-align:center;">
+        <h2 style="font-size:clamp(1.75rem,2.8vw,2.5rem); font-weight:800; color:var(--navy); line-height:1.15; letter-spacing:-0.5px; margin-bottom:16px;">Regulated payment services, and fully accountable.</h2>
+        <p style="font-size:0.9375rem; color:rgba(28,60,87,0.6); line-height:1.8;">Payment services are provided by Sciopay Ltd, authorised and regulated by the FCA as an Authorised Payment Institution (FRN: 927951). Your funds are held in segregated safeguarding accounts and are never commingled with our own.</p>
+      </div>
+      <!-- 2x2 card grid -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div style="background:white; border-radius:16px; padding:36px 36px 32px; border:1px solid rgba(28,60,87,0.08); box-shadow:0 2px 12px rgba(28,60,87,0.05);">
+          <div style="width:48px;height:48px;background:var(--sky);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><img src="icons/Asset 83.png" class="icon-img icon-dark" style="width:24px;height:24px;"></div>
+          <h4 style="font-size:0.9375rem; font-weight:700; color:var(--navy); margin-bottom:10px;">Sciopay Ltd: Authorised Payment Institution</h4>
+          <p style="font-size:0.875rem; color:rgba(28,60,87,0.6); line-height:1.75; margin:0;">Payment services for Dinheiro are provided by Sciopay Ltd, authorised and regulated by the Financial Conduct Authority. FRN: 927951. Verifiable on the FCA register at fca.org.uk.</p>
         </div>
-        <div class="intro-right">
-          <div class="intro-feature">
-            <div class="intro-feature-icon"><img src="icons/Asset 83.png" class="icon-img icon-dark" style="width:26px;height:26px;"></div>
-            <div class="intro-feature-text">
-              <h4>Sciopay Ltd: Authorised Payment Institution</h4>
-              <p>Payment services for Dinheiro are provided by Sciopay Ltd, authorised and regulated by the Financial Conduct Authority. Firm Reference Number: 927951. You can verify Sciopay's authorisation on the FCA register at fca.org.uk.</p>
-            </div>
-          </div>
-          <div class="intro-feature">
-            <div class="intro-feature-icon"><img src="icons/Asset 62.png" class="icon-img icon-dark" style="width:26px;height:26px;"></div>
-            <div class="intro-feature-text">
-              <h4>Client Funds Safeguarded</h4>
-              <p>All client funds are held in segregated safeguarding accounts with tier-1 UK banks, in compliance with the Payment Services Regulations 2017.</p>
-            </div>
-          </div>
-          <div class="intro-feature">
-            <div class="intro-feature-icon"><img src="icons/Asset 79.png" class="icon-img icon-dark" style="width:26px;height:26px;"></div>
-            <div class="intro-feature-text">
-              <h4>Sciopay Ltd: Payment Services</h4>
-              <p>Payment services for Dinheiro Limited are provided by Sciopay Ltd. Sciopay Ltd is authorised by the FCA as an Authorised Payment Institution (FRN: 927951) and licensed by HMRC as an MSB (No: XCML00000151326).</p>
-            </div>
-          </div>
-          <div class="intro-feature">
-            <div class="intro-feature-icon"><img src="icons/Asset 31.png" class="icon-img icon-dark" style="width:26px;height:26px;"></div>
-            <div class="intro-feature-text">
-              <h4>Complaints Procedure</h4>
-              <p>We take complaints seriously. If you have a concern, contact us at complaints@dinheiro.uk. If unresolved, you may refer your complaint to the Financial Ombudsman Service.</p>
-            </div>
-          </div>
+        <div style="background:white; border-radius:16px; padding:36px 36px 32px; border:1px solid rgba(28,60,87,0.08); box-shadow:0 2px 12px rgba(28,60,87,0.05);">
+          <div style="width:48px;height:48px;background:var(--sky);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><img src="icons/Asset 62.png" class="icon-img icon-dark" style="width:24px;height:24px;"></div>
+          <h4 style="font-size:0.9375rem; font-weight:700; color:var(--navy); margin-bottom:10px;">Client Funds Safeguarded</h4>
+          <p style="font-size:0.875rem; color:rgba(28,60,87,0.6); line-height:1.75; margin:0;">All client funds are held in segregated safeguarding accounts with tier-1 UK banks, in compliance with the Payment Services Regulations 2017. Never commingled with operational funds.</p>
+        </div>
+        <div style="background:white; border-radius:16px; padding:36px 36px 32px; border:1px solid rgba(28,60,87,0.08); box-shadow:0 2px 12px rgba(28,60,87,0.05);">
+          <div style="width:48px;height:48px;background:var(--sky);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><img src="icons/Asset 79.png" class="icon-img icon-dark" style="width:24px;height:24px;"></div>
+          <h4 style="font-size:0.9375rem; font-weight:700; color:var(--navy); margin-bottom:10px;">Sciopay Ltd: Payment Services</h4>
+          <p style="font-size:0.875rem; color:rgba(28,60,87,0.6); line-height:1.75; margin:0;">Sciopay Ltd is authorised by the FCA as an Authorised Payment Institution (FRN: 927951) and licensed by HMRC as a Money Service Business (No: XCML00000151326).</p>
+        </div>
+        <div style="background:white; border-radius:16px; padding:36px 36px 32px; border:1px solid rgba(28,60,87,0.08); box-shadow:0 2px 12px rgba(28,60,87,0.05);">
+          <div style="width:48px;height:48px;background:var(--sky);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><img src="icons/Asset 31.png" class="icon-img icon-dark" style="width:24px;height:24px;"></div>
+          <h4 style="font-size:0.9375rem; font-weight:700; color:var(--navy); margin-bottom:10px;">Complaints Procedure</h4>
+          <p style="font-size:0.875rem; color:rgba(28,60,87,0.6); line-height:1.75; margin:0;">We take complaints seriously. Contact us at complaints@dinheiro.uk. If unresolved, you may refer your complaint to the Financial Ombudsman Service.</p>
         </div>
       </div>
     </div>
