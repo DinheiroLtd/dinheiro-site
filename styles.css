@@ -314,23 +314,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .btn-sm { padding: 8px 18px; font-size: 0.8125rem; }
 
 /* ─── LIGHT RAYS PATTERN ──────────────────────────────────── */
-.diag-pattern::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(135deg, rgba(26,111,160,0.18) 0%, transparent 55%),
-    linear-gradient(135deg,
-      transparent 0%, transparent 8%,
-      rgba(255,255,255,0.045) 8%, rgba(255,255,255,0.045) 22%,
-      transparent 22%, transparent 40%,
-      rgba(255,255,255,0.03) 40%, rgba(255,255,255,0.03) 52%,
-      transparent 52%, transparent 70%,
-      rgba(255,255,255,0.025) 70%, rgba(255,255,255,0.025) 78%,
-      transparent 78%
-    );
-  pointer-events: none;
-}
+.diag-pattern::before { display: none; }
 
 /* ─── HOMEPAGE HERO ─────────────────────────────────────── */
 .hero {
