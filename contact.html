@@ -105,7 +105,8 @@
         </div>
       </div>
 
-      <!-- Right: form -->
+      <!-- Right: form + CTA card -->
+      <div style="display:flex; flex-direction:column; gap:24px;">
       <div class="quote-form-card" style="border-radius: 20px;">
         <form onsubmit="dinhSubmitForm(event)" novalidate>
           <input type="hidden" name="access_key" value="440a23ea-2416-439b-9810-adff409044cb">
@@ -157,6 +158,23 @@
           <button type="submit" class="btn-submit">Send Message &rarr;</button>
         </form>
       </div>
+
+      <!-- CTA Card -->
+      <div style="border-radius:20px; overflow:hidden; display:flex; min-height:210px; position:relative;">
+        <div style="flex:1; background:var(--navy); padding:40px 44px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:center;">
+          <div style="position:absolute;inset:0;background:url('navy-bg.jpg') center/cover no-repeat;pointer-events:none;"></div>
+          <div style="position:relative; z-index:1;">
+            <h3 style="font-size:clamp(1.2rem,1.8vw,1.5rem); font-weight:800; color:white; line-height:1.2; margin-bottom:10px;">Ready to get started?</h3>
+            <p style="font-size:0.875rem; color:rgba(255,255,255,0.65); line-height:1.75; margin-bottom:24px; max-width:300px;">Open a free account today and a relationship manager will be in touch within one business hour.</p>
+            <a href="https://dinheiro.sciopay.co/clientregistration" class="btn btn-white" target="_blank" rel="noopener">Open a Free Account &rarr;</a>
+          </div>
+        </div>
+        <div class="contact-cta-img" style="width:42%; flex-shrink:0; overflow:hidden;">
+          <img src="about-cta-image.jpg" alt="Dinheiro relationship team" style="width:100%; height:100%; object-fit:cover; display:block; object-position:center top;">
+        </div>
+      </div>
+
+      </div><!-- end right column wrapper -->
 
     </div>
   </section>
@@ -327,6 +345,7 @@
       .contact-main-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
       section[style*="padding: 80px 48px"] { padding: 48px 20px !important; }
       .page-hero[style] { padding: 100px 20px 48px !important; min-height: auto !important; }
+      .contact-cta-img { display: none !important; }
     }
   </style>
 
