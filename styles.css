@@ -917,7 +917,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .coming-soon-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--navy); font-size: 0.75rem; font-weight: 700; padding: 5px 14px; border-radius: 50px; letter-spacing: 0.05em; margin-bottom: 20px; }
 
 /* ─── FOOTER ────────────────────────────────────────────── */
-footer { background: #0f2233; color: rgba(255,255,255,0.6); }
+footer { background: linear-gradient(rgba(8,18,28,0.55), rgba(8,18,28,0.55)), url('navy-bg.jpg') center/cover no-repeat; color: rgba(255,255,255,0.6); }
 .footer-main { max-width: 1280px; margin: 0 auto; padding: 72px 48px 56px 36px; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.2fr; gap: 48px; }
 .footer-brand-logo img { height: 32px; width: auto; filter: brightness(0) invert(1); margin-bottom: 20px; margin-left: -18px; }
 .footer-brand p { font-size: 0.875rem; line-height: 1.75; color: rgba(255,255,255,0.45); max-width: 280px; margin-bottom: 28px; }
