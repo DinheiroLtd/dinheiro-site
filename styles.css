@@ -689,7 +689,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 .tag-personal { background: var(--sky); color: var(--navy-light); }
 .tag-business { background: var(--navy); color: white; }
 .split-panel h3 { font-size: clamp(1.625rem, 2.5vw, 2.25rem); font-weight: 800; color: var(--navy); line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.3px; }
-.split-panel p { font-size: 0.9625rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px; max-width: 420px; }
+.split-panel p { font-size: 0.9625rem; color: var(--gray); line-height: 1.8; margin-bottom: 32px; }
 .split-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px; }
 .split-features li { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--navy); font-weight: 500; }
 .split-features li::before {
