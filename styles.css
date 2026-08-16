@@ -98,6 +98,9 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
 }
 
 /* Intro shown on all screen sizes */
+@media (max-width: 900px) {
+  #site-intro-logo { height: 52px; }
+}
 
 /* ─── TOP BAR ───────────────────────────────────────────── */
 /* ─── UTILITY BAR (hidden — using single-tier nav) ──────── */
