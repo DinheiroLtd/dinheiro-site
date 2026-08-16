@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: introSlideUp 1.1s cubic-bezier(0.76, 0, 0.24, 1) 3.6s forwards;
+  animation: introSlideUp 0.9s cubic-bezier(0.76, 0, 0.24, 1) 2.2s forwards;
 }
 
 #site-intro-inner {
