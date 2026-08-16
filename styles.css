@@ -100,10 +100,7 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   to   { transform: translateY(-100%); }
 }
 
-/* Hide intro on mobile — only show on desktop */
-@media (max-width: 900px) {
-  #site-intro { display: none; }
-}
+/* Intro shown on all screen sizes */
 
 /* ─── TOP BAR ───────────────────────────────────────────── */
 /* ─── UTILITY BAR (hidden — using single-tier nav) ──────── */
