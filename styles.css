@@ -86,24 +86,12 @@ h1, h2, h3, h4, h5 { font-family: var(--font); }
   filter: brightness(0) invert(1);
 }
 
-#site-intro-line {
-  height: 1px;
-  background: #ffffff;
-  /* PNG has 14.9% transparent padding each side — visible text = 70.2% of image width */
-  width: 70.2%;
-  transform: scaleX(0);
-  transform-origin: left center;
-  animation: introLine 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.8s forwards;
-  margin-top: 12px;
-}
 
 @keyframes introFadeIn {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes introLine {
-  from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }
 
